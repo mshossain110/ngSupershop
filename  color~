@@ -1,0 +1,11 @@
+body-color: #FFFFFF
+base-color:#991500, #995c00
+border-base-color:#991500,
+text -base-color:#333, 777
+link-base-color:#991500
+link-hover-color:#995c00
+
+heading-text-color:
+menubar-background: #5fd48f
+menu-text:#333
+

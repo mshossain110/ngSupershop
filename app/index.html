@@ -1,0 +1,403 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="ngSuperShopApp">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="wrapper">
+      <section class="container-fluid header-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-xs-12">
+              <div class="email"><span class="fa fa-envelope"></span>example@example.com</div>
+              <div class="phpne"><span class="fa fa-phone"></span><span>0135685265</span></div>
+            </div>
+            <div class="col-md-6 col-xs-12">
+              <div class="my-cart pull-right"><span class="fa fa-shopping-bag"></span>your cart <span class="cart-amount">$154</span> </div>
+              <div class="my-account pull-right"><span>Welcome Shahadat</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+       <section class="container-fluid logo-bar">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="logo" id="logo"><a href=""><img src="images/logo.jpg" alt="Angular Super Shop"/></a></div>
+              </div>
+            </div>
+          </div>
+      </section>
+       <section class="container-fluid menu-bar">
+          <div class="container">
+            <div class="row">
+                <nav class="mainmenu" id="mainmenu">
+                    <ul class="nav navbar-nav">
+                      <li class="active"><a href="#/">Home</a></li>
+                      <li><a ng-href="#/about">About</a></li>
+                      <li><a ng-href="#/shop">Shop</a></li>
+                    </ul>
+                </nav>
+            </div>
+          </div>
+      </section>
+       <section class="container-fluid slider-container">
+          <div class="container">
+              <div class="row">
+                  <div class="slider">
+                      <a href=""><img src="images/serenityimg4.png" alt="Angular Super Shop"/></a>
+                  </div>
+              </div>
+          </div>
+      </section>
+       <section class="content" id="content">
+            <section class="promo-bar container-fluid">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="promo">
+                          <div class="icon-container">
+                              <span class="fa fa-shopping-basket fa-3x"></span>
+                          </div>
+                          <div class="promo-content">
+                            <h3>Larges Market</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in ullamcorper nunc.</p>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="promo">
+                          <div class="icon-container">
+                              <span class="fa fa-shopping-basket fa-3x"></span>
+                          </div>
+                          <div class="promo-content">
+                            <h3>Larges Market</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in ullamcorper nunc.</p>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="promo">
+                          <div class="icon-container">
+                              <span class="fa fa-shopping-basket fa-3x"></span>
+                          </div>
+                          <div class="promo-content">
+                            <h3>Larges Market</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in ullamcorper nunc. </p>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </section>
+            <section class="feature-product container-fluid">
+              <div class="container">
+                <div class="row">
+                  <div class="products-container">
+                    <div class="col-md-4 product">
+                          <div class="feature-image">
+                              <img src="images/product/AdidasHoodie.jpg" class="img-responsive" alt="AdidasHoodie" />
+                          </div>
+                          <div class="product-content" >
+                            <p></p>
+                          </div>
+                          <div class="product-button">
+                              <a href="" class=""><span class="fa fa-link fa-2x" ></span></a>
+                              <a href="" class=""><span class="fa fa-cart-plus fa-2x"></span></a>
+                          </div>
+                          <h3 class="product-title">This is title</h3>
+                          <p class="price">$30</p>
+                    </div>
+                    <div class="col-md-4 product">
+                          <div class="feature-image">
+                              <img src="images/product/AdidasHoodie.jpg" class="img-responsive" alt="AdidasHoodie" / >
+                          </div>
+                          <div class="product-content" >
+                            <p></p>
+                          </div>
+                          <div class="product-button">
+                              <a href="" class=""><span class="fa fa-link fa-2x" ></span></a>
+                              <a href="" class=""><span class="fa fa-cart-plus fa-2x"></span></a>
+                          </div>
+                          <h3 class="product-title">This is title</h3>
+                          <p class="price">$30</p>
+                    </div>
+                    <div class="col-md-4 product">
+                          <div class="feature-image">
+                              <img src="images/product/AdidasHoodie.jpg" class="img-responsive" alt="AdidasHoodie" / >
+                          </div>
+                          <div class="product-content" >
+                            <p></p>
+                          </div>
+                          <div class="product-button">
+                              <a href="" class=""><span class="fa fa-link fa-2x" ></span></a>
+                              <a href="" class=""><span class="fa fa-cart-plus fa-2x"></span></a>
+                          </div>
+                          <h3 class="product-title">This is title</h3>
+                          <p class="price">$30</p>
+                    </div>
+                    <div class="col-md-4 product">
+                          <div class="feature-image">
+                              <img src="images/product/AdidasHoodie.jpg" class="img-responsive" alt="AdidasHoodie" / >
+                          </div>
+                          <div class="product-content" >
+                            <p></p>
+                          </div>
+                          <div class="product-button">
+                              <a href="" class=""><span class="fa fa-link fa-2x" ></span></a>
+                              <a href="" class=""><span class="fa fa-cart-plus fa-2x"></span></a>
+                          </div>
+                          <h3 class="product-title">This is title</h3>
+                          <p class="price">$30</p>
+                    </div>
+                    <div class="col-md-4 product">
+                          <div class="feature-image">
+                              <img src="images/product/AdidasHoodie.jpg" class="img-responsive" alt="AdidasHoodie" / >
+                          </div>
+                          <div class="product-content" >
+                            <p></p>
+                          </div>
+                          <div class="product-button">
+                              <a href="" class=""><span class="fa fa-link fa-2x" ></span></a>
+                              <a href="" class=""><span class="fa fa-cart-plus fa-2x"></span></a>
+                          </div>
+                          <h3 class="product-title">This is title</h3>
+                          <p class="price">$30</p>
+                    </div>
+                    <div class="col-md-4 product">
+                          <div class="feature-image">
+                              <img src="images/product/AdidasHoodie.jpg" class="img-responsive" alt="AdidasHoodie" / >
+                          </div>
+                          <div class="product-content" >
+                            <p></p>
+                          </div>
+                          <div class="product-button">
+                              <a href="" class=""><span class="fa fa-link fa-2x" ></span></a>
+                              <a href="" class=""><span class="fa fa-cart-plus fa-2x"></span></a>
+                          </div>
+                          <h3 class="product-title">This is title</h3>
+                          <p class="price">$30</p>
+                    </div>
+                    <div class="col-md-4 product">
+                          <div class="feature-image">
+                              <img src="images/product/AdidasHoodie.jpg" class="img-responsive" alt="AdidasHoodie" / >
+                          </div>
+                          <div class="product-content" >
+                            <p></p>
+                          </div>
+                          <div class="product-button">
+                              <a href="" class=""><span class="fa fa-link fa-2x" ></span></a>
+                              <a href="" class=""><span class="fa fa-cart-plus fa-2x"></span></a>
+                          </div>
+                          <h3 class="product-title">This is title</h3>
+                          <p class="price">$30</p>
+                    </div>
+                    <div class="col-md-4 product">
+                          <div class="feature-image">
+                              <img src="images/product/AdidasHoodie.jpg" class="img-responsive" alt="AdidasHoodie" / >
+                          </div>
+                          <div class="product-content" >
+                            <p></p>
+                          </div>
+                          <div class="product-button">
+                              <a href="" class=""><span class="fa fa-link fa-2x" ></span></a>
+                              <a href="" class=""><span class="fa fa-cart-plus fa-2x"></span></a>
+                          </div>
+                          <h3 class="product-title">This is title</h3>
+                          <p class="price">$30</p>
+                    </div>
+                    <div class="col-md-4 product">
+                          <div class="feature-image">
+                              <img src="images/product/AdidasHoodie.jpg" class="img-responsive" alt="AdidasHoodie" / >
+                          </div>
+                          <div class="product-content" >
+                            <p></p>
+                          </div>
+                          <div class="product-button">
+                              <a href="" class=""><span class="fa fa-link fa-2x" ></span></a>
+                              <a href="" class=""><span class="fa fa-cart-plus fa-2x"></span></a>
+                          </div>
+                          <h3 class="product-title">This is title</h3>
+                          <p class="price">$30</p>
+                    </div>
+                    <div class="col-md-4 product">
+                          <div class="feature-image">
+                              <img src="images/product/AdidasHoodie.jpg" class="img-responsive" alt="AdidasHoodie" / >
+                          </div>
+                          <div class="product-content" >
+                            <p></p>
+                          </div>
+                          <div class="product-button">
+                              <a href="" class=""><span class="fa fa-link fa-2x" ></span></a>
+                              <a href="" class=""><span class="fa fa-cart-plus fa-2x"></span></a>
+                          </div>
+                          <h3 class="product-title">This is title</h3>
+                          <p class="price">$30</p>
+                    </div>
+                    <div class="col-md-4 product">
+                          <div class="feature-image">
+                              <img src="images/product/AdidasHoodie.jpg" class="img-responsive" alt="AdidasHoodie" / >
+                          </div>
+                          <div class="product-content" >
+                            <p></p>
+                          </div>
+                          <div class="product-button">
+                              <a href="" class=""><span class="fa fa-link fa-2x" ></span></a>
+                              <a href="" class=""><span class="fa fa-cart-plus fa-2x"></span></a>
+                          </div>
+                          <h3 class="product-title">This is title</h3>
+                          <p class="price">$30</p>
+                    </div>
+                    <div class="col-md-4 product">
+                          <div class="feature-image">
+                              <img src="images/product/AdidasHoodie.jpg" class="img-responsive" alt="AdidasHoodie" / >
+                          </div>
+                          <div class="product-content" >
+                            <p></p>
+                          </div>
+                          <div class="product-button">
+                              <a href="" class=""><span class="fa fa-link fa-2x" ></span></a>
+                              <a href="" class=""><span class="fa fa-cart-plus fa-2x"></span></a>
+                          </div>
+                          <h3 class="product-title">This is title</h3>
+                          <p class="price">$30</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>  
+            <section class="auction-bar container-fluid">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-5"><img src="images/m-commerce.png"></div>
+                  <div class="col-md-7">
+                      <div class="auction-promo">
+                        <h2>ToTal Project Done</h2>
+                        <span>1535</span>
+                      </div>
+                      <div class="auction-promo">
+                        <h2>CLIENT SETISFY</h2>
+                        <span>100%</span>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+      </section>
+       <section class="container-fluid fooret-caontainer">
+          <footer class="footer container" id="footer">
+              <div class="row footer-top">
+                  <div class="col-md-12">
+                      <h1>GET OUT NEWSLETTER</h1>
+                      <form class="form-inline">
+                        <div class="form-group">
+                          <input type="text" class="form-control col-md-4" id="exampleInputName2" placeholder="NAME">
+                        </div>
+                        <div class="form-group">
+                          <input type="email" class="form-control col-md-4" id="exampleInputEmail2" placeholder="Email">
+                        </div>
+                        <button type="submit" class="btn btn-default">ADD TO LIST</button>
+                      </form>
+                  </div>
+              </div>
+               <div class="row footer-bottom">
+                  <div class="col-md-12">
+                    <div class="col-md-6 col-xm-12">
+                        <img class="" src="images/cards.png" alt="">
+                    </div>
+                    <div class="col-md-6 col-xs-12 ">
+                        <ul class="social-network social-circle">
+                        <li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
+                        <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-12 copy-right">
+                    <p> &copy; All Right resorved</p>
+                  </div>
+              </div>
+
+          </footer>
+      </section>
+    </div>
+
+
+    <!-- <div class="header">
+      <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" href="#/">ngSuperShop</a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="js-navbar-collapse">
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+    <div ng-view=""></div>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+      </div>
+    </div> -->
+
+
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+
+        <script src="scripts/app.js"></script>
+        <script src="scripts/services/products.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/about.js"></script>
+
+        <!-- endbuild -->
+</body>
+</html>

@@ -1,0 +1,66 @@
+[
+   {"num": 1,  "code": "APL", "category": "mac", "name": "55 Apple LCD TV", "src": "apple1.png", "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ", "price": 2150, "cal": 10 },
+
+    
+    { "num": 2, "code": "AVC", "category": "ipad", "name": "Apple iPad", "src": "apple2.png", "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ", "price": 1100, "cal": 10 },
+
+    
+    { "num": 3, "code": "BAN", "category": "phone", "name": "MacBookPro", "src": "apple6.png", "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ", "price": 645, "cal": 10 },
+    { "num": 4, "code": "CTP", "category": "mac", "name": "MacBookPro", "src": "apple4.png", "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ", "price": 1300, "cal": 10 },
+    
+    { "num": 5, "code": "FIG", "category": "ipad", "name": "MacBook Airs", "src": "apple5.png", "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ", "price": 750, "cal": 10 },
+    
+    { "num": 6, "code": "GRP", "category": "ipad", "name": "Front Office Manager", "src": "apple7.png", "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ", "price": 1000, "cal": 10 },
+    
+    { "num": 7, "code": "GUA", "category": "mac", "name": "Interaction Designer", "src": "apple3.png", "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ", "price": 500, "cal": 10 },
+    
+    { "num": 8, "code": "KIW", "category": "mac", "name": "Marketing Manager", "src": "apple4.png", "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ", "price": 1670, "cal": 10 },
+    
+    { "num": 9, "code": "ORG", "category": "ipad", "name": "Account Manager", "src": "apple2.png", "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ", "price": 2000, "cal": 10 },
+    
+    { "num": 10, "code": "LSS", "category": "mac", "name": "35 Apple LCD TV", "src": "apple10.png", "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ", "price": 2150, "cal": 10 },
+    
+    { "num": 11, "code": "LAA", "category": "phone", "name": "Apple xiPad", "src": "apple11.png", "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ", "price": 1100, "cal": 10 },
+    
+    { "num": 12, "code": "LBB", "category": "mac", "name": "MacBookxxPro", "src": "apple12.png", "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ", "price": 645, "cal": 10 },
+    
+    { "num": 13, "code": "LCC", "category": "sound", "name": "MacBookPro", "src": "apple13.png", "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ", "price": 1300, "cal": 10 },
+    
+    { "num": 14, "code": "LDD", "category": "mac", "name": "MacBook Irs", "src": "apple14.png", "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ", "price": 750, "cal": 10 },
+    
+    { "num": 15, "code": "LEE", "category": "sound", "name": "Front Office Manager", "src": "apple15.png", "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ", "price": 1000, "cal": 10 },
+    
+    { "num": 16, "code": "LFF", "category": "sound", "name": "Interaction Designer", "src": "apple13.png", "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ", "price": 500, "cal": 10 },
+    
+    { 
+    	"num": 17,
+    	"code": "LGG", 
+    	"category": "sound", 
+    	"name": "Marketing Manager", 
+    	"src": "apple13.png", 
+    	"overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ", 
+    	"price": 1670, 
+    	"cal": 10 
+    },
+    
+    { 
+    	"num": 18, 
+    	"code": "LHH", 
+    	"category": "sound", 
+    	"name": "Account Manager", 
+    	"src": "apple13.png", 
+    	"overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ", 
+    	"price": 2000, 
+    	"cal": 10
+    },
+    { 
+        "num": 19, 
+        "code": "TS1", 
+        "category": "T-shart", 
+        "name": "Adidas Hoodie", 
+        "src": "AdidasHoodie.jpg", 
+        "overview": "Part of the Adidas Premium Basics range, this simply styled full zip hooded sweatshirt features subtle, minimal branding and is constructed from superbly soft cotton jersey.", 
+        "price": 13, 
+        "cal": 10
+    }
+]   
