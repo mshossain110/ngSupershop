@@ -61,21 +61,37 @@ section.header-top {
 }
 
 /*logo bar-----------------------------*/
-section.logo-bar{
-  margin-bottom:20px; 
-}
-.logo {
-  text-align: center;
-}
+
 #logo img {
   width: 300px;
+  height: 130px;
 }
 /*mainmenu-----------------------------*/
 section.menu-bar {
-  background: #5fd48f none repeat scroll 0 0;
+ margin: 20px 0px;
  
 }#mainmenu li > a {
   padding: 20px 60px;
+}
+.mega-dropdown .dropdown-menu {
+  left: -400px;
+  min-width: 625px;
+}
+.dropdown-menu{
+  left: auto;
+  right: 0px !important;
+
+}
+.main_menu ul a span.fa {
+  display: block;
+  text-align: center;
+}.nav li a {
+  background: transparent none repeat scroll 0 0;
+  border-right: 1px solid #777;
+  font-size: 18px;
+  padding: 28px;
+}.main_menu .nav {
+  border: 1px solid #777;
 }
 /*footer-----------------------------*/
 section.fooret-caontainer {
