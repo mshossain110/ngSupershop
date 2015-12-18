@@ -25,22 +25,22 @@ angular
         controllerAs: 'main'
       })
       .when('/about', {
-        templateUrl: 'views/about.html',
+        templateUrl: 'views/pages/about.html',
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
       .when('/shop/:productID', {
-        templateUrl: 'views/shopSingle.html',
+        templateUrl: 'views/shop/shopSingle.html',
         controller: 'ShopSingleClt',
         controllerAs: 'ShopSingle'
       })
       .when('/shop', {
-        templateUrl: 'views/shop.html',
+        templateUrl: 'views/shop/shop.html',
         controller: 'ShopSingleClt',
         controllerAs: 'ShopSingle'
       })
       .when('/features', {
-          templateUrl:'views/features.html',
+          templateUrl:'views/ui/features.html',
           controller:'featuresCont'
       })
       .when('/ui/typography', {
@@ -62,10 +62,10 @@ angular
         templateUrl: 'views/ui/timeline.html'
       })
       .when('/singup', {
-        templateUrl: 'views/singup.html'
+        templateUrl: 'views/pages/signup.html'
       })
       .when('/singin', {
-        templateUrl: 'views/singin.html'
+        templateUrl: 'views/pages/signin.html'
       })
       .otherwise({
         redirectTo: '/'
