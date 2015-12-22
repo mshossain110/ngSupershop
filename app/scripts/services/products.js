@@ -8,20 +8,35 @@
  * Service in the ngSuperShopApp.
  */
 angular.module('ngSuperShopApp')
-  .factory('products',['$http', '$q', function ($http, $q) {
+  .factory('PService',['$http', '$q', function ($http, $q) {
+  		var products;
 
  		return {
- 			getAllProducts: function(){
- 				var deferred = $q.defer();
- 				return $http.get('data/products.json').success(function(response){
-				    	deferred.resolve(response);
-				 }).error(function(data){
-				 	deferred.reject(data);
-				 });
-
-				 return deferred.promise; 				 				
+ 			setAllProducts: function(value){
+ 				products=value;				 				
  			},
+ 			getAllProducts: function(){
+ 				return products;
+ 			},
+ 			isEmpty : function(){
+ 				if( typeof products != 'object'){
+ 					return true;
+ 				}else{
+ 					return false;
+ 				}
+ 			},
+ 			getProductByCode: function(code){
+ 				var product;
+ 				if(!this.isEmpty()){
+ 					for(product of products){
+	 					if(product.code === code){
+	 						return product;
+	 					}
 
+ 					}
+ 				}
+ 				
+ 			},
  			getSingleProduct: function(){
  				var deferred = $q.defer();
  				 $http.get('data/ProductDetails.json').then(function(response){

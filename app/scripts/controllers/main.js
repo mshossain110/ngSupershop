@@ -8,28 +8,27 @@
  * Controller of the ngSuperShopApp
  */
 angular.module('ngSuperShopApp')
-  .controller('MainCtrl',['$scope', 'products', '$log', function ($scope, products, $log) {
+  .controller('MainCtrl',['$scope', '$http', 'PService', '$log', function ($scope, $http, PService, $log) {
     
-    	$scope.products= products.getAllProducts();
-    	$scope.products.then(function(response){
-    		$scope.products=response.data;
-    	})
+    	$http.get('data/products.json').success(function(response){
+        PService.setAllProducts(response);
+        $scope.allproducts=response;
+      })
     
    }])
-  .controller('ShopSingleClt', ['$scope', '$routeParams', '$http','$log','$sce',function($scope, $routeParams, $http, $log, $sce){
+  .controller('ShopSingleClt', ['$scope', '$routeParams', '$http','PService',function($scope, $routeParams, $http, PService){
     var ProductCode=$routeParams.productID;
-        $http.get('data/ProductDetails.json').then(function(response){
+      
 
-              for(var i of response.data){
-                
-                if(i.code === ProductCode){
-                 $scope.product = i;
-                 $log.log()
 
-                }
-              }
-             
-        });        
+      if(!PService.isEmpty()){
+        $scope.product=PService.getProductByCode(ProductCode);
+      }else{
+          $http.get('data/products.json').success(function(response){
+          PService.setAllProducts(response);
+          $scope.product=PService.getProductByCode(ProductCode);
+        });
+      }
 
 
   }]);
