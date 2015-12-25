@@ -171,7 +171,7 @@ nav.main_menu {
 }
 .textwidget .icon-text {
   display: inline-block;
-  margin: 12px 6px;
+  margin: 12px 5px;
 }
 .widgets .widget_text {
     border-bottom: 1px solid #bcbcbc;
@@ -647,3 +647,43 @@ Product single
 
 /*meadia queary--------------------------*/
 
+    /* Medium Devices, Desktops */
+    @media only screen and (max-width : 992px) {
+      .footer-bottom .col-xs-12 {
+       width: 50%;
+      }
+      .container {
+        width: 970px;
+      }
+      .copy-right p {
+        margin: 40px 0px;
+      }
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (max-width : 768px) {
+      .footer-bottom .col-xs-12 {
+       width: 100%;
+      }
+      .container {
+        width: 760px;
+      }
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (max-width : 480px) {
+      .container {
+        width: 470px;
+      }
+      .copy-right p {
+        margin: 133px 0px;
+        margin-bottom:0px 
+      }
+    }
+
+    /* Custom, iPhone Retina */ 
+    @media only screen and (max-width : 320px) {
+        .container {
+  width: 320px;
+}
+    }
