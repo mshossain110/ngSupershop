@@ -50,7 +50,8 @@
                           </div>
                           <div class="product-button">
                               <a href="#/shop/{{product.sku}}" class=""><span class="fa fa-link fa-2x" ></span></a>
-                              <a href="" class=""><span class="fa fa-cart-plus fa-2x"></span></a>
+                              <ngcart-addtocart id="{{ product.sku }}" name="{{ product.name }}" price="{{ product.price }}" quantity="1" quantity-max="30" data="product"></ngcart-addtocart>
+
                           </div>
                           <h3 class="product-title">{{product.name}}</h3>
                           <p class="price">{{product.price}}</p>

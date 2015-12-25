@@ -1,50 +1,6 @@
 [
-   {
-<<<<<<< HEAD
-    "num": 1,
-    "sku": "APL", 
-    "category": "mac", 
-    "name": "55 Apple LCD TV",
-    "price": 2150,
-    "cal": 10, 
-    "src": "AdidasHoodie.jpg",
-    "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ", 
-    "description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e"
-    },
-
-    
-    { "num": 2, "sku": "AVC", "category": "ipad", "name": "Apple iPad", "src": "cloth-BCE.jpg", "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ", "description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e", "price": 1100, "cal": 10 },
-
-    
-    { "num": 3, "sku": "BAN", "category": "phone", "name": "MacBookPro", "src": "cloth-CDC.jpg", "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ", "description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e", "price": 645, "cal": 10 },
-    { "num": 4, "sku": "CTP", "category": "mac", "name": "MacBookPro", "src": "cloth-DEH.jpg", "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ", "description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e", "price": 1300, "cal": 10 },
-    
-    { "num": 5, "sku": "FIG", "category": "ipad", "name": "MacBook Airs", "src": "cloth-FGH.jpg", "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ", "description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e", "price": 750, "cal": 10 },
-    
-    { "num": 6, "sku": "GRP", "category": "ipad", "name": "Front Office Manager", "src": "AdidasHoodie.jpg", "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ", "description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e", "price": 1000, "cal": 10 },
-    
-    { "num": 7, "sku": "GUA", "category": "mac", "name": "Interaction Designer", "src": "cloth-BCE.jpg", "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ", "description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e", "price": 500, "cal": 10 },
-    
-    { "num": 8, "sku": "KIW", "category": "mac", "name": "Marketing Manager", "src": "cloth-FGH.jpg", "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ", "description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e", "price": 1670, "cal": 10 },
-    
-    { "num": 9, "sku": "ORG", "category": "ipad", "name": "Account Manager", "src": "AdidasHoodie.jpg", "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ", "description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e", "price": 2000, "cal": 10 },
-    
-    { "num": 10, "sku": "LSS", "category": "mac", "name": "35 Apple LCD TV", "src": "cloth-CDC.jpg", "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ", "description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e", "price": 2150, "cal": 10 },
-    
-    { "num": 11, "sku": "LAA", "category": "phone", "name": "Apple xiPad", "src": "cloth-BCE.jpg", "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ", "description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e", "price": 1100, "cal": 10 },
-    
-    { "num": 12, "sku": "LBB", "category": "mac", "name": "MacBookxxPro", "src": "cloth-DEH.jpg", "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ", "description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e", "price": 645, "cal": 10 },
-    
-    { "num": 13, "sku": "LCC", "category": "sound", "name": "MacBookPro", "src": "cloth-BCE.jpg", "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ", "description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e", "price": 1300, "cal": 10 },
-    
-    { "num": 14, "sku": "LDD", "category": "mac", "name": "MacBook Irs", "src": "cloth-FGH.jpg", "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ", "description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e", "price": 750, "cal": 10 },
-    
-    { "num": 15, "sku": "LEE", "category": "sound", "name": "Front Office Manager", "src": "cloth-CDC.jpg", "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ","description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e", "price": 1000, "cal": 10 },
-    
-    { "num": 16, "sku": "LFF", "category": "sound", "name": "Interaction Designer", "src": "cloth-BCE.jpg", "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ","description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e", "price": 500, "cal": 10 },
-=======
-        "num": 1,
-        "code": "APL", 
+      {  "num": 1,
+        "sku": "APL", 
         "category": "mac", 
         "name": "55 Apple LCD TV",
         "price": 2150,
@@ -57,189 +13,186 @@
     
     {
          "num": 2, 
-         "code": "AVC", 
+         "sku": "AVC", 
          "category": "ipad", 
          "name": "Apple iPad",
          "price": 1100,
          "cal": 10,
          "src": "cloth-BCE.jpg", 
          "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ", 
-         "description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e", 
+         "description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e" 
       },
-
-    
     { 
-    "num": 3, 
-        "code": "BAN", 
+        "num": 3, 
+        "sku": "BAN", 
         "category": "phone", 
         "name": "MacBookPro",
         "price": 645,
         "cal": 10 , 
         "src": "cloth-CDC.jpg", 
         "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ", 
-        "description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e",
-
-     },
+        "description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e"
+    },
 
     { 
-    "num": 4, 
-        "code": "CTP", 
+        "num": 4, 
+        "sku": "CTP", 
         "category": "mac", 
         "name": "MacBookPro",
         "price": 1300, 
         "cal": 10 , 
         "src": "cloth-DEH.jpg", 
         "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ", 
-        "description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e", 
+        "description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e" 
         
     },
     
     { 
-    "num": 5, 
-        "code": "FIG", 
+        "num": 5, 
+        "sku": "FIG", 
         "category": "ipad", 
         "name": "MacBook Airs",
         "price": 750,
          "cal": 10 , 
         "src": "cloth-FGH.jpg", 
         "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ", 
-        "description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e", 
+        "description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e" 
         
      },
     
     { 
-    "num": 6, 
-        "code": "GRP", 
+        "num": 6, 
+        "sku": "GRP", 
         "category": "ipad", 
         "name": "Front Office Manager",
          "price": 1000, 
         "cal": 10 , 
         "src": "AdidasHoodie.jpg", 
         "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ", 
-        "description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e", 
+        "description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e"
        
     },
     
     { 
-    "num": 7, 
-        "code": "GUA", 
+        "num": 7, 
+        "sku": "GUA", 
         "category": "mac", 
         "name": "Interaction Designer",
         "price": 500, 
         "cal": 10, 
         "src": "cloth-BCE.jpg", 
         "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ", 
-        "description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e", 
+        "description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e" 
     
      },
     
     { 
-    "num": 8, 
-        "code": "KIW", 
+        "num": 8, 
+        "sku": "KIW", 
         "category": "mac", 
         "name": "Marketing Manager",
         "price": 1670, 
         "cal": 10, 
         "src": "cloth-FGH.jpg", 
         "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ", 
-        "description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e", 
+        "description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e" 
         
      },
     
     { 
-    "num": 9, 
-        "code": "ORG", 
+        "num": 9, 
+        "sku": "ORG", 
         "category": "ipad", 
         "name": "Account Manager",
         "price": 2000, 
         "cal": 10, 
         "src": "AdidasHoodie.jpg", 
         "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ", 
-        "description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e", 
+        "description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e" 
         
      },
     
     { 
-    "num": 10, 
-        "code": "LSS", 
+        "num": 10, 
+        "sku": "LSS", 
         "category": "mac", 
         "name": "35 Apple LCD TV", 
         "price": 2150, 
-        "cal": 10 
+        "cal": 10,
         "src": "cloth-CDC.jpg", 
         "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ", 
-        "description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e", 
+        "description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e"
     
     },
     
     {
-     "num": 11, 
-        "code": "LAA", 
+        "num": 11, 
+        "sku": "LAA", 
         "category": "phone", 
         "name": "Apple xiPad", 
         "price": 1100, 
         "cal": 10,
         "src": "cloth-BCE.jpg", 
         "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ", 
-        "description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e", 
+        "description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e" 
 
      },
     
     { 
-    "num": 12, 
-        "code": "LBB", 
+        "num": 12, 
+        "sku": "LBB", 
         "category": "mac", 
         "name": "MacBookxxPro", 
          "price": 645,
          "cal": 10,
         "src": "cloth-DEH.jpg", 
         "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ", 
-        "description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e", 
+        "description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e" 
    
       },
     
     { 
-    "num": 13, 
-        "code": "LCC", 
+        "num": 13, 
+        "sku": "LCC", 
         "category": "sound", 
         "name": "MacBookPro",
         "price": 1300, 
         "cal": 10 , 
         "src": "cloth-BCE.jpg", 
         "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ", 
-        "description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e", 
+        "description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e"
     
     },
     
     {
-    "num": 14, 
-        "code": "LDD", 
+        "num": 14, 
+        "sku": "LDD", 
         "category": "mac", 
         "name": "MacBook Irs",
         "price": 750, 
         "cal": 10 , 
         "src": "cloth-FGH.jpg", 
         "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ",
-         "description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e", 
+         "description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e" 
          
      },
     
     {
-     "num": 15, 
-        "code": "LEE", 
+        "num": 15, 
+        "sku": "LEE", 
         "category": "sound", 
         "name": "Front Office Manager",
         "price": 1000, 
         "cal": 10 , 
         "src": "cloth-CDC.jpg", 
         "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ",
-        "description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e", 
+        "description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e" 
         
     },
     
      { 
         "num": 16, 
-        "code": "LFF", 
+        "sku": "LFF", 
         "category": "sound", 
         "name": "Interaction Designer",
         "price": 500, 
@@ -249,7 +202,6 @@
         "description": "\u003ch4\u003eHello this is product description\u003c\/h4\u003e"
         
     },
->>>>>>> 09ab6047d2bf83a9136ac91ae9d8945ff7416a11
     
     { 
     	"num": 17,

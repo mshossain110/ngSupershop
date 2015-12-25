@@ -29,7 +29,7 @@ angular.module('ngSuperShopApp')
  				var product;
  				if(!this.isEmpty()){
  					for(product of products){
-	 					if(product.code === code){
+	 					if(product.sku === code){
 	 						return product;
 	 					}
 
