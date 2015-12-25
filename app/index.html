@@ -14,6 +14,7 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/flexslider.css">
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
@@ -137,9 +138,27 @@
      <section class="container-fluid slider-container">
         <div class="container">
             <div class="row">
-                <div class="slider">
-                    <a href=""><img src="images/serenityimg4.png" alt="Angular Super Shop"/></a>
-                </div>
+                <!-- Place somewhere in the <body> of your page -->
+              <div class="flexslider">
+                <ul class="slides">
+                  <li>
+                    <img src="images/serenityimg4.png" />
+                    <p class="flex-caption">Adventurer Cheesecake Brownie</p>
+                  </li>
+                  <li>
+                    <img src="images/serenityimg4.png" />
+                    <p class="flex-caption">Adventurer Lemon</p>
+                  </li>
+                  <li>
+                    <img src="images/serenityimg4.png" />
+                    <p class="flex-caption">Adventurer Donut</p>
+                  </li>
+                  <li>
+                    <img src="images/serenityimg4.png" />
+                    <p class="flex-caption">Adventurer Caramel</p>
+                  </li>
+                </ul>
+              </div>
             </div>
         </div>
       </section>
@@ -147,12 +166,15 @@
         <div ng-view=""></div>
       </section>
        <section class="container-fluid fooret-caontainer">
+           <div class="footer-border">
+          
+           </div>
           <footer class="footer container" id="footer"> 
               <div class="row widgets">
                 <div class="widget_text">
                       <div class="textwidget">
                     <div class="col-sm-3 ">
-                        <div class="icon-image"><i style="color:" class="fa fa-dollar"></i>
+                        <div class="icon-image"><span style="color:" class="fa fa-dollar"></span>
                         </div>
                         <div class="icon-text">
                             <h4>MONEY GUARANTEE</h4>
@@ -161,7 +183,7 @@
                     </div>
 
                     <div class="col-sm-3 ">
-                        <div class="icon-image"><i style="color:" class="fa fa-phone-square"></i>
+                        <div class="icon-image"><span style="color:" class="fa fa-phone-square"></span>
                         </div>
                         <div class="icon-text">
                             <h4>ONLINE SUPPORT</h4>
@@ -170,7 +192,7 @@
                     </div>
 
                     <div class="col-sm-3 ">
-                        <div class="icon-image"><i style="color:" class="fa fa-credit-card"></i>
+                        <div class="icon-image"><span style="color:" class="fa fa-credit-card"></span>
                         </div>
                         <div class="icon-text">
                             <h4>PAYMENT SECURE</h4>
@@ -178,8 +200,8 @@
                         </div>
                     </div>
 
-                    <div class="col-sm-3 ">
-                        <div class="icon-image"><i style="color:" class="fa fa-truck"></i>
+                    <div class="col-sm-3 truck">
+                        <div class="icon-image"><span style="color:" class="fa fa-truck"></span>
                         </div>
                         <div class="icon-text">
                             <h4>FREE DELIVERY</h4>
@@ -241,6 +263,7 @@
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
+    <script type="text/javascript" src="scripts/lib/jquery.flexslider-min.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
@@ -261,7 +284,17 @@
         <script src="scripts/controllers/about.js"></script>
 
         <!-- endbuild -->
-<script type="text/javascript" src="scripts/lib/custom.js"></script>
 
+
+<script type="text/javascript" src="scripts/lib/custom.js"></script>
+<script type="text/javascript">
+    $(document).ready()
+  $(window).load(function() {
+  $('.flexslider').flexslider({
+    animation: "fade",
+    controlNav:false
+  });
+});
+</script>
 </body>
 </html>
