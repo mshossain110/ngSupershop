@@ -29,13 +29,9 @@ h3{
 h4, h5, h6{
   font-size: 18px;
 }
-
-.container {
-  width: 970px;
-}
 /*header-top-----------------------------*/
 section.header-top {
-    background: #991500 none repeat scroll 0 0;  
+    background: #991500 none repeat scroll 0 0;
 }
 .header-top .email, .header-top .phpne {
     display: inline-block;
@@ -67,7 +63,7 @@ section.header-top {
 /*mainmenu-----------------------------*/
 section.menu-bar {
  margin: 20px 0px;
- 
+
 }
 nav.main_menu {
   margin: 14px 0;
@@ -138,7 +134,7 @@ nav.main_menu {
   right: 30px;
   left: inherit;
 }
-.carousel-control .glyphicon-chevron-left, 
+.carousel-control .glyphicon-chevron-left,
 .carousel-control .glyphicon-chevron-right {
   font-size: 12px;
   background-color: #fff;
@@ -148,7 +144,16 @@ nav.main_menu {
   border: 1px solid #ddd;
 }
 /*footer-----------------------------*/
-
+.textwidget .eFeatures {
+  border-right: 1px solid #fff;
+  float: left;
+  margin-right: 20px;
+  width: 23%;
+}
+.textwidget .eFeatures:last-child {
+  border-right: medium none navy;
+  margin-right: 0;
+}
 .textwidget .icon-image span {
   color: #c3c3c3;
   display: inline-block;
@@ -158,16 +163,10 @@ nav.main_menu {
 .textwidget .icon-image {
   display: inline-block;
 }
-.textwidget .col-sm-3.truck {
-  border-right: medium none;
-}
 .textwidget {
   display: block;
   overflow: hidden;
   color: #fff;
-}
-.textwidget .col-sm-3 {
-  border-right: 1px solid #fff;
 }
 .textwidget .icon-text {
   display: inline-block;
@@ -196,16 +195,7 @@ section.fooret-caontainer {
   background-size: 100% auto;
   margin-top: 0;
 }
-.row.footer-top {
-    color: #fff;
-    margin-bottom: 30px;
-    margin-top: 30px;
-    text-align: center;
-}
-.footer-top h1 {
-    font-size: 30px;
-    line-height: 2em;
-}
+
 .footer-bottom img {
   background: #444 none repeat scroll 0 0;
   padding: 5px;
@@ -308,6 +298,9 @@ section.slider-container {
 }
 /*body content-----------------------------*/
 /*front-page---------------------------*/
+.promo-bar.container-fluid {
+  padding: 30px 20px;
+}
 .promo .icon-container span {
     background: #995c00 none repeat scroll 0 0;
     border-radius: 50%;
@@ -329,9 +322,13 @@ section.slider-container {
     position: relative;
     text-align: center;
 }
-.promo-bar {
-    margin: 40px 0;
-    text-align: center;
+.promo {
+  display: inline-block;
+  float: left;
+  margin: 0 10px;
+  position: relative;
+  text-align: center;
+  width: 30.5%;
 }
 .auction-bar.container-fluid {
     background: #f04 none repeat scroll 0 0;
@@ -352,10 +349,12 @@ section.slider-container {
   -webkit-box-shadow: 0px 0px 2px 2px rgba(192,192,192,0.3);
   -moz-box-shadow: 0px 0px 2px 2px rgba(192,192,192,0.3);
   box-shadow: 0px 0px 2px 2px rgba(192,192,192,0.3);
-  margin: 10px 8px;
+  margin: 10px 12px;
   padding: 2px;
   text-align: center;
-  width: 234px;
+  width: 260px;
+  float: left;
+  overflow: hidden;
 }
 .product .feature-image img {
   height: 250px;
@@ -436,15 +435,8 @@ Product single
   max-width: 70%;
   margin-top: 25px;
 }
-
-.container {
-  padding-left: 0px;
-  padding-right: 0px;
-  max-width: 100%;
-}
-
 /*********************************************
-        ITEM 
+        ITEM
 *********************************************/
 
 .service1-items {
@@ -506,7 +498,7 @@ Product single
    #   Last Change   : 08/02/2015
    #
    ##################################################################### */
-   
+
 @import url(http://fonts.googleapis.com/css?family=Roboto);
 
 * {
@@ -648,42 +640,46 @@ Product single
 /*meadia queary--------------------------*/
 
     /* Medium Devices, Desktops */
-    @media only screen and (max-width : 992px) {
-      .footer-bottom .col-xs-12 {
-       width: 50%;
-      }
-      .container {
-        width: 970px;
-      }
+    @media only screen and (max-width : 1200px) {
       .copy-right p {
         margin: 40px 0px;
+      }
+    }
+    @media only screen and (max-width : 992px) {
+      .product {
+        width: 214px;
+      }
+      .product .feature-image img {
+        height: 220px;
       }
     }
 
     /* Small Devices, Tablets */
     @media only screen and (max-width : 768px) {
       .footer-bottom .col-xs-12 {
-       width: 100%;
+         width: 100%;
+        }
+      .textwidget .eFeatures {
+        margin-right: 5px;
+        width: 24%;
       }
-      .container {
-        width: 760px;
-      }
+
     }
 
-    /* Extra Small Devices, Phones */ 
+    /* Extra Small Devices, Phones */
     @media only screen and (max-width : 480px) {
-      .container {
-        width: 470px;
+      .promo-bar .promo {
+        width: 100%;
       }
       .copy-right p {
         margin: 133px 0px;
-        margin-bottom:0px 
+        margin-bottom:0px
       }
     }
 
-    /* Custom, iPhone Retina */ 
+    /* Custom, iPhone Retina */
     @media only screen and (max-width : 320px) {
-        .container {
-  width: 320px;
-}
+      .promo-bar .promo {
+        width: 100%;
+      }
     }
