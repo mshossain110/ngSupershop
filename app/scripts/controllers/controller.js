@@ -8,7 +8,7 @@
  * Controller of the ngSuperShopApp
  */
 angular.module('ngSuperShopApp')
-  .controller('MainCtrl',['$scope', '$http', 'PService', '$log', function ($scope, $http, PService, $log) {
+  .controller('MainCtrl',['$scope', '$http', 'PService', 'amCart', '$log', function ($scope, $http, PService, amCart, $log) {
 
 
     if(!PService.isEmpty()){
@@ -21,6 +21,7 @@ angular.module('ngSuperShopApp')
           $scope.allproducts=response;
         });
       }
+      amCart.addItem(5, 'FCD', 'A big soft', 12, 2);
 
 
    }])

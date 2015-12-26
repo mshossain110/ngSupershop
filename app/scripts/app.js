@@ -71,4 +71,8 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-  });
+  })
+  .run(['$rootScope', 'amCart', function($rootScope, amCart){
+    amCart.init();
+  }])
+  ;
