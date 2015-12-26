@@ -197,7 +197,7 @@ section.fooret-caontainer {
 }
 
 .footer-bottom img {
-  background: #444 none repeat scroll 0 0;
+ /* background: #444 none repeat scroll 0 0;*/
   padding: 5px;
 }.copy-right p {
   margin: 20px 0;
@@ -674,7 +674,11 @@ Product single
       }
       .copy-right p {
         margin: 133px 0px;
-        margin-bottom:0px
+        margin-bottom:0px;
+      }
+      .textwidget .eFeatures {
+        width: 100%;
+        border-right: none;
       }
     }
 
@@ -682,5 +686,9 @@ Product single
     @media only screen and (max-width : 320px) {
       .promo-bar .promo {
         width: 100%;
+      }
+      .textwidget .eFeatures {
+        width: 100%;
+        border-right: none;
       }
     }
