@@ -7,51 +7,76 @@
  * # products
  * Service in the ngSuperShopApp.
  */
-angular.module('ngSuperShopApp')
-  .factory('PService',['$http', '$q', function ($http, $q) {
-  		var products;
+angular.module('angularMart.Service', [])
+  .service('PService', ['$http', '$q', function ($http, $q) {
+  		var $products;
 
- 		return {
- 			setAllProducts: function(value){
- 				products=value;
- 			},
- 			getAllProducts: function(){
- 				return products;
- 			},
- 			isEmpty : function(){
- 				if( typeof products != 'object'){
- 					return true;
- 				}else{
+
+ 			this.setAllProducts= function(value){
+ 				this.$products=value;
+ 			};
+ 			this.getAllProducts= function(){
+ 				return this.$products;
+ 			};
+ 			this.isEmpty = function(){
+ 				if( typeof this.$products === 'object' && this.$products.length > 0 ){
  					return false;
+ 				}else{
+ 					return true;
  				}
- 			},
- 			getProductByCode: function(code){
+ 			};
+ 			this.getProductByskyCode= function(sku){
  				var product;
  				if(!this.isEmpty()){
- 					for(product of products){
-	 					if(product.sku === code){
+ 					for(product of this.$products){
+	 					if(product.sku === sku){
 	 						return product;
 	 					}
-
  					}
  				}
+ 			};
 
- 			},
- 			getSingleProduct: function(){
- 				var deferred = $q.defer();
- 				 $http.get('data/ProductDetails.json').then(function(response){
- 				 	deferred.resolve(response);
- 				 }, function(error){
- 				 	deferred.reject(error);
- 				 });
+      this.getProductByID=function(ids){
 
- 				  return deferred.promise;
- 			}
- 		};
+        if(Array.isArray(ids)){
+          var productByID=[];
+          angular.forEach(this.getAllProducts(), function(product){
+            if(ids.indexOf(product.ID) > -1){
+              productByID.push(product);
+            }
+          });
+        }else{
+          var productByID;
+          angular.forEach(this.getAllProducts(), function(product){
+            if(product.ID === id){
+              productByID=product;
+
+            }
+          });
+        }
+
+        return productByID;
+      };
+
+      this.getProductByCategory=function(category, number){
+        var productByCategory=[];
+        if(typeof category=== 'undefined') return false;
+         var num = number ? parseInt(number, 10): null;
+        angular.forEach(this.getAllProducts(), function(item){
+          if(item.category === category && (num >0 || num==null )){
+            productByCategory.push(item);
+            if(num!=null)
+                num--;
+          }
+        });
+
+        return productByCategory;
+      };
+
   }])
   .service('amCart', ['amItem', 'store', function(amItem, store){
     this.init= function(){
-      this.$Cart={
+      this.$cart={
         items: [],
         shipping: null
       }
@@ -63,7 +88,7 @@ angular.module('ngSuperShopApp')
         inCart.setQuantity(quantity, false);
       }else{
         var newItem= new amItem(id, sku, name, price, quantity, data);
-        this.$Cart.items.push(newItem);
+        this.$cart.items.push(newItem);
 
       }
       this.save();
@@ -79,17 +104,81 @@ angular.module('ngSuperShopApp')
       });
       return iditem;
     };
-
     this.getCart=function(){
-      return this.$Cart;
+      return this.$cart;
     };
+    this.setCart=function(cart){
+      this.$cart=cart;
+      return this.getCart();
+    }
+    this.setShipping=function(shipping){
+      this.$cart.shipping=shipping;
+      return this.getShipping();
+    };
+    this.getShipping=function(){
+      if(this.$cart.shipping !='null')
+        return this.$cart.shipping;
+    }
+
+    this.getAllItems=function(){
+      return this.$cart.items;
+    }
+
+    this.getTotalItems=function(){
+      var count=0;
+      var items=this.$cart.items;
+      angular.forEach(items, function(item){
+        count +=item.getQuantity();
+      })
+      return count;
+    }
+    this.getSubTotal=function(){
+      var total=0;
+      var items =this.$cart.items;
+      angular.forEach(items, function(item){
+        total +=item.getTotal();
+      });
+      return total;
+    };
+
+    this.removeItemById=function(id){
+      var cart=this.getCart();
+      angular.forEach(cart.items, function(item, index){
+        if(item.getId()===id){
+          cart.items.splice(index, 1);
+        }
+      });
+      this.setCart(cart);
+    }
+    this.isEmpty=function(){
+    return this.getCart().items.length >0 ? false: true;
+    }
+    this.toObject=function(){
+      if(this.getCart().items.length <0) return false;
+
+      var items=[];
+      angular.forEach(this.getAllItems(), function(item){
+        items.push(item.toObject());
+
+      });
+
+      return{
+        shipping:this.getShipping(),
+        subTotal: this.getSubTotal(),
+        items: items
+      }
+
+    }
+
 
     this.save=function(){
-      return store.set('amCart', JSON.stringify(this.getCart()));
+      return store.set('amCart', JSON.stringify(this.toObject()));
     };
 
 
-  }]).factory('amItem', ['$log', function($log){
+  }])
+
+  .factory('amItem', ['$log', function($log){
     var item = function(id, sku, name, price, quantity, data) {
       this.setId(id);
       this.setSku(sku);
@@ -106,7 +195,7 @@ angular.module('ngSuperShopApp')
       }
     };
 
-    item.prototype.getid=function(){
+    item.prototype.getId=function(){
       return this._id;
     };
     item.prototype.setSku=function(sku){
@@ -186,7 +275,7 @@ angular.module('ngSuperShopApp')
         if(typeof value === 'undefined'){
           $window.localStorage.removeItem(key);
         }else {
-          $window.localStorage[key]= angular.toJson(value);
+          $window.localStorage[key]=value;
         }
 
         return $window.localStorage[key];

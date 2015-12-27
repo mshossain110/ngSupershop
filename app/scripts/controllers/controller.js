@@ -12,13 +12,11 @@ angular.module('ngSuperShopApp')
 
 
     if(!PService.isEmpty()){
-        $scope.allproducts=PService.getAllProducts();
+      $scope.p=PService;
       }else{
           $http.get('data/products.json').success(function(response){
-
           PService.setAllProducts(response);
-
-          $scope.allproducts=response;
+          $scope.p=PService;
         });
       }
       amCart.addItem(5, 'FCD', 'A big soft', 12, 2);
