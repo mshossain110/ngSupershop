@@ -38,7 +38,7 @@
             <section class="feature-product container-fluid">
               <div class="container">
                   <div class="products-container">
-                    <div class="product" ng-repeat="product in p.getProductByCategory('sound', 3)">
+                    <div class="product" ng-repeat="product in p.getProductByCategory('sound')">
                           <div class="feature-image">
                               <img src="images/product/{{product.src}}" class="img-responsive" alt="AdidasHoodie" />
                           </div>
@@ -47,7 +47,7 @@
                           </div>
                           <div class="product-button">
                               <a href="#/shop/{{product.ID}}" class=""><span class="fa fa-link fa-2x" ></span></a>
-                              <a href="" ng-click="amCart.addItem(product.ID, product.name, product.price, 2, data)"><span class="fa fa-link fa-2x" ></span></a>
+                              <a href="" ng-click="amCart.addItem(product.ID, product.name, product.src, product.price, 1)"><span class="fa fa-link fa-2x" ></span></a>
                           </div>
                           <h3 class="product-title">{{product.name}}</h3>
                           <p class="price">{{product.price}}</p>

@@ -54,7 +54,7 @@ section.header-top {
   overflow: hidden;
   padding: 7px;
 }
-.amCartSummery .items-inner {
+.amCartSummery .shpping-cart .items-inner {
   display: block;
   float: right;
   overflow: hidden;
@@ -67,6 +67,21 @@ section.header-top {
 }
 .amCartSummery .cart-hover {
   color: #777;
+  min-width: 300px;
+  padding: 5px;
+}
+.cart-hover .items-inner strong {
+  font-size: 10px;
+}.cart-hover.dropdown-menu > ul {
+  list-style: outside none none;
+  margin: 0;
+  padding: 0;
+}.amCartSummery .cart-hover .items-inner .image {
+  display: block;
+  float: left;
+}.amCartSummery .cart-hover .items-inner .image img {
+  height: auto;
+  width: 80px;
 }
 /*logo bar-----------------------------*/
 

@@ -8,10 +8,13 @@
   </div>
   <div class="cart-hover dropdown-menu" ng-show="!amCart.isEmpty()">
     <ul>
-      <li ng-repeat="item in amCart.toObject().items">
+      <li ng-repeat="item in amCart.getAllItems()">
         <div class="items-inner">
+          <div class="image">
+            <img src="images/product/{{item.image}}" alt="" />
+          </div>
           <strong>{{item.name}}</strong>
-          <span class="cart-amount">{{item.quantity}}</span>
+          <span class="cart-amount">{{item.price | currency}} x {{item.quantity}} = {{item.total|currency}} </span>
         </div>
       </li>
     </ul>
