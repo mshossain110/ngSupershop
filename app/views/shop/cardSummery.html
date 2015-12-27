@@ -1,0 +1,19 @@
+<div class="amCartSummery ">
+  <div class="shpping-cart dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="fa fa-shopping-bag"></span>
+    <div class="items-inner">
+      <strong>Shopping Cart</strong>
+      <span class="cart-amount">{{amCart.getTotalItems()}} item(s) {{amCart.getSubTotal()| currency}}</span>
+    </div>
+  </div>
+  <div class="cart-hover dropdown-menu" ng-show="!amCart.isEmpty()">
+    <ul>
+      <li ng-repeat="item in amCart.toObject().items">
+        <div class="items-inner">
+          <strong>{{item.name}}</strong>
+          <span class="cart-amount">{{item.quantity}}</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -16,7 +16,6 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ngCart',
     'angularMart.Service'
   ])
   .config(function ($routeProvider) {

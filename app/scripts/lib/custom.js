@@ -9,9 +9,9 @@
    ##################################################################### */
   'use strict';
 
-   
+
 $(function() {
-    
+
     var $formLogin = $('#login-form');
     var $formLost = $('#lost-form');
     var $formRegister = $('#register-form');
@@ -57,14 +57,14 @@ $(function() {
         }
         return false;
     });
-    
+
     $('#login_register_btn').click( function () { modalAnimate($formLogin, $formRegister) });
     $('#register_login_btn').click( function () { modalAnimate($formRegister, $formLogin); });
     $('#login_lost_btn').click( function () { modalAnimate($formLogin, $formLost); });
     $('#lost_login_btn').click( function () { modalAnimate($formLost, $formLogin); });
     $('#lost_register_btn').click( function () { modalAnimate($formLost, $formRegister); });
     $('#register_lost_btn').click( function () { modalAnimate($formRegister, $formLost); });
-    
+
     function modalAnimate ($oldForm, $newForm) {
         var $oldH = $oldForm.height();
         var $newH = $newForm.height();
@@ -75,13 +75,13 @@ $(function() {
             });
         });
     }
-    
+
     function msgFade ($msgId, $msgText) {
         $msgId.fadeOut($msgAnimateTime, function() {
             $(this).text($msgText).fadeIn($msgAnimateTime);
         });
     }
-    
+
     function msgChange($divTag, $iconTag, $textTag, $divClass, $iconClass, $msgText) {
         var $msgOld = $divTag.text();
         msgFade($textTag, $msgText);
@@ -100,16 +100,16 @@ $(function() {
   $(document).ready(function(){
         var $dropdown= $(".dropdown");
             $dropdown.children('a').append('<span class="is_dropdown">+</span>');
-      $dropdown.hover(            
+      $dropdown.hover(
         function() {
             $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideDown("400");
             $(this).toggleClass('open');
-            $(this).find('span.is_dropdown').text('-');    
+            $(this).find('span.is_dropdown').text('-');
         },
         function() {
             $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideUp("400");
             $(this).toggleClass('open');
 
-            $(this).find('span.is_dropdown').text('+');       
+            $(this).find('span.is_dropdown').text('+');
     });
   });

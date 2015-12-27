@@ -38,22 +38,36 @@ section.header-top {
     color: #fff;
     margin: 0px 10px;
     padding: 10px;
-}
-.header-top .my-cart {
+}.amCartSummery {
   background: #995c00 none repeat scroll 0 0;
   color: #fff;
-  display: inline-block;
-  font-size: 16px;
-  margin: 0 10px;
-  padding: 10px;
+  display: table;
+  overflow: hidden;
+  position: relative;
 }
-.header-top .my-account {
-    display: inline-block;
-     color: #fff;
-}.header-top span.fa {
-  margin-right: 10px;
+.amCartSummery .fa {
+  clear: both;
+  display: block;
+  float: left;
+  font-size: 32px;
+  height: auto;
+  overflow: hidden;
+  padding: 7px;
 }
-
+.amCartSummery .items-inner {
+  display: block;
+  float: right;
+  overflow: hidden;
+  padding-right: 5px;
+}.amCartSummery .items-inner strong {
+  display: block;
+  font-size: 17px;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+.amCartSummery .cart-hover {
+  color: #777;
+}
 /*logo bar-----------------------------*/
 
 #logo img {

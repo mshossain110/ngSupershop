@@ -46,8 +46,8 @@
                             <p></p>
                           </div>
                           <div class="product-button">
-                              <a href="#/shop/{{product.sku}}" class=""><span class="fa fa-link fa-2x" ></span></a>
-                              <am-addtocart></am-addtocart>
+                              <a href="#/shop/{{product.ID}}" class=""><span class="fa fa-link fa-2x" ></span></a>
+                              <a href="" ng-click="amCart.addItem(product.ID, product.name, product.price, 2, data)"><span class="fa fa-link fa-2x" ></span></a>
                           </div>
                           <h3 class="product-title">{{product.name}}</h3>
                           <p class="price">{{product.price}}</p>

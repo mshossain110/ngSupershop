@@ -25,17 +25,6 @@ angular.module('angularMart.Service', [])
  					return true;
  				}
  			};
- 			this.getProductByskyCode= function(sku){
- 				var product;
- 				if(!this.isEmpty()){
- 					for(product of this.$products){
-	 					if(product.sku === sku){
-	 						return product;
-	 					}
- 					}
- 				}
- 			};
-
       this.getProductByID=function(ids){
 
         if(Array.isArray(ids)){
@@ -82,12 +71,12 @@ angular.module('angularMart.Service', [])
       }
     }
 
-    this.addItem= function(id, sku, name, price, quantity, data ){
+    this.addItem= function(id, name, price, quantity, data ){
       var inCart= this.getItemById(id);
       if(typeof inCart === 'object' ){
-        inCart.setQuantity(quantity, false);
+        inCart.setQuantity(quantity, true);
       }else{
-        var newItem= new amItem(id, sku, name, price, quantity, data);
+        var newItem= new amItem(id, name, price, quantity, data);
         this.$cart.items.push(newItem);
 
       }
@@ -136,7 +125,7 @@ angular.module('angularMart.Service', [])
       var total=0;
       var items =this.$cart.items;
       angular.forEach(items, function(item){
-        total +=item.getTotal();
+        total += parseFloat(item.getTotal()) ;
       });
       return total;
     };
@@ -179,9 +168,8 @@ angular.module('angularMart.Service', [])
   }])
 
   .factory('amItem', ['$log', function($log){
-    var item = function(id, sku, name, price, quantity, data) {
+    var item = function(id, name, price, quantity, data) {
       this.setId(id);
-      this.setSku(sku);
       this.setName(name);
       this.setPrice(price);
       this.setQuantity(quantity);
@@ -197,13 +185,6 @@ angular.module('angularMart.Service', [])
 
     item.prototype.getId=function(){
       return this._id;
-    };
-    item.prototype.setSku=function(sku){
-      if(sku)this._sku=sku;
-      else $log.info("A unique sku provieded");
-    };
-    item.prototype.getSku=function(){
-      return this._sku;
     };
     item.prototype.setName= function(name){
       if(name && typeof name === 'string') this._name= name;
@@ -252,7 +233,6 @@ angular.module('angularMart.Service', [])
     item.prototype.toObject=function(){
       return {
         id : this.getId(),
-        sku: this.getSku(),
         name: this.getName(),
         price: this.getPrice(),
         quantity: this.getQuantity(),

@@ -1,6 +1,5 @@
 [
       {  "ID": 1,
-        "sku": "APL",
         "category": "mac",
         "name": "55 Apple LCD TV",
         "price": 2150,
@@ -13,7 +12,6 @@
 
     {
          "ID": 2,
-         "sku": "AVC",
          "category": "ipad",
          "name": "Apple iPad",
          "price": 1100,
@@ -24,7 +22,6 @@
       },
     {
         "ID": 3,
-        "sku": "BAN",
         "category": "phone",
         "name": "MacBookPro",
         "price": 645,
@@ -36,7 +33,6 @@
 
     {
         "ID": 4,
-        "sku": "CTP",
         "category": "mac",
         "name": "MacBookPro",
         "price": 1300,
@@ -49,7 +45,6 @@
 
     {
         "ID": 5,
-        "sku": "FIG",
         "category": "ipad",
         "name": "MacBook Airs",
         "price": 750,
@@ -62,7 +57,6 @@
 
     {
         "ID": 6,
-        "sku": "GRP",
         "category": "ipad",
         "name": "Front Office Manager",
          "price": 1000,
@@ -75,7 +69,6 @@
 
     {
         "ID": 7,
-        "sku": "GUA",
         "category": "mac",
         "name": "Interaction Designer",
         "price": 500,
@@ -88,7 +81,6 @@
 
     {
         "ID": 8,
-        "sku": "KIW",
         "category": "mac",
         "name": "Marketing Manager",
         "price": 1670,
@@ -101,7 +93,6 @@
 
     {
         "ID": 9,
-        "sku": "ORG",
         "category": "ipad",
         "name": "Account Manager",
         "price": 2000,
@@ -114,7 +105,6 @@
 
     {
         "ID": 10,
-        "sku": "LSS",
         "category": "mac",
         "name": "35 Apple LCD TV",
         "price": 2150,
@@ -127,7 +117,6 @@
 
     {
         "ID": 11,
-        "sku": "LAA",
         "category": "phone",
         "name": "Apple xiPad",
         "price": 1100,
@@ -140,7 +129,6 @@
 
     {
         "ID": 12,
-        "sku": "LBB",
         "category": "mac",
         "name": "MacBookxxPro",
          "price": 645,
@@ -153,7 +141,6 @@
 
     {
         "ID": 13,
-        "sku": "LCC",
         "category": "sound",
         "name": "MacBookPro",
         "price": 1300,
@@ -166,7 +153,6 @@
 
     {
         "ID": 14,
-        "sku": "LDD",
         "category": "mac",
         "name": "MacBook Irs",
         "price": 750,
@@ -179,7 +165,6 @@
 
     {
         "ID": 15,
-        "sku": "LEE",
         "category": "sound",
         "name": "Front Office Manager",
         "price": 1000,
@@ -192,7 +177,6 @@
 
      {
         "ID": 16,
-        "sku": "LFF",
         "category": "sound",
         "name": "Interaction Designer",
         "price": 500,
@@ -205,7 +189,6 @@
 
     {
     	"ID": 17,
-    	"sku": "LGG",
     	"category": "sound",
     	"name": "Marketing Manager",
     	"src": "cloth-CDC.jpg",
@@ -217,7 +200,6 @@
 
     {
     	"ID": 18,
-    	"sku": "LHH",
     	"category": "sound",
     	"name": "Account Manager",
     	"src": "cloth-BCE.jpg",
@@ -228,7 +210,6 @@
     },
     {
         "ID": 19,
-        "sku": "TS1",
         "category": "T-shart",
         "name": "Adidas Hoodie",
         "src": "AdidasHoodie.jpg",

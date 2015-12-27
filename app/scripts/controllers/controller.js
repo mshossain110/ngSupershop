@@ -19,21 +19,21 @@ angular.module('ngSuperShopApp')
           $scope.p=PService;
         });
       }
-      amCart.addItem(5, 'FCD', 'A big soft', 12, 2);
+    $scope.amCart=amCart;
 
 
    }])
   .controller('ShopSingleClt', ['$scope', '$routeParams', '$http','PService',function($scope, $routeParams, $http, PService){
-    var ProductCode=$routeParams.productID;
+    var Productid=$routeParams.productID;
 
 
 
       if(!PService.isEmpty()){
-        $scope.product=PService.getProductByCode(ProductCode);
+        $scope.product=PService.getProductByID(Productid);
       }else{
           $http.get('data/products.json').success(function(response){
           PService.setAllProducts(response);
-          $scope.product=PService.getProductByCode(ProductCode);
+          $scope.product=PService.getProductByID(Productid);
         });
       }
 
@@ -41,5 +41,7 @@ angular.module('ngSuperShopApp')
   }])
   .controller('amAddtocartClr', ['$scope', function($scope){
 
-  }]);
-///https://docs.google.com/spreadsheets/d/1HHG0VkO8fbgReYk5RpFBb2sVJ29fPCk9HJgcURhN7so/edit?usp=sharing
+  }])
+  .controller('cardSummeryclrt', ['$scope', 'amCart', function($scope, amCart){
+    $scope.amCart=amCart;
+  } ]);
