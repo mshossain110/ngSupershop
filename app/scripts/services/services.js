@@ -8,7 +8,7 @@
  * Service in the ngSuperShopApp.
  */
 angular.module('angularMart.Service', [])
-  .service('PService', ['$http', '$q', function ($http, $q) {
+  .service('PService', [ function () {
   		var $products;
 
 
@@ -75,12 +75,13 @@ angular.module('angularMart.Service', [])
       var inCart= this.getItemById(id);
       if(typeof inCart === 'object' ){
         inCart.setQuantity(quantity, true);
+        // $rootScope.$broadcast('amCart:update', inCart);
       }else{
         var newItem= new amItem(id, name, price, quantity, data);
         this.$cart.items.push(newItem);
-
+        // $rootScope.$broadcast('amCart:add', newItem);
       }
-      this.save();
+      // $rootScope.$broadcast('amCart:change', {});
     };
 
     this.getItemById=function(id){
@@ -132,12 +133,16 @@ angular.module('angularMart.Service', [])
 
     this.removeItemById=function(id){
       var cart=this.getCart();
+      var removedItem;
       angular.forEach(cart.items, function(item, index){
         if(item.getId()===id){
-          cart.items.splice(index, 1);
+          removedItem = cart.items.splice(index, 1)[0] || {};
         }
       });
       this.setCart(cart);
+      // $rootScope.$broadcast('amCart:change', {});
+      // $rootScope.$broadcast('amCart:remove', removedItem);
+      return removedItem;
     }
     this.isEmpty=function(){
     return this.getCart().items.length >0 ? false: true;
@@ -158,10 +163,21 @@ angular.module('angularMart.Service', [])
       }
 
     }
+    this.restore=function(cart){
+        var _self=this;
+        _self.init();
+        _self.$cart.shipping=cart.shipping;
+        _self.subTotal= cart.subTotal;
+        angular.forEach(cart.items, function(item){
+          _self.$cart.items.push(new amItem(item.id, item.name, item.price, item.quantity, item.data))
+        });
 
-
+        this.save();
+    }
     this.save=function(){
+      // $rootScope.$broadcast('amCart:beforeSave', {});
       return store.set('amCart', JSON.stringify(this.toObject()));
+
     };
 
 

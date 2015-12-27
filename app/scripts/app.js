@@ -72,7 +72,17 @@ angular
         redirectTo: '/'
       });
   })
-  .run(['$rootScope', 'amCart', function($rootScope, amCart){
-    amCart.init();
+  .run(['amCart', 'store', function(amCart, store){
+    /* $rootScope.$on('amCart:change', function(evnt, data){
+    //   amCart.save();
+    // });
+    */
+
+    if(angular.isObject(store.get('amCart'))){
+      amCart.restore(store.get('amCart'))
+    }else{
+      amCart.init();
+    }
+
   }])
   ;
