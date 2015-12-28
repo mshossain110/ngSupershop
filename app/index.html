@@ -26,7 +26,9 @@
     <![endif]-->
 <div class="wrapper">
   <header class="header header-classic">
-    <section class="container-fluid header-top" ng-include="'views/templates/top_header.html'"></section>
+    <section class="container-fluid header-top" ng-include="'views/templates/top_header.html'">
+
+    </section>
     <section class="container-fluid menu-bar" ng-include="'views/templates/navigation.html'"></section>
 
   </header>
@@ -36,27 +38,29 @@
               <div class="flexslider">
                 <ul class="slides">
                   <li >
-                    <img src="images/slider/architecture-906737_1920.jpg" />
+                    <div class="slider-image" style="background-image:url('/images/slider/girl_laptop_shopping_white_background.jpg'); height: 620px;" ></div>
                     <div class="caption-inner flex-caption">
-                        <h1 >Beauty &and; Brains</h1>
-                        <strong >Beautiful parallax scrolling effect &and;  intelligent options.</strong>
-                        <a href="" class="btn btn-success btn-lg">Get Shop now</a>
+                        <h1 >Beauty & Brains</h1>
+                        <strong >Beautiful parallax scrolling effect &  intelligent options.</strong>
+                        <a href="" class="btn btn-success btn-lg text-left">Get Shop now</a><a href="" class="btn btn-success btn-lg text-left">Read More</a>
                     </div>
                   </li>
                   <li >
-                    <img src="images/slider/shopping-cart-1080836.jpg" />
+                    <div class="slider-image" style="background-image:url('/images/slider/shopping-cart-1080836.jpg'); height:620px;" ></div>
                     <div class="caption-inner flex-caption" >
-                        <h1 class=''>Beauty &and; Brains</h1>
-                        <strong class=''>Beautiful parallax scrolling effect &and; intelligent options.</strong>
+                        <h1 class=''>THIS IS AN AWESOME VIDEO BANNER</h1>
+                        <strong class=''>This is support video slider from youtube, vemio and mp4</strong>
                         <a href="" class="btn btn-success btn-lg">Get Shop now</a>
+                        <a href="" class="btn btn-success btn-lg text-left">Read More</a>
                     </div>
                   </li>
                   <li>
-                    <img src="images/serenityimg4.png" />
+                    <div class="slider-image" style="background-image:url('/images/slider/child_shopping_bags.jpg'); height:620px;" ></div>
                     <div class="caption-inner flex-caption" >
-                        <h1 >Beauty &and; Brains</h1>
-                        <strong >Beautiful parallax scrolling effect &and; intelligent options.</strong>
-                        <a href="" class="btn btn-success btn-lg">Get Shop now</a>
+                        <h1 >We renovate with perfection</h1>
+                        <strong >Want to get Our help. 24/7 hours Support</strong>
+                        <a href="" class="btn btn-success btn-lg">Shop now</a>
+                        <a href="" class="btn btn-success btn-lg text-left">Read More</a>
                     </div>
                   </li>
                 </ul>
@@ -165,24 +169,7 @@
 
 <script type="text/javascript" src="scripts/lib/custom.js"></script>
 <script type="text/javascript">
-    $(document).ready()
-  $(window).load(function() {
-  $('.flexslider').flexslider({
-    animation: "fade",
-    controlNav:false,
-    before: function(slider){
-      $(slider).find(".flex-active-slide").find('.caption-inner').each(function(){
-       $(this).children('h1').removeClass("animated zoomIn").animate({opacity:0}, 400);
-       });
-     },
-    after: function(slider){
-          var inner= $(slider).find(".flex-active-slide").find('.caption-inner');
-          inner.children('h1').addClass("animated zoomIn").animate({ opacity: 1 },400);
-      },
-  });
 
-
-});
 </script>
 </body>
 </html>

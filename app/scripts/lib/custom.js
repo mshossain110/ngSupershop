@@ -1,16 +1,7 @@
-/* #####################################################################
-   #
-   #   Project       : Modal Login with jQuery Effects
-   #   Author        : Rodrigo Amarante (rodrigockamarante)
-   #   Version       : 1.0
-   #   Created       : 07/29/2015
-   #   Last Change   : 08/04/2015
-   #
-   ##################################################################### */
-  'use strict';
+'use strict';
+$(function() {
 
-
-
+  /****************Login from****************************/
     var $formLogin = $('#login-form');
     var $formLost = $('#lost-form');
     var $formRegister = $('#register-form');
@@ -95,7 +86,7 @@
   		}, $msgShowTime);
     }
 
-      // for dropdown mentu;
+      /* for dropdown mentu; ******************************************/
       $('section.menu-bar .dropdown >a').append('<span class="is_dropdown">+</span>');
 
       $(document).on('mouseenter', '.dropdown', function() {
@@ -109,3 +100,37 @@
           $(this).toggleClass('open');
           $(this).find('span.is_dropdown').text('+');
       });
+
+
+      /*******************************slider active**********************************/
+
+    $('.flexslider').flexslider({
+      animation: "fade",
+      smoothHeight:true,
+      start: $sliderStart,
+      before: $sliderBefore,
+      after: $sliderAfter,
+    });
+
+    function $sliderAfter(slider){
+      var inner= $(slider).find(".flex-active-slide").find('.caption-inner');
+      setTimeout(function(){ inner.children('h1').addClass("animated zoomIn").animate({ opacity: 1 },400); }, 300);
+      setTimeout(function(){ inner.children('strong').addClass("animated fadeInUp").animate({ opacity: 1 },400); }, 600);
+      setTimeout(function(){ inner.children('.btn').addClass("animated flipInX").animate({ opacity: 1 },400); }, 1000);
+
+    };
+
+    function $sliderBefore(slider){
+      $(slider).find(".flex-active-slide").find('.caption-inner').each(function(){
+       $(this).children('h1, strong, .btn').removeClass("animated zoomIn fadeInUp flipInX").animate({opacity:0}, 400);
+       });
+    };
+
+    function $sliderStart(slider){
+      $(slider).find('.caption-inner').each(function(){
+       $(this).children('h1, strong, a').animate({opacity:0}, 400);
+
+       });
+    };
+
+    });

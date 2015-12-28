@@ -337,6 +337,15 @@ a.socialIcon:hover, .socialHoverClass {
 /*slider-----------------------------*/
 .slider-container {
   width: 100%;
+}.slider-image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  height: 620px;
+  max-width: 100%;
+  overflow: hidden;
+  width: 100%;
 }.flex-caption {
   left: 30%;
   overflow: hidden;
@@ -345,23 +354,29 @@ a.socialIcon:hover, .socialHoverClass {
   top: 26%;
   width: 600px;
 }.flex-caption > h1 {
-  background: rgba(99, 97, 96, 0.83) none repeat scroll 0 0;
-  color: #fff;
+  background: rgba(99, 97, 96, 0.5) none repeat scroll 0 0;
+  color: #FFF;
   font-family: 'Philosopher', sans-serif;
   font-weight: 700;
   display: block;
   font-size: 65px;
 }.flex-caption > strong {
-  background: rgba(107, 107, 107, 0.76) none repeat scroll 0 0;
+  background: rgba(99, 97, 96, 0.5) none repeat scroll 0 0;
   display: block;
+  color: #FFF;
   font-family: "Lato",Arial,sans-serif;
   font-size: 23px;
   margin: 20px 0;
   padding: 10px;
-}
-.slider {
-  padding: 40px 0px;
-  text-align: center;
+}ol.flex-control-nav {
+  bottom: 50px;
+  left: 100px;
+  overflow: hidden;
+  text-align: left;
+  width: 300px;
+  z-index: 199999;
+}.caption-inner a.btn {
+  margin-right: 10px;
 }
 /*body content-----------------------------*/
 /*front-page---------------------------*/
