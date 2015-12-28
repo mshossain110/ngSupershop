@@ -1,4 +1,4 @@
-<div class="amCartSummery ">
+<div class="amCartSummery " ng-class="amCart.getTotalItems() >0? 'has-item' : 'no-item'">
   <div class="shpping-cart dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <span class="fa fa-shopping-bag"></span>
     <div class="items-inner">
@@ -8,7 +8,7 @@
   </div>
   <div class="cart-hover dropdown-menu" ng-show="!amCart.isEmpty()">
     <ul>
-      <li ng-repeat="item in amCart.getAllItems()">
+      <li class="item" ng-repeat="item in amCart.getAllItems()">
         <div class="items-inner">
           <div class="image">
             <img src="images/product/{{item.image}}" alt="" />
@@ -16,6 +16,10 @@
           <strong>{{item.name}}</strong>
           <span class="cart-amount">{{item.price | currency}} x {{item.quantity}} = {{item.total|currency}} </span>
         </div>
+      </li>
+      <li class="subtotal">
+        <h1>Sub Total      {{amCart.getSubTotal()| currency}}</h1>
+        <a href="" class="btn btn-default btn-lg btn-block">GET CART</a>
       </li>
     </ul>
   </div>

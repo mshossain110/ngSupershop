@@ -1,10 +1,11 @@
 /*General typhpography*/
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+@import url(https://fonts.googleapis.com/css?family=Philosopher:400,700);
 body{
   text-indent: 0;
   font-size: 14px;
   text-align: left;
- font-family: 'Lato', sans-serif;
+ font-family: 'Lato', Arial, sans-serif;
 }
 a{
   color:#991500;
@@ -30,15 +31,24 @@ h4, h5, h6{
   font-size: 18px;
 }
 /*header-top-----------------------------*/
+/**************Header classic***************************/
 section.header-top {
     background: #991500 none repeat scroll 0 0;
 }
 .header-top .email, .header-top .phpne {
-    display: inline-block;
-    color: #fff;
-    margin: 0px 10px;
-    padding: 10px;
-}.amCartSummery {
+  color: #fff;
+  display: inline-block;
+  margin: 10px 0;
+  padding: 0 3px;
+}.header-top .email{
+  border-right: 1px solid rgb(255, 255, 255);
+}
+.header-top .email span.fa, .header-top .phpne span.fa {
+  font-size: 22px;
+  margin-right: 5px;
+  vertical-align: sub;
+}
+.amCartSummery {
   background: #995c00 none repeat scroll 0 0;
   color: #fff;
   display: table;
@@ -76,6 +86,13 @@ section.header-top {
   list-style: outside none none;
   margin: 0;
   padding: 0;
+  overflow: hidden;
+}.amCartSummery .cart-hover li {
+  border-bottom: 1px solid #ddd;
+  clear: both;
+  display: block;
+  overflow: hidden;
+  padding: 3px 0;
 }.amCartSummery .cart-hover .items-inner .image {
   display: block;
   float: left;
@@ -318,8 +335,29 @@ a.socialIcon:hover, .socialHoverClass {
 }
 
 /*slider-----------------------------*/
-section.slider-container {
-  background: rgba(0, 0, 0, 0) url("../images/sliderbg.png") repeat scroll 0 0;
+.slider-container {
+  width: 100%;
+}.flex-caption {
+  left: 30%;
+  overflow: hidden;
+  position: absolute;
+  text-align: center;
+  top: 26%;
+  width: 600px;
+}.flex-caption > h1 {
+  background: rgba(99, 97, 96, 0.83) none repeat scroll 0 0;
+  color: #fff;
+  font-family: 'Philosopher', sans-serif;
+  font-weight: 700;
+  display: block;
+  font-size: 65px;
+}.flex-caption > strong {
+  background: rgba(107, 107, 107, 0.76) none repeat scroll 0 0;
+  display: block;
+  font-family: "Lato",Arial,sans-serif;
+  font-size: 23px;
+  margin: 20px 0;
+  padding: 10px;
 }
 .slider {
   padding: 40px 0px;

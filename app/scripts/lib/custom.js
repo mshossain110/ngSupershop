@@ -10,13 +10,12 @@
   'use strict';
 
 
-$(function() {
 
     var $formLogin = $('#login-form');
     var $formLost = $('#lost-form');
     var $formRegister = $('#register-form');
     var $divForms = $('#div-forms');
-    var $modalAnimateTime = 300;
+    var $modalAnimateTime = 400;
     var $msgAnimateTime = 150;
     var $msgShowTime = 2000;
 
@@ -58,12 +57,12 @@ $(function() {
         return false;
     });
 
-    $('#login_register_btn').click( function () { modalAnimate($formLogin, $formRegister) });
-    $('#register_login_btn').click( function () { modalAnimate($formRegister, $formLogin); });
-    $('#login_lost_btn').click( function () { modalAnimate($formLogin, $formLost); });
-    $('#lost_login_btn').click( function () { modalAnimate($formLost, $formLogin); });
-    $('#lost_register_btn').click( function () { modalAnimate($formLost, $formRegister); });
-    $('#register_lost_btn').click( function () { modalAnimate($formRegister, $formLost); });
+    $(document).on('click', '#login_register_btn', function () { modalAnimate($formLogin, $formRegister) });
+    $(document).on('click', '#register_login_btn', function () { modalAnimate($formRegister, $formLogin); });
+    $(document).on('click', '#login_lost_btn', function () { modalAnimate($formLogin, $formLost); });
+    $(document).on('click', '#lost_login_btn', function () { modalAnimate($formLost, $formLogin); });
+    $(document).on('click', '#lost_register_btn', function () { modalAnimate($formLost, $formRegister); });
+    $(document).on('click', '#register_lost_btn', function () { modalAnimate($formRegister, $formLost); });
 
     function modalAnimate ($oldForm, $newForm) {
         var $oldH = $oldForm.height();
@@ -95,21 +94,18 @@ $(function() {
             $iconTag.removeClass($iconClass + " " + $divClass);
   		}, $msgShowTime);
     }
-});
 
-  $(document).ready(function(){
-        var $dropdown= $(".dropdown");
-            $dropdown.children('a').append('<span class="is_dropdown">+</span>');
-      $dropdown.hover(
-        function() {
-            $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideDown("400");
-            $(this).toggleClass('open');
-            $(this).find('span.is_dropdown').text('-');
-        },
-        function() {
-            $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideUp("400");
-            $(this).toggleClass('open');
+      // for dropdown mentu;
+      $('section.menu-bar .dropdown >a').append('<span class="is_dropdown">+</span>');
 
-            $(this).find('span.is_dropdown').text('+');
-    });
-  });
+      $(document).on('mouseenter', '.dropdown', function() {
+          $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideDown($modalAnimateTime);
+          $(this).toggleClass('open');
+          $(this).find('span.is_dropdown').text('-');
+      });
+
+      $(document).on('mouseleave', '.dropdown',  function() {
+          $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideUp($modalAnimateTime);
+          $(this).toggleClass('open');
+          $(this).find('span.is_dropdown').text('+');
+      });
