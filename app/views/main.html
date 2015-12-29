@@ -39,7 +39,7 @@
               <div class="container">
                   <div class="products-container">
                     <div class="product" ng-repeat="product in p.getProductByCategory('sound')">
-                          <div class="feature-image">
+                          <div class="feature-image pinkGraBack">
                               <img src="images/product/{{product.src}}" class="img-responsive" alt="AdidasHoodie" />
                           </div>
                           <div class="product-content" >
@@ -50,7 +50,7 @@
                               <a href="" ng-click="amCart.addItem(product.ID, product.name, product.src, product.price, 1)"><span class="fa fa-link fa-2x" ></span></a>
                           </div>
                           <h3 class="product-title">{{product.name}}</h3>
-                          <p class="price">{{product.price}}</p>
+                          <p class="price">{{product.price | currency:"$":0}}</p>
                     </div>
 
 
