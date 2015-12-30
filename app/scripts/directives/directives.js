@@ -22,5 +22,20 @@ angular.module('ngSuperShopApp')
     },
 
   }
+}).directive('amProducts', function(){
+  return {
+    controller: 'amproductclrt',
+    transclude:true,
+    restrict: 'E',
+    scope:{},
+    templateUrl: function(element, attrs) {
+        if ( typeof attrs.templateUrl == 'undefined' ) {
+            return 'views/shop/products.html';
+        } else {
+            return attrs.templateUrl;
+        }
+    },
+
+  }
 })
   ;

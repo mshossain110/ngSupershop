@@ -37,7 +37,7 @@ angular.module('angularMart.Service', [])
         }else{
           var productByID;
           angular.forEach(this.getAllProducts(), function(product){
-            if(product.ID === id){
+            if(product.ID === ids){
               productByID=product;
 
             }

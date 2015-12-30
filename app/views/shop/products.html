@@ -1,0 +1,39 @@
+<header>
+  <h1 class="page-header">Feature products </h1>
+</header>
+  <div class="product animated flipInX" ng-repeat="product in p.getAllProducts()">
+        <div class="feature-image pinkGraBack">
+            <img src="images/product/{{product.src}}" class="img-responsive" alt="AdidasHoodie" />
+        </div>
+        <div class="product-content" >
+          <p></p>
+        </div>
+        <div class="product-button">
+            <a href="" data-toggle="modal" data-target="#myModal"  class=""><span ng-click="setProductId(product.ID)" class="fa fa-link fa-2x"  ></span></a>
+            <a href="" ng-click="amCart.addItem(product.ID, product.name, product.src, product.price, 1)"><span class="fa fa-shop fa-2x" ></span></a>
+        </div>
+        <h3 class="product-title">{{product.name}}</h3>
+        <p class="price">{{product.price | currency:"$":0}}</p>
+
+
+
+
+
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">{{sproduct.name}}</h4>
+      </div>
+      <div class="modal-body">
+        <img src="images/product/{{sproduct.src}}" />
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
