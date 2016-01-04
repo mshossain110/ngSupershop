@@ -1,39 +1,73 @@
+<div class="item-block cat-pro-style">
 <header>
   <h1 class="page-header">Feature products </h1>
 </header>
-  <div class="product animated flipInX" ng-repeat="product in p.getAllProducts()">
-        <div class="feature-image pinkGraBack">
+<div class="col-md-2 product-category">
+  <div class="product-category-inner">
+    <ul class="list-unstyled clearfix">
+      <li><a href="" ng-click="query.category=NULL" >All</a></li>
+      <li><a href="" ng-click="query.category='mac'" >man</a></li>
+      <li><a href="" ng-click="query.category='ipad'" >woman</a></li>
+      <li><a href="" ng-click="query.category='phone'" >children</a></li>
+    </ul>
+  </div>
+</div>
+<div class="col-md-10 products">
+  <div class="col-md-3 product animated flipInX" ng-repeat="product in p.getAllProducts() | filter: query">
+        <div class="feature-image">
             <img src="images/product/{{product.src}}" class="img-responsive" alt="AdidasHoodie" />
         </div>
         <div class="product-content" >
           <p></p>
         </div>
         <div class="product-button">
-            <a href="" data-toggle="modal" data-target="#myModal"  class=""><span ng-click="setProductId(product.ID)" class="fa fa-link fa-2x"  ></span></a>
-            <a href="" ng-click="amCart.addItem(product.ID, product.name, product.src, product.price, 1)"><span class="fa fa-shop fa-2x" ></span></a>
+            <a href="" data-toggle="modal" data-target="#myModal" title="Quick View"  class=""><span ng-click="setProductId(product.ID)" class="fa fa-link fa-2x"  ></span></a>
+            <a href="" ng-click="amCart.addItem(product.ID, product.name, product.src, product.price, 1)" title="Add to Cart"><span class="fa fa-cart-arrow-down fa-2x" ></span></a>
         </div>
-        <h3 class="product-title">{{product.name}}</h3>
+        <h3 class="product-title title-entry">{{product.name}}</h3>
         <p class="price">{{product.price | currency:"$":0}}</p>
-
-
-
-
-
 </div>
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="quick-view-modal modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">{{sproduct.name}}</h4>
       </div>
-      <div class="modal-body">
-        <img src="images/product/{{sproduct.src}}" />
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+
+      <div class="modal-body col-md-12">
+        <div class="feature-imges">
+					<div class="p-image">
+	          <img id="item-display" src="images/product/{{sproduct.src}}" alt="" />
+					</div>
+
+					<div class="p-images">
+						<ul>
+							<a id="item-1" class="service1-item">
+								<img src="http://www.corsair.com/Media/catalog/product/g/s/gs600_psu_sideview_blue_2.png" alt=""></img>
+							</a>
+							<a id="item-2" class="service1-item">
+								<img src="http://www.corsair.com/Media/catalog/product/g/s/gs600_psu_sideview_blue_2.png" alt=""></img>
+							</a>
+							<a id="item-3" class="service1-item">
+								<img src="http://www.corsair.com/Media/catalog/product/g/s/gs600_psu_sideview_blue_2.png" alt=""></img>
+							</a>
+						</ul>
+					</div>
+				</div>
+
+
+        <div class="product-content">
+          <h2 class="entry-title"><a href="">{{sproduct.name}}</a></h2>
+          <div class="product-content">
+              <p>
+                {{sproduct.overview}}
+              </p>
+          </div>
+
+        </div>
       </div>
     </div>
   </div>
+</div>
+</div>
 </div>

@@ -76,7 +76,7 @@ angular
      $rootScope.$on('amCart:change', function(evnt, data){
        amCart.save();
      });
-    
+
 
     if(angular.isObject(store.get('amCart'))){
       amCart.restore(store.get('amCart'))

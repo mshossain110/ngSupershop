@@ -53,7 +53,7 @@ angular.module('ngSuperShopApp')
         });
       }
     $scope.amCart=amCart;
-
+    $scope.query='';
     $scope.setProductId=function(id){
       $scope.sproduct=PService.getProductByID(id);
     }

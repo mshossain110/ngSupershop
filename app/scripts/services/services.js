@@ -50,15 +50,23 @@ angular.module('angularMart.Service', [])
       this.getProductByCategory=function(category, number){
         var productByCategory=[];
         if(typeof category=== 'undefined') return false;
-         var num = number ? parseInt(number, 10): null;
-        angular.forEach(this.getAllProducts(), function(item){
-          if(item.category === category && (num >0 || num==null )){
-            productByCategory.push(item);
+        var num = number ? parseInt(number, 10): null;
+        var cat=[];
+        if(Array.isArray(category)){
+          category.forEach(function(c){
+            cat.push(c.toLowerCase());
+          })
+        }else {
+          cat.push(category.toLowerCase());
+        }
+
+        angular.forEach(this.getAllProducts(), function(product){
+          if(cat.indexOf(product.category.toLowerCase()) > -1 && (num >0 || num==null )){
+            productByCategory.push(product);
             if(num!=null)
                 num--;
           }
         });
-
         return productByCategory;
       };
 
