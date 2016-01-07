@@ -32,11 +32,9 @@
     <section class="container-fluid menu-bar" ng-include="'views/templates/navigation.html'"></section>
 
   </header>
-     <section class="slider-container">
-              <slider data="{animation: 'fade', smoothHeight:true, start: $sliderStart(), before: $sliderBefor()}"></slider>
-      </section>
+     <section class="slider-container" ui-view="slider"></section>
        <section class="content" id="content">
-        <div ng-view=""></div>
+        <div ui-view></div>
       </section>
        <section class="container-fluid fooret-caontainer">
            <div class="footer-border">
@@ -120,10 +118,10 @@
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/flexslider/jquery.flexslider.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

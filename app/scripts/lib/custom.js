@@ -102,28 +102,3 @@ $(function() {
       });
 
     });
-
-    var $sliderAfter=function (slider){
-      var inner= $(slider).find(".flex-active-slide").find('.caption-inner');
-      setTimeout(function(){ inner.children('h1').addClass("animated zoomIn").animate({ opacity: 1 },400); }, 300);
-      setTimeout(function(){ inner.children('strong').addClass("animated fadeInUp").animate({ opacity: 1 },400); }, 600);
-      setTimeout(function(){ inner.children('.btn').addClass("animated flipInX").animate({ opacity: 1 },400); }, 1000);
-
-    };
-
-    var $sliderBefore=function (slider){
-      $(slider).find(".flex-active-slide").find('.caption-inner').each(function(){
-       $(this).children('h1, strong, .btn').removeClass("animated zoomIn fadeInUp flipInX").animate({opacity:0}, 400);
-       });
-    };
-
-    var $sliderStart=function (slider){
-      $(slider).find('.caption-inner').each(function(){
-        $(this).children('h1, strong, .btn').css('opacity', 0)
-          var inner= $(slider).find(".flex-active-slide").find('.caption-inner');
-       setTimeout(function(){ inner.children('h1').addClass("animated zoomIn").animate({ opacity: 1 },400); }, 300);
-       setTimeout(function(){ inner.children('strong').addClass("animated fadeInUp").animate({ opacity: 1 },400); }, 600);
-       setTimeout(function(){inner.children('.btn').addClass("animated flipInX").animate({ opacity: 1 },400); }, 1000);
-
-       });
-    };
