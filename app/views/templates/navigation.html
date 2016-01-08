@@ -8,12 +8,12 @@
     <div class="col-md-8">
       <nav class="navbar main_menu">
         <div class="collapse navbar-collapse js-navbar-collapse">
-          <ul class="nav navbar-nav pull-right">
+          <ul class="nav navbar-nav pull-right nav-squer">
             <li>
               <a href="#/" ui-sref="home"> <span class="fa fa-home"></span>Home</a>
             </li>
             <li class="dropdown mega-dropdown">
-              <a ui-sref="elements" href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-cogs"></span>Features</a>
+              <a ui-sref="elements"  class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-cogs"></span>Features</a>
               <ul class="dropdown-menu mega-dropdown-menu ">
                 <li class="col-sm-4">
                   <ul>
@@ -48,7 +48,7 @@
                 <li class="col-sm-4">
                   <ul>
                     <li class="dropdown-header">Features</li>
-                    <li><a href="#/element/button" >Button</a></li>
+                    <li><a href="" ui-sref="elements.button">Button</a></li>
                     <li><a href="#">Carousel Control</a></li>
                     <li><a href="#">Left & Right Navigation</a> </li>
                     <li><a href="#">Four Columns Grid</a> </li>
@@ -74,7 +74,7 @@
               </ul>
             </li>
             <li class="women">
-              <a href="#" class=""><span class="fa fa-shopping-cart"></span>shop</a>
+              <a href="#" ui-sref="shop.page" class=""><span class="fa fa-shopping-cart"></span>shop</a>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="fa fa-file-text-o"></span>Pages</a>

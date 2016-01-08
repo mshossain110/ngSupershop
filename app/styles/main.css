@@ -1,7 +1,7 @@
 /*General typhpography*/
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700);
 @import url(https://fonts.googleapis.com/css?family=Philosopher:400,700);
-@import url(https://fonts.googleapis.com/css?family=Crete+Round);
+@import url(https://fonts.googleapis.com/css?family=Quattrocento);
 body{
   text-indent: 0;
   font-size: 14px;
@@ -20,25 +20,90 @@ p{
 font-family: 'Lato', Arial, sans-serif;
 color: #2e2e2e;
 }
-h1{
-  font-size: 24px;
 
+.title-entry {
+  color: #555;
+  font-family: "Quattrocento",serif;
+  font-weight: bold;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  overflow: hidden;
+  position: relative;
 }
-h2{
-  font-size: 22px;
+.title-entry h1, .title-entry h2, .title-entry h3, .title-entry h4, .title-entry h5, .title-entry h6 {
+  background: #ffffff none repeat scroll 0 0;
+   display: inline-block;
+   margin: 0;
+   padding-right: 15px;
 }
-h3{
+.title-entry.title-right {
+  text-align: right;
+}
+.title-entry.title-right h1, .title-entry.title-right h2,.title-entry.title-right h3,.title-entry.title-right h4,.title-entry.title-right h5,.title-entry.title-right h6{
+  padding-right: 0;
+  padding-left: 15px;
+}
+
+.title-entry.title-center {
+  text-align: center;
+}
+.title-entry.title-center h1, .title-entry.title-center h2,.title-entry.title-center h3,.title-entry.title-center h4,.title-entry.title-center h5,.title-entry.title-center h6{
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.title-entry strong {
+  display: block;
+  font-size: 16px;
+  line-height: 2em;
+}
+.title-entry .sep-dash-border {
+  border-color: #ddd;
+  border-style: dotted;
+  border-width: 3px;
+  position: relative;
+  top: 22px;
+  z-index: -5;
+}
+
+
+.title-entry.title3D {
+  text-align: center;
+}
+.title3D h1 {
+  text-transform: uppercase;
+  font-size: 50px;
+  text-shadow: 4px 5px #e6e6d8, 6px 7px #c6a39a;
+}
+.title3D h1 span {
+  display: inline-block;
+  vertical-align: middle;
+}
+.title3D span.fa {
   font-size: 20px;
 }
-h4, h5, h6{
-  font-size: 18px;
+
+.title3D h3 {
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+  position: relative;
 }
-.title-entry{
-  font-family: 'Crete Round', serif;
-  color: #555;
+.title3D h3:before, .title3D h3:after {
+  content: " ";
+  position: absolute;
+  width: 100px;
+  height: 8px;
+  border-top: 2px solid #121212;
+  border-bottom: 2px solid #121212;
 }
-.sub-title{
-  color: #999;
+
+.title3D h3:before {
+  margin: 5px 0 0 -110px;
+}
+
+.title3D h3:after {
+  margin: 5px 0 0 10px;
 }
 /*header-top-----------------------------*/
 /**************Header classic***************************/
@@ -135,14 +200,14 @@ nav.main_menu {
 }.dropdown .is_dropdown {
   display: block;
   text-align: center;
-}.nav > li  > a {
+}.nav-squer > li  > a {
   background: transparent none repeat scroll 0 0;
   font-size: 18px;
   max-height: 100px;
   padding: 28px;
   text-transform: uppercase;
 }
-.nav .open > a, .nav .open > a:focus, .nav .open > a:hover, .nav > li  > a:hover, .nav > li  > a:focus{
+.nav-squer .open > a, .nav-squer .open > a:focus, .nav-squer .open > a:hover, .nav-squer > li  > a:hover, .nav-squer > li  > a:focus{
   background: #995c00 none repeat scroll 0 0;
   color:#FFFFFF;
 }

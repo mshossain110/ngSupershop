@@ -32,12 +32,34 @@ angular
         "": {templateUrl: 'views/main.html'}
       }
    })
-   .state('elements',{
-     url: '/elements'
+   // shop router
+   .state('shop',{
+     template: '<ui-view />'
+   }).state('shop.page',{
+     url: '/shop',
+     templateUrl: '/views/shop/shop.html'
+   }).state('shop.single',{
+     ulr:'/:id',
+     templateUrl: '/views/shop/shopSingle.html'
    })
-   .state('elements.button',{
-     url: '/button',
+
+
+   // elements router
+   .state('elements',{
+     url: '/elements',
+     templateUrl: '/views/ui/elements.html'
+   }).state('elements.button',{
      templateUrl:'/views/ui/button.html'
+   }).state('elements.heading',{
+     templateUrl:'/views/ui/heading.html'
+   }).state('elements.conntentbox',{
+     templateUrl:'/views/ui/elements.conntentbox.html'
+   }).state('elements.carousel',{
+     templateUrl:'/views/ui/elements.carousel.html'
+   }).state('elements.accordion',{
+     templateUrl:'/views/ui/elements.accordion.html'
+   }).state('elements.icons',{
+     templateUrl:'/views/ui/elements.icons.html'
    })
   })
   .run(['$rootScope','amCart', 'store', function($rootScope, amCart, store){
