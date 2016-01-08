@@ -56,16 +56,33 @@ color: #2e2e2e;
   font-size: 16px;
   line-height: 2em;
 }
-.title-entry .sep-dash-border {
-  border-color: #ddd;
-  border-style: dotted;
-  border-width: 3px;
-  position: relative;
-  top: 22px;
+
+.title-entry .title::before, .title-entry .title::after {
+  border-top-color: #ddd;
+  border-top-style: solid;
+  border-top-width: 2px;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 25%;
+  width: 100%;
   z-index: -5;
 }
-
-
+.title-entry .title::after {
+  top: 33%;
+}
+.title-entry.shape-dotted .title::before, .title-entry.shape-dotted .title::after{
+  border-top-style: dotted;
+}
+.title-entry.shape-dash .title::before, .title-entry.shape-dash .title::after{
+  border-top-style: dashed;
+}
+.title-entry.shape-dotted-solid .title::before {
+  border-top-style: dotted;
+}
+.title-entry.shape-dash-solid .title::before {
+  border-top-style: dashed;
+}
 .title-entry.title3D {
   text-align: center;
 }
@@ -105,6 +122,15 @@ color: #2e2e2e;
 .title3D h3:after {
   margin: 5px 0 0 10px;
 }
+
+.component {
+  display: block;
+  margin: 30px 0;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+
 /*header-top-----------------------------*/
 /**************Header classic***************************/
 section.header-top {
