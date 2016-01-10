@@ -21,6 +21,13 @@ font-family: 'Lato', Arial, sans-serif;
 color: #2e2e2e;
 }
 
+.margin-bottom{
+  margin-bottom: 30px;
+}
+.last{
+  margin-right: 0;
+  padding-right: 0;
+}
 .title-entry {
   color: #555;
   font-family: "Quattrocento",serif;
