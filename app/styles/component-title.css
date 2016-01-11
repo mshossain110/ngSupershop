@@ -1,0 +1,134 @@
+.title-entry {
+    color: #555;
+    font-family: "Quattrocento", serif;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    overflow: hidden;
+    position: relative;
+}
+.title-entry .title {
+    position: relative;
+}
+.title-entry h1,
+.title-entry h2,
+.title-entry h3,
+.title-entry h4,
+.title-entry h5,
+.title-entry h6 {
+    background: #ffffff none repeat scroll 0 0;
+    display: inline-block;
+    margin: 0;
+    padding-right: 15px;
+    text-transform: uppercase;
+}
+.title-entry.title-right {
+    text-align: right;
+}
+.title-entry.title-right h1,
+.title-entry.title-right h2,
+.title-entry.title-right h3,
+.title-entry.title-right h4,
+.title-entry.title-right h5,
+.title-entry.title-right h6 {
+    padding-right: 0;
+    padding-left: 15px;
+}
+.title-entry.title-center {
+    text-align: center;
+}
+.title-entry.title-center h1,
+.title-entry.title-center h2,
+.title-entry.title-center h3,
+.title-entry.title-center h4,
+.title-entry.title-center h5,
+.title-entry.title-center h6 {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.title-entry small {
+    display: block;
+    font-size: 16px;
+    line-height: 2em;
+}
+.title-entry .title::before,
+.title-entry .title::after {
+    border-top-color: #ddd;
+    border-top-style: solid;
+    border-top-width: 2px;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 35%;
+    width: 100%;
+    z-index: -5;
+}
+.title-entry .title::after {
+    top: 55%;
+}
+.title-entry.shape-dotted .title::before,
+.title-entry.shape-dotted .title::after {
+    border-top-style: dotted;
+}
+.title-entry.shape-dash .title::before,
+.title-entry.shape-dash .title::after {
+    border-top-style: dashed;
+}
+.title-entry.shape-dotted-solid .title::before {
+    border-top-style: dotted;
+}
+.title-entry.shape-dash-solid .title::before {
+    border-top-style: dashed;
+}
+.title-entry.boder-bottom::after {
+    border-bottom: 3px dashed #ddd;
+    content: "";
+    display: block;
+    position: relative;
+    top: -1px;
+}
+.title-entry.boder-bottom.small-width::after {
+    border-bottom-style: solid;
+    border-color: rgba(153, 21, 0, 1);
+    margin: 0 auto;
+    padding-bottom: 20px;
+    text-align: center;
+    width: 200px;
+}
+.title-entry.title3D {
+    text-align: center;
+}
+.title3D h1 {
+    text-transform: uppercase;
+    font-size: 50px;
+    text-shadow: 4px 5px #e6e6d8, 6px 7px #c6a39a;
+}
+.title3D h1 span {
+    display: inline-block;
+    vertical-align: middle;
+}
+.title3D span.fa {
+    font-size: 20px;
+}
+.title3D h3 {
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    margin-bottom: 10px;
+    position: relative;
+}
+.title3D h3:before,
+.title3D h3:after {
+    content: " ";
+    position: absolute;
+    width: 100px;
+    height: 8px;
+    border-top: 2px solid #121212;
+    border-bottom: 2px solid #121212;
+}
+.title3D h3:before {
+    margin: 5px 0 0 -110px;
+}
+.title3D h3:after {
+    margin: 5px 0 0 10px;
+}
