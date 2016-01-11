@@ -1,0 +1,150 @@
+<div class="page-counter">
+  <div class="component counter-component">
+      <div class="col-md-4">
+        <div class="counter-box">
+            <span class="timer" data-from="25" data-to="75"></span>
+            <div class="counter-text">Counter text</div>
+        </div>
+      </div>
+  </div>
+
+  <div class="component counter-component">
+      <div class="col-md-12">
+        <div class="counter-box-fill ">
+            <div class="item">
+                <i class="fa fa-briefcase"></i>
+                <span class="timer" data-from="25" data-to="2000"></span>
+                <p>Projects done</p>
+            </div>
+            <div class="item">
+                <i class="fa fa-smile-o"></i>
+                <span class="timer" data-from="25" data-to="705"></span>
+                <p>Happy clients</p>
+            </div>
+            <div class="item">
+                <i class="fa fa-coffee"></i>
+                <span class="timer" data-from="25" data-to="750"></span>
+                <p>Cups of coffee</p>
+            </div>
+            <div class="item">
+                <i class="fa fa-camera"></i>
+                <span class="timer" data-from="100" data-to="8465" data-refresh-interval="100" data-speed="2000"></span>
+                <p>Photos taken</p>
+            </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="component counter-component">
+      <div class="col-md-12">
+        <div class="counter-box-fill no-bg">
+            <div class="item">
+                <i class="fa fa-briefcase"></i>
+                <span class="timer" data-from="25" data-to="2000"></span>
+                <p>Projects done</p>
+            </div>
+            <div class="item">
+                <i class="fa fa-smile-o"></i>
+                <span class="timer" data-from="25" data-to="705"></span>
+                <p>Happy clients</p>
+            </div>
+            <div class="item">
+                <i class="fa fa-coffee"></i>
+                <span class="timer" data-from="25" data-to="750"></span>
+                <p>Cups of coffee</p>
+            </div>
+            <div class="item">
+                <i class="fa fa-camera"></i>
+                <span class="timer" data-from="100" data-to="8465" data-refresh-interval="100" data-speed="2000"></span>
+                <p>Photos taken</p>
+            </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="component counter-component">
+      <div class="col-md-12">
+        <div class="counter-box-fill no-bg border-box">
+            <div class="item">
+                <i class="fa fa-briefcase"></i>
+                <span class="timer" data-from="25" data-to="2000"></span>
+                <p>Projects done</p>
+            </div>
+            <div class="item">
+                <i class="fa fa-smile-o"></i>
+                <span class="timer" data-from="25" data-to="705"></span>
+                <p>Happy clients</p>
+            </div>
+            <div class="item">
+                <i class="fa fa-coffee"></i>
+                <span class="timer" data-from="25" data-to="750"></span>
+                <p>Cups of coffee</p>
+            </div>
+            <div class="item">
+                <i class="fa fa-camera"></i>
+                <span class="timer" data-from="100" data-to="8465" data-refresh-interval="100" data-speed="2000"></span>
+                <p>Photos taken</p>
+            </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="component counter-component">
+      <div class="col-md-12">
+          <div id="countdown" class="countdown-ex1" data-countdown="2016/04/01" >
+            <ul class="list-unstyled list-inline">
+                <li><span class="cdweeks"></span>Weeks</li>
+                <li><span class="cddays"></span>Days</li>
+                <li><span class="cdhours"></span>Hours</li>
+                <li><span class="cdminutes"></span>minutes</li>
+                <li><span class="cdseconds"></span>Seconds</li>
+            </ul>
+
+          </div>
+          <div id="countdown" class="countdown-ex1 block" data-countdown="2016/02/01" >
+            <ul class="list-unstyled list-inline">
+                <li><span class="cdweeks"></span>Weeks</li>
+                <li><span class="cddays"></span>Days</li>
+                <li><span class="cdhours"></span>Hours</li>
+                <li><span class="cdminutes"></span>minutes</li>
+                <li><span class="cdseconds"></span>Seconds</li>
+            </ul>
+          </div>
+          <div id="countdown" class="countdown-ex1 block small" data-countdown="2016/03/01" >
+            <ul class="list-unstyled list-inline">
+                <li><span class="cdweeks"></span>Weeks</li>
+                <li><span class="cddays"></span>Days</li>
+                <li><span class="cdhours"></span>Hours</li>
+                <li><span class="cdminutes"></span>minutes</li>
+                <li><span class="cdseconds"></span>Seconds</li>
+            </ul>
+          </div>
+      </div>
+  </div>
+
+
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('[data-countdown]').each(function() {
+     var $this = $(this), finalDate = $(this).data('countdown');
+     $this.countdown(finalDate, function(event) {
+       $this.find('.cdweeks').html(event.strftime( '%w'));
+       $this.find('.cddays').html(event.strftime('%d'));
+       $this.find('.cdhours').html(event.strftime('%H'));
+       $this.find('.cdminutes').html(event.strftime('%M'));
+       $this.find('.cdseconds').html(event.strftime('%S'));
+
+     });
+    });
+
+  })
+
+
+</script>
+
+</div>
+
+<script type="text/javascript">
+  $('.timer').countTo();
+</script>

@@ -3,7 +3,9 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700);
 @import url(https://fonts.googleapis.com/css?family=Philosopher:400,700);
 @import url(https://fonts.googleapis.com/css?family=Quattrocento);
+@import url("plugins.css");
 @import url("component-title.css");
+@import url("component-counter.css");
 @import url("button.css");
 @import url("icon-design.css");
 body {

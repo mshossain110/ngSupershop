@@ -1,0 +1,124 @@
+.counter-box{
+  overflow: hidden;
+  display: block;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #DDD;
+}
+.counter-box span{
+  font-size: 80px;
+
+}
+.counter-box .counter-text{
+  display: block;
+  font-size: 30px;
+}
+
+
+.counter-box-fill {
+  display: flex;
+  margin-top: 30px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.counter-box-fill .item {
+  width: 25%;
+  height: 100%;
+  padding: 50px 0px;
+  text-align: center;
+}
+
+.counter-box-fill .item:nth-child(1) {
+  background: rgb(16, 31, 46);
+}
+
+.counter-box-fill .item:nth-child(2) {
+  background: rgb(18, 34, 51);
+}
+
+.counter-box-fill .item:nth-child(3) {
+  background: rgb(21, 38, 56);
+}
+
+.counter-box-fill .item:nth-child(4) {
+  background: rgb(23, 44, 66);
+}
+
+.counter-box-fill .item span {
+  font-size: 40px;
+  padding: 0;
+  font-weight: bold;
+}
+
+.counter-box-fill .item p,
+.counter-box-fill .item span {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+  margin: 0;
+  padding: 10px;
+  display: block;
+}
+
+.counter-box-fill .item span::after {
+  border-bottom: 3px solid #fff;
+  content: "";
+  display: block;
+  margin: 7px auto 1px;
+  width: 60px;
+}
+
+.counter-box-fill .item i {
+  vertical-align: middle;
+  font-size: 50px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 786px) {
+  .counter-box-fill .item {
+    flex: 0 0 50%;
+  }
+}
+.counter-box-fill.no-bg .item {
+  background: transparent none repeat scroll 0 0;
+}
+.counter-box-fill.no-bg .item i, .counter-box-fill.no-bg .item span, .counter-box-fill.no-bg .item p{
+  color: #777;
+}
+.counter-box-fill.border-box {
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px 0px;
+  background-image: url("http://www.wallpaperhi.com/thumbnails/detail/20130308/textures%20gaussian%20blur%20gradient%201920x1080%20wallpaper_www.wallpaperhi.com_33.jpg");
+}
+.counter-box-fill.no-bg.border-box .item {
+  border: 1px solid #DDD;
+  margin-left: 1%;
+  width: 23%
+}
+
+
+.countdown-ex1 {
+  display: block;
+  margin: 30px 0;
+  text-align: center;
+}
+.countdown-ex1 ul li {
+  border-right: 1px dashed #ddd;
+  display: inline-block;
+  font-size: 32px;
+  padding: 9px;
+}
+.countdown-ex1 li span {
+  font-size: 40px;
+  margin-right: 10px;
+}
+.countdown-ex1.block li span {
+  display: block;
+  overflow: hidden;
+}
+.countdown-ex1.small ul li {
+  font-size: 20px;
+}
+.countdown-ex1.small li span {
+  font-size: 24px;
+}

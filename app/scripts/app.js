@@ -60,6 +60,8 @@ angular
      templateUrl:'/views/ui/elements.accordion.html'
    }).state('elements.icons',{
      templateUrl:'/views/ui/elements.icons.html'
+   }).state('elements.counter',{
+     templateUrl:'/views/ui/elements.counter.html'
    })
   })
   .run(['$rootScope','amCart', 'store', function($rootScope, amCart, store){
