@@ -62,6 +62,12 @@ angular
      templateUrl:'/views/ui/elements.icons.html'
    }).state('elements.counter',{
      templateUrl:'/views/ui/elements.counter.html'
+   }).state('elements.gmaps',{
+     templateUrl:'/views/ui/elements.gmaps.html'
+   }).state('elements.pricingTable',{
+     templateUrl:'/views/ui/elements.pricingTable.html'
+   }).state('elements.testimonials',{
+     templateUrl:'/views/ui/elements.testimonials.html'
    })
   })
   .run(['$rootScope','amCart', 'store', function($rootScope, amCart, store){

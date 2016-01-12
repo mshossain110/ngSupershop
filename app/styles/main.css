@@ -8,6 +8,8 @@
 @import url("component-counter.css");
 @import url("button.css");
 @import url("icon-design.css");
+@import url("pricingTable.css");
+@import url("testimonials.css");
 body {
     text-indent: 0;
     font-size: 14px;
@@ -44,6 +46,32 @@ p {
     margin: 30px 0;
     overflow: hidden;
     padding: 20px 0;
+}
+.divider {
+  color: #b6b1b1;
+  margin: 35px 0;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.divider::after, .divider.divider-center::before, .divider.divider-center.divider-short::before {
+  border-top: 1px solid #adadad;
+  content: "";
+  height: 0;
+  left: 30px;
+  position: absolute;
+  top: 8px;
+  width: 100%;
+}.divider i , .divider span {
+  font-size: 18px !important;
+  height: 18px;
+  line-height: 1;
+  position: relative;
+  text-align: center;
+  width: 18px;
+}
+.divider.divider-right {
+  text-align: right;
 }
 /*header-top-----------------------------*/
 /**************Header classic***************************/

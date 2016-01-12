@@ -33,6 +33,9 @@ module.exports = function(config) {
       'bower_components/flexslider/jquery.flexslider.js',
       'bower_components/angular-ui-router/release/angular-ui-router.js',
       'bower_components/jquery-countTo/jquery.countTo.js',
+      'bower_components/jquery.countdown/dist/jquery.countdown.js',
+      'bower_components/jqvmap/dist/jquery.vmap.min.js',
+      'bower_components/gmaps/gmaps.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       "app/scripts/**/*.js",

@@ -1,0 +1,139 @@
+<div class="heading-container">
+    <div class="component heading-component">
+      <div class="title-entry">
+        <div class="title">
+          <h1>world Vactor maps</h1>
+        </div>
+      </div>
+
+      <div id="vactorWorld" style="height: 400px;"></div>
+    </div>
+
+    <div class="component heading-component">
+      <div class="title-entry">
+        <div class="title">
+          <h1>USA Vactor maps</h1>
+        </div>
+      </div>
+
+
+
+      <div id="vactorUsa" style="height: 400px;"></div>
+    </div>
+
+    <div class="component heading-component">
+      <div class="title-entry">
+        <div class="title">
+          <h1>Asia Vactor maps</h1>
+        </div>
+      </div>
+
+      <div id="vactorAsia" style="height: 400px;"></div>
+    </div>
+
+    <div class="component heading-component">
+      <div class="title-entry">
+        <div class="title">
+          <h1>Australia Vactor maps</h1>
+        </div>
+      </div>
+
+      <div id="vactorAustralia" style="height: 400px;"></div>
+    </div>
+
+    <div class="component heading-component">
+      <div class="title-entry">
+        <div class="title">
+          <h1>Europe Vactor maps</h1>
+        </div>
+      </div>
+
+      <div id="vactorEurope" style="height: 400px;"></div>
+    </div>
+
+    <div class="component heading-component">
+      <div class="title-entry">
+        <div class="title">
+          <h1>Full width maps</h1>
+        </div>
+      </div>
+
+    </div>
+
+
+</div>
+<script src="scripts/lib/jquery.vmap.sampledata.js"></script>
+<script src="scripts/lib/maps/jquery.vmap.world.js"></script>
+<script src="scripts/lib/maps/jquery.vmap.usa.js"></script>
+<script src="scripts/lib/maps/continents/jquery.vmap.asia.js"></script>
+<script src="scripts/lib/maps/continents/jquery.vmap.australia.js"></script>
+<script src="scripts/lib/maps/continents/jquery.vmap.europe.js"></script>
+<script type="text/javascript">
+  jQuery(document).ready(function($){
+
+    $('#vactorWorld').vectorMap({
+      map: 'world_en',
+      backgroundColor: null,
+      color: '#ffffff',
+      hoverOpacity: 0.7,
+      selectedColor: '#756060',
+      enableZoom: true,
+      showTooltip: true,
+      values: sample_data,
+      scaleColors: ['#0778ab', '#073e57'],
+      normalizeFunction: 'polynomial'
+    });
+
+    $('#vactorUsa').vectorMap({
+      map: 'usa_en',
+      backgroundColor: null,
+      color: '#006666',
+      hoverOpacity: 0.7,
+      selectedColor: '#333',
+      enableZoom: true,
+      showTooltip: true,
+      values: sample_data,
+      scaleColors: ['#339966', '#006666'],
+      normalizeFunction: 'polynomial'
+    });
+
+    $('#vactorAsia').vectorMap({
+      map: 'asia_en',
+      backgroundColor: null,
+      color: '#ffffff',
+      hoverOpacity: 0.7,
+      selectedColor: '#756060',
+      enableZoom: true,
+      showTooltip: true,
+      values: sample_data,
+      scaleColors: ['#0778ab', '#073e57'],
+      normalizeFunction: 'polynomial'
+    });
+
+    $('#vactorAustralia').vectorMap({
+      map: 'australia_en',
+      backgroundColor: null,
+      color: '#ffffff',
+      hoverOpacity: 0.7,
+      selectedColor: '#756060',
+      enableZoom: true,
+      showTooltip: true,
+      values: sample_data,
+      scaleColors: ['#0778ab', '#073e57'],
+      normalizeFunction: 'polynomial'
+    });
+
+    $('#vactorEurope').vectorMap({
+      map: 'europe_en',
+      backgroundColor: null,
+      color: '#ffffff',
+      hoverOpacity: 0.7,
+      selectedColor: '#756060',
+      enableZoom: true,
+      showTooltip: true,
+      values: sample_data,
+      scaleColors: ['#0778ab', '#073e57'],
+      normalizeFunction: 'polynomial'
+    });
+  });
+</script>

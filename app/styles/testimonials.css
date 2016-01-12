@@ -1,0 +1,248 @@
+.testimonials {
+  display: block;
+  overflow: hidden;
+}
+.testimonials .quote{
+  display:block;
+  float:left;
+  font-family: 'Raleway', Arial, sans-serif;
+}
+.quote blockquote{
+  margin: 0;
+  display: block;
+  border-radius: 8px;
+  position: relative;
+  background-color: #fff;
+  color: #333;
+  border: medium none;
+}
+
+.quote  blockquote:before,
+.quote  blockquote:after {
+  font-family: 'FontAwesome';
+  content: "\201C";
+  position: absolute;
+  font-size: 50px;
+  font-style: normal;
+}
+.quote blockquote:after {
+  content: "\201D";
+}
+.gride .rectangle-speech-border {
+position: relative;
+padding: 15px 35px;
+margin: 15px 0 30px;
+border: 1px solid #CDCDCD;
+text-align: left;
+color: #333;
+background: #fff;
+-webkit-border-radius: 20px;
+-moz-border-radius: 20px;
+border-radius: 20px;
+}
+.gride .rectangle-speech-border p{
+  text-align: left;
+  color: #333;
+  font-size:13px;
+  line-height:30px;
+}
+.author img{
+  height:50px;
+  width:50px;
+  border-radius:100%;
+  overflow:hidden;
+  display:block;
+  margin:0 10px;
+  position: relative;
+}
+.gride .rectangle-speech-border:before {
+content: "";
+position: absolute;
+z-index: 10;
+bottom: -21px;
+left: 50px;
+width: 35px;
+height: 22px;
+border-style: solid;
+border-width: 0 1px 1px 0;
+border-color: #CDCDCD;
+background: #fff;
+-webkit-border-bottom-right-radius: 80px 50px;
+-moz-border-radius-bottomright: 80px 50px;
+border-bottom-right-radius: 80px 50px;
+display: block;
+}
+
+.gride .rectangle-speech-border:after {
+content: "";
+position: absolute;
+z-index: 11;
+bottom: -20px;
+left: 50px;
+width: 15px;
+height: 20px;
+border-style: solid;
+border-width: 0 1px 1px 0;
+border-color: #CDCDCD;
+background: transparent;
+-webkit-border-bottom-right-radius: 40px 50px;
+-moz-border-radius-bottomright: 40px 50px;
+border-bottom-right-radius: 40px 50px;
+display: block;
+border-top-style: solid;
+border-top-width: 1px;
+}
+
+.gride .author{
+  position: relative;
+display: inline-block;
+}
+
+
+.gride .author img{
+    float:left;
+}
+.author .author-info{
+  display:block;
+  float:left;
+}
+.author .author-info .author-name{
+  clear:both;
+   display:block;
+  text-transform:uppercase;
+   font-size:15px;
+  letter-spacing:1px;
+  margin-bottom:0px;
+}
+
+.author .author-info .author-position{
+  color:#cdcdcd;
+  font-size:12px;
+}
+
+/***********************************/
+.quote.classic{
+
+}
+.quote.classic img {
+  display: unset;
+  float: none;
+  height: 100px;
+  text-align: center;
+  width: 100px;
+}
+.quote.classic blockquote::after,
+.quote.classic blockquote:before {
+  top: 35px;
+  left: 20px;
+ opacity: 0.3;
+}
+.quote.classic blockquote::after {
+  left: 287px;
+  top: 125px;
+}
+.quote.classic blockquote{
+  border: 1px solid #ddd;
+  padding: 30px 50px 75px 50px;
+  font-size: 0.8em;
+  font-weight: 500;
+  margin: 0 0 -50px;
+  line-height: 1.6em;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+.quote.classic .author {
+  display: block;
+  text-align: center;
+}
+.quote.classic .author img{
+  float: unset;
+}
+.quote.classic .author .author-info {
+  color: #333;
+  display: block;
+  width: 100%;
+}
+.quote.col-md-6.classic blockquote::after {
+  left: 489px;
+  top: 97px;
+}
+
+/*****colorize*************/
+.quote.colorize {
+  background: #333 none repeat scroll 0 0;
+  color: #fff;
+  margin-left: 30px;
+  margin-top: 34px;
+  overflow: visible;
+  position: relative;
+}.colorize .author {
+  overflow: hidden;
+}.quote.colorize .author > img {
+  border: 5px solid #333;
+  float: left;
+  height: 80px;
+  left: -32px;
+  position: absolute;
+  top: -20px;
+  width: 80px;
+}.colorize .author-info {
+  margin-left: 65px;
+  margin-top: 9px;
+}.quote.colorize > blockquote {
+  background: transparent none repeat scroll 0 0;
+  border: medium none;
+  color: #fff;
+  display: block;
+  float: unset;
+  margin-bottom: 25px;
+  margin-top: 22px;
+  overflow: hidden;
+  width: 100%;
+}.quote.colorize blockquote::before {
+  left: 0;
+  top: -10px;
+}
+.quote.colorize blockquote::after {
+  right: 21px;
+  top: 30px;
+}.quote.colorize p {
+  color: #fff;
+}
+
+/*modern*/
+
+.quote.modern {
+  text-align: center;
+}.quote.modern > blockquote::before {
+  left: 0;
+  top: -10px;
+}.quote.modern > blockquote::after {
+  right: 17px;
+  top: 56%;
+}.quote.modern .author {
+  display: block;
+  margin-top: 10px;
+}.quote.modern .author > img {
+  display: inline-block;
+  height: 80px;
+  margin-bottom: 10px;
+  width: 80px;
+}.quote.modern .author-info {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+.quote.modern {
+  padding: 50px;
+  text-align: center;
+}
+.quote.modern.dark > blockquote {
+  background: transparent none repeat scroll 0 0;
+  color: #fff;
+}.quote.modern.dark p {
+  color: #fff;
+}.quote.modern.dark {
+  background: #333 none repeat scroll 0 0;
+  color: #fff;
+}

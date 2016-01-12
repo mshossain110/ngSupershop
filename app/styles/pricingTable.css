@@ -1,0 +1,125 @@
+.pricingTable {
+  color: #000000;
+  text-align: center;
+  font-size: 16px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 40px auto;
+}
+.pricingTable .plan {
+  margin: 0;
+  width: 25%;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  background-color: #ffffff;
+  border: 1px solid rgba(163, 162, 162, 0.5);
+}
+.pricingTable .plan:first-of-type {
+  border-radius: 8px 0 0 8px;
+}
+.pricingTable .plan:last-of-type {
+  border-radius: 0 8px 8px 0;
+}
+
+.pricingTable .plan-title {
+  font-weight: 800;
+  padding: 15px;
+  margin: 0;
+  background: rgba(0, 0, 0, 0.08);
+  color: #595959;
+  text-transform: uppercase;
+}
+.pricingTable .plan-cost {
+  padding: 20px 10px;
+}
+.pricingTable .plan-price {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 800;
+  font-size: 3em;
+  color: #2980b9;
+}
+.pricingTable .plan-type {
+  opacity: 0.6;
+}
+.pricingTable .plan-features {
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  list-style: outside none none;
+  font-size: 0.8em;
+}
+.pricingTable .plan-features li {
+  border-top: 1px solid #d2d7e2;
+  padding: 10px 5%;
+}
+.pricingTable .plan-features li:nth-child(even) {
+  background: rgba(0, 0, 0, 0.08);
+}
+.pricingTable .plan-features i {
+  margin-right: 8px;
+  opacity: 0.4;
+}
+.pricingTable .plan-select {
+  border-top: 1px solid #d2d7e2;
+  padding: 30px 10px;
+}
+.pricingTable .plan-select a {
+  background-color: #2980b9;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  -webkit-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
+}
+.pricingTable .plan-select a:hover {
+  background-color: #409ad5;
+}
+.pricingTable .featured {
+  margin-top: -20px;
+  background-color: #2980b9;
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  border-radius: 8px;
+}
+.pricingTable .featured .plan-title,
+.pricingTable .featured .plan-price {
+  color: #ffffff;
+}
+.pricingTable .featured .plan-title {
+  padding: 25px 15px;
+}
+.pricingTable .featured .plan-select {
+  padding: 40px 10px;
+}
+.pricingTable .featured .plan-select a {
+  color: #2980b9;
+  background-color: #ffffff;
+}
+.pricingTable .featured .plan-select a:hover {
+  background-color: #409ad5;
+  color: #ffffff;
+}
+@media only screen and (max-width: 767px) {
+  .pricingTable .plan {
+    width: 50%;
+    border-radius: 0 !important;
+  }
+  .pricingTable .featured {
+    margin-top: 0;
+    border-radius: 0;
+  }
+  .pricingTable .featured .plan-title {
+    padding: 15px;
+  }
+  .pricingTable .featured .plan-select {
+    padding: 30px 10px;
+  }
+}
+@media only screen and (max-width: 440px) {
+  .pricingTable .plan {
+    width: 100%;
+  }
+}
