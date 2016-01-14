@@ -6,7 +6,7 @@
       <span class="cart-amount">{{amCart.getTotalItems()}} item(s) {{amCart.getSubTotal()| currency}}</span>
     </div>
   </div>
-  <div class="cart-hover dropdown-menu" ng-show="!amCart.isEmpty()">
+  <div class="cart-hover dropdown-menu" style="display:none;" ng-show="!amCart.isEmpty()">
     <ul>
       <li class="item" ng-repeat="item in amCart.getAllItems()">
         <div class="items-inner">

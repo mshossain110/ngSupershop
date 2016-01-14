@@ -21,13 +21,36 @@
           <p></p>
         </div>
         <div class="product-button">
-            <a href="" data-toggle="modal" data-target="#myModal" title="Quick View"  class=""><span ng-click="setProductId(product.ID)" class="fa fa-link fa-2x"  ></span></a>
+            <a href=""  ui-turn-on="modal1" title="Quick View"  class=""><span ng-click="setProductId(product.ID)" class="fa fa-link fa-2x"  ></span></a>
             <a href="" ng-click="amCart.addItem(product.ID, product.name, product.src, product.price, 1)" title="Add to Cart"><span class="fa fa-cart-arrow-down fa-2x" ></span></a>
         </div>
         <h3 class="product-title title-entry">{{product.name}}</h3>
         <p class="price">{{product.price | currency:"$":0}}</p>
 </div>
-<div class="quick-view-modal modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+
+<div ui-content-for="modals">
+  <div class="modal" ui-if="modal1" ui-state='modal1'>
+    <div class="modal-backdrop in"></div>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close"
+                  ui-turn-off="modal1">&times;</button>
+          <h4 class="modal-title">Modal title</h4>
+        </div>
+        <div class="modal-body">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio quo illum nihil voluptatem earum optio repellendus, molestias illo facere, ea non. Possimus assumenda illo accusamus voluptatibus, vel corporis maxime quam.</p>
+        </div>
+        <div class="modal-footer">
+          <button ui-turn-off="modal1" class="btn btn-default">Close</button>
+          <button ui-turn-off="modal1" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="quick-view-modal modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -68,6 +91,6 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 </div>
 </div>

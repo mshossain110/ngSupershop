@@ -1,10 +1,14 @@
 <!doctype html>
 <html ng-app="ngSuperShopApp">
   <head>
+
     <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=9">
     <title>Angular Mart</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
@@ -12,6 +16,9 @@
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
     <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
     <link rel="stylesheet" href="bower_components/flexslider/flexslider.css" />
+    <link rel="stylesheet" href="bower_components/mobile-angular-ui/dist/css/mobile-angular-ui-hover.css" />
+    <link rel="stylesheet" href="bower_components/mobile-angular-ui/dist/css/mobile-angular-ui-base.css" />
+    <link rel="stylesheet" href="bower_components/mobile-angular-ui/dist/css/mobile-angular-ui-desktop.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -20,13 +27,39 @@
     <link href="images/icon/flaticon.css" rel="stylesheet" media="screen" />
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/main2.css" />
+
+    <!--[if lt IE 8]>
+      <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
     <!-- endbuild -->
   </head>
-  <body >
+  <body class="scrollable">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-<div class="wrapper">
+
+
+      <div class="navbar navbar-app navbar-absolute-top" ng-if="!isNotMobile">
+
+        <div class="navbar-brand navbar-brand-center">
+          {{isNotMobile}}
+        </div>
+
+        <div class="btn-group pull-left">
+          <div class="btn btn-navbar">
+            Left Action
+          </div>
+        </div>
+
+        <div class="btn-group pull-right">
+          <div class="btn btn-navbar">
+            <span class="fa fa-search" ></span>
+          </div>
+        </div>
+      </div>
+
+<div class="wrapper scrollable-content">
   <header class="header header-classic">
     <section class="container-fluid header-top" ng-include="'views/templates/top_header.html'">
 
@@ -100,7 +133,7 @@
                     </div>
 
                   <div class="col-md-12 copy-right">
-                    <p> &copy; All Right resorved</p>
+                    <p> &copy; All Right resorved  {{isNotMobile}}</p>
                   </div>
               </div>
 
@@ -109,7 +142,7 @@
     </div>
 
 
-
+<div ui-yield-to="modals"></div>
 
 
     <!-- build:js(.) scripts/vendor.js -->
@@ -127,7 +160,8 @@
     <script src="bower_components/jquery-countTo/jquery.countTo.js"></script>
     <script src="bower_components/jquery.countdown/dist/jquery.countdown.js"></script>
     <script src="bower_components/jqvmap/dist/jquery.vmap.min.js"></script>
-    <script src="bower_components/gmaps/gmaps.js"></script>
+    <script src="bower_components/mobile-angular-ui/dist/js/mobile-angular-ui.js"></script>
+    <script src="bower_components/mobile-angular-ui/dist/js/mobile-angular-ui.gestures.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -139,8 +173,6 @@
         <script src="scripts/controllers/controller.js"></script>
         <!-- endbuild -->
     <!-- <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script> -->
-
-    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
 <script type="text/javascript" src="scripts/lib/plugins.js"></script>
 <script type="text/javascript" src="scripts/lib/custom.js"></script>
 
