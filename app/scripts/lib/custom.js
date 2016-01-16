@@ -15,13 +15,12 @@ $(function() {
             case "login-form":
                 var $lg_username=$('#login_username').val();
                 var $lg_password=$('#login_password').val();
-                if ($lg_username == "ERROR") {
+                if ($lg_username === "ERROR") {
                     msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), "error", "glyphicon-remove", "Login error");
                 } else {
                     msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), "success", "glyphicon-ok", "Login OK");
                 }
                 return false;
-                break;
             case "lost-form":
                 var $ls_email=$('#lost_email').val();
                 if ($ls_email == "ERROR") {
@@ -30,7 +29,7 @@ $(function() {
                     msgChange($('#div-lost-msg'), $('#icon-lost-msg'), $('#text-lost-msg'), "success", "glyphicon-ok", "Send OK");
                 }
                 return false;
-                break;
+
             case "register-form":
                 var $rg_username=$('#register_username').val();
                 var $rg_email=$('#register_email').val();
@@ -41,7 +40,6 @@ $(function() {
                     msgChange($('#div-register-msg'), $('#icon-register-msg'), $('#text-register-msg'), "success", "glyphicon-ok", "Register OK");
                 }
                 return false;
-                break;
             default:
                 return false;
         }
@@ -86,20 +84,6 @@ $(function() {
   		}, $msgShowTime);
     }
 
-      /* for dropdown mentu; ******************************************/
-      $('section.menu-bar .dropdown >a').append('<span class="is_dropdown">+</span>');
 
-      $(document).on('mouseenter', '.dropdown', function() {
-          $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideDown($modalAnimateTime);
-          $(this).toggleClass('open');
-          $(this).find('span.is_dropdown').text('-');
-      });
 
-      $(document).on('mouseleave', '.dropdown',  function() {
-          $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideUp($modalAnimateTime);
-          $(this).toggleClass('open');
-          $(this).find('span.is_dropdown').text('+');
-      });
-
-      
   });

@@ -26,16 +26,16 @@ angular.module('angularMart.Service', [])
  				}
  			};
       this.getProductByID=function(ids){
-
+          var productByID;
         if(Array.isArray(ids)){
-          var productByID=[];
+
           angular.forEach(this.getAllProducts(), function(product){
             if(ids.indexOf(product.ID) > -1){
               productByID.push(product);
             }
           });
         }else{
-          var productByID;
+
           angular.forEach(this.getAllProducts(), function(product){
             if(product.ID === ids){
               productByID=product;
@@ -49,35 +49,37 @@ angular.module('angularMart.Service', [])
 
       this.getProductByCategory=function(category, number){
         var productByCategory=[];
-        if(typeof category=== 'undefined') return false;
+        if(typeof category=== 'undefined') {return false;}
         var num = number ? parseInt(number, 10): null;
         var cat=[];
         if(Array.isArray(category)){
           category.forEach(function(c){
             cat.push(c.toLowerCase());
-          })
+          });
         }else {
           cat.push(category.toLowerCase());
         }
 
         angular.forEach(this.getAllProducts(), function(product){
-          if(cat.indexOf(product.category.toLowerCase()) > -1 && (num >0 || num==null )){
+          if(cat.indexOf(product.category.toLowerCase()) > -1 && (num >0 || num===null )){
             productByCategory.push(product);
-            if(num!=null)
-                num--;
+            if(num!==null){
+              num--;
+            }
+
           }
         });
         return productByCategory;
       };
 
   }])
-  .service('amCart', ['$rootScope', 'amItem', 'store', function($rootScope, amItem, store){
+  .service('amCart', ['$rootScope', 'AmItem', 'store', function($rootScope, AmItem, store){
     this.init= function(){
       this.$cart={
         items: [],
         shipping: null
-      }
-    }
+      };
+    };
 
     this.addItem= function(id, name, image, price, quantity, data){
       var inCart= this.getItemById(id);
@@ -85,7 +87,7 @@ angular.module('angularMart.Service', [])
         inCart.setQuantity(quantity, true);
         $rootScope.$broadcast('amCart:update', inCart);
       }else{
-        var newItem= new amItem(id, name, image, price, quantity, data);
+        var newItem= new AmItem(id, name, image, price, quantity, data);
         this.$cart.items.push(newItem);
          $rootScope.$broadcast('amCart:add', newItem);
       }
@@ -108,28 +110,30 @@ angular.module('angularMart.Service', [])
     this.setCart=function(cart){
       this.$cart=cart;
       return this.getCart();
-    }
+    };
     this.setShipping=function(shipping){
       this.$cart.shipping=shipping;
       return this.getShipping();
     };
     this.getShipping=function(){
-      if(this.$cart.shipping !='null')
+      if(this.$cart.shipping !=='null'){
         return this.$cart.shipping;
-    }
+      }
+
+    };
 
     this.getAllItems=function(){
       return this.$cart.items;
-    }
+    };
 
     this.getTotalItems=function(){
       var count=0;
       var items=this.$cart.items;
       angular.forEach(items, function(item){
         count +=item.getQuantity();
-      })
+      });
       return count;
-    }
+    };
     this.getSubTotal=function(){
       var total=0;
       var items =this.$cart.items;
@@ -151,12 +155,12 @@ angular.module('angularMart.Service', [])
        $rootScope.$broadcast('amCart:change', {});
        $rootScope.$broadcast('amCart:remove', removedItem);
       return removedItem;
-    }
+    };
     this.isEmpty=function(){
     return this.getCart().items.length >0 ? false: true;
-    }
+  };
     this.toObject=function(){
-      if(this.getCart().items.length <0) return false;
+      if(this.getCart().items.length <0) {return false;}
 
       var items=[];
       angular.forEach(this.getAllItems(), function(item){
@@ -168,20 +172,20 @@ angular.module('angularMart.Service', [])
         shipping:this.getShipping(),
         subTotal: this.getSubTotal(),
         items: items
-      }
+      };
 
-    }
+    };
     this.restore=function(cart){
         var _self=this;
         _self.init();
         _self.$cart.shipping=cart.shipping;
         _self.subTotal= cart.subTotal;
         angular.forEach(cart.items, function(item){
-          _self.$cart.items.push(new amItem(item.id, item.name, item.image, item.price, item.quantity, item.data))
+          _self.$cart.items.push(new AmItem(item.id, item.name, item.image, item.price, item.quantity, item.data));
         });
 
         this.save();
-    }
+    };
     this.save=function(){
       $rootScope.$broadcast('amCart:beforeSave', {});
       return store.set('amCart', JSON.stringify(this.toObject()));
@@ -191,11 +195,11 @@ angular.module('angularMart.Service', [])
 
   }])
 
-  .factory('amItem', ['$log', function($log){
+  .factory('AmItem', ['$log', function($log){
     var item = function(id, name, image, price, quantity, data) {
       this.setId(id);
       this.setName(name);
-      this.setImage(image)
+      this.setImage(image);
       this.setPrice(price);
       this.setQuantity(quantity);
       this.setData(data);
@@ -212,24 +216,28 @@ angular.module('angularMart.Service', [])
       return this.id;
     };
     item.prototype.setName= function(name){
-      if(name && typeof name === 'string') this.name= name;
-      else $log.error("A product name must be provieded");
+      if(name && typeof name === 'string') {
+        this.name= name;
+      } else {
+        $log.error("A product name must be provieded");
+      }
     };
     item.prototype.getName= function(){
       return this.name;
     };
     item.prototype.setImage=function(image){
-      if(image) this.image=image;
-      else this.image='defaultimges.jpg';
-    }
+      if(image) {this.image=image;}
+      else {this.image='defaultimges.jpg';}
+    };
     item.prototype.getImage=function(){
       return this.image;
-    }
+    };
     item.prototype.setPrice=function(price){
       var pricef = parseFloat(price);
-      if(pricef >=0 )
+      if(pricef >=0 ){
         this.price=(pricef);
-      else $log.error("A price must be provided");
+      }
+      else {$log.error("A price must be provided");}
     };
     item.prototype.getPrice=function(){
       return this.price;
@@ -245,22 +253,26 @@ angular.module('angularMart.Service', [])
         }
       }else {
         this.quantity=1;
-        $log.info("Quantity must be an integer gratter then 0")
+        $log.info("Quantity must be an integer gratter then 0");
       }
     };
     item.prototype.getQuantity=function(){
       return this.quantity;
     };
     item.prototype.setData=function(data){
-      if(data) this.data=data;
+      if(data) {this.data=data;}
     };
     item.prototype.getData=function(){
-      if(this.data)
-        return this.data;
-        else $log.info("This item has not set any data");
+      if(this.data){
+          return this.data;
+      }else {
+        $log.info("This item has not set any data");
+      }
     };
     item.prototype.getTotal=function(){
-      return this.total= parseFloat(this.getQuantity() * this.getPrice()).toFixed(2);
+       this.total= parseFloat(this.getQuantity() * this.getPrice()).toFixed(2);
+
+       return this.total;
     };
     item.prototype.toObject=function(){
       return {
@@ -270,7 +282,7 @@ angular.module('angularMart.Service', [])
         price: this.getPrice(),
         quantity: this.getQuantity(),
         total:this.getTotal()
-      }
+      };
     };
 
     return item;
@@ -292,5 +304,5 @@ angular.module('angularMart.Service', [])
 
         return $window.localStorage[key];
       }
-    }
+    };
   }]);

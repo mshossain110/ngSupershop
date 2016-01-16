@@ -1,18 +1,18 @@
 <!doctype html>
-<html ng-app="ngSuperShopApp">
+<html ng-app="ngSuperShopApp" >
   <head>
 
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta http-equiv="X-UA-Compatible" content="IE=9">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="yes" />
     <title>Angular Mart</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
     <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
     <link rel="stylesheet" href="bower_components/flexslider/flexslider.css" />
@@ -34,48 +34,73 @@
     <![endif]-->
     <!-- endbuild -->
   </head>
-  <body class="scrollable">
+  <body ng-controller="MainController" >
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+    <!-- Sidebars -->
+    <div ng-include="'views/templates/sidebar.html'"
+            ui-track-as-search-param='true'
+            class="sidebar sidebar-left"></div>
 
+    <div ng-include="'views/templates/rightsidebar.html'"
+            class="sidebar sidebar-right"></div>
 
-      <div class="navbar navbar-app navbar-absolute-top" ng-if="!isNotMobile">
+    <div class="app"
+         ui-swipe-right='Ui.turnOn("uiSidebarLeft")'
+         ui-swipe-left='Ui.turnOff("uiSidebarLeft")'>
 
-        <div class="navbar-brand navbar-brand-center">
+      <!-- Navbars -->
+
+      <div class="navbar navbar-app navbar-absolute-top" >
+        <div class="navbar-brand navbar-brand-center" ui-yield-to="title">
           {{isNotMobile}}
         </div>
-
         <div class="btn-group pull-left">
-          <div class="btn btn-navbar">
-            Left Action
+          <div ui-toggle="uiSidebarLeft" class="btn sidebar-toggle">
+            <i class="fa fa-bars"></i> Menu
           </div>
         </div>
-
-        <div class="btn-group pull-right">
-          <div class="btn btn-navbar">
-            <span class="fa fa-search" ></span>
+        <div class="btn-group pull-right" ui-yield-to="navbarAction">
+          <div ui-toggle="uiSidebarRight" class="btn">
+            <i class="fa fa-comment"></i> Chat
           </div>
         </div>
       </div>
 
-<div class="wrapper scrollable-content">
-  <header class="header header-classic">
-    <section class="container-fluid header-top" ng-include="'views/templates/top_header.html'">
+      <div class="navbar navbar-app navbar-absolute-bottom" ng-if="!isNotMobile">
+        <div class="btn-group justified">
+          <a href="/docs" class="btn btn-navbar"><i class="fa fa-home fa-navbar"></i> Docs</a>
+          <a href="https://github.com/mcasimir/mobile-angular-ui" class="btn btn-navbar"><i class="fa fa-github fa-navbar"></i> Sources</a>
+          <a href="https://github.com/mcasimir/mobile-angular-ui/issues" class="btn btn-navbar"><i class="fa fa-exclamation-circle fa-navbar"></i> Issues</a>
+        </div>
+      </div>
 
-    </section>
-    <section class="container-fluid menu-bar" ng-include="'views/templates/navigation.html'"></section>
+      <!-- App Body -->
+      <div class="app-body" ng-class="{loading: loading}">
+        <div ng-show="loading" class="app-content-loading">
+          <i class="fa fa-spinner fa-spin loading-spinner"></i>
+        </div>
+        <div class="app-content">
+          <ui-view></ui-view>
+        </div>
+      </div>
 
-  </header>
-     <section class="slider-container" ui-view="slider"></section>
-       <section class="content" id="content">
+    </div><!-- ~ .app -->
+
+    <div ui-yield-to="modals"></div>
+
+<!-- <div class="wrapper scrollable ">
+
+     <section class="slider-container scrollable-content" ui-view="slider"></section>
+       <section class="content scrollable-content" id="content">
         <div ui-view></div>
       </section>
        <section class="container-fluid fooret-caontainer">
            <div class="footer-border">
 
            </div>
-          <footer class="footer container" id="footer">
+          <footer class="footer container scrollable-content" id="footer">
               <div class="widgets">
                 <div class="widget_text">
                       <div class="textwidget">
@@ -142,14 +167,13 @@
     </div>
 
 
-<div ui-yield-to="modals"></div>
+<div ui-yield-to="modals"></div> -->
 
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
@@ -172,7 +196,6 @@
         <script src="scripts/directives/directives.js"></script>
         <script src="scripts/controllers/controller.js"></script>
         <!-- endbuild -->
-    <!-- <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script> -->
 <script type="text/javascript" src="scripts/lib/plugins.js"></script>
 <script type="text/javascript" src="scripts/lib/custom.js"></script>
 

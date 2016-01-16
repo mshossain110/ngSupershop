@@ -1,24 +1,24 @@
 <div class="flexslider">
   <ul class="slides">
     <li >
-      <div class="slider-image" style="background-image:url('/images/slider/girl_laptop_shopping_white_background.jpg'); height: 620px;" ></div>
-      <div class="caption-inner flex-caption">
-          <h1 style="opacity:0;">Beauty & Brains</h1>
-          <strong style="opacity:0;" >Beautiful parallax scrolling effect &  intelligent options.</strong>
-          <a style="opacity:0;" href="" class="btn btn-success btn-lg text-left">Get Shop now</a><a href="" class="btn btn-success btn-lg text-left">Read More</a>
+      <img class="img-responsive" src="/images/slider/girl_laptop_shopping_white_background.jpg" />
+          <div class="caption-inner flex-caption">
+          <h1 >Beauty & Brains</h1>
+          <strong >Beautiful parallax scrolling effect &  intelligent options.</strong>
+          <a href="" class="btn btn-success btn-lg text-left">Get Shop now</a><a href="" class="btn btn-success btn-lg text-left">Read More</a>
       </div>
     </li>
     <li >
-      <div class="slider-image" style="background-image:url('/images/slider/shopping-cart-1080836.jpg'); height:620px;" ></div>
-      <div class="caption-inner flex-caption" >
-          <h1 class=''>THIS IS AN AWESOME VIDEO BANNER</h1>
-          <strong class=''>This is support video slider from youtube, vemio and mp4</strong>
-          <a href="" class="btn btn-success btn-lg">Get Shop now</a>
+      <img class="img-responsive" src="/images/slider/shopping-cart-1080836.jpg" />
+            <div class="caption-inner flex-caption" >
+          <h1class=''>THIS IS AN AWESOME VIDEO BANNER</h1>
+          <strong style="opacity:0;" class=''>This is support video slider from youtube, vemio and mp4</strong>
+          <a href=""class="btn btn-success btn-lg">Get Shop now</a>
           <a href="" class="btn btn-success btn-lg text-left">Read More</a>
       </div>
     </li>
     <li>
-      <div class="slider-image" style="background-image:url('/images/slider/child_shopping_bags.jpg'); height:620px;" ></div>
+      <img class="img-responsive" src="/images/slider/child_shopping_bags.jpg" />
       <div class="caption-inner flex-caption" >
           <h1 >We renovate with perfection</h1>
           <strong >Want to get Our help. 24/7 hours Support</strong>
@@ -35,7 +35,7 @@
       smoothHeight:true,
       start: function (slider){
         $(slider).find('.caption-inner').each(function(){
-          $(this).children('h1, strong, .btn').css('opacity', 0)
+
             var inner= $(slider).find(".flex-active-slide").find('.caption-inner');
          setTimeout(function(){ inner.children('h1').addClass("animated zoomIn").animate({ opacity: 1 },400); }, 300);
          setTimeout(function(){ inner.children('strong').addClass("animated fadeInUp").animate({ opacity: 1 },400); }, 600);

@@ -8,9 +8,21 @@
  * Controller of the ngSuperShopApp
  */
 angular.module('ngSuperShopApp')
-  .controller('MainCtrl',['$scope', '$http', 'PService', 'amCart', '$log', function ($scope, $http, PService, amCart, $log) {
+  .controller('MainCtrl',['$scope',   function ($scope) {
 
 
+
+
+
+   }])
+   .controller('MainController', ['$scope', '$rootScope', function($scope, $rootScope){
+     $scope.bodyClass= '';
+     $scope.bodyClass += navigator.platform? navigator.platform.split(" ")[0]+' ':'';
+     $scope.bodyClass += navigator.vendor?  navigator.vendor.substr(0,4)+' ':'';
+     $scope.bodyClass += window.opera ?  window.opera.substr(0,4)+' ': '';
+     $scope.bodyClass += navigator.appCodeName ? navigator.appCodeName+' ': '';
+      $scope.bodyClass += window.screen.width <=770 ? 'small-view'+' ': 'large-view'+' ';
+     $rootScope.$broadcast('bodyClass:add', $scope.bodyClass);
 
 
 
@@ -37,12 +49,12 @@ angular.module('ngSuperShopApp')
   }])
 
 
-  .controller('cardSummeryclrt', ['$scope', 'amCart',  function($scope, amCart){
-    $scope.amCart=amCart;
+  .controller('cardSummeryclrt', ['$scope', 'AmCart',  function($scope, AmCart){
+    $scope.AmCart=AmCart;
   } ])
 
 
-  .controller('amproductclrt', ['$scope', '$http', 'PService',  'amCart', function($scope,$http, PService, amCart){
+  .controller('amproductclrt', ['$scope', '$http', 'PService',  'AmCart', function($scope,$http, PService, AmCart){
 
     if(!PService.isEmpty()){
       $scope.p=PService;
@@ -52,9 +64,9 @@ angular.module('ngSuperShopApp')
           $scope.p=PService;
         });
       }
-    $scope.amCart=amCart;
+    $scope.AmCart=AmCart;
     $scope.query='';
     $scope.setProductId=function(id){
       $scope.sproduct=PService.getProductByID(id);
-    }
+    };
   } ]);

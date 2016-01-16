@@ -159,22 +159,26 @@ section.header-top {
     height: 130px;
 }
 /*mainmenu-----------------------------*/
-
-section.menu-bar {
-    margin: 20px 0px;
+.dropdown.mega-dropdown > ul > li {
+  display: inline-block;
+  float: left;
+  min-width: 250px;
+  overflow: hidden;
+  padding-left: 26px;
+  width: 24%;
 }
 nav.main_menu {
     margin: 14px 0;
 }
 .dropdown-menu {
     left: auto;
-    right: 0px !important;
+
 }
+.main_menu ul li:last-child .dropdown-menu{
+  right: 0 !important;
+}
+
 .main_menu ul a span.fa {
-    display: block;
-    text-align: center;
-}
-.dropdown .is_dropdown {
     display: block;
     text-align: center;
 }
@@ -200,9 +204,15 @@ nav.main_menu {
 }
 .mega-dropdown-menu {
     padding: 20px 0px;
-    width: 100%;
-    box-shadow: none;
-    -webkit-box-shadow: none;
+    right:0 !important;
+}
+.nav.navbar-nav {
+  float: right;
+  display: inline-block;
+}
+.nav.navbar-nav > li {
+  display: inline-block;
+  float: left;
 }
 .mega-dropdown-menu > li > ul {
     padding: 0;
@@ -216,33 +226,99 @@ nav.main_menu {
     color: #222;
     padding: 3px 5px;
 }
+.mega-dropdown-menu > li > ul > li > a:hover {
+  -ms-transform: translateX(10px);
+   -webkit-transform: translateX(10px);
+   transform: translateX(10px);
+   color:rgba(153, 21, 0, 1);
+   -webkit-transition-delay: 200ms;
+   transition-delay: 2s;
+}
 .mega-dropdown-menu > li ul > li > a:hover,
 .mega-dropdown-menu > li ul > li > a:focus {
     text-decoration: none;
 }
 .mega-dropdown-menu .dropdown-header {
     font-size: 18px;
-    color: #ff3546;
+    color: #242424;
     padding: 5px 60px 5px 5px;
     line-height: 30px;
 }
-.carousel-control {
-    width: 30px;
-    height: 30px;
-    top: -35px;
+/* Medium Devices, Desktops */
+.sidebar .navbar {
+  margin: 0 !important;
+  padding: 0;
 }
-.left.carousel-control {
-    right: 30px;
-    left: inherit;
+.sidebar .nav.navbar-nav {
+  margin: 0;
+  float: none;
+  clear: both;
 }
-.carousel-control .glyphicon-chevron-left,
-.carousel-control .glyphicon-chevron-right {
-    font-size: 12px;
-    background-color: #fff;
-    line-height: 30px;
-    text-shadow: none;
-    color: #333;
-    border: 1px solid #ddd;
+.sidebar .nav  li {
+  border-bottom: 1px solid #ddd;
+  display: inline-block;
+  width: 100%;
+  position: relative;
+}.sidebar .navbar  li  a {
+  display: block;
+  font-size: 16px;
+  padding: 8px;
+  text-transform: uppercase;
+}
+.navbar-nav .dropdown .dropdown-menu > li > a, .navbar-nav .dropdown .dropdown-menu .dropdown-header {
+  padding: 8px 15px 8px 25px;
+}
+.list-group-item.active, .list-group-item.active:focus {
+  background-color: rgb(153, 92, 0);
+  border-color: #FFF;
+  color: #ffffff;
+  z-index: 2;
+}
+.mega-dropdown-menu  li  ul  li  a.list-group-item:hover,
+a.list-group-item:hover, button.list-group-item:hover {
+  background-color: rgb(153, 92, 0);
+  color: #FFF;
+  text-decoration: none;
+  transform: translateX(0px);
+  transition-delay: 0s;
+}
+.sidebar .nav .fa {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 14px;
+}
+.sidebar .dropdown .dsign {
+  position: absolute;
+  right: 7px;
+  top: 12px;
+}
+.small-view .app-content nav.navbar {
+  display: none;
+}
+.sidebar .dropdown-menu {
+  border: medium none;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.sidebar .dropdown.mega-dropdown > ul > li {
+  padding: 0;
+  width: 100%;
+}
+.dropdown-menu > li {
+  width: 100%;
+}
+.sidebar .list-group-item {
+  font-size: 16px;
+  line-height: 1.3em;
+  padding: 8px;
+}
+.large-view .nav.navbar-nav.pull-right.nav-squer > li {
+  display: inline-block;
+}
+.dropdown-menu {
+  display: none;
 }
 /*footer-----------------------------*/
 
@@ -395,14 +471,14 @@ a.socialIcon:hover,
     font-family: 'Philosopher', sans-serif;
     font-weight: 700;
     display: block;
-    font-size: 65px;
+    font-size: 5em;
 }
 .flex-caption > strong {
     background: rgba(99, 97, 96, 0.5) none repeat scroll 0 0;
     display: block;
     color: #FFF;
     font-family: "Lato", Arial, sans-serif;
-    font-size: 23px;
+    font-size: 2.5em;
     margin: 20px 0;
     padding: 10px;
 }
@@ -654,55 +730,98 @@ input[type=password] {
     max-width: 100px;
 }
 /*meadia queary--------------------------*/
-/* Medium Devices, Desktops */
 
-@media only screen and (max-width: 1200px) {
-    .copy-right p {
-        margin: 40px 0px;
-    }
+/*mobile fixing*/
+.large-view .app {
+  margin-left: 0;
 }
+.scrollable-content {
+  background: #FFF;
+}
+
+
 @media only screen and (max-width: 992px) {
-    .product {
-        width: 214px;
-    }
-    .product .feature-image img {
-        height: 220px;
-    }
+  .flex-caption {
+  left: 23%;
+  top: 20%;
+  width: 400px;
+}
+.flex-caption > h1 {
+  font-size: 4em;
+}
+.flex-caption > strong {
+  font-size: 2em;
+}
+
 }
 /* Small Devices, Tablets */
 
 @media only screen and (max-width: 768px) {
-    .footer-bottom .col-xs-12 {
-        width: 100%;
+
+  .flex-caption {
+    left: 18%;
+    top: 10%;
+    width: 200px;
+  }
+    .flex-caption > h1 {
+      font-size: 1em;
     }
-    .textwidget .eFeatures {
-        margin-right: 5px;
-        width: 24%;
+    .flex-caption > strong {
+      font-size: 1em;
+    }
+    .caption-inner a.btn {
+      margin-right: 10px;
+      padding: 5px;
+      font-size: 1em;
+    }
+    ol.flex-control-nav {
+    display: none;
     }
 }
 /* Extra Small Devices, Phones */
 
 @media only screen and (max-width: 480px) {
-    .promo-bar .promo {
-        width: 100%;
+  .flex-caption {
+    left: 18%;
+    top: 10%;
+    width: 200px;
+  }
+      .flex-caption > h1 {
+      font-size: 1.5em;
     }
-    .copy-right p {
-        margin: 133px 0px;
-        margin-bottom: 0px;
+    .flex-caption > strong {
+      font-size: 1em;
     }
-    .textwidget .eFeatures {
-        width: 100%;
-        border-right: none;
+    .caption-inner a.btn {
+      margin-right: 10px;
+      padding: 5px;
+      font-size: 1em;
+    }
+    ol.flex-control-nav {
+    display: none;
     }
 }
 /* Custom, iPhone Retina */
 
 @media only screen and (max-width: 320px) {
-    .promo-bar .promo {
-        width: 100%;
+      .flex-caption {
+        left: 18%;
+        top: 10%;
+        width: 200px;
+      }
+      .flex-caption > h1 {
+      font-size: 1.2em;
     }
-    .textwidget .eFeatures {
-        width: 100%;
-        border-right: none;
+    .flex-caption > strong {
+      font-size: 1em;
     }
+    .caption-inner a.btn {
+      margin-right: 10px;
+      padding: 5px;
+      font-size: .8em;
+    }
+    ol.flex-control-nav {
+    display: none;
+    }
+
 }
