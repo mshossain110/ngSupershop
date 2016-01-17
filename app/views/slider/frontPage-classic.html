@@ -1,60 +1,46 @@
-<div class="flexslider">
-  <ul class="slides">
-    <li >
-      <img class="img-responsive" src="/images/slider/girl_laptop_shopping_white_background.jpg" />
-          <div class="caption-inner flex-caption">
-          <h1 >Beauty & Brains</h1>
-          <strong >Beautiful parallax scrolling effect &  intelligent options.</strong>
-          <a href="" class="btn btn-success btn-lg text-left">Get Shop now</a><a href="" class="btn btn-success btn-lg text-left">Read More</a>
-      </div>
-    </li>
-    <li >
-      <img class="img-responsive" src="/images/slider/shopping-cart-1080836.jpg" />
-            <div class="caption-inner flex-caption" >
-          <h1class=''>THIS IS AN AWESOME VIDEO BANNER</h1>
-          <strong style="opacity:0;" class=''>This is support video slider from youtube, vemio and mp4</strong>
-          <a href=""class="btn btn-success btn-lg">Get Shop now</a>
-          <a href="" class="btn btn-success btn-lg text-left">Read More</a>
-      </div>
-    </li>
-    <li>
-      <img class="img-responsive" src="/images/slider/child_shopping_bags.jpg" />
-      <div class="caption-inner flex-caption" >
-          <h1 >We renovate with perfection</h1>
-          <strong >Want to get Our help. 24/7 hours Support</strong>
-          <a href="" class="btn btn-success btn-lg">Shop now</a>
-          <a href="" class="btn btn-success btn-lg text-left">Read More</a>
-      </div>
-    </li>
-  </ul>
+<div class="flexslider front-pagestyle1 left">
+	<ul class="slides">
+		<li>
+			<img src="images/slider/9574.jpg">
+			<div class="caption">
+				<h1>Lorem ipsum dolor sit amet, consectetur.</h1>
+				<h2>Lorem ipsum dolor sit.</h2>
+        <a class="btn button-aqua btn3d btn-lg" >BUY IT NOW</a>
+				<a class="btn button-aqua btn3d btn-lg" >BUY IT NOW</a>
+			</div>
+		</li>
+		<li>
+			<img src="images/slider/12797.jpg">
+			<div class="caption">
+				<h1>Lorem ipsum dolor sit amet, consectetur.</h1>
+				<h2>Lorem ipsum dolor sit.</h2>
+        <a class="btn button-aqua btn3d btn-lg" >BUY IT NOW</a>
+				<a class="btn button-aqua btn3d btn-lg" >BUY IT NOW</a>
+			</div>
+		</li>
+		<li>
+			<img src="images/slider/19189.jpg">
+			<div class="caption">
+				<h1>Lorem ipsum dolor sit amet, consectetur.</h1>
+				<h2>Lorem ipsum dolor sit.</h2>
+        <a class="btn button-aqua btn3d btn-lg" >BUY IT NOW</a>
+				<a class="btn button-aqua btn3d btn-lg" >BUY IT NOW</a>
+			</div>
+		</li>
+		<li>
+			<img src="images/slider/22364.jpg">
+			<div class="caption">
+				<h1>Lorem ipsum dolor sit amet, consectetur.</h1>
+				<h2>Lorem ipsum dolor sit.</h2>
+        <a class="btn button-aqua btn3d btn-lg" >BUY IT NOW</a>
+				<a class="btn button-aqua btn3d btn-lg" >BUY IT NOW</a>
+			</div>
+		</li>
+	</ul>
 </div>
 <script type="text/javascript" >
-  $(document).ready(function(){
-    $('.flexslider').flexslider({
-      animation: 'fade',
-      smoothHeight:true,
-      start: function (slider){
-        $(slider).find('.caption-inner').each(function(){
-
-            var inner= $(slider).find(".flex-active-slide").find('.caption-inner');
-         setTimeout(function(){ inner.children('h1').addClass("animated zoomIn").animate({ opacity: 1 },400); }, 300);
-         setTimeout(function(){ inner.children('strong').addClass("animated fadeInUp").animate({ opacity: 1 },400); }, 600);
-         setTimeout(function(){inner.children('.btn').addClass("animated flipInX").animate({ opacity: 1 },400); }, 1000);
-
-         });
-      },
-      before: function (slider){
-        $(slider).find(".flex-active-slide").find('.caption-inner').each(function(){
-         $(this).children('h1, strong, .btn').removeClass("animated zoomIn fadeInUp flipInX").animate({opacity:0}, 400);
-         });
-      },
-      after:function (slider){
-        var inner= $(slider).find(".flex-active-slide").find('.caption-inner');
-        setTimeout(function(){ inner.children('h1').addClass("animated zoomIn").animate({ opacity: 1 },400); }, 300);
-        setTimeout(function(){ inner.children('strong').addClass("animated fadeInUp").animate({ opacity: 1 },400); }, 600);
-        setTimeout(function(){ inner.children('.btn').addClass("animated flipInX").animate({ opacity: 1 },400); }, 1000);
-
-      }
-    });
-  })
+  $('.flexslider').flexslider({
+	animation: "slide",
+	controlNav: false
+});
 </script>

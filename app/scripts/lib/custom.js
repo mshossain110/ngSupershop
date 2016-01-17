@@ -85,5 +85,11 @@ $(function() {
     }
 
 
-
+  });
+  jQuery(document).ready(function(){
+      jQuery('.scrollable-content').scrollbar();
+  });
+  $(document).ready(function(){
+    // Target your .container, .wrapper, .post, etc.
+    $('.scrollable-content, .container').fitVids();
   });

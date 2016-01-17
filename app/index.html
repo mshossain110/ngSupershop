@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="ngSuperShopApp" class="header-classic" >
+<html ng-app="ngSuperShopApp" class="headerClassic" >
   <head>
 
     <meta charset="utf-8">
@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="bower_components/mobile-angular-ui/dist/css/mobile-angular-ui-hover.css" />
     <link rel="stylesheet" href="bower_components/mobile-angular-ui/dist/css/mobile-angular-ui-base.css" />
     <link rel="stylesheet" href="bower_components/mobile-angular-ui/dist/css/mobile-angular-ui-desktop.css" />
+    <link rel="stylesheet" href="bower_components/jquery.scrollbar/jquery.scrollbar.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -43,8 +44,7 @@
             ui-track-as-search-param='true'
             class="sidebar sidebar-left"></div>
 
-    <div ng-include="'views/templates/rightsidebar.html'"
-            class="sidebar sidebar-right"></div>
+    <div ng-include="'views/templates/rightsidebar.html'" class="sidebar sidebar-right"></div>
 
     <div class="app"
          ui-swipe-right='Ui.turnOn("uiSidebarLeft")'
@@ -73,107 +73,25 @@
           <div class="navigation-container"><am-navigation></am-navigation></div>
       </header>
       </div>
-
-      <div class="navbar navbar-app navbar-absolute-bottom" ng-if="!isNotMobile">
-        <div class="btn-group justified">
-          <a href="/docs" class="btn btn-navbar"><i class="fa fa-home fa-navbar"></i> Docs</a>
-          <a href="https://github.com/mcasimir/mobile-angular-ui" class="btn btn-navbar"><i class="fa fa-github fa-navbar"></i> Sources</a>
-          <a href="https://github.com/mcasimir/mobile-angular-ui/issues" class="btn btn-navbar"><i class="fa fa-exclamation-circle fa-navbar"></i> Issues</a>
-        </div>
-      </div>
-
       <!-- App Body -->
       <div class="app-body" ng-class="{loading: loading}">
         <div ng-show="loading" class="app-content-loading">
           <i class="fa fa-spinner fa-spin loading-spinner"></i>
         </div>
         <div class="app-content">
-          <ui-view></ui-view>
+          <div class="scrollable">
+            <div class="scrollable-content">
+                <ui-view></ui-view>
+                <div ng-include="'views/templates/footer.html'"></div>
+              </div>
+
+            </div>
         </div>
       </div>
 
     </div><!-- ~ .app -->
 
     <div ui-yield-to="modals"></div>
-
-<!-- <div class="wrapper scrollable ">
-
-     <section class="slider-container scrollable-content" ui-view="slider"></section>
-       <section class="content scrollable-content" id="content">
-        <div ui-view></div>
-      </section>
-       <section class="container-fluid fooret-caontainer">
-           <div class="footer-border">
-
-           </div>
-          <footer class="footer container scrollable-content" id="footer">
-              <div class="widgets">
-                <div class="widget_text">
-                      <div class="textwidget">
-                    <div class="eFeatures col-xs-12">
-                        <div class="icon-image "><span style="color:" class="fa fa-dollar"></span>
-                        </div>
-                        <div class="icon-text">
-                            <h4>MONEY GUARANTEE</h4>
-                            <p>30 days money guarantee!</p>
-                        </div>
-                    </div>
-
-                    <div class="eFeatures col-xs-12">
-                        <div class="icon-image"><span style="color:" class="fa fa-phone-square"></span>
-                        </div>
-                        <div class="icon-text">
-                            <h4>ONLINE SUPPORT</h4>
-                            <p>We support online 24/7</p>
-                        </div>
-                    </div>
-
-                    <div class="eFeatures col-xs-12">
-                        <div class="icon-image"><span style="color:" class="fa fa-credit-card"></span>
-                        </div>
-                        <div class="icon-text">
-                            <h4>PAYMENT SECURE</h4>
-                            <p>Secure all your payment</p>
-                        </div>
-                    </div>
-
-                    <div class="eFeatures col-xs-12">
-                        <div class="icon-image"><span style="color:" class="fa fa-truck"></span>
-                        </div>
-                        <div class="icon-text">
-                            <h4>FREE DELIVERY</h4>
-                            <p>Free all orders up £99.99</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-          </div>
-               <div class="footer-bottom row">
-                    <div class="col-md-12 col-xs-12">
-                    <div class="col-md-6 col-xs-12 ">
-                        <img class="pull-left" src="images/cards.png" alt="">
-                    </div>
-                    <div class="col-md-6 col-xs-12 ">
-                      <ul class="social-network social-circle pull-right">
-                        <li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
-                        <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-                      </ul>
-                    </div>
-
-                  <div class="col-md-12 copy-right">
-                    <p> &copy; All Right resorved  {{isNotMobile}}</p>
-                  </div>
-              </div>
-
-          </footer>
-      </section>
-    </div>
-
-
-<div ui-yield-to="modals"></div> -->
 
 
     <!-- build:js(.) scripts/vendor.js -->
@@ -192,6 +110,7 @@
     <script src="bower_components/jqvmap/dist/jquery.vmap.min.js"></script>
     <script src="bower_components/mobile-angular-ui/dist/js/mobile-angular-ui.js"></script>
     <script src="bower_components/mobile-angular-ui/dist/js/mobile-angular-ui.gestures.js"></script>
+    <script src="bower_components/jquery.scrollbar/jquery.scrollbar.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

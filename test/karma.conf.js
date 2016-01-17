@@ -36,6 +36,7 @@ module.exports = function(config) {
       'bower_components/jqvmap/dist/jquery.vmap.min.js',
       'bower_components/mobile-angular-ui/dist/js/mobile-angular-ui.js',
       'bower_components/mobile-angular-ui/dist/js/mobile-angular-ui.gestures.js',
+      'bower_components/jquery.scrollbar/jquery.scrollbar.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       "app/scripts/**/*.js",

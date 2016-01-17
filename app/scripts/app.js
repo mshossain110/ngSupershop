@@ -30,7 +30,7 @@ angular
      url:'/',
 
      views: {
-
+       "footer": {templateUrl: 'views/templates/footer.html'},
         "": {templateUrl: 'views/main.html'}
       }
    })
@@ -49,9 +49,14 @@ angular
    // elements router
    .state('elements',{
      url: '/elements',
+     template: '<ui-view />'
+   }).state('elements.element',{
+     url: '/elements',
      templateUrl: '/views/ui/elements.html'
    }).state('elements.button',{
-     templateUrl:'/views/ui/button.html'
+     views:{
+       "": {templateUrl:'/views/ui/button.html'}
+     }
    }).state('elements.heading',{
      templateUrl:'/views/ui/heading.html'
    }).state('elements.conntentbox',{

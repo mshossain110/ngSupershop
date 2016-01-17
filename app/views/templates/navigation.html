@@ -19,16 +19,18 @@
                         <li><a  href="#">Shop with sidebar</a></li>
                   </ul>
                 </li>
-                <li class="dropdown mega-dropdown"><a ui-sref="elements"><span class="fa fa-cogs"></span>Features</a>
+                <li class="dropdown mega-dropdown"><a  ui-sref="elements.element"><span class="fa fa-cogs"></span>Features</a>
                       <ul class="dropdown-menu mega-dropdown-menu ">
                             <li>
                                   <ul>
                                     <li class="dropdown-header">Element</li>
-                                    <li><a  ui-sref="elements.button">Heading</a></li>
-                                    <li><a  ui-sref="elements.button">Button</a></li>
-                                    <li><a  href="#">Content Box</a> </li>
-                                    <li><a  href="#">testimonials</a></li>
-                                    <li><a  href="#">flex box</a></li>
+                                    <li ui-sref-active="active"  ><a ui-sref="elements.button"><span class="fa fa-check-square"></span> button</a></li>
+                                    <li ui-sref-active="active" ><a  ui-sref="elements.heading"><span class="fa fa-check-square"></span> Heading</a></li>
+                                    <li ui-sref-active="active"><a ui-sref="elements.conntentbox"><span class="fa fa-check-square"></span> content box</a></li>
+                                    <li ui-sref-active="active" ><a  ui-sref="elements.carousel"><span class="fa fa-check-square"></span> carousel</a></li>
+                                    <li ui-sref-active="active"><a  ui-sref="elements.accordion"><span class="fa fa-check-square"></span> accordion</a></li>
+                                    <li ui-sref-active="active"><a ui-sref="elements.icons"><span class="fa fa-check-square"></span> Icons</a></li>
+
                                   </ul>
 
                             </li>
@@ -36,19 +38,18 @@
                             <li >
                                 <ul>
                                   <li class="dropdown-header">Element</li>
-                                  <li><a  >Icon</a></li>
-                                  <li><a  href="#">Icon style</a></li>
-                                  <li><a  href="#">Counter</a> </li>
-                                  <li><a >Vector Map</a></li>
-                                  <li><a  href="#">pricing Table</a></li>
-                                  <li><a  href="#">Typhpography</a></li>
+                                  <li ui-sref-active="active" ><a  ui-sref="elements.counter"><span class="fa fa-check-square"></span> Counter</a></li>
+                                  <li ui-sref-active="active" ><a  ui-sref="elements.gmaps"><span class="fa fa-check-square"></span>Gmaps</a></li>
+                                  <li ui-sref-active="active"><a  ui-sref="elements.pricingTable"><span class="fa fa-check-square"></span> pricing Table</a></li>
+                                  <li ui-sref-active="active"><a  ui-sref="elements.testimonials"><span class="fa fa-check-square"></span> Testimonials</a></li>
+
                                 </ul>
                             </li>
 
                             <li >
                                   <ul>
                                     <li class="dropdown-header">Angular</li>
-                                    <li><a  href="" ui-sref="elements.button">accordion</a></li>
+                                    <li><a  href="" >accordion</a></li>
                                     <li><a  href="#">Carousel</a></li>
                                     <li><a  href="#">modal</a> </li>
                                     <li><a  href="#">Tab</a> </li>
@@ -62,7 +63,7 @@
                               <li>
                                   <ul>
                                     <li class="dropdown-header">Angular Touch</li>
-                                    <li><a  href="" ui-sref="elements.button">Touch</a></li>
+                                    <li><a  href="">Touch</a></li>
                                     <li><a  href="#">Swipe</a></li>
                                     <li><a  href="#">Tap</a> </li>
                                     <li><a  href="#">Dismish</a> </li>
