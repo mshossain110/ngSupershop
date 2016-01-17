@@ -7,22 +7,31 @@
  * # amAddtocart
  */
 angular.module('ngSuperShopApp')
-.directive('cardSummery', function(){
+.directive('cartSummery', function(){
   return {
     controller: 'cardSummeryclrt',
     transclude:true,
     restrict: 'E',
-    scope:{},
     templateUrl: function(element, attrs) {
         if ( typeof attrs.templateUrl === 'undefined' ) {
             return 'views/shop/cardSummery.html';
         } else {
             return attrs.templateUrl;
         }
-    },
-
+    }
   };
-}).directive('amProducts', function(){
+})
+.directive('cartIcon', function(){
+  return {
+    controller: 'cardSummeryclrt',
+    transclude:true,
+    restrict: 'E',
+    scope:{
+    },
+    template: '<div class="shopping-cart-icon">'+'<span class="fa fa-shopping-cart">{{amCart.getTotalItems()}}</span>'+'<div class="items-inner">'+'<strong>Shopping Cart</strong>'+'<span class="cart-amount">{{amCart.getTotalItems()}} item(s) {{amCart.getSubTotal()| currency}}</span>'+'</div></div>',
+  };
+})
+.directive('amProducts', function(){
   return {
     controller: 'amproductclrt',
     transclude:true,

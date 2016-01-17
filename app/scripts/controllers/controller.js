@@ -49,12 +49,12 @@ angular.module('ngSuperShopApp')
   }])
 
 
-  .controller('cardSummeryclrt', ['$scope', 'AmCart',  function($scope, AmCart){
-    $scope.AmCart=AmCart;
+  .controller('cardSummeryclrt', ['$scope', 'amCart',  function($scope, amCart){
+    $scope.amCart=amCart;
   } ])
 
 
-  .controller('amproductclrt', ['$scope', '$http', 'PService',  'AmCart', function($scope,$http, PService, AmCart){
+  .controller('amproductclrt', ['$scope', '$http', 'PService',  'amCart', function($scope,$http, PService, amCart){
 
     if(!PService.isEmpty()){
       $scope.p=PService;
@@ -64,7 +64,7 @@ angular.module('ngSuperShopApp')
           $scope.p=PService;
         });
       }
-    $scope.AmCart=AmCart;
+    $scope.amCart=amCart;
     $scope.query='';
     $scope.setProductId=function(id){
       $scope.sproduct=PService.getProductByID(id);
