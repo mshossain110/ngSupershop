@@ -114,6 +114,24 @@
     transform: scale(.8);
     opacity: 0;
 }
+.icon-entry > span {
+    position: relative;
+    top: 48px;
+}
+.icon-entry i {
+    left: 90px;
+    position: relative;
+}
+.icon-entry {
+}
+.list-unstyled .icon-entry {
+    margin-top: 17px;
+    position: relative;
+}
+.flaticon-leaf64.icon-effect.auto-width.effect-1.effect-a {
+  margin-left: 35px;
+}
+
 /* Effect 1a */
 
 .icon-effect.effect-1.effect-a:hover,
@@ -317,6 +335,7 @@
     -webkit-transition: background 0.3s, color 0.3s, box-shadow 0.3s;
     -moz-transition: background 0.3s, color 0.3s, box-shadow 0.3s;
     transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    top: 30px;
 }
 .icon-effect.effect-5:after {
     display: none;

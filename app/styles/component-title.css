@@ -6,7 +6,7 @@
     margin-top: 50px;
     overflow: hidden;
     position: relative;
-    z-index: 9999;
+    z-index: 1;
 }
 .title-entry .title {
     position: relative;
