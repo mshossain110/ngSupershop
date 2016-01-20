@@ -9,21 +9,4 @@ heading-text-color:
 menubar-background: #5fd48f
 menu-text:#333
 
-
-#class
-=>header-class
-header
-
-title-entry
-sub-title
-
-=>product class
-product-block
-product-block-inner
-product
-products
-product-title
-product-images
-product-meta
-product-content
-product-category
+#182e3b;

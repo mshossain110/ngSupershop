@@ -1,96 +1,79 @@
-<div class="item-block cat-pro-style">
-<header>
-  <h1 class="page-header">Feature products </h1>
-</header>
-<div class="col-md-2 product-category">
-  <div class="product-category-inner">
-    <ul class="list-unstyled clearfix">
-      <li><a href="" ng-click="query.category=NULL" >All</a></li>
-      <li><a href="" ng-click="query.category='mac'" >man</a></li>
-      <li><a href="" ng-click="query.category='ipad'" >woman</a></li>
-      <li><a href="" ng-click="query.category='phone'" >children</a></li>
-    </ul>
-  </div>
-</div>
-<div class="col-md-10 products">
-  <div class="col-md-3 product animated flipInX" ng-repeat="product in p.getAllProducts() | filter: query">
-        <div class="feature-image">
-            <img src="images/product/{{product.src}}" class="img-responsive" alt="AdidasHoodie" />
-        </div>
-        <div class="product-content" >
-          <p></p>
-        </div>
-        <div class="product-button">
-            <a href=""  ui-turn-on="modal1" title="Quick View"  class=""><span ng-click="setProductId(product.ID)" class="fa fa-link fa-2x"  ></span></a>
-            <a href="" ng-click="amCart.addItem(product.ID, product.name, product.src, product.price, 1)" title="Add to Cart"><span class="fa fa-cart-arrow-down fa-2x" ></span></a>
-        </div>
-        <h3 class="product-title title-entry">{{product.name}}</h3>
-        <p class="price">{{product.price | currency:"$":0}}</p>
-</div>
+<div class="products-block-container fout-products-per-row">
+	<div class="products-block-outer">
+		<div class="products-block-inner">
+			<div class="products-block">
 
-<div ui-content-for="modals">
-  <div class="modal" ui-if="modal1" ui-state='modal1'>
-    <div class="modal-backdrop in"></div>
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button class="close"
-                  ui-turn-off="modal1">&times;</button>
-          <h4 class="modal-title">Modal title</h4>
-        </div>
-        <div class="modal-body">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio quo illum nihil voluptatem earum optio repellendus, molestias illo facere, ea non. Possimus assumenda illo accusamus voluptatibus, vel corporis maxime quam.</p>
-        </div>
-        <div class="modal-footer">
-          <button ui-turn-off="modal1" class="btn btn-default">Close</button>
-          <button ui-turn-off="modal1" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
-<!-- <div class="quick-view-modal modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      </div>
-
-      <div class="modal-body col-md-12">
-        <div class="feature-imges">
-					<div class="p-image">
-	          <img id="item-display" src="images/product/{{sproduct.src}}" alt="" />
+				<header>
+					<div class="title-entry">
+						<div class="title">
+							<h1>Feature Products</h1>
+						</div>
 					</div>
+				</header>
 
-					<div class="p-images">
-						<ul>
-							<a id="item-1" class="service1-item">
-								<img src="http://www.corsair.com/Media/catalog/product/g/s/gs600_psu_sideview_blue_2.png" alt=""></img>
-							</a>
-							<a id="item-2" class="service1-item">
-								<img src="http://www.corsair.com/Media/catalog/product/g/s/gs600_psu_sideview_blue_2.png" alt=""></img>
-							</a>
-							<a id="item-3" class="service1-item">
-								<img src="http://www.corsair.com/Media/catalog/product/g/s/gs600_psu_sideview_blue_2.png" alt=""></img>
-							</a>
-						</ul>
+				<div class="products-cat-entry">
+					<div class="products-category-outer">
+						<div class="products-category-inner">
+							<ul class="list-unstyled list-inline clearfix">
+								<li><a href="" ng-click="query.category=NULL" >All</a></li>
+								<li><a href="" ng-click="query.category='mac'" >man</a></li>
+								<li><a href="" ng-click="query.category='ipad'" >woman</a></li>
+								<li><a href="" ng-click="query.category='phone'" >children</a></li>
+							</ul>
+						</div>
 					</div>
 				</div>
 
+				<div class="products-entry">
+					<div class="product-outer" ng-repeat="product in p.getAllProducts() | filter: query">
+						<div class="product-inner">
+							<div class="product animated flipInX" >
 
-        <div class="product-content">
-          <h2 class="entry-title"><a href="">{{sproduct.name}}</a></h2>
-          <div class="product-content">
-              <p>
-                {{sproduct.overview}}
-              </p>
-          </div>
+								<div class="feature-image">
+									<img src="images/product/{{product.src}}" class="img-responsive" alt="AdidasHoodie" />
+								</div>
 
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
+								<div class="product-bottom">
+									<h3>{{product.name}}</h3>
+									<span>{{product.price | currency:"$":0}}</span>
+								</div>
+
+								<div class="product-button">
+									<a href=""  ui-turn-on="modal1" title="Quick View" ng-click="setProductId(product.ID)"  class="btn"><span  class="fa fa-link"></span><span  class="text">Quick View</span></a>
+									<a href="" ng-click="amCart.addItem(product.ID, product.name, product.src, product.price, 1)" title="Add to Cart" class="btn"><span class="fa fa-shopping-cart" ></span><span  class="text">Add to cart</span></a>
+									<a href=""  title="Add to Cart" class="btn"><span class="fa fa-bolt" ></span><span  class="text">Read More</span></a>
+								</div>
+                
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
 </div>
+
+
+<div ui-content-for="modals">
+	<div class="modal" ui-if="modal1" ui-state='modal1'>
+		<div class="modal-backdrop in"></div>
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button class="close"
+						ui-turn-off="modal1">&times;</button>
+					<h4 class="modal-title">Modal title</h4>
+				</div>
+				<div class="modal-body">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio quo illum nihil voluptatem earum optio repellendus, molestias illo facere, ea non. Possimus assumenda illo accusamus voluptatibus, vel corporis maxime quam.</p>
+				</div>
+				<div class="modal-footer">
+					<button ui-turn-off="modal1" class="btn btn-default">Close</button>
+					<button ui-turn-off="modal1" class="btn btn-primary">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
