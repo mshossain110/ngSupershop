@@ -67,6 +67,8 @@ angular
      templateUrl:'/views/ui/elements.accordion.html'
    }).state('elements.icons',{
      templateUrl:'/views/ui/elements.icons.html'
+   }).state('elements.iconseffect',{
+     templateUrl:'views/ui/element.iconsEffect.html'
    }).state('elements.counter',{
      templateUrl:'/views/ui/elements.counter.html'
    }).state('elements.gmaps',{
