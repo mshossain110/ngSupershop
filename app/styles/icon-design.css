@@ -122,16 +122,18 @@
     left: 90px;
     position: relative;
 }
-.icon-entry {
-}
 .list-unstyled .icon-entry {
     margin-top: 17px;
     position: relative;
 }
-.flaticon-leaf64.icon-effect.auto-width.effect-1.effect-a {
-  margin-left: 35px;
+.icon-entry .small,.mini {
+  top: 16px;
 }
-
+.icon-entry .xl {
+  left: 112px;
+  position: relative;
+  margin-left: -73px;
+}
 /* Effect 1a */
 
 .icon-effect.effect-1.effect-a:hover,
@@ -150,6 +152,9 @@
     -ms-transform: scale(1);
     transform: scale(1);
     opacity: 1;
+}
+.icons {
+  margin-top: 34px;
 }
 /* Effect 1b */
 
@@ -292,6 +297,9 @@
     -ms-transform: scale(1);
     transform: scale(1);
     opacity: 1;
+}
+.xl.effect-6,.xl.effect-7,.xl.effect-8,.xl.effect-9.square   {
+  top: -19px;
 }
 /* Effect 4 */
 
