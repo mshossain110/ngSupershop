@@ -70,7 +70,7 @@ angular.module('ngSuperShopApp')
         $dropdown=$nav.find('.dropdown'),
         $animation= 400;
         $dropdown.children('a').append('<span class="fa fa-plus dsign"></span>');
-        if($scope.mobile==true){
+        if($scope.mobile===true){
           $nav.addClass('mobile-nav');
           $nav.find('li').children('a').addClass('list-group-item');
           $nav.find('.divider, .dropdown-header').remove();
@@ -141,7 +141,7 @@ angular.module('ngSuperShopApp')
   };
 }])
 /*gototop*/
-.directive('amGototop', [ '$timeout', 'isMobile' function($timeout, isMobile){
+.directive('amGototop', [ '$timeout', 'isMobile', function($timeout, isMobile){
   return {
     transclude:false,
     restrict: 'E',
@@ -149,8 +149,8 @@ angular.module('ngSuperShopApp')
     scope:{},
     link: function($scope, element, attrs){
       if(!isMobile.any()){
-           $('.scrollable-content').on('scroll', function() {
-              if($(this).scrollTop() > 500){
+           jQuery('.scrollable-content').on('scroll', function() {
+              if(jQuery(this).scrollTop() > 500){
                 element.fadeIn(100);
               }else{
                 element.fadeOut(100);
@@ -160,7 +160,7 @@ angular.module('ngSuperShopApp')
        
 
         element.on('click', function(){
-          $('.scrollable-content').animate({scrollTop:0},1000);
+          jQuery('.scrollable-content').animate({scrollTop:0},1000);
         });
     }
 

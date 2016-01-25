@@ -412,21 +412,20 @@ a.socialIcon:hover,
     font-size: 20px;
 }
 /*slider-----------------------------*/
-.flexslider.front-pagestyle1{
-  width: 100%;
-  height: 600px;
-  max-height: 600px;
-  overflow: hidden;
+.flexslider.front-pagestyle1 {
   display: block;
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+ border: medium none;
 }
-.flexslider.front-pagestyle1 .slides img {
-  -moz-user-select: none;
-  height: 600px;
-}
+
 .flexslider li {
 		position: relative;
 }
-
+.flexslider .slides img {
+  max-height: 600px;
+}
 .flexslider li .caption {
 		position: absolute;
 		bottom: 200px;
@@ -668,6 +667,14 @@ a.socialIcon:hover,
       .content-block-outer .content-box-icon-top .content-box-icon {
         background: transparent;
       }
+
+      .our-clients li {
+          width: 25%;
+          float: left;
+          height: 200px;
+          overflow: hidden;
+          border: 1px solid #ddd;
+        }
 /*front page products---------------------------*/
 /*meadia queary--------------------------*/
 .products-block-container {

@@ -1,5 +1,17 @@
 /********************************    Icon Effect and radious ***************************************************************************/
 
+
+.list-unstyled .icon-entry {
+  height: 110px;
+  margin-top: 17px;
+  min-width: 200px;
+  position: relative;
+  width: 19%;
+  display: inline-block;
+}
+.list-unstyled .icon-entry span{
+    display: block;
+}
 .icon-effect {
     display: inline-block;
     font-size: 30px;
@@ -11,6 +23,7 @@
     border-radius: 50%;
     text-align: center;
     position: relative;
+    top: 0;
     text-decoration: none;
     z-index: 1;
     color: rgba(153, 21, 0, 1);
@@ -114,26 +127,7 @@
     transform: scale(.8);
     opacity: 0;
 }
-.icon-entry > span {
-    position: relative;
-    top: 48px;
-}
-.icon-entry i {
-    left: 90px;
-    position: relative;
-}
-.list-unstyled .icon-entry {
-    margin-top: 17px;
-    position: relative;
-}
-.icon-entry .small,.mini {
-  top: 16px;
-}
-.icon-entry .xl {
-  left: 112px;
-  position: relative;
-  margin-left: -73px;
-}
+
 /* Effect 1a */
 
 .icon-effect.effect-1.effect-a:hover,
@@ -153,9 +147,7 @@
     transform: scale(1);
     opacity: 1;
 }
-.icons {
-  margin-top: 34px;
-}
+
 /* Effect 1b */
 
 .icon-effect.effect-1.effect-b:hover,
