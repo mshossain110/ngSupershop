@@ -18,6 +18,7 @@ angular
     'mobile-angular-ui.gestures',
     'ngSanitize',
     'ngTouch',
+    'duScroll',
     'angularMart.Service'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
@@ -77,6 +78,8 @@ angular
      templateUrl:'/views/ui/elements.pricingTable.html'
    }).state('elements.testimonials',{
      templateUrl:'/views/ui/elements.testimonials.html'
+   }).state('elements.callToAction',{
+     templateUrl:'/views/ui/elements.callToAction.html'
    });
   })
   .run(['$rootScope','amCart', 'store', '$window', '$timeout', function($rootScope, amCart, store, $window, $timeout){
@@ -105,5 +108,5 @@ angular
     }, 10);
 
 
-  }])
+  }]) 
   ;

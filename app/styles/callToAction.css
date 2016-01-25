@@ -1,0 +1,43 @@
+.callToAction-inner {
+  display: block;
+  overflow: hidden;
+  padding: 20px 30px;
+  position: relative;
+}
+.callToAction-content {
+  display: block;
+  float: left;
+  width: 70%;
+  overflow: hidden;
+  text-align: center;
+}
+.callToAction-content > h1 {
+  font-size: 2em;
+}
+.callToAction-content strong {
+  color: rgba(153, 21, 0, 1);
+}
+.callToAction-content p{
+	font-size: 1.5em;
+}
+.callToAction-btn {
+  width: 30%;
+  float: right;
+  display: block;
+  text-align: center;
+  margin: 1.5em 0em;
+}
+.box .callToAction-inner {
+  border: 1px solid #ddd;
+}
+
+.box-bg .callToAction-inner {
+  background: rgba(153, 21, 0, 1);
+  color:#FFF;
+}
+.box-bg .callToAction-inner strong{
+	color:yellow;
+}
+.box-bg .callToAction-inner p{
+	color: #FFF;
+}

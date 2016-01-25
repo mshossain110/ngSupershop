@@ -35,7 +35,7 @@
     <![endif]-->
     <!-- endbuild -->
   </head>
-  <body ng-controller="MainController" >
+  <body ng-controller="MainController" id="body">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -60,18 +60,18 @@
                     <div class="phpne"><a href=""><span class="fa fa-phone"></span><span>0135685265</span></a></div>
                   </div>
                   <div class="navigation-button">
-                    <div ui-toggle="uiSidebarLeft" class="btn sidebar-toggle"><i class="fa fa-bars"></i></div>
+                    <button ui-toggle="uiSidebarLeft" class="sidebar-toggle"><span>Toggle Navigation</span></button>
                   </div>
                   <div class="cart-profile" ui-yield-to="navbarAction">
                       <div class="my-account"><a href="#"><span class="fa fa-user"></span></a></div>
                       <cart-icon ui-toggle="uiSidebarRight" ></cart-icon>
                   </div>
-          </div>
-          <div class="logo-container">
+            </div>
+            <div class="logo-container">
                 <a > <img src="/images/angularjs-logo.png" /></a>
-          </div>
-          <div class="navigation-container"><am-navigation></am-navigation></div>
-      </header>
+            </div>
+            <div class="navigation-container"><am-navigation></am-navigation></div>
+        </header>
       </div>
       <!-- App Body -->
       <div class="app-body" ng-class="{loading: loading}">
@@ -90,7 +90,7 @@
       </div>
 
     </div><!-- ~ .app -->
-
+        <am-gototop></am-gototop>
     <div ui-yield-to="modals"></div>
 
 
@@ -111,6 +111,8 @@
     <script src="bower_components/mobile-angular-ui/dist/js/mobile-angular-ui.js"></script>
     <script src="bower_components/mobile-angular-ui/dist/js/mobile-angular-ui.gestures.js"></script>
     <script src="bower_components/jquery.scrollbar/jquery.scrollbar.js"></script>
+    <script src="bower_components/jquery-appear/src/jquery.appear.js"></script>
+    <script src="bower_components/angular-scroll/angular-scroll.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

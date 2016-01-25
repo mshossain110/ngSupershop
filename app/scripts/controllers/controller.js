@@ -16,16 +16,8 @@ angular.module('ngSuperShopApp')
 
    }])
    .controller('MainController', ['$scope', '$rootScope', function($scope, $rootScope){
-     $scope.bodyClass= '';
-     $scope.bodyClass += navigator.platform? navigator.platform.split(" ")[0]+' ':'';
-     $scope.bodyClass += navigator.vendor?  navigator.vendor.substr(0,4)+' ':'';
-     $scope.bodyClass += window.opera ?  window.opera.substr(0,4)+' ': '';
-     $scope.bodyClass += navigator.appCodeName ? navigator.appCodeName+' ': '';
-      $scope.bodyClass += window.screen.width <=770 ? 'small-view'+' ': 'large-view'+' ';
      $rootScope.$broadcast('bodyClass:add', $scope.bodyClass);
-
-
-
+      
    }])
   .controller('ShopSingleClt', ['$scope', '$routeParams', '$http','PService',function($scope, $routeParams, $http, PService){
     var Productid=$routeParams.productID;

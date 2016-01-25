@@ -113,4 +113,57 @@ angular.module('ngSuperShopApp')
     };
 
 }])
+/*directive for animation*/
+
+.directive('amAnimate', [ '$timeout', function($timeout){
+  return {
+    transclude:false,
+    restrict: 'A',
+    scope:{},
+    link: function($scope, element, attrs){
+      var animationDelay = attrs.amDelay;
+        
+
+        if(!element.hasClass('animated')){
+          element.addClass('no-animated');
+           $timeout(function(){
+              element.bind('appear', function(){
+                $timeout(function(){
+                  element.removeClass('no-animated').addClass(attrs.amAnimate + ' animated');
+                }, animationDelay);
+              
+              });
+          }, 100);
+
+        }
+    }
+
+  };
+}])
+/*gototop*/
+.directive('amGototop', [ '$timeout', 'isMobile' function($timeout, isMobile){
+  return {
+    transclude:false,
+    restrict: 'E',
+    template: '<a href="#body" class="goToTop"><span class="fa fa-arrow-circle-up fa-2x"></span> </a>',
+    scope:{},
+    link: function($scope, element, attrs){
+      if(!isMobile.any()){
+           $('.scrollable-content').on('scroll', function() {
+              if($(this).scrollTop() > 500){
+                element.fadeIn(100);
+              }else{
+                element.fadeOut(100);
+              }
+          });
+      }
+       
+
+        element.on('click', function(){
+          $('.scrollable-content').animate({scrollTop:0},1000);
+        });
+    }
+
+  };
+}])
   ;

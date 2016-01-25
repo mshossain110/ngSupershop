@@ -1,5 +1,114 @@
 'use strict';
-$(function() {
+var AM = AM || {};
+
+(function($) {
+
+
+var $window=$(window),
+    $body= $('body'),
+    $header= $('#header'),
+    $sidebar =$('.sidebar'),
+    $app= $('app'),
+    $appBody=$('.app-body'),
+    $scrollableContent= $('.scrollable-content'),
+    $footer = $('#footer'),
+    $goToTopEl =$('#goToTop');
+
+
+    AM.initialization = {
+
+        init : function(){
+            AM.initialization.bodyClass();
+            AM.initialization.resizeVideos();
+        },
+
+
+        bodyClass: function(){
+            var jRes = jRespond([
+                {
+                    label: 'mobile',
+                    enter: 0,
+                    exit: 479
+                },{
+                    label: 'handheld',
+                    enter: 480,
+                    exit: 767
+                },{
+                    label: 'tablet',
+                    enter: 768,
+                    exit: 991
+                },{
+                    label: 'laptop',
+                    enter: 992,
+                    exit: 1199
+                },{
+                    label: 'desktop',
+                    enter: 1200,
+                    exit: 10000
+                }
+            ]);
+            jRes.addFunc([
+                {
+                    breakpoint: 'desktop',
+                    enter: function() { $body.addClass('device-lg'); },
+                    exit: function() { $body.removeClass('device-lg'); }
+                },{
+                    breakpoint: 'laptop',
+                    enter: function() { $body.addClass('device-md'); },
+                    exit: function() { $body.removeClass('device-md'); }
+                },{
+                    breakpoint: 'tablet',
+                    enter: function() { $body.addClass('device-sm'); },
+                    exit: function() { $body.removeClass('device-sm'); }
+                },{
+                    breakpoint: 'handheld',
+                    enter: function() { $body.addClass('device-xs'); },
+                    exit: function() { $body.removeClass('device-xs'); }
+                },{
+                    breakpoint: 'mobile',
+                    enter: function() { $body.addClass('device-xxs'); },
+                    exit: function() { $body.removeClass('device-xxs'); }
+                }
+            ]);
+        },
+
+        resizeVideos: function(){
+            if ( $().fitVids ) {
+                $(".app-body,#footer,#slider:not(.revslider-wrap),.scrollable-content").fitVids({
+                    customSelector: "iframe[src^='http://www.dailymotion.com/embed']",
+                    ignore: '.no-fv'
+                });
+            }
+        }  
+
+    }
+
+
+    AM.documentOnReady={
+        init : function(){
+            AM.initialization.init();
+        },
+
+    };
+
+
+    AM.documentOnResize ={
+        init : function(){
+
+        },
+    };
+
+    AM.documentOnLoad ={
+        init :function(){
+            
+        },
+    };
+
+
+    $(document).ready( AM.documentOnReady.init );
+    $window.load( AM.documentOnLoad.init );
+    $window.on( 'resize', AM.documentOnResize.init );
+
 
   /****************Login from****************************/
     var $formLogin = $('#login-form');
@@ -83,13 +192,6 @@ $(function() {
             $iconTag.removeClass($iconClass + " " + $divClass);
   		}, $msgShowTime);
     }
+jQuery('.scrollable-content').scrollbar();
 
-
-  });
-  jQuery(document).ready(function(){
-      jQuery('.scrollable-content').scrollbar();
-  });
-  $(document).ready(function(){
-    // Target your .container, .wrapper, .post, etc.
-    $('.scrollable-content, .container').fitVids();
-  });
+})(jQuery);
