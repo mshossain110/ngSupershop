@@ -144,3 +144,9 @@
 .content-box.cb-icon-left .content-box-button, .content-box.cb-icon-right .content-box-button{
   padding-left: 0;
 }
+
+/**************************************************************************************************************************************************************/
+.cb-bg .content-box-inner {
+  background-color: #F6F6F6;
+  padding: 41px 0px;
+}
