@@ -1,227 +1,146 @@
-/*accodrion*/
-
-.panel-group .panel {
-    border-radius: 0;
-    box-shadow: none;
-    border-color: #EEEEEE;
-}
-.panel-default > .panel-heading {
-    padding: 0;
-    border-radius: 0;
-    color: #212121;
-    background-color: #FAFAFA;
-    border-color: #EEEEEE;
-}
-.panel-title {
-    font-size: 14px;
-}
-.panel-title > a {
-    display: block;
-    padding: 15px;
-    text-decoration: none;
-}
-.more-less {
-    float: right;
-    color: #212121;
-}
-.panel-default > .panel-heading + .panel-collapse > .panel-body {
-    border-top-color: #EEEEEE;
-}
-/* ----- v CAN BE DELETED v ----- */
-/*content box */
-.content-box {
-    word-wrap: break-word;
-    position: relative;
-    top: 0;
-    left: 0;
-    display: block;
-    border: 1px solid #fff;
-}
-.content-box-border.content-box {
-    border: 1px solid #DDD;
-}
-.content-box h3 {
-  text-transform: uppercase;
-}
-.content-box h3::after {
-  border-bottom: 1px solid #ddd;
-  content: "";
-  display: block;
-  position:relative;
-  margin: 20px auto;
-  width: 40px;
-  -webkit-transition: width .5s;
-  -moz-transition: width .5s;
-  -o-transition: width .5s;
-  transition: width .5s;
-}
-.content-box:hover h3::after{
-  width: 50px;
-  border-bottom-color: #333;
-}
-.content-box .content-box-content {
-    margin: 10px 0;
-    padding: 0 10px;
-}
-.content-box-content small {
-  display: block;
-  line-height: 2em;
-}
-
 /*content box style*/
+.content-box {
+  display: table;
+  overflow: hidden;
+  position: relative;
+  color: #474747;
+}
+.content-box .content-box-outer {
+  margin: 5px;
+}
+.content-box .content-box-inner {
+  overflow: hidden;
+  clear: both;
+}
+.content-box .content-box-content{
+  padding: 10px;
+  overflow: hidden;
+  display: inline-block;
+}
+.content-box h1, .content-box h2, .content-box h3, .content-box h4, .content-box h1 a, .content-box h2 a, .content-box h3 a, .content-box h4 a {
+  color: #474747;
+  margin: 15px 0px;
 
-.content-box-style .content-box-image {
+}
+.content-box h1 a:hover, .content-box h2 a:hover, .content-box h3 a:hover, .content-box h4 a:hover{
+  color: #b52e31;
+}
+.content-box h1 small, .content-box h2 small, .content-box h3 small, .content-box h4 small{
+  display: block;
+}
+.content-box p{
+    color: #474747;
+}
+
+.content-box .content-box-image {
     width: 100%;
     overflow: hidden;
     display: block;
 }
-.content-box-style .content-box-image img,
-.content-box-style .content-box-image iframe {
+.content-box .content-box-image img,
+.content-box .content-box-image iframe {
     width: 100%;
     height: auto;
 }
-.content-box-style .content-box-content h3 {
-    text-align: center;
-}
-.content-box-style .content-box-content, .content-box-icon-top .content-box-content  {
-    margin: 10px 0 50px;
-    padding: 0 10px;
-    text-align: justify;
-}
-.content-box-style .content-box-image img {
+
+.content-box .content-box-image img {
     transform: scale(1);
     transition: .4s;
     opacity: 1;
 }
-.content-box-style.content-box:hover .content-box-image img {
+.content-box:hover .content-box-image img {
     transform: scale(1.1);
     transition: .4s;
     opacity: 0.9;
 }
-.content-box-style .content-box-button {
-    left: 36%;
-    position: absolute;
-    text-align: center;
-    top: 95%;
+.content-box-button {
+  margin:10px 0px;
+  padding-left: 10px;
 }
-/*two-col*/
-.content-box-style.two-col .content-box-content h3::after,.content-box-style.one-col .content-box-content h3::after {
-  border-color: rgba(153, 21, 0, 1);
-  border-width: 3px;
-  margin: 20px 0;
+.content-box.cb-border .content-box-inner{
+  border: 1px solid #ddd;
+  padding: 0;
 }
-.content-box-style.two-col .content-box-content h3, .content-box-style.one-col .content-box-content h3 {
-  text-align: left;
-}
-.content-box-style.one-col .content-box-button, .content-box-style.two-col .content-box-button {
-  display: block;
-  left: 0;
-  margin-top: 13px;
-  position: relative;
-  text-align: left;
-}
-.content-box-style.one-col .content-box-content, .content-box-style.two-col .content-box-content {
-  margin-bottom: 21px;
-}
-/*content-box-image-left*/
-.content-box.content-box-image-left {
-  clear: both;
-  display: block;
-  overflow: hidden;
-}
-.content-box-image-left .content-box-image {
+
+.content-box.cb-image-left .content-box-image {
+  width: 40%;
+  min-width: 150px;
+  display: table;
   float: left;
-  margin-right: 10px;
 }
-.content-box-image-left .content-box-content h3::after {
-  display: none;
-  margin: 0;
+.content-box.cb-image-left .content-box-content{
+  width: 60%;
+  min-width: 150px;
+  float: left;
+
 }
 
+.content-box.cb-image-right .content-box-image{
+  width: 40%;
+  min-width: 150px;
+  display: table;
+  float: right;
+}
+.content-box.cb-image-right .content-box-content{
+  width: 60%;
+  min-width: 150px;
+  float: left;
+}
+.content-box.cb-image-right h1, .content-box.cb-image-right h2, .content-box.cb-image-right h3, .content-box.cb-image-right h4, .content-box.cb-image-right h1 a, .content-box.cb-image-right h2 a, .content-box.cb-image-right h3 a, .content-box.cb-image-right h4 a ,
+.content-box.cb-image-left h1, .content-box.cb-image-left h2, .content-box.cb-image-left h3, .content-box.cb-image-left h4, .content-box.cb-image-left h1 a, .content-box.cb-image-left h2 a, .content-box.cb-image-left h3 a, .content-box.cb-image-left h4 a {
+  margin: 4px 0px;
 
-/*content-box-icon-top*/
-
-.content-box-icon-top .content-box-icon {
-  background: #fff none repeat scroll 0 0;
-  clear: both;
+}
+.content-box .content-box-tag {
   display: block;
-  left: 38%;
+  margin-top: 10px;
   overflow: hidden;
-  padding-bottom: 7px;
-  position: absolute;
-  top: -42px;
 }
-.content-box-icon-top h3 {
-    margin-top: 75px;
-    text-align: center;
+.content-box .content-box-tag  a {
+  border: 1px solid #ddd;
+  color: #b52e31;
+  display: inline-block;
+  padding: 5px;
+  font-size: 10px;
 }
-/*xl-icon*/
-.content-box-icon-top.xl-icon .content-box-icon {
-  left: 25%;
-  top: -69px;
+.content-box .content-box-tag  a:hover {
+  background: #b52e31 none repeat scroll 0 0;
+  color: #fff;
+  opacity: 1;
 }
-.content-box-icon-top.small-icon .content-box-icon {
-  left: 36%;
-  top: -5px;
+/*icon*/
+.content-box .content-box-icon {
+  position: relative;
+  width: 100%;
 }
-.content-box-icon-top.mini-icon .content-box-icon {
-  left: 45%;
-  top: 5px;
+.content-box.cb-icon-right .content-box-icon{
+  display: inline;
+  float: right;
+  overflow: hidden;
+  text-align: center;
+  width: 30%;
+  margin-top: 10px;
 }
-/*icon left */
-.content-box-icon-left .content-box-icon {
-    left: 0;
-    position: absolute;
-    top: 17px;
+.content-box.cb-icon-right .content-box-content{
+  float: left;
+  padding-top: 0;
+  width: 70%;
+  text-align: justify;
 }
-.content-box-icon-left .content-box-content {
-  padding-left: 83px;
+.content-box.cb-icon-left .content-box-icon {
+  display: inline;
+  float: left;
+  overflow: hidden;
+  text-align: center;
+  width: 30%;
+  margin-top: 10px;
 }
-.content-box-icon-left h3, .content-box-icon-right h3{
-  margin-bottom: 0;
+.content-box.cb-icon-left .content-box-content {
+  float: left;
+  padding-top: 0;
+  width: 70%;
+  text-align: justify;
 }
-.content-box-icon-left h3::after, .content-box-icon-right h3::after{
-  border: medium none;
-
-}
-.content-box-icon-right .content-box-icon {
-    right:0;
-    position: absolute;
-    top: 17px;
-}
-.content-box-icon-right .content-box-content {
-  padding-right: 92px;
-  text-align: right;
-}
-/*small icon*/
-.content-box-icon-left.small-icon .content-box-content {
-  padding-left: 83px;
-}
-.content-box-icon-right.small-icon .content-box-content {
-  padding-right: 80px;
-}
-.content-box-icon-right.small-icon .content-box-icon, .content-box-icon-left.mini-icon .content-box-icon {
-    top: 20px;
-}
-/*mini icon*/
-.content-box-icon-left.mini-icon .content-box-content {
-  padding-left: 53px;
-}
-.content-box-icon-right.mini-icon .content-box-content {
-  padding-right: 60px;
-}
-.content-box-icon-right.mini-icon .content-box-icon, .content-box-icon-left.mini-icon .content-box-icon {
-    top: 24px;
-}
-
-/*xl-icon*/
-.content-box-icon-right.xl-icon .content-box-content {
-  padding-right: 127px;
-  text-align: right;
-}
-.content-box-icon-left.xl-icon .content-box-content {
-  padding-left: 130px;
-}
-.content-box-icon-right.mini-icon .content-box-icon, .content-box-icon-left.mini-icon .content-box-icon {
-    top: 30px;
+.content-box.cb-icon-left .content-box-button, .content-box.cb-icon-right .content-box-button{
+  padding-left: 0;
 }

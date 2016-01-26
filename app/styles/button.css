@@ -24,8 +24,8 @@
   margin-top: 5px;
 }
 .button-red {
-    background-color: rgb(193, 25, 53);
-    border-color: rgb(150, 20, 41);
+    background-color: #791606;
+    border-color: rgba(#791606, 0.8);
     color: #FFFFFF;
 }
 .button-red:hover {
