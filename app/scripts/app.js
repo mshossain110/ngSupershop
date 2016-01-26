@@ -37,6 +37,12 @@ angular
        "footer": {templateUrl: 'views/templates/footer.html'},
         "": {templateUrl: 'views/main.html'}
       }
+   }).state('home2',{
+     url: '/home2',
+     templateUrl: '/views/pages/home2.html'
+   }).state('home3',{
+     url: '/home3',
+     templateUrl: '/views/pages/homeresturent.html'
    })
    // shop router
    .state('shop',{

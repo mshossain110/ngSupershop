@@ -1,46 +1,59 @@
-<div class="flexslider front-pagestyle1 left">
-	<ul class="slides">
-		<li>
-			<img src="images/slider/9574.jpg" class="img-responsive">
-			<div class="caption">
-				<h1>Lorem ipsum dolor sit amet, consectetur.</h1>
-				<h2>Lorem ipsum dolor sit.</h2>
-        <a class="btn button-aqua btn3d btn-lg" >BUY IT NOW</a>
-				<a class="btn button-aqua btn3d btn-lg" >BUY IT NOW</a>
-			</div>
-		</li>
-		<li>
-			<img src="images/slider/12797.jpg" class="img-responsive">
-			<div class="caption">
-				<h1>Lorem ipsum dolor sit amet, consectetur.</h1>
-				<h2>Lorem ipsum dolor sit.</h2>
-        <a class="btn button-aqua btn3d btn-lg" >BUY IT NOW</a>
-				<a class="btn button-aqua btn3d btn-lg" >BUY IT NOW</a>
-			</div>
-		</li>
-		<li>
-			<img src="images/slider/19189.jpg" class="img-responsive">
-			<div class="caption">
-				<h1>Lorem ipsum dolor sit amet, consectetur.</h1>
-				<h2>Lorem ipsum dolor sit.</h2>
-        <a class="btn button-aqua btn3d btn-lg" >BUY IT NOW</a>
-				<a class="btn button-aqua btn3d btn-lg" >BUY IT NOW</a>
-			</div>
-		</li>
-		<li>
-			<img src="images/slider/22364.jpg"  class="img-responsive">
-			<div class="caption">
-				<h1>Lorem ipsum dolor sit amet, consectetur.</h1>
-				<h2>Lorem ipsum dolor sit.</h2>
-        <a class="btn button-aqua btn3d btn-lg" >BUY IT NOW</a>
-				<a class="btn button-aqua btn3d btn-lg" >BUY IT NOW</a>
-			</div>
-		</li>
-	</ul>
-</div>
+<div class="swiper-container amslider1">
+			 <div class="swiper-wrapper">
+					 <div class="swiper-slide">
+							 <img src="images/slider/9574.jpg" class="img-responsive">
+	 						<div class="caption">
+	 							<h1>Lorem ipsum dolor sit amet, consectetur.</h1>
+	 							<h2>Lorem ipsum dolor sit.</h2>
+	 			        <a class="btn button-aqua btn3d btn-lg" >BUY IT NOW</a>
+	 							<a class="btn button-aqua btn3d btn-lg" >BUY IT NOW</a>
+	 						</div>
+					 </div>
+
+
+					 <div class="swiper-slide">
+						 <img src="images/slider/12797.jpg" class="img-responsive">
+						 <div class="caption">
+							 <h1>Lorem ipsum dolor sit amet, consectetur.</h1>
+							 <h2>Lorem ipsum dolor sit.</h2>
+								<a class="btn button-aqua btn3d btn-lg" >BUY IT NOW</a>
+							 <a class="btn button-aqua btn3d btn-lg" >BUY IT NOW</a>
+						 </div>
+					 </div>
+					 <div class="swiper-slide">
+						 <img src="images/slider/19189.jpg" class="img-responsive">
+						 <div class="caption">
+							 <h1>Lorem ipsum dolor sit amet, consectetur.</h1>
+							 <h2>Lorem ipsum dolor sit.</h2>
+							 <a class="btn button-aqua btn3d btn-lg" >BUY IT NOW</a>
+							 <a class="btn button-aqua btn3d btn-lg" >BUY IT NOW</a>
+						 </div>
+					 </div>
+					 <div class="swiper-slide">
+						 <img src="images/slider/22364.jpg"  class="img-responsive">
+ 						<div class="caption">
+ 							<h1>Lorem ipsum dolor sit amet, consectetur.</h1>
+ 							<h2>Lorem ipsum dolor sit.</h2>
+ 			        <a class="btn button-aqua btn3d btn-lg" >BUY IT NOW</a>
+ 							<a class="btn button-aqua btn3d btn-lg" >BUY IT NOW</a>
+ 						</div>
+					 </div>
+
+			 </div>
+			 <!-- Add Arrows -->
+			 <div class="swiper-button-next"></div>
+			 <div class="swiper-button-prev"></div>
+	 </div>
+
 <script type="text/javascript" >
-  $('.flexslider').flexslider({
-	animation: "slide",
-	controlNav: false
-});
+	var swiper = new Swiper('.swiper-container.amslider1', {
+	        nextButton: '.swiper-button-next',
+	        prevButton: '.swiper-button-prev',
+	        paginationClickable: true,
+	        spaceBetween: 30,
+	        centeredSlides: true,
+	        autoplay: 2500,
+	        autoplayDisableOnInteraction: false,
+					loop: true
+	    });
 </script>

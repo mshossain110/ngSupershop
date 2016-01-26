@@ -145,7 +145,7 @@ angular.module('ngSuperShopApp')
   return {
     transclude:false,
     restrict: 'E',
-    template: '<a href="#body" class="goToTop"><span class="fa fa-arrow-circle-up fa-2x"></span> </a>',
+    template: '<a href="" class="goToTop"><span class="fa fa-arrow-circle-up fa-2x"></span> </a>',
     scope:{},
     link: function($scope, element, attrs){
       if(!isMobile.any()){
@@ -165,7 +165,7 @@ angular.module('ngSuperShopApp')
     }
 
   };
-}]).directive('amBreadcrumbs', ['$interpolate', '$state', function($interpolate, $state) {
+}]).directive('amPagetitle', ['$interpolate', '$state', function($interpolate, $state) {
             return {
                 restrict: 'E',
                 templateUrl: function(elem, attrs) {
@@ -177,6 +177,9 @@ angular.module('ngSuperShopApp')
                 },
                 link: function(scope) {
                     scope.breadcrumbs = [];
+
+                    scope.pageTitle=getDisplayName($state.$current);
+
                     if ($state.$current.name !== '') {
                         updateBreadcrumbsArray();
                     }
