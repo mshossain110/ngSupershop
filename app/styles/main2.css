@@ -18,7 +18,7 @@
   display: inline-block;
 }
 .content-box h1, .content-box h2, .content-box h3, .content-box h4, .content-box h1 a, .content-box h2 a, .content-box h3 a, .content-box h4 a {
-  color: #474747;
+  color: #020202;
   margin: 15px 0px;
 
 }
@@ -149,4 +149,26 @@
 .cb-bg .content-box-inner {
   background-color: #F6F6F6;
   padding: 41px 0px;
+}
+
+.cb-icon-top-border .content-box-content {
+    border: 1px solid #f6f69f;
+    padding-bottom: 30px;
+    padding-top: 76px;
+    background-color: #F6F6F6;
+}
+.cb-icon-top-border .content-box-icon {
+    position: relative;
+    top: 46px;
+}
+.cb-icon-top-border .content-box-icon .icon-effect {
+    background: #fff none repeat scroll 0 0;
+}
+.shape-dotted .title > h3 {
+    left: 36%;
+    position: relative;
+    text-align: center;
+}
+.component .cb-icon-top-border {
+    margin-top: -60px;
 }
