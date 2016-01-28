@@ -53,27 +53,60 @@
 
       <!-- Navbars -->
 
-      <div class="navbar navbar-app navbar-absolute-top" >
-        <header id="header">
-            <div class="header-top">
-                  <div class="contact-info" ui-yield-to="title">
-                    <div class="email"><a href=""><span class="fa fa-envelope"></span><span>example@example.com</span></a></div>
-                    <div class="phpne"><a href=""><span class="fa fa-phone"></span><span>0135685265</span></a></div>
+      <header id="header" class="navbar-app navbar-absolute-top" >
+        <div class="header-container">
+
+              <div class="header-top">
+                <div class="navigation-button">
+                  <button ui-toggle="uiSidebarLeft" class="sidebar-toggle"><span>Toggle Navigation</span></button>
+                </div>
+                <div class="btn-group socialInfo">
+                      <a ui-turn-on='socialInfo' class="btn btn-default"> <i class="fa fa-share-alt"></i>   </a>
+                          <ul  class="dropdown-menu"
+                          ui-outer-click="Ui.turnOff('socialInfo')"
+                          ui-outer-click-if="Ui.active('socialInfo')"
+                          role="menu"
+                          ui-show="socialInfo"
+                          ui-state="socialInfo"
+                          ui-turn-off="socialInfo">
+
+                              <li><a><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
+                              <li><a><i class="fa fa-google-plus"></i><span>Google Plus</span></a></li>
+                              <li><a><i class="fa fa-twitter"></i><span>twitter</span></a></li>
+                              <li><a><i class="fa fa-amazon"></i><span>Amazon</span></a></li>
+                              <li><a><i class="fa fa-youtube"></i><span>Youtebe</span></a></li>
+                              <li><a><i class="fa fa-linkedin"></i><span>Linkedin</span></a></li>
+                          </ul>
+                      <a class="btn btn-default" href=""><i class="fa fa-envelope-o"></i><span>example@example.com</span></a>
+                      <a  class="btn btn-default" href=""><i class="fa fa-phone"></i><span>(000)-000-000</span></a>
                   </div>
-                  <div class="navigation-button">
-                    <button ui-toggle="uiSidebarLeft" class="sidebar-toggle"><span>Toggle Navigation</span></button>
+
+                  <div class="btn-group userAccount" ui-yield-to="navbarAction">
+                        <a ui-turn-on='userAccount' class="btn btn-default"> <i class="fa fa-user"></i>   </a>
+                            <ul  class="dropdown-menu"
+                            ui-outer-click="Ui.turnOff('userAccount')"
+                            ui-outer-click-if="Ui.active('userAccount')"
+                            role="menu"
+                            ui-show="userAccount"
+                            ui-state="userAccount"
+                            ui-turn-off="userAccount">
+
+                                <li><a><span>My Account</span></a></li>
+                                <li><a><span>My Collection</span></a></li>
+                                <li><a><span>Profile</span></a></li>
+                                <li><a><span>Others</span></a></li>
+                            </ul>
+                        <cart-icon ui-toggle="uiSidebarRight" ></cart-icon>
+                    </div>
+              </div>
+              <div class="header-bottom">
+                  <div class="logo-container">
+                      <a href="/" > <img src="/images/angularjs-logo.png" /></a>
                   </div>
-                  <div class="cart-profile" ui-yield-to="navbarAction">
-                      <div class="my-account"><a href="#"><span class="fa fa-user"></span></a></div>
-                      <cart-icon ui-toggle="uiSidebarRight" ></cart-icon>
-                  </div>
+                  <am-navigation></am-navigation>
             </div>
-            <div class="logo-container">
-                <a > <img src="/images/angularjs-logo.png" /></a>
-            </div>
-            <div class="navigation-container"><am-navigation></am-navigation></div>
-        </header>
-      </div>
+        </div>
+      </header>
       <!-- App Body -->
       <div class="app-body" ng-class="{loading: loading}">
         <div ng-show="loading" class="app-content-loading">

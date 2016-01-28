@@ -1,80 +1,91 @@
 
-      <nav class="navbar main_menu ">
 
-          <ul class="nav navbar-nav nav-squer">
-                <li class="dropdown"><a href="#/" ui-sref="home" > <span class="fa fa-home"></span>Home</a>
-                  <ul class="dropdown-menu" role="menu">
-                        <li><a  ui-sref="home2">Mobile Mart</a></li>
-                        <li><a  ui-sref="home3">Car Mart</a></li>
-                        <li><a  ui-sref="home4">Resturest Mart</a></li>
-                  </ul>
-                </li>
-                <li><a ui-sref="elements"><span class="fa fa-user"></span>About us</a></li>
-                <li class="dropdown"> <a  ui-sref="shop.page" class=""><span class="fa fa-shopping-cart"></span>shop</a>
-                  <ul class="dropdown-menu" role="menu">
-                        <li><a  ui-sref="home2">Mobile Mart</a></li>
-                        <li><a  ui-sref="home3">Car Mart</a></li>
-                        <li><a  ui-sref="home4">Resturest Mart</a></li>
-                  </ul>
-                </li>
-                <li class="dropdown mega-dropdown"><a  ui-sref="elements.element"><span class="fa fa-cogs"></span>Features</a>
-                      <ul class="dropdown-menu mega-dropdown-menu ">
-                            <li>
-                                  <ul>
-                                    <li class="dropdown-header">Element</li>
-                                    <li ui-sref-active="active"  ><a ui-sref="elements.button"><span class="fa fa-check-square"></span> button</a></li>
-                                    <li ui-sref-active="active" ><a  ui-sref="elements.heading"><span class="fa fa-check-square"></span> Heading</a></li>
-                                    <li ui-sref-active="active"><a ui-sref="elements.conntentbox"><span class="fa fa-check-square"></span> content box</a></li>
-                                    <li ui-sref-active="active" ><a  ui-sref="elements.carousel"><span class="fa fa-check-square"></span> carousel</a></li>
-                                    <li ui-sref-active="active"><a  ui-sref="elements.accordion"><span class="fa fa-check-square"></span> accordion</a></li>
-                                    <li ui-sref-active="active"><a ui-sref="elements.icons"><span class="fa fa-check-square"></span> Icons</a></li>
-                                    <li ui-sref-active="active"><a ui-sref="elements.iconseffect"><span class="fa fa-check-square"></span> Icon Effect</a></li>
+<nav id="primary-menu">
 
-                                  </ul>
+  <ul class="sf-menu" id="example">
+    <li><a href="#/" ui-sref="home" > <span class="fa fa-home"></span>Home</a>
+      <ul>
+            <li><a  ui-sref="home2">Mobile Mart</a>
 
-                            </li>
+              <ul>
+                <li class="dropdown-header">Element</li>
+                <li ui-sref-active="active"  ><a ui-sref="elements.button"><span class="fa fa-check-square"></span> button</a></li>
+                <li ui-sref-active="active" ><a  ui-sref="elements.heading"><span class="fa fa-check-square"></span> Heading</a></li>
+                <li ui-sref-active="active"><a ui-sref="elements.conntentbox"><span class="fa fa-check-square"></span> content box</a></li>
+                <li ui-sref-active="active" ><a  ui-sref="elements.carousel"><span class="fa fa-check-square"></span> carousel</a></li>
+                <li ui-sref-active="active"><a  ui-sref="elements.accordion"><span class="fa fa-check-square"></span> accordion</a></li>
+                <li ui-sref-active="active"><a ui-sref="elements.icons"><span class="fa fa-check-square"></span> Icons</a></li>
+                <li ui-sref-active="active"><a ui-sref="elements.iconseffect"><span class="fa fa-check-square"></span> Icon Effect</a></li>
 
-                            <li >
-                                <ul>
-                                  <li class="dropdown-header">Element</li>
-                                  <li ui-sref-active="active" ><a  ui-sref="elements.counter"><span class="fa fa-check-square"></span> Counter</a></li>
-                                  <li ui-sref-active="active" ><a  ui-sref="elements.gmaps"><span class="fa fa-check-square"></span>Gmaps</a></li>
-                                  <li ui-sref-active="active"><a  ui-sref="elements.pricingTable"><span class="fa fa-check-square"></span> pricing Table</a></li>
-                                  <li ui-sref-active="active"><a  ui-sref="elements.testimonials"><span class="fa fa-check-square"></span> Testimonials</a></li>
-                                  <li ui-sref-active="active"><a  ui-sref="elements.callToAction"><span class="fa fa-check-square"></span> Call To Action </a></li>
+              </ul>
+            </li>
+            <li><a  ui-sref="home3">Car Mart</a></li>
+            <li><a  ui-sref="home4">Resturest Mart</a></li>
+      </ul>
+    </li>
+    <li><a ui-sref="elements"><span class="fa fa-user"></span>About us</a></li>
+    <li> <a  ui-sref="shop.page" class=""><span class="fa fa-shopping-cart"></span>shop</a>
+      <ul>
+            <li><a  ui-sref="home2">Mobile Mart</a></li>
+            <li><a  ui-sref="home3">Car Mart</a></li>
+            <li><a  ui-sref="home4">Resturest Mart</a></li>
+      </ul>
+    </li>
 
-                                </ul>
-                            </li>
+    <li class="mega-menu"><a  ui-sref="elements.element"><span class="fa fa-cogs"></span>Features</a>
+      <div class="mega-menu-content col-5">
 
-                            <li >
-                                  <ul>
-                                    <li class="dropdown-header">Angular</li>
-                                    <li><a  href="" >accordion</a></li>
-                                    <li><a  href="#">Carousel</a></li>
-                                    <li><a  href="#">modal</a> </li>
-                                    <li><a  href="#">Tab</a> </li>
-                                    <li><a  href="#">Dismish</a> </li>
-                                    <li><a  href="#">Wordpress Rest Api</a> </li>
-                                    <li><a  href="#">JSON</a> </li>
-                                    <li><a  href="#">Firebase</a> </li>
+                      <ul>
+                        <li class="dropdown-header">Element</li>
+                        <li ui-sref-active="active"  ><a ui-sref="elements.button"><span class="fa fa-check-square"></span> button</a></li>
+                        <li ui-sref-active="active" ><a  ui-sref="elements.heading"><span class="fa fa-check-square"></span> Heading</a></li>
+                        <li ui-sref-active="active"><a ui-sref="elements.conntentbox"><span class="fa fa-check-square"></span> content box</a></li>
+                        <li ui-sref-active="active" ><a  ui-sref="elements.carousel"><span class="fa fa-check-square"></span> carousel</a></li>
+                        <li ui-sref-active="active"><a  ui-sref="elements.accordion"><span class="fa fa-check-square"></span> accordion</a></li>
+                        <li ui-sref-active="active"><a ui-sref="elements.icons"><span class="fa fa-check-square"></span> Icons</a></li>
+                        <li ui-sref-active="active"><a ui-sref="elements.iconseffect"><span class="fa fa-check-square"></span> Icon Effect</a></li>
 
-                                  </ul>
-                              </li>
-                              <li>
-                                  <ul>
-                                    <li class="dropdown-header">Angular Touch</li>
-                                    <li><a  href="">Touch</a></li>
-                                    <li><a  href="#">Swipe</a></li>
-                                    <li><a  href="#">Tap</a> </li>
-                                    <li><a  href="#">Dismish</a> </li>
-
-                                  </ul>
-                            </li>
                       </ul>
-                </li>
 
 
-                <li ><a href="#" ><span class="fa fa-file-text-o"></span>Blog</a></li>
-                <li><a href="#" ><span class="fa fa-comment"></span>Contact</a></li>
-          </ul>
-      </nav>
+
+
+                    <ul>
+                      <li class="dropdown-header">Element</li>
+                      <li ui-sref-active="active" ><a  ui-sref="elements.counter"><span class="fa fa-check-square"></span> Counter</a></li>
+                      <li ui-sref-active="active" ><a  ui-sref="elements.gmaps"><span class="fa fa-check-square"></span>Gmaps</a></li>
+                      <li ui-sref-active="active"><a  ui-sref="elements.pricingTable"><span class="fa fa-check-square"></span> pricing Table</a></li>
+                      <li ui-sref-active="active"><a  ui-sref="elements.testimonials"><span class="fa fa-check-square"></span> Testimonials</a></li>
+                      <li ui-sref-active="active"><a  ui-sref="elements.callToAction"><span class="fa fa-check-square"></span> Call To Action </a></li>
+
+                    </ul>
+
+                      <ul>
+                        <li class="dropdown-header">Angular</li>
+                        <li><a  href="" >accordion</a></li>
+                        <li><a  href="#">Carousel</a></li>
+                        <li><a  href="#">modal</a> </li>
+                        <li><a  href="#">Tab</a> </li>
+                        <li><a  href="#">Dismish</a> </li>
+                        <li><a  href="#">Wordpress Rest Api</a> </li>
+                        <li><a  href="#">JSON</a> </li>
+                        <li><a  href="#">Firebase</a> </li>
+
+                      </ul>
+
+                      <ul>
+                        <li class="dropdown-header">Angular Touch</li>
+                        <li><a  href="">Touch</a></li>
+                        <li><a  href="#">Swipe</a></li>
+                        <li><a  href="#">Tap</a> </li>
+                        <li><a  href="#">Dismish</a> </li>
+
+                      </ul>
+        </div>
+    </li>
+
+
+    <li ><a href="#" ><span class="fa fa-file-text-o"></span>Blog</a></li>
+    <li><a href="#" ><span class="fa fa-comment"></span>Contact</a></li>
+      </ul>
+</nav>

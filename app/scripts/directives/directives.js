@@ -28,7 +28,7 @@ angular.module('ngSuperShopApp')
     restrict: 'E',
     scope:{
     },
-    template: '<div class="shopping-cart-icon">'+'<span class="fa fa-shopping-cart">{{amCart.getTotalItems()}}</span>'+'<div class="items-inner">'+'<strong>Shopping Cart</strong>'+'<span class="cart-amount">{{amCart.getTotalItems()}} item(s) {{amCart.getSubTotal()| currency}}</span>'+'</div></div>',
+    template: '<div class="shopping-cart-icon">'+'<a href=""><i class="fa fa-shopping-cart"></i><span>{{amCart.getTotalItems()}}</span></a></div>',
   };
 })
 .directive('amProducts', function(){
@@ -48,7 +48,7 @@ angular.module('ngSuperShopApp')
   };
 })
 
-.directive('amNavigation', ['$rootScope','SharedState', function($rootScope, SharedState){
+.directive('amNavigation', ['$rootScope','SharedState', '$document', function($rootScope, SharedState, $document){
     return {
       controller: function(){
 
@@ -66,47 +66,86 @@ angular.module('ngSuperShopApp')
         }
       },
       link: function($scope, element, attrs){
-        var $nav= element.find('nav.main_menu'),
-        $dropdown=$nav.find('.dropdown'),
-        $animation= 400;
-        $dropdown.children('a').append('<span class="fa fa-plus dsign"></span>');
-        if($scope.mobile===true){
-          $nav.addClass('mobile-nav');
-          $nav.find('li').children('a').addClass('list-group-item');
-          $nav.find('.divider, .dropdown-header').remove();
+          var $body = angular.element('body'),
+              $header= angular.element('#header');
 
-          element.on('click', 'li', function(event) {
+              if( $body.hasClass('device-lg') || $body.hasClass('device-md') ) {
+      					       menuInvert();
+      				}
 
-            if($(this).hasClass('dropdown')){
-                event.preventDefault();
-                if(!$(this).hasClass('open')){
-                  $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideDown($animation);
-                  $(this).find('.dsign').removeClass('fa-plus').addClass('fa-minus');
-                }else {
-                    $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideUp($animation);
-                    $(this).find('.dsign').removeClass('fa-minus').addClass('fa-plus');
-                }
-              $(this).toggleClass('open');
-            }else{
-              SharedState.turnOff('uiSidebarLeft');
-            }
+              var exampleOptions = {
+                popUpSelector: 'ul,.mega-menu-content',
+                delay: 250,
+      					speed: 350,
+      					animation: {opacity:'show'},
+      					animationOut:  {opacity:'hide'},
+      					cssArrows: false
+              }
 
-          });
 
-        }else{
-          element.on('mouseenter', '.dropdown', function() {
+              function menuInvert() {
 
-              $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideDown($animation);
-              $(this).toggleClass('open');
-              $(this).find('.dsign').removeClass('fa-plus').addClass('fa-minus');
-          });
+          			$('#primary-menu .mega-menu-content, #primary-menu ul ul').each( function( index, element ){
+          				var $menuChildElement = $(element);
+          				var windowWidth = $document.width();
+          				var menuChildOffset = $menuChildElement.offset();
+          				var menuChildWidth = $menuChildElement.width();
+          				var menuChildLeft = menuChildOffset.left;
 
-          element.on('mouseleave', '.dropdown',  function() {
-              $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideUp($animation);
-              $(this).toggleClass('open');
-              $(this).find('.dsign').removeClass('fa-minus').addClass('fa-plus');
-          });
-        }
+          				if(windowWidth - (menuChildWidth + menuChildLeft) < 0) {
+          					$menuChildElement.addClass('menu-pos-invert');
+          				}
+          			});
+
+          		}
+              // initialise plugin
+              var nav = element.find('ul.sf-menu').superfish(exampleOptions);
+              $( '#primary-menu ul li:has(ul)' ).addClass('sub-menu');
+              $('.mega-menu .mega-menu-content').css({ 'width': $header.width() });
+
+
+        //
+        // var $nav= element.find('nav.main_menu'),
+        // $dropdown=$nav.find('.dropdown'),
+        // $animation= 400;
+        // $dropdown.children('a').append('<span class="fa fa-plus dsign"></span>');
+        // if($scope.mobile===true){
+        //   $nav.addClass('mobile-nav');
+        //   $nav.find('li').children('a').addClass('list-group-item');
+        //   $nav.find('.divider, .dropdown-header').remove();
+        //
+        //   element.on('click', 'li', function(event) {
+        //
+        //     if($(this).hasClass('dropdown')){
+        //         event.preventDefault();
+        //         if(!$(this).hasClass('open')){
+        //           $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideDown($animation);
+        //           $(this).find('.dsign').removeClass('fa-plus').addClass('fa-minus');
+        //         }else {
+        //             $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideUp($animation);
+        //             $(this).find('.dsign').removeClass('fa-minus').addClass('fa-plus');
+        //         }
+        //       $(this).toggleClass('open');
+        //     }else{
+        //       SharedState.turnOff('uiSidebarLeft');
+        //     }
+        //
+        //   });
+        //
+        // }else{
+        //   element.on('mouseenter', '.dropdown', function() {
+        //
+        //       $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideDown($animation);
+        //       $(this).toggleClass('open');
+        //       $(this).find('.dsign').removeClass('fa-plus').addClass('fa-minus');
+        //   });
+        //
+        //   element.on('mouseleave', '.dropdown',  function() {
+        //       $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideUp($animation);
+        //       $(this).toggleClass('open');
+        //       $(this).find('.dsign').removeClass('fa-minus').addClass('fa-plus');
+        //   });
+        // }
 
 
       }
