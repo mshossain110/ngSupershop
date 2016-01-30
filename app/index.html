@@ -36,7 +36,7 @@
     <![endif]-->
     <!-- endbuild -->
   </head>
-  <body ng-controller="MainController" id="body">
+  <body ng-controller="MainController" id="body" ontouchstart="">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -56,54 +56,59 @@
       <header id="header" class="navbar-app navbar-absolute-top" >
         <div class="header-container">
 
-              <div class="header-top">
-                <div class="navigation-button">
-                  <button ui-toggle="uiSidebarLeft" class="sidebar-toggle"><span>Toggle Navigation</span></button>
-                </div>
-                <div class="btn-group socialInfo">
-                      <a ui-turn-on='socialInfo' class="btn btn-default"> <i class="fa fa-share-alt"></i>   </a>
-                          <ul  class="dropdown-menu"
-                          ui-outer-click="Ui.turnOff('socialInfo')"
-                          ui-outer-click-if="Ui.active('socialInfo')"
-                          role="menu"
-                          ui-show="socialInfo"
-                          ui-state="socialInfo"
-                          ui-turn-off="socialInfo">
-
-                              <li><a><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
-                              <li><a><i class="fa fa-google-plus"></i><span>Google Plus</span></a></li>
-                              <li><a><i class="fa fa-twitter"></i><span>twitter</span></a></li>
-                              <li><a><i class="fa fa-amazon"></i><span>Amazon</span></a></li>
-                              <li><a><i class="fa fa-youtube"></i><span>Youtebe</span></a></li>
-                              <li><a><i class="fa fa-linkedin"></i><span>Linkedin</span></a></li>
-                          </ul>
-                      <a class="btn btn-default" href=""><i class="fa fa-envelope-o"></i><span>example@example.com</span></a>
-                      <a  class="btn btn-default" href=""><i class="fa fa-phone"></i><span>(000)-000-000</span></a>
-                  </div>
-
-                  <div class="btn-group userAccount" ui-yield-to="navbarAction">
-                        <a ui-turn-on='userAccount' class="btn btn-default"> <i class="fa fa-user"></i>   </a>
-                            <ul  class="dropdown-menu"
-                            ui-outer-click="Ui.turnOff('userAccount')"
-                            ui-outer-click-if="Ui.active('userAccount')"
-                            role="menu"
-                            ui-show="userAccount"
-                            ui-state="userAccount"
-                            ui-turn-off="userAccount">
-
-                                <li><a><span>My Account</span></a></li>
-                                <li><a><span>My Collection</span></a></li>
-                                <li><a><span>Profile</span></a></li>
-                                <li><a><span>Others</span></a></li>
-                            </ul>
-                        <cart-icon ui-toggle="uiSidebarRight" ></cart-icon>
+              <div class="header-top bgColor">
+                <div class="container">
+                    <div class="navigation-button">
+                      <button ui-toggle="uiSidebarLeft" class="sidebar-toggle"><span>Toggle Navigation</span></button>
                     </div>
+                    <div class="btn-group socialInfo">
+                          <a ui-turn-on='socialInfo' class="btn btn-default"> <i class="fa fa-share-alt"></i>   </a>
+                              <ul  class="dropdown-menu"
+                              ui-outer-click="Ui.turnOff('socialInfo')"
+                              ui-outer-click-if="Ui.active('socialInfo')"
+                              role="menu"
+                              ui-show="socialInfo"
+                              ui-state="socialInfo"
+                              ui-turn-off="socialInfo">
+
+                                  <li><a><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
+                                  <li><a><i class="fa fa-google-plus"></i><span>Google Plus</span></a></li>
+                                  <li><a><i class="fa fa-twitter"></i><span>twitter</span></a></li>
+                                  <li><a><i class="fa fa-amazon"></i><span>Amazon</span></a></li>
+                                  <li><a><i class="fa fa-youtube"></i><span>Youtebe</span></a></li>
+                                  <li><a><i class="fa fa-linkedin"></i><span>Linkedin</span></a></li>
+                              </ul>
+                          <a class="btn btn-default" href=""><i class="fa fa-envelope-o"></i><span>example@example.com</span></a>
+                          <a  class="btn btn-default" href=""><i class="fa fa-phone"></i><span>(000)-000-000</span></a>
+                      </div>
+
+                      <div class="btn-group userAccount" ui-yield-to="navbarAction">
+                            <a ui-turn-on='userAccount' class="btn btn-default"> <i class="fa fa-user"></i>   </a>
+                                <ul  class="dropdown-menu"
+                                ui-outer-click="Ui.turnOff('userAccount')"
+                                ui-outer-click-if="Ui.active('userAccount')"
+                                role="menu"
+                                ui-show="userAccount"
+                                ui-state="userAccount"
+                                ui-turn-off="userAccount">
+
+                                    <li><a><span>My Account</span></a></li>
+                                    <li><a><span>My Collection</span></a></li>
+                                    <li><a><span>Profile</span></a></li>
+                                    <li><a><span>Others</span></a></li>
+                                </ul>
+                            <cart-icon ui-toggle="uiSidebarRight" ></cart-icon>
+                        </div>
+
+                  </div>
               </div>
-              <div class="header-bottom">
+              <div class="container header-bottom">
+                <div class="">
                   <div class="logo-container">
                       <a href="/" > <img src="/images/angularjs-logo.png" /></a>
                   </div>
                   <am-navigation></am-navigation>
+                </div>
             </div>
         </div>
       </header>

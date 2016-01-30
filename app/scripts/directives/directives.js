@@ -48,7 +48,7 @@ angular.module('ngSuperShopApp')
   };
 })
 
-.directive('amNavigation', ['$rootScope','SharedState', '$document', function($rootScope, SharedState, $document){
+.directive('amNavigation', ['$rootScope','SharedState', '$document', '$window', function($rootScope, SharedState, $document, $window){
     return {
       controller: function(){
 
@@ -66,12 +66,13 @@ angular.module('ngSuperShopApp')
         }
       },
       link: function($scope, element, attrs){
-          var $body = angular.element('body'),
-              $header= angular.element('#header');
 
-              if( $body.hasClass('device-lg') || $body.hasClass('device-md') ) {
-      					       menuInvert();
-      				}
+          var $w = angular.element($window),
+              $body = angular.element('body'),
+              $header= angular.element('#header'),
+              sidebar = angular.element('.sidebar'),
+              magaW = angular.element('.container').width();
+
 
               var exampleOptions = {
                 popUpSelector: 'ul,.mega-menu-content',
@@ -82,71 +83,31 @@ angular.module('ngSuperShopApp')
       					cssArrows: false
               }
 
-
-              function menuInvert() {
-
-          			$('#primary-menu .mega-menu-content, #primary-menu ul ul').each( function( index, element ){
-          				var $menuChildElement = $(element);
-          				var windowWidth = $document.width();
-          				var menuChildOffset = $menuChildElement.offset();
-          				var menuChildWidth = $menuChildElement.width();
-          				var menuChildLeft = menuChildOffset.left;
-
-          				if(windowWidth - (menuChildWidth + menuChildLeft) < 0) {
-          					$menuChildElement.addClass('menu-pos-invert');
-          				}
-          			});
-
-          		}
-              // initialise plugin
               var nav = element.find('ul.sf-menu').superfish(exampleOptions);
-              $( '#primary-menu ul li:has(ul)' ).addClass('sub-menu');
-              $('.mega-menu .mega-menu-content').css({ 'width': $header.width() });
 
+              var subNav=$( '#primary-menu ul li:has(ul)' ).addClass('sub-menu');
 
-        //
-        // var $nav= element.find('nav.main_menu'),
-        // $dropdown=$nav.find('.dropdown'),
-        // $animation= 400;
-        // $dropdown.children('a').append('<span class="fa fa-plus dsign"></span>');
-        // if($scope.mobile===true){
-        //   $nav.addClass('mobile-nav');
-        //   $nav.find('li').children('a').addClass('list-group-item');
-        //   $nav.find('.divider, .dropdown-header').remove();
-        //
-        //   element.on('click', 'li', function(event) {
-        //
-        //     if($(this).hasClass('dropdown')){
-        //         event.preventDefault();
-        //         if(!$(this).hasClass('open')){
-        //           $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideDown($animation);
-        //           $(this).find('.dsign').removeClass('fa-plus').addClass('fa-minus');
-        //         }else {
-        //             $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideUp($animation);
-        //             $(this).find('.dsign').removeClass('fa-minus').addClass('fa-plus');
-        //         }
-        //       $(this).toggleClass('open');
-        //     }else{
-        //       SharedState.turnOff('uiSidebarLeft');
-        //     }
-        //
-        //   });
-        //
-        // }else{
-        //   element.on('mouseenter', '.dropdown', function() {
-        //
-        //       $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideDown($animation);
-        //       $(this).toggleClass('open');
-        //       $(this).find('.dsign').removeClass('fa-plus').addClass('fa-minus');
-        //   });
-        //
-        //   element.on('mouseleave', '.dropdown',  function() {
-        //       $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideUp($animation);
-        //       $(this).toggleClass('open');
-        //       $(this).find('.dsign').removeClass('fa-minus').addClass('fa-plus');
-        //   });
-        // }
+              if($scope.mobile===true){
+                  element.addClass('sidebarNav');
+                  magaW=sidebar.width();
+                  var signIcon = subNav.prepend('<i class="navsign"></i>');
+                  element.on('click', 'li', function(){
+                    SharedState.turnOff('uiSidebarLeft');
+                  });
 
+              }
+
+              $scope.$watch(function () {
+                  return {
+                      'w': magaW,
+                  };
+              }, function (newValue, oldValue) {
+                  element.find('.mega-menu-content').css({ 'width': newValue.w });
+              }, true);
+
+              $w.bind('resize', function () {
+                  $scope.$apply();
+              });
 
       }
     };
