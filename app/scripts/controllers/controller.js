@@ -8,17 +8,15 @@
  * Controller of the ngSuperShopApp
  */
 angular.module('ngSuperShopApp')
-  .controller('MainCtrl',['$scope',   function ($scope) {
 
-
-
-
-
-   }])
    .controller('MainController', ['$scope', '$rootScope', function($scope, $rootScope){
      $rootScope.$broadcast('bodyClass:add', $scope.bodyClass);
-      
+
    }])
+   .controller('MainCtrl',['$scope',   function ($scope) {
+
+
+    }])
   .controller('ShopSingleClt', ['$scope', '$routeParams', '$http','PService',function($scope, $routeParams, $http, PService){
     var Productid=$routeParams.productID;
 
@@ -46,7 +44,7 @@ angular.module('ngSuperShopApp')
   } ])
 
 
-  .controller('amproductclrt', ['$scope', '$http', 'PService',  'amCart', function($scope,$http, PService, amCart){
+  .controller('amproductclrt', ['$scope', '$http', '$sce', 'PService',  'amCart', function($scope,$http, $sce, PService, amCart){
 
     if(!PService.isEmpty()){
       $scope.p=PService;
@@ -61,4 +59,8 @@ angular.module('ngSuperShopApp')
     $scope.setProductId=function(id){
       $scope.sproduct=PService.getProductByID(id);
     };
+    $scope.HTMLDescription=function(html){
+        return $sce.trustAsHtml(html);
+    }
+
   } ]);

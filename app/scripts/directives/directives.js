@@ -36,13 +36,12 @@ angular.module('ngSuperShopApp')
     controller: 'amproductclrt',
     transclude:true,
     restrict: 'E',
-    scope:{},
+    scope:{
+      page : '='
+    },
     templateUrl: function(element, attrs) {
-        if ( typeof attrs.templateUrl === 'undefined' ) {
-            return 'views/shop/products.html';
-        } else {
-            return attrs.templateUrl;
-        }
+
+            return attrs.templateUrl || 'views/shop/products.html';
     },
 
   };
@@ -165,7 +164,8 @@ angular.module('ngSuperShopApp')
     }
 
   };
-}]).directive('amPagetitle', ['$interpolate', '$state', function($interpolate, $state) {
+}])
+.directive('amPagetitle', ['$interpolate', '$state', function($interpolate, $state) {
             return {
                 restrict: 'E',
                 templateUrl: function(elem, attrs) {
@@ -288,5 +288,22 @@ angular.module('ngSuperShopApp')
                     }
                 }
             };
-        }])
-  ;
+}])
+// 
+// .directive('amParallax', [ '$window', '$timeout', 'isMobile', function($window, $timeout, isMobile){
+//           return {
+//             transclude:false,
+//             restrict: 'C',
+//             scope:{},
+//             link: function($scope, element, attrs){
+//               var scrolable = angular.element('.scrollable-content');
+//               element.css('height', 450);
+//               scrolable.stellar({
+//
+//       				});
+//
+//             }
+//
+//           };
+// }])
+;

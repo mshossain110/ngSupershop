@@ -1,11 +1,5 @@
 
 
-
-dl, dt, dd, ol, ul, li {
-	margin: 0;
-	padding: 0;
-}
-
 .clear {
 	clear: both;
 	display: block;
@@ -48,7 +42,7 @@ dl, dt, dd, ol, ul, li {
 	Typography
 ********************************/
 body {
-		line-height: 1.5;
+		line-height: 1.8em;
     text-indent: 0;
     font-size: 100%;
 		font-size: 16px;
@@ -69,13 +63,9 @@ a:hover, a:focus, a:active {
 }
 small, p {
     font-family: 'Lato', Arial, sans-serif;
-		font-size: 0.825em; /*  14px */
+		font-size: 1em; /*  16px */
 		line-height: 1.5;
     color: #474747;
-}
-dl, dt, dd, ol, ul, li {
-  margin: 0;
-  padding: 0;
 }
 
 a img { border: none; }
@@ -84,42 +74,46 @@ img { max-width: 100%; }
 
 iframe { border: none !important; }
 
+dl, dt, dd, ol, ul, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-	font-weight: 700;
-	line-height: 1.5;
+	font-weight: 400;
 	margin: 0 0 15px 0;
 	font-family: 'Quattrocento', sans-serif;
 }
-p{}
 h1 {
-  font-size: 2em; /*32px*/
-  line-height: 1.25;
+  font-size: 3em; /*48px*/
+  line-height: 2em;
 }
 h2 {
-  font-size: 1.625em;  /* 26px */
-  line-height: 1.15384615;
+  font-size: 2.5em;  /* 40px */
+  line-height: 2em;
 }
 
 h3 {
-  font-size: 1.375em;  /* 22px */
-  line-height: 1.13636364;
+  font-size: 2em;  /* 32px */
+  line-height: 1.725em;
 }
 h4 {
-  font-size: 1.125em; /*  18px */
-  line-height: 1.11111111;
+  font-size: 1.5em; /*  24px */
+  line-height: 1.5em;
 }
 h5 {
-  font-size: 1em; /*  16px */
-  line-height: 1;
+  font-size: 1.25em; /*  20px */
+  line-height: 1.2em;
 }
 h6 {
-  font-size: 0.825em; /*  14px */
-  line-height: 0.825;
+  font-size: 1em; /*  16px */
+  line-height: 1em;
 }
 h1 > span:not(.nocolor),
 h2 > span:not(.nocolor),
@@ -130,6 +124,12 @@ h6 > span:not(.nocolor) { color: #B52E31; }
 /*************
 Basic Class
 *********************/
+.lead {
+  font-size: 1.5em;
+  font-weight: 400;
+  line-height: 1.4em;
+  margin-bottom: 20px;
+}
 .oHidden {
 	position: relative;
 	overflow: hidden !important;
@@ -240,6 +240,10 @@ Basic Class
 .headingFont { font-family: 'Quattrocento', sans-serif; }
 .othersFont{ font-family: 'Philosopher', sans-serif;}
 
+.ambtn{
+	background-color: #B52E31 !important;
+	box-shadow: 0px 5px 0px 0px #882123;
+}
 
 /*laptop*/
 @media (max-width: 1199px) {
@@ -250,22 +254,57 @@ Basic Class
 /*Teblet*/
 @media (max-width: 991px) {
 
-	h1 {	  font-size: 1.625em;  /* 26px */	}
-	h2 {	  font-size: 1.375em;  /* 22px */	}
-	h3 {	  font-size: 1.125em; /*  18px */	}
-	h4 {	  font-size: 1em; /*  16px */	}
-	h5, h6 {	  font-size: 0.825em; /*  14px */	}
+	h1 {
+	  font-size: 2.5em;  /* 40px */
+	  line-height: 2em;
+	}
+
+	h2 {
+	  font-size: 2em;  /* 32px */
+	  line-height: 1.725em;
+	}
+	h3 {
+	  font-size: 1.5em; /*  24px */
+	  line-height: 1.5em;
+	}
+	h4 {
+	  font-size: 1.25em; /*  20px */
+	  line-height: 1.2em;
+	}
+	h5, h6 {
+	  font-size: 1em; /*  16px */
+	  line-height: 1em;
+	}
+	.lead { font-size: 1.2em}
+
 
 }
 
 /*Tab*/
 @media (max-width: 767px) {
 
-h1 {	  font-size: 1.5em;  /* 24px */	}
-h2 {	  font-size: 1.25em;  /* 20px */	}
-h3 {	  font-size: 1.125em; /*  18px */	}
-h4 {	  font-size: 1em; /*  16px */	}
-h5, h6 {	  font-size: 0.825em; /*  14px */	}
+	h1 {
+	  font-size: 2em;  /* 32px */
+	  line-height: 2em;
+	}
+
+	h2 {
+	  font-size: 1.725em;  /* 28px */
+	  line-height: 1.5em;
+	}
+	h3 {
+	  font-size: 1.5em; /*  24px */
+	  line-height: 1.5em;
+	}
+	h4 {
+	  font-size: 1.25em; /*  20px */
+	  line-height: 1.2em;
+	}
+	h5 ,h6 {
+	  font-size: 1em; /*  16px */
+	  line-height: 1em;
+	}
+	.lead { font-size: 1em}
 
 
 }

@@ -5,7 +5,7 @@
     width: 310px;
     height: 100px;
     vertical-align: top;
-    margin: 1em 3em 2em 0;
+    margin: 1em 3em 2em 1em;
     cursor: pointer;
     position: relative;
     -webkit-perspective: 4000px;
@@ -28,6 +28,7 @@
            -o-transition: -o-transform .6s;
               transition: transform .6s;
   }
+    .image-flex .item:active,
     .image-flex .item:focus,
     .image-flex .item:hover {
       -webkit-transform: translateZ(-50px) rotateX(95deg);
@@ -37,12 +38,14 @@
               transform: translateZ(-50px) rotateX(95deg);
     }
 
+      .image-flex .item:active img,
       .image-flex .item:focus img,
       .image-flex .item:hover img {
         box-shadow: none;
         border-radius: 15px;
       }
 
+      .image-flex  .item:active .information,
       .image-flex  .item:focus .information,
       .image-flex  .item:hover .information  {
         box-shadow: 0px 3px 8px rgba(0,0,0,0.3);
@@ -110,13 +113,7 @@
 
       .content-block-outer {
         background-image: url("../images/bg-masthead-branded.png");
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        padding-top: 82px;
-        margin-top: 50px;
         color: #FFF;
-        padding-bottom: 50px;
       }
       .content-block-outer p {
         color: #ddd;
@@ -145,6 +142,17 @@
         }
         .needHelp .content-box-inner{
             margin-bottom: 10px;
+        }
+        @media (max-width: 991px) {
+              .flex-wrapper {margin: 1em 1em 2em .5em; }
+        }
+        @media (max-width: 767px) {
+            .our-clients li {  width: 50%; }
+            .flex-wrapper {margin: 1em 1em 2em .5em; }
+        }
+        @media (max-width: 479px) {
+              .our-clients li {  width: 100%; }
+              .flex-wrapper {margin: 1em 1em 2em .5em; }
         }
 
 /*****************************Home page Mobile************************************************************/
@@ -269,9 +277,8 @@
 
 
 /************************home3 resturent************************/
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,200,300,800);
-figure.snip0021 {
-  font-family: 'Raleway', Arial, sans-serif;
+
+.snip0021 {
   color: #fff;
   position: relative;
   float: left;
@@ -284,17 +291,14 @@ figure.snip0021 {
   background: #000000;
   text-align: center;
 }
-figure.snip0021 * {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-figure.snip0021 img {
+
+.snip0021 img {
   opacity: 1;
   width: 100%;
   -webkit-transition: opacity 0.35s;
   transition: opacity 0.35s;
 }
-figure.snip0021 figcaption {
+.snip0021 figcaption {
   position: absolute;
   top: 0;
   left: 0;
@@ -302,14 +306,14 @@ figure.snip0021 figcaption {
   height: 100%;
   text-align: left;
 }
-figure.snip0021 figcaption > div {
+.snip0021 figcaption > div {
   float: left;
   height: 100%;
   overflow: hidden;
   width: 50%;
   position: relative;
 }
-figure.snip0021 figcaption::before {
+.snip0021 figcaption::before {
   position: absolute;
   top: 50%;
   bottom: 50%;
@@ -323,8 +327,8 @@ figure.snip0021 figcaption::before {
   -webkit-transition-delay: 0.6s;
   transition-delay: 0.6s;
 }
-figure.snip0021 h2,
-figure.snip0021 p {
+.snip0021 h2,
+.snip0021 p {
   margin: 0;
   padding: 20px;
   opacity: 0;
@@ -337,7 +341,7 @@ figure.snip0021 p {
   -webkit-transition-delay: 0.3s;
   transition-delay: 0.3s;
 }
-figure.snip0021 h2 {
+.snip0021 h2 {
   text-align: right;
   display: inline-block;
   word-spacing: -0.1em;
@@ -349,10 +353,10 @@ figure.snip0021 h2 {
   -webkit-transform: translate3d(50%, 0%, 0);
   transform: translate3d(50%, 0%, 0);
 }
-figure.snip0021 h2 span {
+.snip0021 h2 span {
   font-weight: 800;
 }
-figure.snip0021 p {
+.snip0021 p {
   display: block;
   bottom: 0;
   text-align: left;
@@ -364,7 +368,7 @@ figure.snip0021 p {
   -webkit-transform: translate3d(-50%, 0%, 0);
   transform: translate3d(-50%, 0%, 0);
 }
-figure.snip0021 .curl {
+.snip0021 .curl {
   width: 0px;
   height: 0px;
   position: absolute;
@@ -374,8 +378,8 @@ figure.snip0021 .curl {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   transition: all .3s ease;
 }
-figure.snip0021 .curl:before,
-figure.snip0021 .curl:after {
+.snip0021 .curl:before,
+.snip0021 .curl:after {
   content: '';
   position: absolute;
   z-index: -1;
@@ -388,14 +392,14 @@ figure.snip0021 .curl:after {
   box-shadow: 0 12px 15px rgba(0, 0, 0, 0.3);
   transform: skew(-10deg) rotate(-6deg);
 }
-figure.snip0021 .curl:after {
+.snip0021 .curl:after {
   left: auto;
   right: 6%;
   bottom: auto;
   top: 14%;
   transform: skew(-15deg) rotate(-84deg);
 }
-figure.snip0021 a {
+.snip0021 a {
   left: 0;
   right: 0;
   top: 0;
@@ -403,29 +407,29 @@ figure.snip0021 a {
   position: absolute;
   color: #ffffff;
 }
-figure.snip0021:hover img,
-figure.snip0021.hover img {
+.snip0021:hover img,
+.snip0021.hover img {
   opacity: 0.7;
 }
-figure.snip0021:hover figcaption h2,
-figure.snip0021.hover figcaption h2,
-figure.snip0021:hover figcaption p,
-figure.snip0021.hover figcaption p {
+.snip0021:hover figcaption h2,
+.snip0021.hover figcaption h2,
+.snip0021:hover figcaption p,
+.snip0021.hover figcaption p {
   -webkit-transform: translate3d(0%, 0%, 0);
   transform: translate3d(0%, 0%, 0);
   -webkit-transition-delay: 0.3s;
   transition-delay: 0.3s;
 }
-figure.snip0021:hover figcaption h2,
-figure.snip0021.hover figcaption h2 {
+.snip0021:hover figcaption h2,
+.snip0021.hover figcaption h2 {
   opacity: 1;
 }
-figure.snip0021:hover figcaption p,
-figure.snip0021.hover figcaption p {
+.snip0021:hover figcaption p,
+.snip0021.hover figcaption p {
   opacity: 1;
 }
-figure.snip0021:hover figcaption::before,
-figure.snip0021.hover figcaption::before {
+.snip0021:hover figcaption::before,
+.snip0021.hover figcaption::before {
   background: #ffffff;
   top: 0px;
   bottom: 0px;
@@ -433,10 +437,72 @@ figure.snip0021.hover figcaption::before {
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
 }
-figure.snip0021:hover figcaption .curl,
-figure.snip0021.hover figcaption .curl {
+.snip0021:hover figcaption .curl,
+.snip0021.hover figcaption .curl {
   width: 40px;
   height: 40px;
   -webkit-transition-delay: 0.7s;
   transition-delay: 0.7s;
+}
+/*page 3--------------------------------*/
+.pizza-slider{
+  background-image: url("../images/slider/pizzabg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.pizza-slider h1 {
+  color: #fff;
+  font-size: 6em;
+  line-height: 1em;
+  margin: 80px 0px;
+  text-transform: uppercase;
+}
+.pizzaItems {
+  background: #fff none repeat scroll 0 0;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 32px;
+  overflow: hidden;
+  padding: 40px 20px;
+}
+.pizzaItems .item {
+  display: inline-block;
+  float: left;
+  margin-right: 2%;
+  position: relative;
+  width: 23%;
+}
+.pizzaItems .item  p {
+  position: absolute;
+  bottom: 20px;
+  background: #B52E31;
+  color: #f5f5f5;
+  display: block;
+  padding: 10px;
+  opacity: 0;
+  width: 100%;
+  -webkit-transform: translateX(200px);
+     -moz-transform: translateX(200px);
+      -ms-transform: translateX(200px);
+       -o-transform:translateX(200px);
+          transform: translateX(200px);
+  -webkit-transition: all .6s;
+     -moz-transition: all .6s;
+      -ms-transition: all .6s;
+       -o-transition: all .6s;
+          transition: all .6s;
+}
+
+.pizzaItems .item:hover p{
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+     -moz-transform: translateX(0px);
+      -ms-transform: translateX(0px);
+       -o-transform:translateX(0px);
+          transform: translateX(0px);
+}
+
+
+.pizza-contant .content-box .content-box-image img {
+  height: 369px;
 }

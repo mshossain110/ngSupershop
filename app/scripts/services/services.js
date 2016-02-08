@@ -84,7 +84,7 @@ angular.module('angularMart.Service', [])
     this.addItem= function(id, name, image, price, quantity, data){
       var inCart= this.getItemById(id);
       if(typeof inCart === 'object' ){
-        inCart.setQuantity(quantity, true);
+        inCart.setQuantity(quantity, false);
         $rootScope.$broadcast('amCart:update', inCart);
       }else{
         var newItem= new AmItem(id, name, image, price, quantity, data);

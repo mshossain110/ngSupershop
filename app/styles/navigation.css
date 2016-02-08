@@ -23,6 +23,7 @@
   margin: 2px;
   padding: 5px;
   text-align: center;
+  text-transform: unset;
 }
 #header .header-top .dropdown-menu a {
   color: #474747;

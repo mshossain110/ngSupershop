@@ -11,14 +11,11 @@
 angular
   .module('ngSuperShopApp', [
     'ngAnimate',
-    'ngCookies',
     'ngResource',
     'ui.router',
     'mobile-angular-ui',
     'mobile-angular-ui.gestures',
     'ngSanitize',
-    'ngTouch',
-    'duScroll',
     'angularMart.Service'
   ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {

@@ -4,10 +4,8 @@
   "dependencies": {
     "angular": "^1.4.0",
     "angular-animate": "^1.4.0",
-    "angular-cookies": "^1.4.0",
     "angular-resource": "^1.4.0",
     "angular-sanitize": "^1.4.0",
-    "angular-touch": "^1.4.0",
     "font-awesome": "~4.5.0",
     "animate.css": "~3.5.0",
     "angular-ui-router": "~0.2.15",
@@ -17,8 +15,9 @@
     "mobile-angular-ui": "~1.2.0-rc.3",
     "jquery.scrollbar": "~0.2.10",
     "jquery-appear": "~0.2.4",
-    "angular-scroll": "~1.0.0",
-    "Swiper": "swiper#~3.3.0"
+    "Swiper": "swiper#~3.3.0",
+    "jquery.stellar": "~0.6.2",
+    "lodash": "~4.2.1"
   },
   "devDependencies": {
     "angular-mocks": "^1.4.0",
