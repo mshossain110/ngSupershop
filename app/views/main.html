@@ -83,10 +83,93 @@
                 </section>
 
 
-                <section class="feature-product container-fluid marginBottom">
+                <section class="feature-product container-fluid marginBottom clearfix">
                   <div class="container clearfix">
                     <div class="row">
-                        <am-products></am-products>
+                      <div class="amProducts products-block-container">
+                              <header>
+                                <div class="title-entry">
+                                  <div class="title">
+                                    <h3>Feature Products</h3>
+                                  </div>
+                                </div>
+                              </header>
+
+                              <div class="products-entry">
+                                <div class="col-md-3 col-sm-6 col-xs-12 product-outer marginSmBottom" ng-repeat="product in p.getProductByID([18, 5, 6, 8, 10, 13, 14, 12])">
+                                  <div class="product-inner">
+                                    <div class="product" >
+
+                                      <div class="feature-image">
+                                        <img src="{{product.src}}" class="img-responsive" alt="AdidasHoodie" />
+                                      </div>
+
+                                      <div class="product-details">
+                                        <a href=""><h3>{{product.title}}</h3></a>
+                                        <span>{{product.price | currency:"$":0}}</span>
+                                        <a class="btn ambtn" ng-click="amCart.addItem(product.ID, product.title, product.src, product.price, 1)" title="Add to Cart"  href="#">Add to cart</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </section>
+
+                <section class="our-categories container-fluid marginBottom clearfix">
+                  <div class="container clearfix">
+                    <div class="row">
+                      <header>
+                        <div class="title-entry">
+                          <div class="title">
+                            <h3>Our Categories</h3>
+                          </div>
+                        </div>
+                      </header>
+
+                      <div class="amcarousel">
+                       <div class="swiper-wrapper">
+                           <div class="swiper-slide">
+                              <img src="images/product/T-shart1.jpg" />
+                              <p>Beautiful T-shart</p>
+                           </div>
+                           <div class="swiper-slide">
+                             <img src="images/product/Shart3.jpg" />
+                             <p>beautiful Shart</p>
+                         </div>
+                           <div class="swiper-slide">
+                             <img src="images/product/woman1.jpg" />
+                             <p>Dress for woman</p>
+                           </div>
+                           <div class="swiper-slide">
+                             <img src="images/product/Child1.jpg" />
+                             <p>Dress for Child</p>
+                           </div>
+                           <div class="swiper-slide">
+                             <img src="images/product/pizza1.jpg" />
+                             <p>Delicious pizza</p>
+                           </div>
+                           <div class="swiper-slide">
+                             <img src="images/slider/slider43.jpg" />
+                             <p>Brand new car</p>
+                           </div>
+                           <div class="swiper-slide">
+                             <img src="images/product/woman1.jpg" />
+                             <p>Dress for woman</p>
+                           </div>
+                           <div class="swiper-slide">
+                             <img src="images/product/Child1.jpg" />
+                             <p>Dress for Child</p>
+                           </div>
+                           <div class="swiper-slide">
+                             <img src="images/product/pizza1.jpg" />
+                             <p>Delicious pizza</p>
+                           </div>
+                       </div>
+                   </div>
 
                     </div>
                   </div>
@@ -101,11 +184,11 @@
         										<div class="content-box-inner">
 
         											<div class="content-box-icon">
-        												<i class="fa fa-desktop fa-4x"></i>
+        												<i class="fa fa-database fa-4x"></i>
         											</div>
 
         											<div class="content-box-content">
-        												<h3><a href="">Angular</a></h3>
+        												<h3><a href="">Firebase</a></h3>
         												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in ullamcorper nunc.Lorem ipsum dolor sit amet</p>
         											</div>
 
@@ -120,11 +203,11 @@
         										<div class="content-box-inner">
 
         											<div class="content-box-icon">
-        												<i class="fa fa-rocket fa-4x"></i>
+        												<i class="fa fa-wordpress fa-4x"></i>
         											</div>
 
         											<div class="content-box-content">
-        												<h3><a href="">Word Press</a></h3>
+        												<h3><a href="">WordPress</a></h3>
         												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in ullamcorper nunc.Lorem ipsum dolor sit amet</p>
         											</div>
 
@@ -139,7 +222,7 @@
         										<div class="content-box-inner">
 
         											<div class="content-box-icon">
-        												<i class="fa fa-tablet fa-4x"></i>
+        												<i class="fa fa-code fa-4x"></i>
         											</div>
 
         											<div class="content-box-content">
@@ -169,7 +252,7 @@
                                 </div>
                               </div>
                         </div>
-                        <div class="col-md-12 clearfix">
+                        <div class="col-xs-12 clearfix">
                             <ul class="list-unstyled list-inline our-clients">
                                 <li><img src="images/Brands/1.png"></li>
                                 <li><img src="images/Brands/14.png"></li>
@@ -189,15 +272,15 @@
                 <section class="container-fluid needHelp">
                     <div class="container">
                       <div class="row">
-                        <div class="col-md-12 clearfix">
+                        <div class="col-xs-12 clearfix">
                           <div class="title-entry boder-bottom small-width title-center">
                             <h1>Need More Help</h1>
                             <small style="letter-spacing: 0.2em;">Get great opertunity from us</small>
                           </div>
                         </div>
-                        <div class="col-md-12 clearfix">
+                        <div class="col-xs-12 clearfix">
 
-                          <div class="col-md-4 col-md-offset-2">
+                          <div class="col-md-5 col-xs-12 col-md-offset-1">
 
 
               								<div class="content-box cb-border">
@@ -205,7 +288,7 @@
               										<div class="content-box-inner">
 
               											<div class="content-box-content">
-              												<h3><a href="">This is title</a></h3>
+              												<h4><a href="">Support for building</a></h4>
               												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in ullamcorper nunc.Lorem ipsum dolor sit amet</p>
               											</div>
 
@@ -218,7 +301,7 @@
               										<div class="content-box-inner">
 
               											<div class="content-box-content">
-              												<h3><a href="">This is title</a></h3>
+              												<h4><a href="">Support for installation</a></h4>
               												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in ullamcorper nunc.Lorem ipsum dolor sit amet</p>
               											</div>
 
@@ -229,14 +312,14 @@
 
                           </div>
 
-                        <div class="col-md-4 margin-bottom">
+                        <div class="col-md-5 col-xs-12 margin-bottom">
 
                             <div class="content-box cb-border">
                               <div class="content-box-outer">
                                 <div class="content-box-inner">
 
                                   <div class="content-box-content">
-                                    <h3><a href="">This is title</a></h3>
+                                    <h4><a href="">Custom support</a></h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in ullamcorper nunc.Lorem ipsum dolor sit amet</p>
                                   </div>
 
@@ -249,7 +332,7 @@
                                 <div class="content-box-inner">
 
                                   <div class="content-box-content">
-                                    <h3><a href="">This is title</a></h3>
+                                    <h4><a href="">Connect with others API</a></h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in ullamcorper nunc.Lorem ipsum dolor sit amet</p>
                                   </div>
 

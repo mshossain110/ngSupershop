@@ -16,11 +16,11 @@
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
     <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
-    <link rel="stylesheet" href="bower_components/mobile-angular-ui/dist/css/mobile-angular-ui-hover.css" />
-    <link rel="stylesheet" href="bower_components/mobile-angular-ui/dist/css/mobile-angular-ui-base.css" />
-    <link rel="stylesheet" href="bower_components/mobile-angular-ui/dist/css/mobile-angular-ui-desktop.css" />
     <link rel="stylesheet" href="bower_components/jquery.scrollbar/jquery.scrollbar.css" />
     <link rel="stylesheet" href="bower_components/Swiper/dist/css/swiper.css" />
+    <link rel="stylesheet" href="bower_components/angularjs-slider/dist/rzslider.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -71,12 +71,12 @@
                               ui-state="socialInfo"
                               ui-turn-off="socialInfo">
 
-                                  <li><a><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
-                                  <li><a><i class="fa fa-google-plus"></i><span>Google Plus</span></a></li>
-                                  <li><a><i class="fa fa-twitter"></i><span>twitter</span></a></li>
-                                  <li><a><i class="fa fa-amazon"></i><span>Amazon</span></a></li>
-                                  <li><a><i class="fa fa-youtube"></i><span>Youtebe</span></a></li>
-                                  <li><a><i class="fa fa-linkedin"></i><span>Linkedin</span></a></li>
+                                  <li><a href=""><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
+                                  <li><a href=""><i class="fa fa-google-plus"></i><span>Google Plus</span></a></li>
+                                  <li><a href=""><i class="fa fa-twitter"></i><span>twitter</span></a></li>
+                                  <li><a href=""><i class="fa fa-amazon"></i><span>Amazon</span></a></li>
+                                  <li><a href=""><i class="fa fa-youtube"></i><span>Youtebe</span></a></li>
+                                  <li><a href=""><i class="fa fa-linkedin"></i><span>Linkedin</span></a></li>
                               </ul>
                           <a class="btn btn-default" href=""><i class="fa fa-envelope-o"></i><span>example@example.com</span></a>
                           <a  class="btn btn-default" href=""><i class="fa fa-phone"></i><span>(000)-000-000</span></a>
@@ -84,7 +84,7 @@
 
                       <div class="btn-group userAccount" ui-yield-to="navbarAction">
                             <a ui-turn-on='userAccount' class="btn btn-default"> <i class="fa fa-user"></i>   </a>
-                                <ul  class="dropdown-menu"
+                                <ul  class="dropdown-menu pull-right"
                                 ui-outer-click="Ui.turnOff('userAccount')"
                                 ui-outer-click-if="Ui.active('userAccount')"
                                 role="menu"
@@ -92,10 +92,10 @@
                                 ui-state="userAccount"
                                 ui-turn-off="userAccount">
 
-                                    <li><a><span>My Account</span></a></li>
-                                    <li><a><span>My Collection</span></a></li>
-                                    <li><a><span>Profile</span></a></li>
-                                    <li><a><span>Others</span></a></li>
+                                    <li><a href=""><span>My Account</span></a></li>
+                                    <li><a href=""><span>My Collection</span></a></li>
+                                    <li><a href=""><span>Profile</span></a></li>
+                                    <li><a href=""><span>Others</span></a></li>
                                 </ul>
                             <cart-icon ui-toggle="uiSidebarRight" ></cart-icon>
                         </div>
@@ -150,6 +150,8 @@
     <script src="bower_components/jquery-appear/src/jquery.appear.js"></script>
     <script src="bower_components/Swiper/dist/js/swiper.js"></script>
     <script src="bower_components/jquery.stellar/jquery.stellar.js"></script>
+    <script src="bower_components/lodash/lodash.js"></script>
+    <script src="bower_components/angularjs-slider/dist/rzslider.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -157,6 +159,7 @@
 
         <script src="scripts/app.js"></script>
         <script src="scripts/services/services.js"></script>
+        <script src="scripts/filters/filters.js"></script>
         <script src="scripts/directives/directives.js"></script>
         <script src="scripts/controllers/controller.js"></script>
         <!-- endbuild -->

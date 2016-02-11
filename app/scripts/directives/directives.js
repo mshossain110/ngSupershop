@@ -34,19 +34,64 @@ angular.module('ngSuperShopApp')
 .directive('amProducts', function(){
   return {
     controller: 'amproductclrt',
-    transclude:true,
-    restrict: 'E',
-    scope:{
-      page : '='
-    },
-    templateUrl: function(element, attrs) {
+    transclude:false,
+    restrict: 'C',
+    link: function($scope, element, attrs){
 
-            return attrs.templateUrl || 'views/shop/products.html';
-    },
-
+    }
   };
 })
+.directive('amcarousel', [ '$timeout', 'isMobile',  function($timeout, isMobile){
+  return {
+    transclude : false,
+    restrict : 'C',
+    scope : {
+      pagination : '=?',
+      slidesPerView : '=?',
+      slidesPerColumn : '=?',
+      autoplay : '=?'
+    },
+    link: function(scope, element, attrs){
+      console.log(scope.slidesPerView);
+        scope.pagination = angular.isDefined(scope.pagination) ? scope.pagination : '.swiper-pagination';
+        scope.slidesPerView = angular.isDefined(scope.slidesPerView) ? parseInt(scope.slidesPerView, 10) : 4;
+        scope.slidesPerColumn = angular.isDefined(scope.slidesPerColumn) ? scope.slidesPerColumn : 1;
+        scope.autoplay = angular.isDefined(scope.autoplay) ? scope.autoplay : '';
+        $timeout(function(){
+          var swiper = new Swiper(element , {
+             pagination: scope.pagination ,
+             slidesPerView: scope.slidesPerView,
+             slidesPerColumn: scope.slidesPerColumn,
+             paginationClickable: true,
+             nextButton: '.amCarousel-button-next',
+             prevButton: '.amCarousel-button-prev',
+             loop: true,
+             autoplay:scope.autoplay,
+             spaceBetween: 30,
+             breakpoints: {
+                1024: {
+                    slidesPerView: scope.slidesPerView,
+                    spaceBetween: 20
+                },
+                768: {
+                    slidesPerView: scope.slidesPerView - 1,
+                    spaceBetween: 10
+                },
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 20
+                },
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 15
+                }
+            }
+         });
+        }, 500)
 
+    }
+  }
+}])
 .directive('amNavigation', ['$rootScope','SharedState', '$document', '$window', function($rootScope, SharedState, $document, $window){
     return {
       controller: function(){
@@ -289,7 +334,7 @@ angular.module('ngSuperShopApp')
                 }
             };
 }])
-// 
+//
 // .directive('amParallax', [ '$window', '$timeout', 'isMobile', function($window, $timeout, isMobile){
 //           return {
 //             transclude:false,

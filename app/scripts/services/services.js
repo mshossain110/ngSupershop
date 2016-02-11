@@ -8,16 +8,21 @@
  * Service in the ngSuperShopApp.
  */
 angular.module('angularMart.Service', [])
-  .service('PService', [ function () {
-  		var $products;
+  .service('PService', [ '$timeout', '$sce', function ($timeout, $sce) {
+  		var $products, $minPrice, $maxPrice, $categories=[], $colors=[], $brands=[];
 
+      this.init = function(value){
+        this.$products=value;
+        var $that = this;
+        $timeout(function(){
+          $that.setVariable();
+        }, 100);
+      }
 
- 			this.setAllProducts= function(value){
- 				this.$products=value;
- 			};
  			this.getAllProducts= function(){
  				return this.$products;
  			};
+
  			this.isEmpty = function(){
  				if( typeof this.$products === 'object' && this.$products.length > 0 ){
  					return false;
@@ -25,21 +30,22 @@ angular.module('angularMart.Service', [])
  					return true;
  				}
  			};
-      this.getProductByID=function(ids){
-          var productByID;
-        if(Array.isArray(ids)){
 
-          angular.forEach(this.getAllProducts(), function(product){
-            if(ids.indexOf(product.ID) > -1){
+
+      this.getProductByID=function(ids){
+
+        if(_.isArray(ids)){
+            var productByID=[];
+          _.forEach(this.getAllProducts(), function(product){
+            if(_.indexOf(ids, product.ID) > -1){
               productByID.push(product);
             }
           });
         }else{
-
-          angular.forEach(this.getAllProducts(), function(product){
+            var productByID;
+          _.forEach(this.getAllProducts(), function(product){
             if(product.ID === ids){
               productByID=product;
-
             }
           });
         }
@@ -47,13 +53,24 @@ angular.module('angularMart.Service', [])
         return productByID;
       };
 
+      this.getAllCategory=function(products){
+        if(undefined === products ) products =this.$products;
+          var category=[];
+        _.forEach(products, function(product){
+            if(_.indexOf(category, product.category) ===-1){
+              category.push(product.category);
+            }
+        });
+        return category;
+      };
+
       this.getProductByCategory=function(category, number){
         var productByCategory=[];
         if(typeof category=== 'undefined') {return false;}
         var num = number ? parseInt(number, 10): null;
         var cat=[];
-        if(Array.isArray(category)){
-          category.forEach(function(c){
+        if(_.isArray(category)){
+          _.forEach(category, function(c){
             cat.push(c.toLowerCase());
           });
         }else {
@@ -72,7 +89,78 @@ angular.module('angularMart.Service', [])
         return productByCategory;
       };
 
+      this.setVariable = function(){
+            var minPrice=1000, maxPrice=0, categories=[], colors=[], brands=[], products = this.$products;
+
+            _.forEach(products, function(product){
+              var price = parseInt(product.price, 10)
+                minPrice = price <= minPrice ? price: minPrice;
+                maxPrice = price >= maxPrice ? price: maxPrice;
+
+                if(product.category) categories.push(product.category.toLowerCase());
+                if(product.brand ) brands.push(product.brand.toLowerCase());
+
+                if(product.colors && _.isArray(product.colors)){
+                  _.forEach(product.colors, function(color){
+                      colors.push(color.toLowerCase()) ;
+                  });
+                }
+            });
+             this.$minPrice = minPrice;
+             this.$maxPrice = maxPrice;
+             this.$categories = _.uniq(categories);
+             this.$brands = _.uniq(brands);
+             this.$colors = _.uniq(colors);
+      };
+
+      this.HTMLParsing = function(html){
+          return $sce.trustAsHtml(html);
+      }
+
   }])
+  /*-------------------filter service--------------------------*/
+  .service('amFilterService', [ function(){
+      var $filters;
+      this.setFilter = function(key, value){
+        var filters=this.$filters;
+
+        var existingFilter = _.some(filters, {'type': key} );
+        if(existingFilter){
+            _.forEach(filters, function(filter){
+              if(filter.type ===key){
+                if(key !=='priceRange'){
+                    var idx= _.indexOf(filter.option, value);
+                    if(idx >-1){
+                      filter.option.splice(idx, 1);
+                    }else{
+                      filter.option.push(value);
+                    }
+                }else{
+                  filter.option =[];
+                  filter.option=[value[0], value[1]];
+                }
+              }
+            })
+        }else{
+          var filter ={}
+          filter.type= key;
+          filter.option =[];
+          if(key !=='priceRange'){
+            filter.option.push(value);
+          }else{
+            filter.option =[value[0], value[1]];
+          }
+          filters.push(filter);
+        }
+        this.$filters = filters;
+      };
+
+      this.isInFilterList = function( key, vlaue){
+        return _.some(this.$filters, { 'type': key, 'option':[value]});
+      };
+
+  }])
+  /* ----------------service for cart ----------------------------*/
   .service('amCart', ['$rootScope', 'AmItem', 'store', function($rootScope, AmItem, store){
     this.init= function(){
       this.$cart={
@@ -104,23 +192,32 @@ angular.module('angularMart.Service', [])
       });
       return iditem;
     };
+
+
     this.getCart=function(){
       return this.$cart;
     };
+
+
     this.setCart=function(cart){
       this.$cart=cart;
       return this.getCart();
     };
+
+
     this.setShipping=function(shipping){
       this.$cart.shipping=shipping;
       return this.getShipping();
     };
+
+
     this.getShipping=function(){
       if(this.$cart.shipping !=='null'){
         return this.$cart.shipping;
       }
 
     };
+
 
     this.getAllItems=function(){
       return this.$cart.items;
@@ -134,6 +231,8 @@ angular.module('angularMart.Service', [])
       });
       return count;
     };
+
+
     this.getSubTotal=function(){
       var total=0;
       var items =this.$cart.items;
@@ -143,6 +242,7 @@ angular.module('angularMart.Service', [])
       return total;
     };
 
+
     this.removeItemById=function(id){
       var cart=this.getCart();
       var removedItem;
@@ -151,14 +251,19 @@ angular.module('angularMart.Service', [])
           removedItem = cart.items.splice(index, 1)[0] || {};
         }
       });
+
       this.setCart(cart);
        $rootScope.$broadcast('amCart:change', {});
        $rootScope.$broadcast('amCart:remove', removedItem);
       return removedItem;
     };
+
+
     this.isEmpty=function(){
-    return this.getCart().items.length >0 ? false: true;
-  };
+      return this.getCart().items.length >0 ? false: true;
+    };
+
+
     this.toObject=function(){
       if(this.getCart().items.length <0) {return false;}
 
@@ -175,6 +280,8 @@ angular.module('angularMart.Service', [])
       };
 
     };
+
+
     this.restore=function(cart){
         var _self=this;
         _self.init();
@@ -186,6 +293,8 @@ angular.module('angularMart.Service', [])
 
         this.save();
     };
+
+
     this.save=function(){
       $rootScope.$broadcast('amCart:beforeSave', {});
       return store.set('amCart', JSON.stringify(this.toObject()));

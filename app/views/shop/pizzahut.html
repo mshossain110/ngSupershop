@@ -24,7 +24,7 @@
 								<span>{{product.price | currency:"$":0}}</span>
 								<div class="product-title">
 									<a href=""><h3>{{product.title}}</h3></a>
-									<div class="description marginSmTop marginSmBottom" ng-bind-html="HTMLDescription(product.description)"></div>
+									<div class="description marginSmTop marginSmBottom" ng-bind-html="p.HTMLParsing(product.description)"></div>
 
 
 									<a class="btn ambtn" ng-click="amCart.addItem(product.ID, product.title, product.src, product.price, 1)" title="Add to Cart"  href="#">Order Now!!</a>

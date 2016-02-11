@@ -7,26 +7,13 @@
 				<header>
 					<div class="title-entry">
 						<div class="title">
-							<h1>Feature Products</h1>
+							<h3>Feature Products</h3>
 						</div>
 					</div>
 				</header>
 
-
-					<div class="products-category-outer">
-						<div class="products-category-inner">
-							<ul class="list-unstyled list-inline clearfix">
-								<li><a href="" ng-click="query.category=NULL" >All</a></li>
-								<li><a href="" ng-click="query.category='man'" >man</a></li>
-								<li><a href="" ng-click="query.category='woman'" >woman</a></li>
-								<li><a href="" ng-click="query.category='child'" >children</a></li>
-							</ul>
-						</div>
-					</div>
-
-
 				<div class="products-entry">
-					<div class="product-outer marginSmBottom" ng-repeat="product in p.getProductByCategory(['man', 'woman', 'child']) | filter: query">
+					<div class="product-outer marginSmBottom" ng-repeat="product in p.getProductByID([18, 5, 6, 8, 10, 13, 14, 12])">
 						<div class="product-inner">
 							<div class="product" >
 
@@ -34,7 +21,7 @@
 									<img src="{{product.src}}" class="img-responsive" alt="AdidasHoodie" />
 								</div>
 
-								<div class="product-title">
+								<div class="product-details">
 									<a href=""><h3>{{product.title}}</h3></a>
 									<span>{{product.price | currency:"$":0}}</span>
 									<a class="btn ambtn" ng-click="amCart.addItem(product.ID, product.title, product.src, product.price, 1)" title="Add to Cart"  href="#">Add to cart</a>
@@ -43,8 +30,10 @@
 						</div>
 					</div>
 				</div>
-
 			</div>
+
+
 		</div>
 	</div>
+</div>
 </div>

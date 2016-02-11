@@ -263,6 +263,29 @@
   width: 100%;
   margin: 0 auto;
 }
+/* carousal css*/
+.amcarousel {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+.amCarousel-button-next, .amCarousel-button-prev {
+  background: #B52E31 none repeat scroll 0 0;
+  color: #f5f5f5;
+  cursor: pointer;
+  left: 95%;
+  position: relative;
+  text-align: center;
+  top: 20px;
+  width: 34px;
+}
+.amCarousel-button-prev {
+  left: 92%;
+  top: -9px;
+}
 @media (max-width: 1199px) {
   .swiper-container{
     height: 600px;
@@ -313,6 +336,11 @@
     .amslider3.swiper-container .caption {
       left: 20px;
     }
+    .amCarousel-button-prev {
+      left: 89%;
+    } .amCarousel-button-next{
+        left: 93%;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -345,6 +373,7 @@
   }
   .amslider4 {   height: 300px;}
   .amslider4 .swiper-container .caption{ bottom: 10px; left: 53px;}
+  .amCarousel-button-next, .amCarousel-button-prev { display: none;}
 }
 @media (min-width: 480px) and (max-width: 767px) {
 

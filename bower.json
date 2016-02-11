@@ -17,10 +17,11 @@
     "jquery-appear": "~0.2.4",
     "Swiper": "swiper#~3.3.0",
     "jquery.stellar": "~0.6.2",
-    "lodash": "~4.2.1"
+    "lodash": "~4.2.1",
+    "angularjs-slider": "^2.8.0",
+    "bootstrap": "^3.3.6"
   },
   "devDependencies": {
-    "angular-mocks": "^1.4.0",
     "font-awesome": "~4.5.0"
   },
   "appPath": "app",
@@ -28,9 +29,14 @@
   "overrides": {
     "bootstrap": {
       "main": [
-        "less/bootstrap.less",
         "dist/css/bootstrap.min.css",
-        "dist/js/bootstrap.js"
+        "dist/css/bootstrap-theme.min.css"  
+      ]
+    },
+    "mobile-angular-ui": {
+      "main": [
+        "dist/js/mobile-angular-ui.js",
+        "dist/js/mobile-angular-ui.gestures.js"
       ]
     },
     "font-awesome": {

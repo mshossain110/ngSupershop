@@ -16,7 +16,10 @@ angular
     'mobile-angular-ui',
     'mobile-angular-ui.gestures',
     'ngSanitize',
-    'angularMart.Service'
+    'rzModule',
+    //'ui-rangeSlider',
+    'angularMart.Service',
+    'angularMart.Filter'
   ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 

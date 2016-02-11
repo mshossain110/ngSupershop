@@ -3,6 +3,7 @@
 /*Header font  ***************      slider font *******************    text font     */
 
 @import url("basic.css");
+@import url("angularMobile.css");
 @import url("plugins.css");
 @import url("component-title.css");
 @import url("component-counter.css");

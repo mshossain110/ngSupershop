@@ -44,23 +44,43 @@ angular.module('ngSuperShopApp')
   } ])
 
 
-  .controller('amproductclrt', ['$scope', '$http', '$sce', 'PService',  'amCart', function($scope,$http, $sce, PService, amCart){
+  .controller('amproductclrt', ['$scope', '$timeout', '$http', 'PService',  'amCart', function($scope, $timeout, $http, PService, amCart){
 
-    if(!PService.isEmpty()){
-      $scope.p=PService;
-      }else{
+    if(PService.isEmpty()){
           $http.get('data/products.json').success(function(response){
-          PService.setAllProducts(response);
-          $scope.p=PService;
+          PService.init(response);
         });
       }
+
+      $timeout(function(){
+          $scope.p=PService;
+      },500);
+
     $scope.amCart=amCart;
-    $scope.query='';
+
     $scope.setProductId=function(id){
       $scope.sproduct=PService.getProductByID(id);
     };
-    $scope.HTMLDescription=function(html){
-        return $sce.trustAsHtml(html);
-    }
+    /* set filter function*/
+    $scope.filters;
+
+
+
+    /*product rzslider slider scope*/
+    $timeout(function(){
+      $scope.priceRange = {
+                minValue: $scope.p.$minPrice,
+                maxValue: $scope.p.$maxPrice,
+                options: {
+                    floor: $scope.p.$minPrice,
+                    ceil: $scope.p.$maxPrice,
+                    step: 1,
+                    onEnd: function(sliderId, modelValue, highValue){
+                      $scope.filter('priceRange', [modelValue, highValue])
+                    }
+                }
+            };
+
+    },500);
 
   } ]);

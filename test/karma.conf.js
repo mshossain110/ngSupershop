@@ -37,7 +37,8 @@ module.exports = function(config) {
       'bower_components/jquery-appear/src/jquery.appear.js',
       'bower_components/Swiper/dist/js/swiper.js',
       'bower_components/jquery.stellar/jquery.stellar.js',
-      'bower_components/angular-mocks/angular-mocks.js',
+      'bower_components/lodash/lodash.js',
+      'bower_components/angularjs-slider/dist/rzslider.js',
       // endbower
       "app/scripts/**/*.js",
       "test/mock/**/*.js",
