@@ -290,8 +290,63 @@ a.socialIcon:hover,
   background-size: auto 100%;
   overflow: hidden;
 }
-/*impotant All CSS*/
 
+/*from*/
+.checkbox, .radio {
+  font-size: 1.3em;
+  margin-left: 10px;
+}
+.checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"], .radio input[type="radio"], .radio-inline input[type="radio"] {
+  top: 6px;
+}
+.form-select {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+
+}
+
+.form-select select {
+  color: #474747;
+  font-size: inherit;
+  padding: .5em;
+  padding-right: 2.5em;
+  border: 2px solid #ddd;
+  margin: 0;
+  border-radius: 3px;
+  text-indent: 0.01px;
+  text-overflow: '';
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+.form-select::before,
+.form-select::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.form-select::after {
+  content: "\25BC";
+  height: 1em;
+  font-size: .625em;
+  line-height: 1;
+  right: 1.2em;
+  top: 50%;
+  margin-top: -.5em;
+}
+
+.form-select::before {
+  width: 2em;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 0 3px 3px 0;
+  background: rgba(159, 159, 159, 0.75);
+}
 
 
 @media (max-width: 1199px) {

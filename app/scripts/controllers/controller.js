@@ -44,7 +44,8 @@ angular.module('ngSuperShopApp')
   } ])
 
 
-  .controller('amproductclrt', ['$scope', '$timeout', '$http', 'PService',  'amCart', function($scope, $timeout, $http, PService, amCart){
+  .controller('amproductclrt', ['$scope', '$timeout', '$http', 'PService',  'amCart', 'amFilterService',
+   function($scope, $timeout, $http, PService, amCart, amFilterService){
 
     if(PService.isEmpty()){
           $http.get('data/products.json').success(function(response){
@@ -62,9 +63,13 @@ angular.module('ngSuperShopApp')
       $scope.sproduct=PService.getProductByID(id);
     };
     /* set filter function*/
-    $scope.filters;
+    $scope.filters=amFilterService;
 
-
+    /*filterbar toggle*/
+    $scope.isFilterbarOpern = true;
+    $scope.toggleFilterbar= function(){
+        return $scope.isFilterbarOpern = !$scope.isFilterbarOpern
+    }
 
     /*product rzslider slider scope*/
     $timeout(function(){
@@ -76,7 +81,7 @@ angular.module('ngSuperShopApp')
                     ceil: $scope.p.$maxPrice,
                     step: 1,
                     onEnd: function(sliderId, modelValue, highValue){
-                      $scope.filter('priceRange', [modelValue, highValue])
+                      $scope.filters.setFilter('priceRange', [modelValue, highValue])
                     }
                 }
             };

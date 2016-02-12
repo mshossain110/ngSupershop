@@ -50,11 +50,17 @@ angular
    }).state('shop.page',{
      url: '/shop',
      templateUrl: '/views/shop/shop.html'
-   }).state('shop.single',{
+   }).state('shop.pagerightsidebar',{
+     url: '/shopright',
+     templateUrl: '/views/shop/shopright.html'
+   }).state('shop.pagetopsidebar',{
+     url: '/shoptop',
+     templateUrl: '/views/shop/shoptop.html'
+   })
+   .state('shop.single',{
      ulr:'/:id',
      templateUrl: '/views/shop/shopSingle.html'
    })
-
 
    // elements router
    .state('elements',{

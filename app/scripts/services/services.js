@@ -122,7 +122,7 @@ angular.module('angularMart.Service', [])
   .service('amFilterService', [ function(){
       var $filters;
       this.setFilter = function(key, value){
-        var filters=this.$filters;
+        var filters=this.$filters || [];
 
         var existingFilter = _.some(filters, {'type': key} );
         if(existingFilter){
@@ -133,7 +133,7 @@ angular.module('angularMart.Service', [])
                     if(idx >-1){
                       filter.option.splice(idx, 1);
                     }else{
-                      filter.option.push(value);
+                      filter.option.push(value.toLowerCase());
                     }
                 }else{
                   filter.option =[];
@@ -143,10 +143,10 @@ angular.module('angularMart.Service', [])
             })
         }else{
           var filter ={}
-          filter.type= key;
+          filter.type= key.toLowerCase();
           filter.option =[];
           if(key !=='priceRange'){
-            filter.option.push(value);
+            filter.option.push(value.toLowerCase());
           }else{
             filter.option =[value[0], value[1]];
           }

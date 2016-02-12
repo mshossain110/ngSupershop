@@ -1,6 +1,6 @@
 <am-pagetitle displayname-property="data.title"></am-pagetitle>
 
-<section class="am-products feature-product container-fluid marginBottom marginTop shop-page page-leftSidebar" ng-class="{'openfilterbar':isFilterbarOpern, 'list-view':listView}">
+<section class="am-products feature-product container-fluid marginBottom marginTop shop-page page-topSidebar" ng-class="{'openfilterbar':isFilterbarOpern, 'list-view':listView}">
   <div class="container clearfix">
     <div class="row">
       <div class="shop-page-container">
@@ -14,13 +14,6 @@
 
               </ul>
             </div>
-
-
-            <div class="filter-area fpr marginBottom">
-              <h5>Price range </h5>
-              <rzslider rz-slider-model="priceRange.minValue" rz-slider-high="priceRange.maxValue" rz-slider-options="priceRange.options" ></rzslider>
-            </div>
-
 
             <div class="filter-area fcol marginBottom" >
               <ul class="list-unstyled marginBottom clearfix" >
@@ -37,6 +30,12 @@
                 <h5>Brands</h5>
                 <li class="checkbox" ng-repeat="brand in p.$brands"><label><input type="checkbox" ng-click="filters.setFilter('brand', brand)" />{{brand}}</label></li>              </ul>
 
+            </div>
+
+
+            <div class="filter-area fpr marginBottom">
+              <h5>Price range </h5>
+              <rzslider rz-slider-model="priceRange.minValue" rz-slider-high="priceRange.maxValue" rz-slider-options="priceRange.options" ></rzslider>
             </div>
 
         </div>
