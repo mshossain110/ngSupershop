@@ -9,7 +9,7 @@
  */
 angular.module('angularMart.Service', [])
   .service('PService', [ '$timeout', '$sce', function ($timeout, $sce) {
-  		var $products, $minPrice, $maxPrice, $categories=[], $colors=[], $brands=[];
+  		var $products, $minPrice, $maxPrice, $categories=[], $colors=[], $sizes=[], $brands=[];
 
       this.init = function(value){
         this.$products=value;
@@ -42,12 +42,10 @@ angular.module('angularMart.Service', [])
             }
           });
         }else{
+
             var productByID;
-          _.forEach(this.getAllProducts(), function(product){
-            if(product.ID === ids){
-              productByID=product;
-            }
-          });
+          productByID=  _.find(this.getAllProducts(), function(o) { return o.ID === parseInt(ids, 10); });
+            console.log(productByID)
         }
 
         return productByID;
@@ -90,7 +88,7 @@ angular.module('angularMart.Service', [])
       };
 
       this.setVariable = function(){
-            var minPrice=1000, maxPrice=0, categories=[], colors=[], brands=[], products = this.$products;
+            var minPrice=1000, maxPrice=0, categories=[], colors=[], sizes=[], brands=[], products = this.$products;
 
             _.forEach(products, function(product){
               var price = parseInt(product.price, 10)
@@ -105,12 +103,19 @@ angular.module('angularMart.Service', [])
                       colors.push(color.toLowerCase()) ;
                   });
                 }
+
+                if(product.colors && _.isArray(product.sizes)){
+                  _.forEach(product.sizes, function(size){
+                      sizes.push(size.toLowerCase()) ;
+                  });
+                }
             });
              this.$minPrice = minPrice;
              this.$maxPrice = maxPrice;
              this.$categories = _.uniq(categories);
              this.$brands = _.uniq(brands);
              this.$colors = _.uniq(colors);
+             this.$sizes = _.uniq(sizes);
       };
 
       this.HTMLParsing = function(html){

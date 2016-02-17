@@ -39,6 +39,7 @@ module.exports = function(config) {
       'bower_components/jquery.stellar/jquery.stellar.js',
       'bower_components/lodash/lodash.js',
       'bower_components/angularjs-slider/dist/rzslider.js',
+      'bower_components/angular-socialshare/dist/angular-socialshare.min.js',
       // endbower
       "app/scripts/**/*.js",
       "test/mock/**/*.js",

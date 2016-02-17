@@ -17,7 +17,7 @@ angular
     'mobile-angular-ui.gestures',
     'ngSanitize',
     'rzModule',
-    //'ui-rangeSlider',
+    '720kb.socialshare',
     'angularMart.Service',
     'angularMart.Filter'
   ])
@@ -46,19 +46,21 @@ angular
    })
    // shop router
    .state('shop',{
-     template: '<ui-view />'
-   }).state('shop.page',{
      url: '/shop',
+     template: '<ui-view />'
+   }).state('shop.leftsidebar',{
+     url: '/shopleft',
      templateUrl: '/views/shop/shop.html'
-   }).state('shop.pagerightsidebar',{
+   }).state('shop.rightsidebar',{
      url: '/shopright',
      templateUrl: '/views/shop/shopright.html'
-   }).state('shop.pagetopsidebar',{
+   }).state('shop.topsidebar',{
      url: '/shoptop',
      templateUrl: '/views/shop/shoptop.html'
    })
    .state('shop.single',{
-     ulr:'/:id',
+     url:'/:id',
+     controller: 'ShopSingleClt',
      templateUrl: '/views/shop/shopSingle.html'
    })
 
@@ -115,6 +117,13 @@ angular
 
   })
   .run(['$rootScope','amCart', 'store', '$window', '$timeout', function($rootScope, amCart, store, $window, $timeout){
+
+    $rootScope.$on('$stateChangeStart',
+function(event, toState, toParams, fromState, fromParams){
+    $( ".scrollable-content" ).scrollTop( 0 );
+})
+
+
      $rootScope.$on('amCart:change', function(evnt, data){
        amCart.save();
      });

@@ -1,78 +1,107 @@
-<am-pagetitle displayname-property="data.title"></am-pagetitle>
-    <div class="content-wrapper">
-		<div class="item-container">
-			<div class="container">
-				<div class="col-md-12">
-					<div class="product col-md-3 service-image-left">
-	                    <img id="item-display" src="images/product/{{product.src}}" alt="" />
-					</div>
+<section class="container-fluid product-title-single text-center">
+    <div class="ptitle">
+      <h3>{{singleProduct.title}}</h3>
+    </div>
+      <am-socialshare data="singleProduct"></am-socialshare>
+</section>
+<section class="container-fluid page-shop-single">
+  <div class="container">
+    <div class="row marginTop marginBottom">
+        <!-- <div class="col-md-2 col-sm-2 col-xs-12">
 
-					<div class="container service1-items col-sm-2 col-md-2 pull-left">
-						<center>
-							<a id="item-1" class="service1-item">
-								<img src="http://www.corsair.com/Media/catalog/product/g/s/gs600_psu_sideview_blue_2.png" alt=""></img>
-							</a>
-							<a id="item-2" class="service1-item">
-								<img src="http://www.corsair.com/Media/catalog/product/g/s/gs600_psu_sideview_blue_2.png" alt=""></img>
-							</a>
-							<a id="item-3" class="service1-item">
-								<img src="http://www.corsair.com/Media/catalog/product/g/s/gs600_psu_sideview_blue_2.png" alt=""></img>
-							</a>
-						</center>
-					</div>
-				</div>
+          <img src="https://www.pinkyparadise.com/v/vspfiles/assets/images/pinkyparadise-standard-200x600.png" />
+          <p></p>
+          <img src="http://4.bp.blogspot.com/-LvoW8JPaStw/VRhFrkozlDI/AAAAAAAAOIY/FbWsRt-mISU/s1600/Banner%2BTERU10.png" />
 
-				<div class="col-md-7">
-					<div class="product-title">{{product.name}}</div>
-					<div ng-bind-html="product.overview"></div>
-					<div class="product-rating"><i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star-o"></i> </div>
-					<hr>
-					<div class="product-price">{{product.price}}</div>
-					<div class="product-stock">In Stock</div>
-					<hr>
-					<div class="btn-group cart">
-						<button type="button" class="btn btn-success">
-							Add to cart
-						</button>
-					</div>
-					<div class="btn-group wishlist">
-						<button type="button" class="btn btn-danger">
-							Add to wishlist
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="container-fluid">
-			<div class="col-md-12 product-info">
-					<ul id="myTab" class="nav nav-tabs nav_tabs">
+        </div> -->
 
-						<li class="active"><a href="#service-one" data-toggle="tab">DESCRIPTION</a></li>
-						<li><a href="#service-two" data-toggle="tab">PRODUCT INFO</a></li>
-						<li><a href="#service-three" data-toggle="tab">REVIEWS</a></li>
+        <div class="col-xs-12">
+          <div class="marginSmLeft marginSmRight">
 
-					</ul>
-				<div id="myTabContent" class="tab-content">
-						<div class="tab-pane fade in active" id="service-one">
+              <div class="singleProduct-entry">
+                <div class="singleProduct-inner">
 
-							<section class="container product-info">
-								<div ng-bind-html="product.description"></div>
+                  <div class="featrue-image">
+                      <img src="{{singleProduct.src}}" alt="{{singleProduct.title}}" />
+                  </div>
+                  <div class="product-summary">
 
-							</section>
+                    <p style="font-size:30px;">{{singleProduct.price | currency}}</p>
 
-						</div>
-					<div class="tab-pane fade" id="service-two">
 
-						<section class="container">
+                    <div class="product-description">
+                      <div class="description marginSmTop marginSmBottom" ng-bind-html="ps.HTMLParsing(singleProduct.description)"></div>
 
-						</section>
+                    </div>
 
-					</div>
-					<div class="tab-pane fade" id="service-three">
+                    <div class="metaDetails marginSmTop marginSmBottom">
+                      <div class="form-select">
+                          <select aria-label="ngSelected" ng-model="data.color">
+                            <option value="" selected="selected">Colors</option>
+                            <option ng-repeat="c in singleProduct.colors" value="{{c}}">{{c}}</option>
+                          </select>
+                      </div>
+                        <p></p>
+                      <div class="form-select">
+                          <select aria-label="ngSelected" ng-model="data.color" >
+                            <option value="" selected="selected">Size</option>
+                            <option ng-repeat="s in singleProduct.sizes" value="{{s}}">{{s}}</option>
+                          </select>
+                      </div>
+                        <p></p>
+                      <a class="btn ambtn btn-lg" ng-click="amCart.addItem(product.ID, product.title, product.src, product.price, 1)" title="Add to Cart"  href="#">Add to cart</a>
 
-					</div>
-				</div>
-				<hr>
-			</div>
-		</div>
-	</div>
+
+                    </div>
+
+
+
+                  </div>
+
+                </div>
+              </div>
+
+          </div>
+
+        </div>
+
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="title-entry shape-dash-solid title-center">
+          <div class="title">
+            <h1>Related Product</h1>
+          </div>
+        </div>
+
+        <div class="amcarousel" autoplay="5000">
+          <!-- Navigation -->
+         <div class="amCarousel-button-next"><i class="fa fa-chevron-right" ></i></div>
+         <div class="amCarousel-button-prev"><i class="fa fa-chevron-left" ></i></div>
+
+         <div class="swiper-wrapper">
+           <div class="swiper-slide product-outer marginSmBottom" ng-repeat="product in ps.getProductByCategory(singleProduct.category)">
+             <div class="product-inner">
+               <div class="product" >
+
+                 <div class="feature-image">
+                   <img src="{{product.src}}" class="img-responsive" alt="AdidasHoodie" />
+                 </div>
+
+                 <div class="product-details">
+                   <a href=""><h3>{{product.title}}</h3></a>
+                   <span>{{product.price | currency:"$":0}}</span>
+                   <a class="btn ambtn" ng-click="amCart.addItem(product.ID, product.title, product.src, product.price, 1)" title="Add to Cart"  href="#">Add to cart</a>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+
+
+
+     </div>
+      </div>
+    </div>
+  </div>
+</section>

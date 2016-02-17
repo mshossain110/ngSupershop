@@ -5,10 +5,11 @@
         "price": 20,
         "cal": 10,
         "colors": ["black", "yellow", "blue"],
+        "sizes": ["X", "M", "L"],
         "brand": "Converse",
         "src": "images/product/T-shart1.jpg",
         "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ",
-        "description": "<p>Nanamica back for AW13 with a selection of luggage combining traditional outdoor silhouettes with contemporary fabrics and processes, an expertly crafted collection of some of the most innovative clothing and accessories available. The Loopwheel Graphic Tee is a classically styled crew neck tee, constructed from CoolMax fabric which regulates body temperature. Made in Japan, this is no ordinary tee, with a superbly soft handle and featuring high quality prints on the chest and between the shoulders.</p><ul > <li > <i class=&#039;fa fa-check&#039;></i> Cool Max Cotton/Polyester Blend </li><li > <i class=&#039; fa fa-check&#039;></i>High Quality Screen Print </li><li > <i class=fa fa-check&#039;></i> Print Between Shoulders </li><li > <i class=fa fa-check&#039;></i>Crew Neck Collar </li><li > <i class=&#039;fa fa-check&#039;></i>Printed Internal Label Detail </li><li > <i class=&#039;fa fa-check&#039;></i>Made in Japan </li></ul>"
+        "description": "<p>Nanamica back for AW13 with a selection of luggage combining traditional outdoor silhouettes with contemporary fabrics and processes, an expertly crafted collection of some of the most innovative clothing and accessories available. The Loopwheel Graphic Tee is a classically styled crew neck tee, constructed from CoolMax fabric which regulates body temperature. Made in Japan, this is no ordinary tee, with a superbly soft handle and featuring high quality prints on the chest and between the shoulders.</p><ul > <li > <i class='fa fa-check'></i> Cool Max Cotton/Polyester Blend </li><li > <i class='fa fa-check'></i>High Quality Screen Print </li><li > <i class='fa fa-check'></i> Print Between Shoulders </li><li > <i class='fa fa-check'></i>Crew Neck Collar </li><li > <i class='fa fa-check'></i>Printed Internal Label Detail </li><li > <i class='fa fa-check'></i>Made in Japan </li></ul>"
     },
     {  "ID": 2,
       "category": "man",
@@ -16,10 +17,11 @@
       "price": 23,
       "cal": 6,
       "colors": ["black", "green", "blue"],
+      "sizes": ["X", "M", "L"],
       "brand": "Agatha",
       "src": "images/product/T-shart2.jpeg",
       "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ",
-      "description": "<p>Nanamica back for AW13 with a selection of luggage combining traditional outdoor silhouettes with contemporary fabrics and processes, an expertly crafted collection of some of the most innovative clothing and accessories available. The Loopwheel Graphic Tee is a classically styled crew neck tee, constructed from CoolMax fabric which regulates body temperature. Made in Japan, this is no ordinary tee, with a superbly soft handle and featuring high quality prints on the chest and between the shoulders.</p><ul > <li > <i class=&#039;fa fa-check&#039;></i> Cool Max Cotton/Polyester Blend </li><li > <i class=&#039; fa fa-check&#039;></i>High Quality Screen Print </li><li > <i class=fa fa-check&#039;></i> Print Between Shoulders </li><li > <i class=fa fa-check&#039;></i>Crew Neck Collar </li><li > <i class=&#039;fa fa-check&#039;></i>Printed Internal Label Detail </li><li > <i class=&#039;fa fa-check&#039;></i>Made in Japan </li></ul>"
+      "description": "<p>Nanamica back for AW13 with a selection of luggage combining traditional outdoor silhouettes with contemporary fabrics and processes, an expertly crafted collection of some of the most innovative clothing and accessories available. The Loopwheel Graphic Tee is a classically styled crew neck tee, constructed from CoolMax fabric which regulates body temperature. Made in Japan, this is no ordinary tee, with a superbly soft handle and featuring high quality prints on the chest and between the shoulders.</p><ul > <li > <i class='fa fa-check'></i> Cool Max Cotton/Polyester Blend </li><li > <i class='fa fa-check'></i>High Quality Screen Print </li><li > <i class='fa fa-check'></i> Print Between Shoulders </li><li > <i class='fa fa-check'></i>Crew Neck Collar </li><li > <i class='fa fa-check'></i>Printed Internal Label Detail </li><li > <i class='fa fa-check'></i>Made in Japan </li></ul>"
   },
   {  "ID": 3,
     "category": "man",
@@ -27,10 +29,11 @@
     "price": 25,
     "cal": 8,
     "colors": ["red", "green", "pink"],
+    "sizes": ["2X", "M", "L"],
     "brand": "Anna",
     "src": "images/product/T-shart3.jpg",
     "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ",
-    "description": "<p>Nanamica back for AW13 with a selection of luggage combining traditional outdoor silhouettes with contemporary fabrics and processes, an expertly crafted collection of some of the most innovative clothing and accessories available. The Loopwheel Graphic Tee is a classically styled crew neck tee, constructed from CoolMax fabric which regulates body temperature. Made in Japan, this is no ordinary tee, with a superbly soft handle and featuring high quality prints on the chest and between the shoulders.</p><ul > <li > <i class=&#039;fa fa-check&#039;></i> Cool Max Cotton/Polyester Blend </li><li > <i class=&#039; fa fa-check&#039;></i>High Quality Screen Print </li><li > <i class=fa fa-check&#039;></i> Print Between Shoulders </li><li > <i class=fa fa-check&#039;></i>Crew Neck Collar </li><li > <i class=&#039;fa fa-check&#039;></i>Printed Internal Label Detail </li><li > <i class=&#039;fa fa-check&#039;></i>Made in Japan </li></ul>"
+    "description": "<p>Nanamica back for AW13 with a selection of luggage combining traditional outdoor silhouettes with contemporary fabrics and processes, an expertly crafted collection of some of the most innovative clothing and accessories available. The Loopwheel Graphic Tee is a classically styled crew neck tee, constructed from CoolMax fabric which regulates body temperature. Made in Japan, this is no ordinary tee, with a superbly soft handle and featuring high quality prints on the chest and between the shoulders.</p><ul > <li > <i class='fa fa-check'></i> Cool Max Cotton/Polyester Blend </li><li > <i class='fa fa-check'></i>High Quality Screen Print </li><li > <i class='fa fa-check'></i> Print Between Shoulders </li><li > <i class='fa fa-check'></i>Crew Neck Collar </li><li > <i class='fa fa-check'></i>Printed Internal Label Detail </li><li > <i class='fa fa-check'></i>Made in Japan </li></ul>"
 },
 {  "ID": 4,
   "category": "man",
@@ -38,10 +41,11 @@
   "price": 18,
   "cal": 10,
   "colors": ["red", "blue", "pink"],
+  "sizes": ["X", "ML", "L"],
   "brand": "Gucci",
   "src": "images/product/T-shart4.jpeg",
   "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ",
-  "description": "<p>Nanamica back for AW13 with a selection of luggage combining traditional outdoor silhouettes with contemporary fabrics and processes, an expertly crafted collection of some of the most innovative clothing and accessories available. The Loopwheel Graphic Tee is a classically styled crew neck tee, constructed from CoolMax fabric which regulates body temperature. Made in Japan, this is no ordinary tee, with a superbly soft handle and featuring high quality prints on the chest and between the shoulders.</p><ul > <li > <i class=&#039;fa fa-check&#039;></i> Cool Max Cotton/Polyester Blend </li><li > <i class=&#039; fa fa-check&#039;></i>High Quality Screen Print </li><li > <i class=fa fa-check&#039;></i> Print Between Shoulders </li><li > <i class=fa fa-check&#039;></i>Crew Neck Collar </li><li > <i class=&#039;fa fa-check&#039;></i>Printed Internal Label Detail </li><li > <i class=&#039;fa fa-check&#039;></i>Made in Japan </li></ul>"
+  "description": "<p>Nanamica back for AW13 with a selection of luggage combining traditional outdoor silhouettes with contemporary fabrics and processes, an expertly crafted collection of some of the most innovative clothing and accessories available. The Loopwheel Graphic Tee is a classically styled crew neck tee, constructed from CoolMax fabric which regulates body temperature. Made in Japan, this is no ordinary tee, with a superbly soft handle and featuring high quality prints on the chest and between the shoulders.</p><ul > <li > <i class='fa fa-check'></i> Cool Max Cotton/Polyester Blend </li><li > <i class='fa fa-check'></i>High Quality Screen Print </li><li > <i class='fa fa-check'></i> Print Between Shoulders </li><li > <i class='fa fa-check'></i>Crew Neck Collar </li><li > <i class='fa fa-check'></i>Printed Internal Label Detail </li><li > <i class='fa fa-check'></i>Made in Japan </li></ul>"
 },
 
 {  "ID": 5,
@@ -50,10 +54,11 @@
   "price": 35,
   "cal": 10,
   "colors": ["red", "green", "pink"],
+  "sizes": ["X", "ML", "L"],
   "brand": "Agatha",
   "src": "images/product/T-shart5.png",
   "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ",
-  "description": "<p>Nanamica back for AW13 with a selection of luggage combining traditional outdoor silhouettes with contemporary fabrics and processes, an expertly crafted collection of some of the most innovative clothing and accessories available. The Loopwheel Graphic Tee is a classically styled crew neck tee, constructed from CoolMax fabric which regulates body temperature. Made in Japan, this is no ordinary tee, with a superbly soft handle and featuring high quality prints on the chest and between the shoulders.</p><ul > <li > <i class=&#039;fa fa-check&#039;></i> Cool Max Cotton/Polyester Blend </li><li > <i class=&#039; fa fa-check&#039;></i>High Quality Screen Print </li><li > <i class=fa fa-check&#039;></i> Print Between Shoulders </li><li > <i class=fa fa-check&#039;></i>Crew Neck Collar </li><li > <i class=&#039;fa fa-check&#039;></i>Printed Internal Label Detail </li><li > <i class=&#039;fa fa-check&#039;></i>Made in Japan </li></ul>"
+  "description": "<p>Nanamica back for AW13 with a selection of luggage combining traditional outdoor silhouettes with contemporary fabrics and processes, an expertly crafted collection of some of the most innovative clothing and accessories available. The Loopwheel Graphic Tee is a classically styled crew neck tee, constructed from CoolMax fabric which regulates body temperature. Made in Japan, this is no ordinary tee, with a superbly soft handle and featuring high quality prints on the chest and between the shoulders.</p><ul > <li > <i class='fa fa-check'></i> Cool Max Cotton/Polyester Blend </li><li > <i class='fa fa-check'></i>High Quality Screen Print </li><li > <i class='fa fa-check'></i> Print Between Shoulders </li><li > <i class='fa fa-check'></i>Crew Neck Collar </li><li > <i class='fa fa-check'></i>Printed Internal Label Detail </li><li > <i class='fa fa-check'></i>Made in Japan </li></ul>"
 },
 {  "ID": 6,
   "category": "man",
@@ -61,10 +66,11 @@
   "price": 15,
   "cal": 10,
   "colors": ["black", "green", "pink"],
+  "sizes": ["X", "ML", "L"],
   "brand": "Converse",
   "src": "images/product/Shart1.jpg",
   "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ",
-  "description": "<p>Nanamica back for AW13 with a selection of luggage combining traditional outdoor silhouettes with contemporary fabrics and processes, an expertly crafted collection of some of the most innovative clothing and accessories available. The Loopwheel Graphic Tee is a classically styled crew neck tee, constructed from CoolMax fabric which regulates body temperature. Made in Japan, this is no ordinary tee, with a superbly soft handle and featuring high quality prints on the chest and between the shoulders.</p><ul > <li > <i class=&#039;fa fa-check&#039;></i> Cool Max Cotton/Polyester Blend </li><li > <i class=&#039; fa fa-check&#039;></i>High Quality Screen Print </li><li > <i class=fa fa-check&#039;></i> Print Between Shoulders </li><li > <i class=fa fa-check&#039;></i>Crew Neck Collar </li><li > <i class=&#039;fa fa-check&#039;></i>Printed Internal Label Detail </li><li > <i class=&#039;fa fa-check&#039;></i>Made in Japan </li></ul>"
+  "description": "<p>Nanamica back for AW13 with a selection of luggage combining traditional outdoor silhouettes with contemporary fabrics and processes, an expertly crafted collection of some of the most innovative clothing and accessories available. The Loopwheel Graphic Tee is a classically styled crew neck tee, constructed from CoolMax fabric which regulates body temperature. Made in Japan, this is no ordinary tee, with a superbly soft handle and featuring high quality prints on the chest and between the shoulders.</p><ul > <li > <i class='fa fa-check'></i> Cool Max Cotton/Polyester Blend </li><li > <i class='fa fa-check'></i>High Quality Screen Print </li><li > <i class='fa fa-check'></i> Print Between Shoulders </li><li > <i class='fa fa-check'></i>Crew Neck Collar </li><li > <i class='fa fa-check'></i>Printed Internal Label Detail </li><li > <i class='fa fa-check'></i>Made in Japan </li></ul>"
 },
 {  "ID": 7,
   "category": "man",
@@ -72,10 +78,11 @@
   "price": 50,
   "cal": 25,
   "colors": ["red", "black", "pink"],
+  "sizes": ["X", "ML", "XL"],
   "brand": "Gucci",
   "src": "images/product/Shart2.jpg",
   "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ",
-  "description": "<p>Nanamica back for AW13 with a selection of luggage combining traditional outdoor silhouettes with contemporary fabrics and processes, an expertly crafted collection of some of the most innovative clothing and accessories available. The Loopwheel Graphic Tee is a classically styled crew neck tee, constructed from CoolMax fabric which regulates body temperature. Made in Japan, this is no ordinary tee, with a superbly soft handle and featuring high quality prints on the chest and between the shoulders.</p><ul > <li > <i class=&#039;fa fa-check&#039;></i> Cool Max Cotton/Polyester Blend </li><li > <i class=&#039; fa fa-check&#039;></i>High Quality Screen Print </li><li > <i class=fa fa-check&#039;></i> Print Between Shoulders </li><li > <i class=fa fa-check&#039;></i>Crew Neck Collar </li><li > <i class=&#039;fa fa-check&#039;></i>Printed Internal Label Detail </li><li > <i class=&#039;fa fa-check&#039;></i>Made in Japan </li></ul>"
+  "description": "<p>Nanamica back for AW13 with a selection of luggage combining traditional outdoor silhouettes with contemporary fabrics and processes, an expertly crafted collection of some of the most innovative clothing and accessories available. The Loopwheel Graphic Tee is a classically styled crew neck tee, constructed from CoolMax fabric which regulates body temperature. Made in Japan, this is no ordinary tee, with a superbly soft handle and featuring high quality prints on the chest and between the shoulders.</p><ul > <li > <i class='fa fa-check'></i> Cool Max Cotton/Polyester Blend </li><li > <i class='fa fa-check'></i>High Quality Screen Print </li><li > <i class='fa fa-check'></i> Print Between Shoulders </li><li > <i class='fa fa-check'></i>Crew Neck Collar </li><li > <i class='fa fa-check'></i>Printed Internal Label Detail </li><li > <i class='fa fa-check'></i>Made in Japan </li></ul>"
 },
 {  "ID": 8,
   "category": "man",
@@ -83,10 +90,11 @@
   "price": 32,
   "cal": 10,
   "colors": ["red", "green", "blue"],
+  "sizes": ["X", "ML", "XL"],
   "brand": "Agatha",
   "src": "images/product/Shart3.jpg",
   "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ",
-  "description": "<p>Nanamica back for AW13 with a selection of luggage combining traditional outdoor silhouettes with contemporary fabrics and processes, an expertly crafted collection of some of the most innovative clothing and accessories available. The Loopwheel Graphic Tee is a classically styled crew neck tee, constructed from CoolMax fabric which regulates body temperature. Made in Japan, this is no ordinary tee, with a superbly soft handle and featuring high quality prints on the chest and between the shoulders.</p><ul > <li > <i class=&#039;fa fa-check&#039;></i> Cool Max Cotton/Polyester Blend </li><li > <i class=&#039; fa fa-check&#039;></i>High Quality Screen Print </li><li > <i class=fa fa-check&#039;></i> Print Between Shoulders </li><li > <i class=fa fa-check&#039;></i>Crew Neck Collar </li><li > <i class=&#039;fa fa-check&#039;></i>Printed Internal Label Detail </li><li > <i class=&#039;fa fa-check&#039;></i>Made in Japan </li></ul>"
+  "description": "<p>Nanamica back for AW13 with a selection of luggage combining traditional outdoor silhouettes with contemporary fabrics and processes, an expertly crafted collection of some of the most innovative clothing and accessories available. The Loopwheel Graphic Tee is a classically styled crew neck tee, constructed from CoolMax fabric which regulates body temperature. Made in Japan, this is no ordinary tee, with a superbly soft handle and featuring high quality prints on the chest and between the shoulders.</p><ul > <li > <i class='fa fa-check'></i> Cool Max Cotton/Polyester Blend </li><li > <i class='fa fa-check'></i>High Quality Screen Print </li><li > <i class='fa fa-check'></i> Print Between Shoulders </li><li > <i class='fa fa-check'></i>Crew Neck Collar </li><li > <i class='fa fa-check'></i>Printed Internal Label Detail </li><li > <i class='fa fa-check'></i>Made in Japan </li></ul>"
 },
 {  "ID": 9,
   "category": "man",
@@ -94,10 +102,11 @@
   "price": 12,
   "cal": 10,
   "colors": ["black", "green", "pink"],
+  "sizes": ["X", "ML", "XL"],
   "brand": "Converse",
   "src": "images/product/Shart4.jpg",
   "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ",
-  "description": "<p>Nanamica back for AW13 with a selection of luggage combining traditional outdoor silhouettes with contemporary fabrics and processes, an expertly crafted collection of some of the most innovative clothing and accessories available. The Loopwheel Graphic Tee is a classically styled crew neck tee, constructed from CoolMax fabric which regulates body temperature. Made in Japan, this is no ordinary tee, with a superbly soft handle and featuring high quality prints on the chest and between the shoulders.</p><ul > <li > <i class=&#039;fa fa-check&#039;></i> Cool Max Cotton/Polyester Blend </li><li > <i class=&#039; fa fa-check&#039;></i>High Quality Screen Print </li><li > <i class=fa fa-check&#039;></i> Print Between Shoulders </li><li > <i class=fa fa-check&#039;></i>Crew Neck Collar </li><li > <i class=&#039;fa fa-check&#039;></i>Printed Internal Label Detail </li><li > <i class=&#039;fa fa-check&#039;></i>Made in Japan </li></ul>"
+  "description": "<p>Nanamica back for AW13 with a selection of luggage combining traditional outdoor silhouettes with contemporary fabrics and processes, an expertly crafted collection of some of the most innovative clothing and accessories available. The Loopwheel Graphic Tee is a classically styled crew neck tee, constructed from CoolMax fabric which regulates body temperature. Made in Japan, this is no ordinary tee, with a superbly soft handle and featuring high quality prints on the chest and between the shoulders.</p><ul > <li > <i class='fa fa-check'></i> Cool Max Cotton/Polyester Blend </li><li > <i class='fa fa-check'></i>High Quality Screen Print </li><li > <i class='fa fa-check'></i> Print Between Shoulders </li><li > <i class='fa fa-check'></i>Crew Neck Collar </li><li > <i class='fa fa-check'></i>Printed Internal Label Detail </li><li > <i class='fa fa-check'></i>Made in Japan </li></ul>"
 },
 {  "ID": 10,
   "category": "woman",
@@ -105,10 +114,11 @@
   "price": 25,
   "cal": 10,
   "colors": ["black", "yellow", "pink"],
+  "sizes": ["X", "M", "XL"],
   "brand": "Gucci",
   "src": "images/product/woman1.jpg",
   "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ",
-  "description": "<p>Nanamica back for AW13 with a selection of luggage combining traditional outdoor silhouettes with contemporary fabrics and processes, an expertly crafted collection of some of the most innovative clothing and accessories available. The Loopwheel Graphic Tee is a classically styled crew neck tee, constructed from CoolMax fabric which regulates body temperature. Made in Japan, this is no ordinary tee, with a superbly soft handle and featuring high quality prints on the chest and between the shoulders.</p><ul > <li > <i class=&#039;fa fa-check&#039;></i> Cool Max Cotton/Polyester Blend </li><li > <i class=&#039; fa fa-check&#039;></i>High Quality Screen Print </li><li > <i class=fa fa-check&#039;></i> Print Between Shoulders </li><li > <i class=fa fa-check&#039;></i>Crew Neck Collar </li><li > <i class=&#039;fa fa-check&#039;></i>Printed Internal Label Detail </li><li > <i class=&#039;fa fa-check&#039;></i>Made in Japan </li></ul>"
+  "description": "<p>Nanamica back for AW13 with a selection of luggage combining traditional outdoor silhouettes with contemporary fabrics and processes, an expertly crafted collection of some of the most innovative clothing and accessories available. The Loopwheel Graphic Tee is a classically styled crew neck tee, constructed from CoolMax fabric which regulates body temperature. Made in Japan, this is no ordinary tee, with a superbly soft handle and featuring high quality prints on the chest and between the shoulders.</p><ul > <li > <i class='fa fa-check'></i> Cool Max Cotton/Polyester Blend </li><li > <i class='fa fa-check'></i>High Quality Screen Print </li><li > <i class='fa fa-check'></i> Print Between Shoulders </li><li > <i class='fa fa-check'></i>Crew Neck Collar </li><li > <i class='fa fa-check'></i>Printed Internal Label Detail </li><li > <i class='fa fa-check'></i>Made in Japan </li></ul>"
 },
 {  "ID": 11,
   "category": "woman",
@@ -116,10 +126,11 @@
   "price": 22,
   "cal": 10,
   "colors": ["red", "green", "blue"],
+  "sizes": ["X", "M", "XL"],
   "brand": "Anna",
   "src": "images/product/woman2.jpg",
   "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ",
-  "description": "<p>Nanamica back for AW13 with a selection of luggage combining traditional outdoor silhouettes with contemporary fabrics and processes, an expertly crafted collection of some of the most innovative clothing and accessories available. The Loopwheel Graphic Tee is a classically styled crew neck tee, constructed from CoolMax fabric which regulates body temperature. Made in Japan, this is no ordinary tee, with a superbly soft handle and featuring high quality prints on the chest and between the shoulders.</p><ul > <li > <i class=&#039;fa fa-check&#039;></i> Cool Max Cotton/Polyester Blend </li><li > <i class=&#039; fa fa-check&#039;></i>High Quality Screen Print </li><li > <i class=fa fa-check&#039;></i> Print Between Shoulders </li><li > <i class=fa fa-check&#039;></i>Crew Neck Collar </li><li > <i class=&#039;fa fa-check&#039;></i>Printed Internal Label Detail </li><li > <i class=&#039;fa fa-check&#039;></i>Made in Japan </li></ul>"
+  "description": "<p>Nanamica back for AW13 with a selection of luggage combining traditional outdoor silhouettes with contemporary fabrics and processes, an expertly crafted collection of some of the most innovative clothing and accessories available. The Loopwheel Graphic Tee is a classically styled crew neck tee, constructed from CoolMax fabric which regulates body temperature. Made in Japan, this is no ordinary tee, with a superbly soft handle and featuring high quality prints on the chest and between the shoulders.</p><ul > <li > <i class='fa fa-check'></i> Cool Max Cotton/Polyester Blend </li><li > <i class='fa fa-check'></i>High Quality Screen Print </li><li > <i class='fa fa-check'></i> Print Between Shoulders </li><li > <i class='fa fa-check'></i>Crew Neck Collar </li><li > <i class='fa fa-check'></i>Printed Internal Label Detail </li><li > <i class='fa fa-check'></i>Made in Japan </li></ul>"
 },
 {  "ID": 12,
   "category": "woman",
@@ -127,10 +138,11 @@
   "price": 18,
   "cal": 10,
   "colors": ["red", "green", "blue"],
+  "sizes": ["X", "M", "XL"],
   "brand": "Gucci",
   "src": "images/product/woman3.jpg",
   "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ",
-  "description": "<p>Nanamica back for AW13 with a selection of luggage combining traditional outdoor silhouettes with contemporary fabrics and processes, an expertly crafted collection of some of the most innovative clothing and accessories available. The Loopwheel Graphic Tee is a classically styled crew neck tee, constructed from CoolMax fabric which regulates body temperature. Made in Japan, this is no ordinary tee, with a superbly soft handle and featuring high quality prints on the chest and between the shoulders.</p><ul > <li > <i class=&#039;fa fa-check&#039;></i> Cool Max Cotton/Polyester Blend </li><li > <i class=&#039; fa fa-check&#039;></i>High Quality Screen Print </li><li > <i class=fa fa-check&#039;></i> Print Between Shoulders </li><li > <i class=fa fa-check&#039;></i>Crew Neck Collar </li><li > <i class=&#039;fa fa-check&#039;></i>Printed Internal Label Detail </li><li > <i class=&#039;fa fa-check&#039;></i>Made in Japan </li></ul>"
+  "description": "<p>Nanamica back for AW13 with a selection of luggage combining traditional outdoor silhouettes with contemporary fabrics and processes, an expertly crafted collection of some of the most innovative clothing and accessories available. The Loopwheel Graphic Tee is a classically styled crew neck tee, constructed from CoolMax fabric which regulates body temperature. Made in Japan, this is no ordinary tee, with a superbly soft handle and featuring high quality prints on the chest and between the shoulders.</p><ul > <li > <i class='fa fa-check'></i> Cool Max Cotton/Polyester Blend </li><li > <i class='fa fa-check'></i>High Quality Screen Print </li><li > <i class='fa fa-check'></i> Print Between Shoulders </li><li > <i class='fa fa-check'></i>Crew Neck Collar </li><li > <i class='fa fa-check'></i>Printed Internal Label Detail </li><li > <i class='fa fa-check'></i>Made in Japan </li></ul>"
 },
 {  "ID": 13,
   "category": "child",
@@ -138,10 +150,11 @@
   "price": 22,
   "cal": 10,
   "colors": ["black", "green", "blue"],
+  "sizes": ["X", "M", "XL"],
   "brand": "Gucci",
   "src": "images/product/Child1.jpg",
   "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ",
-  "description": "<p>Nanamica back for AW13 with a selection of luggage combining traditional outdoor silhouettes with contemporary fabrics and processes, an expertly crafted collection of some of the most innovative clothing and accessories available. The Loopwheel Graphic Tee is a classically styled crew neck tee, constructed from CoolMax fabric which regulates body temperature. Made in Japan, this is no ordinary tee, with a superbly soft handle and featuring high quality prints on the chest and between the shoulders.</p><ul > <li > <i class=&#039;fa fa-check&#039;></i> Cool Max Cotton/Polyester Blend </li><li > <i class=&#039; fa fa-check&#039;></i>High Quality Screen Print </li><li > <i class=fa fa-check&#039;></i> Print Between Shoulders </li><li > <i class=fa fa-check&#039;></i>Crew Neck Collar </li><li > <i class=&#039;fa fa-check&#039;></i>Printed Internal Label Detail </li><li > <i class=&#039;fa fa-check&#039;></i>Made in Japan </li></ul>"
+  "description": "<p>Nanamica back for AW13 with a selection of luggage combining traditional outdoor silhouettes with contemporary fabrics and processes, an expertly crafted collection of some of the most innovative clothing and accessories available. The Loopwheel Graphic Tee is a classically styled crew neck tee, constructed from CoolMax fabric which regulates body temperature. Made in Japan, this is no ordinary tee, with a superbly soft handle and featuring high quality prints on the chest and between the shoulders.</p><ul > <li > <i class='fa fa-check'></i> Cool Max Cotton/Polyester Blend </li><li > <i class='fa fa-check'></i>High Quality Screen Print </li><li > <i class='fa fa-check'></i> Print Between Shoulders </li><li > <i class='fa fa-check'></i>Crew Neck Collar </li><li > <i class='fa fa-check'></i>Printed Internal Label Detail </li><li > <i class='fa fa-check'></i>Made in Japan </li></ul>"
 },
 {  "ID": 14,
   "category": "child",
@@ -149,10 +162,11 @@
   "price": 18,
   "cal": 10,
   "colors": ["black", "green", "pink"],
+  "sizes": ["X", "M", "XL"],
   "brand": "Converse",
   "src": "images/product/child2.jpg",
   "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ",
-  "description": "<p>Nanamica back for AW13 with a selection of luggage combining traditional outdoor silhouettes with contemporary fabrics and processes, an expertly crafted collection of some of the most innovative clothing and accessories available. The Loopwheel Graphic Tee is a classically styled crew neck tee, constructed from CoolMax fabric which regulates body temperature. Made in Japan, this is no ordinary tee, with a superbly soft handle and featuring high quality prints on the chest and between the shoulders.</p><ul > <li > <i class=&#039;fa fa-check&#039;></i> Cool Max Cotton/Polyester Blend </li><li > <i class=&#039; fa fa-check&#039;></i>High Quality Screen Print </li><li > <i class=fa fa-check&#039;></i> Print Between Shoulders </li><li > <i class=fa fa-check&#039;></i>Crew Neck Collar </li><li > <i class=&#039;fa fa-check&#039;></i>Printed Internal Label Detail </li><li > <i class=&#039;fa fa-check&#039;></i>Made in Japan </li></ul>"
+  "description": "<p>Nanamica back for AW13 with a selection of luggage combining traditional outdoor silhouettes with contemporary fabrics and processes, an expertly crafted collection of some of the most innovative clothing and accessories available. The Loopwheel Graphic Tee is a classically styled crew neck tee, constructed from CoolMax fabric which regulates body temperature. Made in Japan, this is no ordinary tee, with a superbly soft handle and featuring high quality prints on the chest and between the shoulders.</p><ul > <li > <i class='fa fa-check'></i> Cool Max Cotton/Polyester Blend </li><li > <i class='fa fa-check'></i>High Quality Screen Print </li><li > <i class='fa fa-check'></i> Print Between Shoulders </li><li > <i class='fa fa-check'></i>Crew Neck Collar </li><li > <i class='fa fa-check'></i>Printed Internal Label Detail </li><li > <i class='fa fa-check'></i>Made in Japan </li></ul>"
 },
 {  "ID": 15,
   "category": "child",
@@ -160,10 +174,11 @@
   "price": 16,
   "cal": 10,
   "colors": ["red", "green", "black"],
+  "sizes": ["2X", "M", "L"],
   "brand": "Agatha",
   "src": "images/product/Child3.jpg",
   "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ",
-  "description": "<p>Nanamica back for AW13 with a selection of luggage combining traditional outdoor silhouettes with contemporary fabrics and processes, an expertly crafted collection of some of the most innovative clothing and accessories available. The Loopwheel Graphic Tee is a classically styled crew neck tee, constructed from CoolMax fabric which regulates body temperature. Made in Japan, this is no ordinary tee, with a superbly soft handle and featuring high quality prints on the chest and between the shoulders.</p><ul > <li > <i class=&#039;fa fa-check&#039;></i> Cool Max Cotton/Polyester Blend </li><li > <i class=&#039; fa fa-check&#039;></i>High Quality Screen Print </li><li > <i class=fa fa-check&#039;></i> Print Between Shoulders </li><li > <i class=fa fa-check&#039;></i>Crew Neck Collar </li><li > <i class=&#039;fa fa-check&#039;></i>Printed Internal Label Detail </li><li > <i class=&#039;fa fa-check&#039;></i>Made in Japan </li></ul>"
+  "description": "<p>Nanamica back for AW13 with a selection of luggage combining traditional outdoor silhouettes with contemporary fabrics and processes, an expertly crafted collection of some of the most innovative clothing and accessories available. The Loopwheel Graphic Tee is a classically styled crew neck tee, constructed from CoolMax fabric which regulates body temperature. Made in Japan, this is no ordinary tee, with a superbly soft handle and featuring high quality prints on the chest and between the shoulders.</p><ul > <li > <i class='fa fa-check'></i> Cool Max Cotton/Polyester Blend </li><li > <i class='fa fa-check'></i>High Quality Screen Print </li><li > <i class='fa fa-check'></i> Print Between Shoulders </li><li > <i class='fa fa-check'></i>Crew Neck Collar </li><li > <i class='fa fa-check'></i>Printed Internal Label Detail </li><li > <i class='fa fa-check'></i>Made in Japan </li></ul>"
 },
 {  "ID": 16,
   "category": "child",
@@ -171,10 +186,11 @@
   "price": 17,
   "cal": 10,
   "colors": ["red", "black", "blue"],
+  "sizes": ["2X", "M", "L"],
   "brand": "Gucci",
   "src": "images/product/child4.jpg",
   "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ",
-  "description": "<p>Nanamica back for AW13 with a selection of luggage combining traditional outdoor silhouettes with contemporary fabrics and processes, an expertly crafted collection of some of the most innovative clothing and accessories available. The Loopwheel Graphic Tee is a classically styled crew neck tee, constructed from CoolMax fabric which regulates body temperature. Made in Japan, this is no ordinary tee, with a superbly soft handle and featuring high quality prints on the chest and between the shoulders.</p><ul > <li > <i class=&#039;fa fa-check&#039;></i> Cool Max Cotton/Polyester Blend </li><li > <i class=&#039; fa fa-check&#039;></i>High Quality Screen Print </li><li > <i class=fa fa-check&#039;></i> Print Between Shoulders </li><li > <i class=fa fa-check&#039;></i>Crew Neck Collar </li><li > <i class=&#039;fa fa-check&#039;></i>Printed Internal Label Detail </li><li > <i class=&#039;fa fa-check&#039;></i>Made in Japan </li></ul>"
+  "description": "<p>Nanamica back for AW13 with a selection of luggage combining traditional outdoor silhouettes with contemporary fabrics and processes, an expertly crafted collection of some of the most innovative clothing and accessories available. The Loopwheel Graphic Tee is a classically styled crew neck tee, constructed from CoolMax fabric which regulates body temperature. Made in Japan, this is no ordinary tee, with a superbly soft handle and featuring high quality prints on the chest and between the shoulders.</p><ul > <li > <i class='fa fa-check'></i> Cool Max Cotton/Polyester Blend </li><li > <i class='fa fa-check'></i>High Quality Screen Print </li><li > <i class='fa fa-check'></i> Print Between Shoulders </li><li > <i class='fa fa-check'></i>Crew Neck Collar </li><li > <i class='fa fa-check'></i>Printed Internal Label Detail </li><li > <i class='fa fa-check'></i>Made in Japan </li></ul>"
 },
 {  "ID": 17,
   "category": "child",
@@ -182,10 +198,11 @@
   "price": 14,
   "cal": 10,
   "colors": ["red", "green", "pink"],
+  "sizes": ["2X", "M", "L"],
   "brand": "Converse",
   "src": "images/product/child5.jpg",
   "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ",
-  "description": "<p>Nanamica back for AW13 with a selection of luggage combining traditional outdoor silhouettes with contemporary fabrics and processes, an expertly crafted collection of some of the most innovative clothing and accessories available. The Loopwheel Graphic Tee is a classically styled crew neck tee, constructed from CoolMax fabric which regulates body temperature. Made in Japan, this is no ordinary tee, with a superbly soft handle and featuring high quality prints on the chest and between the shoulders.</p><ul > <li > <i class=&#039;fa fa-check&#039;></i> Cool Max Cotton/Polyester Blend </li><li > <i class=&#039; fa fa-check&#039;></i>High Quality Screen Print </li><li > <i class=fa fa-check&#039;></i> Print Between Shoulders </li><li > <i class=fa fa-check&#039;></i>Crew Neck Collar </li><li > <i class=&#039;fa fa-check&#039;></i>Printed Internal Label Detail </li><li > <i class=&#039;fa fa-check&#039;></i>Made in Japan </li></ul>"
+  "description": "<p>Nanamica back for AW13 with a selection of luggage combining traditional outdoor silhouettes with contemporary fabrics and processes, an expertly crafted collection of some of the most innovative clothing and accessories available. The Loopwheel Graphic Tee is a classically styled crew neck tee, constructed from CoolMax fabric which regulates body temperature. Made in Japan, this is no ordinary tee, with a superbly soft handle and featuring high quality prints on the chest and between the shoulders.</p><ul > <li > <i class='fa fa-check'></i> Cool Max Cotton/Polyester Blend </li><li > <i class='fa fa-check'></i>High Quality Screen Print </li><li > <i class='fa fa-check'></i> Print Between Shoulders </li><li > <i class='fa fa-check'></i>Crew Neck Collar </li><li > <i class='fa fa-check'></i>Printed Internal Label Detail </li><li > <i class='fa fa-check'></i>Made in Japan </li></ul>"
 },
 {  "ID": 18,
   "category": "child",
@@ -193,10 +210,11 @@
   "price": 22,
   "cal": 10,
   "colors": ["red", "green", "pink"],
+  "sizes": ["2X", "M", "L"],
   "brand": "Anna",
   "src": "images/product/child6.jpg",
   "overview": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. ",
-  "description": "<p>Nanamica back for AW13 with a selection of luggage combining traditional outdoor silhouettes with contemporary fabrics and processes, an expertly crafted collection of some of the most innovative clothing and accessories available. The Loopwheel Graphic Tee is a classically styled crew neck tee, constructed from CoolMax fabric which regulates body temperature. Made in Japan, this is no ordinary tee, with a superbly soft handle and featuring high quality prints on the chest and between the shoulders.</p><ul > <li > <i class=&#039;fa fa-check&#039;></i> Cool Max Cotton/Polyester Blend </li><li > <i class=&#039; fa fa-check&#039;></i>High Quality Screen Print </li><li > <i class=fa fa-check&#039;></i> Print Between Shoulders </li><li > <i class=fa fa-check&#039;></i>Crew Neck Collar </li><li > <i class=&#039;fa fa-check&#039;></i>Printed Internal Label Detail </li><li > <i class=&#039;fa fa-check&#039;></i>Made in Japan </li></ul>"
+  "description": "<p>Nanamica back for AW13 with a selection of luggage combining traditional outdoor silhouettes with contemporary fabrics and processes, an expertly crafted collection of some of the most innovative clothing and accessories available. The Loopwheel Graphic Tee is a classically styled crew neck tee, constructed from CoolMax fabric which regulates body temperature. Made in Japan, this is no ordinary tee, with a superbly soft handle and featuring high quality prints on the chest and between the shoulders.</p><ul > <li > <i class='fa fa-check'></i> Cool Max Cotton/Polyester Blend </li><li > <i class='fa fa-check'></i>High Quality Screen Print </li><li > <i class='fa fa-check'></i> Print Between Shoulders </li><li > <i class='fa fa-check'></i>Crew Neck Collar </li><li > <i class='fa fa-check'></i>Printed Internal Label Detail </li><li > <i class='fa fa-check'></i>Made in Japan </li></ul>"
 },
 {  "ID": 19,
   "category": "pizaa",

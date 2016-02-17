@@ -7,7 +7,7 @@
 
         <div class="filter-sidebar">
             <h3><i class="fa fa-navicon"></i> Filters Products</h3>
-            <div class="filter-area fcat marginBottom">
+            <div class="filter-area fcat ">
               <ul class="list-unstyled" >
                 <h5>Categories</h5>
                 <li class="checkbox" ng-repeat=" cat in p.$categories"><label><input type="checkbox" ng-click="filters.setFilter('category', cat)" />{{cat}}</label></li>
@@ -15,25 +15,32 @@
               </ul>
             </div>
 
-            <div class="filter-area fcol marginBottom" >
-              <ul class="list-unstyled marginBottom clearfix" >
+            <div class="filter-area fcol " >
+              <ul class="list-unstyled  clearfix" >
                 <h5>Colors</h5>
                 <li class="checkbox" ng-repeat=" color in p.$colors"><label><input type="checkbox" ng-click="filters.setFilter('colors', color)" />{{color}}</label></li>
 
               </ul>
             </div>
 
+            <div class="filter-area fsiz " >
+              <ul class="list-unstyled clearfix" >
+                <h5>Sizes</h5>
+                <li class="checkbox" ng-repeat="size in p.$sizes"><label><input type="checkbox" ng-click="filters.setFilter('sizes', size)" />{{size | uppercase}}</label></li>
 
-            <div class="filter-area fbrd marginBottom" >
+              </ul>
+            </div>
 
-              <ul class="list-unstyled marginBottom  clearfix" >
+            <div class="filter-area fbrd" >
+
+              <ul class="list-unstyled clearfix" >
                 <h5>Brands</h5>
                 <li class="checkbox" ng-repeat="brand in p.$brands"><label><input type="checkbox" ng-click="filters.setFilter('brand', brand)" />{{brand}}</label></li>              </ul>
 
             </div>
 
 
-            <div class="filter-area fpr marginBottom">
+            <div class="filter-area fpr ">
               <h5>Price range </h5>
               <rzslider rz-slider-model="priceRange.minValue" rz-slider-high="priceRange.maxValue" rz-slider-options="priceRange.options" ></rzslider>
             </div>

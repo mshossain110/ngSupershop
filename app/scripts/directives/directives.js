@@ -334,21 +334,26 @@ angular.module('ngSuperShopApp')
                 }
             };
 }])
-//
-// .directive('amParallax', [ '$window', '$timeout', 'isMobile', function($window, $timeout, isMobile){
-//           return {
-//             transclude:false,
-//             restrict: 'C',
-//             scope:{},
-//             link: function($scope, element, attrs){
-//               var scrolable = angular.element('.scrollable-content');
-//               element.css('height', 450);
-//               scrolable.stellar({
-//
-//       				});
-//
-//             }
-//
-//           };
-// }])
+.directive('amSocialshare', ['$location', function($location){
+// ["facebook", "twitter", "linkedin", "google+", "pinterest", "tumblr", "reddit", "stumbleupon", "buffer", "digg", "delicious", "vk", "pocket", "wordpress", "flipboard", "xing", "hackernews", "evernote"]
+  return {
+    restrict : 'EAC',
+    transclude : false,
+    templateUrl : 'views/templates/socialShare.html',
+    controller: function($scope, $location){
+      $scope.url= $location.absUrl();
+      $scope.host = location.host;
+
+      $scope.socials = angular.isDefined($scope.socials) ? $scope.socials : ["facebook", "twitter", "linkedin", "google+"]
+    },
+    scope : {
+      data : '=',
+      socials: '=?'
+    },
+    link : function(scope, element, attrs){
+
+    }
+  };
+
+}])
 ;

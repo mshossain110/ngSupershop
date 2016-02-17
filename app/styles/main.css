@@ -311,8 +311,9 @@ a.socialIcon:hover,
   font-size: inherit;
   padding: .5em;
   padding-right: 2.5em;
-  border: 2px solid #ddd;
+  border: 2px solid #B52E31;
   margin: 0;
+  width: 200px;
   border-radius: 3px;
   text-indent: 0.01px;
   text-overflow: '';
@@ -337,6 +338,7 @@ a.socialIcon:hover,
   right: 1.2em;
   top: 50%;
   margin-top: -.5em;
+  color:#FFF;
 }
 
 .form-select::before {
@@ -345,7 +347,8 @@ a.socialIcon:hover,
   top: 0;
   bottom: 0;
   border-radius: 0 3px 3px 0;
-  background: rgba(159, 159, 159, 0.75);
+  background: #B52E31;
+
 }
 
 

@@ -45,6 +45,13 @@
         return filtered;
 
     }
+  })
+  .filter('rsing', function(){
+
+      return function(input, rstr, withstr){
+        return input.replace(rstr, withstr);
+      }
+
   });
 
 })();

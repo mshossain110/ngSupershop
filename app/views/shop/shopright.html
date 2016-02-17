@@ -30,6 +30,13 @@
               </ul>
             </div>
 
+            <div class="filter-area fsiz marginBottom" >
+              <ul class="list-unstyled marginBottom clearfix" >
+                <h5>Sizes</h5>
+                <li class="checkbox" ng-repeat="size in p.$sizes"><label><input type="checkbox" ng-click="filters.setFilter('sizes', size)" />{{size | uppercase}}</label></li>
+
+              </ul>
+            </div>
 
             <div class="filter-area fbrd marginBottom" >
 

@@ -93,7 +93,7 @@ module.exports = function (grunt) {
             ];
           }
         }
-      },
+      },      
       test: {
         options: {
           port: 9001,
@@ -220,7 +220,7 @@ module.exports = function (grunt) {
             }
           }
       }
-    }, 
+    },
 
     // Renames files for browser caching purposes
     filerev: {

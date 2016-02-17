@@ -295,13 +295,13 @@
     top:0px;
 }
 .shop-page.page-topSidebar.openfilterbar .products-container{
-  top:-560px;
+  top:-400px;
 }
 .shop-page.page-topSidebar .products-container{
   top:0px;
 }
 .shop-page.page-topSidebar .filter-area:not(.fpr) {
-  width: 30%;
+  width: 22%;
   float: left;
   margin-right: 3%;
 
@@ -343,3 +343,62 @@ rzslider .rz-bar.rz-selection {
   height: 350px;
   width: 380px;
 }
+/*--------------------------------------shop single--------------------------------------*/
+.product-title-single {
+  background: #fff none repeat scroll 0 0;
+  box-shadow: 0 0 61px 2px #777 inset;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+.singleProduct-inner .featrue-image {
+  float: left;
+  margin-right: 30px;
+  overflow: hidden;
+}
+.singleProduct-inner .product-summary {
+  overflow: hidden;
+  display: block;
+}
+.social {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  
+  padding: 0;
+}
+.social li {
+  display: inline;
+  float: left;
+  margin-bottom: 5px;
+  margin-right: 7.5px;
+}
+.social li a {
+  display: block;
+  height: 32px;
+  text-indent: -9999px;
+  transition: all 300ms ease-out 0s;
+  width: 32px;
+  background-image:url("../images/social.png");
+  background-color: rgba(0, 0, 0, 0) ;
+  background-repeat: no-repeat;
+}
+.facebook {background-position: 0 0px;}
+.twitter{  background-position: -39px 0px;}
+.twitter:hover{  background-position: -39px -32px;}
+.youtube{  background-position: -78px 0px;}
+.youtube:hover{  background-position: -78px -32px;}
+.vimeo{  background-position: -117px 0px;}
+.vimeo:hover{  background-position: -117px -32px;}
+.linkedin{  background-position: -156px 0px;}
+.linkedin:hover{  background-position: -156px -32px;}
+.rss{  background-position: -195px 0px;}
+.rss:hover{  background-position: -195px -32px;}
+.flickr{  background-position: -234px 0px;}
+.flickr:hover{  background-position: -234px -32px;}
+.skype{  background-position: -273px 0px;}
+.skype:hover{  background-position: -273px -32px;}
+.google{  background-position: -311px 0px;}
+.google:hover{  background-position: -311px -32px;}
+.pinterest{  background-position: -351px 0px;}
+.pinterest:hover{  background-position: -351px -32px;}
+.facebook:hover {  background-position: 0 -32px;}

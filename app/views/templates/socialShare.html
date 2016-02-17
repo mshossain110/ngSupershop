@@ -1,0 +1,17 @@
+<div class="socialShare">
+  <ul class="social center-block clearfix">
+    <li ng-repeat="social in socials">   <a href=""
+      socialshare
+      socialshare-provider="{{social}}"
+      socialshare-text="{{data.title}}"
+      socialshare-media ="{{host}}/{{data.src}}"
+      socialshare-description = "{{data.description | limitTo: 30}}"
+      socialshare-hashtags="{{data.category}}, {{ data.colors[0]}},{{ data.brand}}"
+      socialshare-url="{{url}}"
+      class="{{social | rsing:'+':''}}"
+      >
+      </a></li>
+  </ul>
+
+
+</div>

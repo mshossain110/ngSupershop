@@ -30,6 +30,14 @@
               </ul>
             </div>
 
+            <div class="filter-area fsiz marginBottom" >
+              <ul class="list-unstyled marginBottom clearfix" >
+                <h5>Sizes</h5>
+                <li class="checkbox" ng-repeat="size in p.$sizes"><label><input type="checkbox" ng-click="filters.setFilter('sizes', size)" />{{size | uppercase}}</label></li>
+
+              </ul>
+            </div>
+
 
             <div class="filter-area fbrd marginBottom" >
 
@@ -62,11 +70,11 @@
                 <div class="product" >
 
                   <div class="feature-image">
-                    <img src="{{product.src}}" class="img-responsive" alt="AdidasHoodie" />
+                    <a ng-href="#/shop/{{product.ID}}"><img src="{{product.src}}" class="img-responsive" alt="AdidasHoodie" /></a>
                   </div>
 
                   <div class="product-details">
-                    <a href=""><h3>{{product.title}}</h3></a>
+                    <a ng-href="#/shop/{{product.ID}}"><h3>{{product.title}}</h3></a>
                     <span>{{product.price | currency:"$":0}}</span>
                     <div ng-hide="!listView" class="description marginSmTop marginSmBottom" ng-bind-html="p.HTMLParsing(product.description)"></div>
                     <a class="btn ambtn" ng-click="amCart.addItem(product.ID, product.title, product.src, product.price, 1)" title="Add to Cart"  href="#">Add to cart</a>
