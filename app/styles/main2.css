@@ -172,3 +172,170 @@
 .component .cb-icon-top-border {
     margin-top: -60px;
 }
+/*----------------------------------tab------------------------------------------*/
+.amtab .nav-tabs {
+  border-bottom:medium none;
+}
+.amtab .tab-content {
+  border: 1px solid #ddd;
+  padding: 20px;
+  overflow: hidden;
+  display: block;
+}
+.amtab .nav-tabs li {
+  margin-bottom: -1px;
+}
+.amtab .nav-tabs li a {
+  padding: 10px 36px;
+}
+.amtab .nav-tabs li.active  a {
+  border-top: 3px solid #f00!important;
+}
+.tab-content.ng-enter {
+    -webkit-transition: all linear 0.5s;
+    -moz-transition: all linear 0.5s;
+    -o-transition: all linear 0.5s;
+    transition: all linear 0.5s;
+  -webkit-animation: bounceIn 0.5s linear 0.5s;
+  -moz-animation: bounceIn 0.5s linear 0.5s;
+  -ms-animation: bounceIn 0.5s linear 0.5s;
+  animation: bounceIn 0.5s linear 0.5s;
+}
+.tab-content.ng-leave {
+    -webkit-transition: all linear 0.4s;
+    -moz-transition: all linear 0.4s;
+    -o-transition: all linear 0.4s;
+    transition: all linear 0.4s;
+  -webkit-animation: zoomOut 0.4s;
+  -moz-animation: zoomOut 0.4s;
+  -ms-animation: zoomOut 0.4s;
+  animation: zoomOut 0.4s;
+  display: none;
+}
+
+.amtab.vertical .nav-tabs {
+  float: left;
+}
+.amtab.vertical .nav-tabs li {
+  float: none;
+}
+.amtab.vertical .nav-tabs li a {
+  border-bottom-color: #ddd;
+  border-left-color: #ddd;
+  border-right-color: #fff;
+  margin-right: -2px;
+  z-index: 4;
+}
+.amtab.vertical .nav-tabs li:first-child a{
+  border-top-color: #ddd;
+}
+/*panel  accordion*/
+.panel-heading {
+  position: relative;
+}
+.panel-heading .fa {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+}
+.ampanel .panel-body.ng-enter {
+  -webkit-transition: all linear 0.5s;
+  -moz-transition: all linear 0.5s;
+  -o-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+-webkit-animation: slideInDown 0.5s linear 0.5s;
+-moz-animation: slideInDown 0.5s linear 0.5s;
+-ms-animation: slideInDown 0.5s linear 0.5s;
+animation: slideInDown 0.5s linear 0.5s;
+}
+.ampanel .panel-body.ng-leave {
+  -webkit-transition: all linear 0.4s;
+  -moz-transition: all linear 0.4s;
+  -o-transition: all linear 0.4s;
+  transition: all linear 0.4s;
+-webkit-animation: slideOutUp 0.4s;
+-moz-animation: slideOutUp 0.4s;
+-ms-animation: slideOutUp 0.4s;
+animation: slideOutUp 0.4s;
+}
+/*Drag crosal*/
+
+.carousel-item {
+  display: block;
+  color: #444;
+  background: #f4f4f4;
+  box-shadow: 0px 0px 3px rgba(0,0,0,0.5);
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  opacity: 1;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+.carousel {
+  padding: 20px;
+  height: 600px;
+  overflow: visible;
+}
+
+.carousel-inner {
+  position: relative;
+  overflow: visible;
+}
+
+.carousel>.item, .carousel-item {
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+.carousel-item {
+  -webkit-transition: -webkit-transform 500ms;
+  -moz-transition: -moz-transform 500ms;
+  transition: transform 500ms;
+}
+
+
+
+[drag-to-dismiss]{
+  transform: translate(0,0); /* NOTE: this is required to prevent mobile webkit issues */
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: opacity 300ms, -webkit-transform 300ms;
+  -moz-transition: opacity 300ms, -moz-transform 300ms;
+  transition: opacity 300ms, transform 300ms;
+  opacity: 1;
+}
+
+.notices-container {
+  overflow-x: hidden;
+}
+
+.dismiss {
+  -webkit-transition: opacity 300ms, -webkit-transform 300ms;
+  -moz-transition: opacity 300ms, -moz-transform 300ms;
+  transition: opacity 300ms, transform 300ms;
+  opacity: 0.5;
+}
+
+.dismitted {
+  -webkit-transition: opacity 300ms, -webkit-transform 300ms;
+  -moz-transition: opacity 300ms, -moz-transform 300ms;
+  transition: opacity 300ms, transform 300ms;
+  opacity: 0;
+}

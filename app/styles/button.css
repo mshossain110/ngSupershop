@@ -2,8 +2,9 @@
 
 .btn,
 .btn:hover {
-    color: #FFF;
-      -webkit-transition: all 500ms ease-in-out;
+  margin: 5px;
+  color: #FFF;
+  -webkit-transition: all 500ms ease-in-out;
   -moz-transition: all 500ms ease-in-out;
   -ms-transition: all 500ms ease-in-out;
   -o-transition: all 500ms ease-in-out;

@@ -1,0 +1,22 @@
+<am-pagetitle displayname-property="data.title"></am-pagetitle>
+
+<section class="container-fluid page-about marginTop marginBottom">
+  <div class="container">
+    <div class="row ">
+
+
+          <div class="col-md-12 col-xs-12 marginBottom">
+              <h1 class="paddingAll">To dismis the notices drag 1/4</h1>
+            <div class="notices-container">
+              <div ng-repeat="notice in notices"
+                drag-to-dismiss="deleteNotice(notice)"
+                class="section section-break bgColor marginSm borderSm">
+                <i class="fa fa-{{notice.icon}}"></i> {{notice.message}}
+              </div>
+            </div>
+
+            </div>
+
+    </div>
+  </div>
+</section>

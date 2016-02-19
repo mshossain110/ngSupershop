@@ -43,6 +43,9 @@ angular
    }).state('home3',{
      url: '/home3',
      templateUrl: '/views/pages/homeresturent.html'
+   }).state('aboutUs',{
+     url: '/about-us',
+     templateUrl: '/views/pages/about.html'
    })
    // shop router
    .state('shop',{
@@ -112,8 +115,28 @@ angular
    }).state('elements.callToAction',{
      url: '/callToAction',
      templateUrl:'/views/ui/elements.callToAction.html'
+   }).state('elements.tabs',{
+     url: '/tabs',
+     templateUrl:'/views/ui/elements.tabs.html'
+   }).state('elements.modal',{
+     url: '/modal',
+     templateUrl:'/views/ui/elements.modal.html'
+   }).state('elements.carosal2',{
+     url: '/carosal2',
+     templateUrl:'/views/ui/elements.carosal2.html'
+   }).state('elements.dragtodismis',{
+     url: '/dragtodismis',
+     templateUrl:'/views/ui/elements.dragtodismis.html'
+   }).state('elements.swip',{
+     url: '/swip',
+     templateUrl:'/views/ui/elements.swip.html'
+   }).state('elements.touch',{
+     url: '/touch',
+     templateUrl:'/views/ui/elements.touch.html'
+   }).state('elements.drag2',{
+     url: '/drag2',
+     templateUrl:'/views/ui/elements.drag2.html'
    });
-
 
   })
   .run(['$rootScope','amCart', 'store', '$window', '$timeout', function($rootScope, amCart, store, $window, $timeout){

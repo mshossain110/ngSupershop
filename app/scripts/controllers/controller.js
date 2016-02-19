@@ -10,6 +10,38 @@
 angular.module('ngSuperShopApp')
 
    .controller('MainController', ['$scope', '$rootScope', '$http', function($scope, $rootScope, $http){
+
+
+       $scope.swiped = function(direction) {
+         alert('Swiped ' + direction);
+       };
+
+
+       $rootScope.$on('$routeChangeStart', function(){
+         $rootScope.loading = true;
+       });
+
+       $rootScope.$on('$routeChangeSuccess', function(){
+         $rootScope.loading = false;
+       });
+
+       //
+       // 'Drag' screen
+       //
+       $scope.notices = [];
+
+       for (var j = 0; j < 10; j++) {
+         $scope.notices.push({icon: 'envelope', message: 'Notice ' + (j + 1) });
+       }
+
+       $scope.deleteNotice = function(notice) {
+         var index = $scope.notices.indexOf(notice);
+         if (index > -1) {
+           $scope.notices.splice(index, 1);
+         }
+       };
+
+
      $rootScope.$broadcast('bodyClass:add', $scope.bodyClass);
 
      function rawurlencode(str) {

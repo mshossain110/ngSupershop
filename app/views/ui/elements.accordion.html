@@ -1,64 +1,68 @@
 <am-pagetitle displayname-property="data.title"></am-pagetitle>
 
-<div class="container-fluid">
+<section class="container-fluid page-about marginTop marginBottom">
   <div class="container">
-    <div class="row">
-      <div class="col-md-12">
+    <div class="row ">
+        <div class="col-md-6 col-xs-12 marginBottom">
+          <div class="ampanel panel-group" ui-state="myAccordion" ui-default="2">
 
-
-    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-
-        <div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="headingOne">
-                <h4 class="panel-title">
-                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        <i class="more-less glyphicon glyphicon-plus"></i>
-                        Collapsible Group Item #1
-                    </a>
-                </h4>
+          <div class="panel panel-default" ng-repeat="i in [1,2,3]">
+            <div class="panel-heading" ui-set="{'myAccordion': i}">
+              <h4 class="panel-title">
+                  Accordion Title#{{i}}
+              </h4>
+              <i class="fa" ui-class="{'fa-minus': myAccordion == {{i}}, 'fa-plus':myAccordion != {{i}}}" ></i>
             </div>
-            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                <div class="panel-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                </div>
-            </div>
+
+              <div class="panel-body" ui-if="myAccordion == {{i}}">
+                <h3>This is Heading {{i}}</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sem nunc, facilisis id feugiat sed, dictum sed tellus. Fusce eget augue id turpis finibus bibendum et id quam. In id lectus et lectus malesuada aliquam efficitur a orci. Vestibulum euismod lacus eget nulla vehicula vehicula. Nunc tortor nisi, blandit sed sapien id, ultrices molestie erat. Donec placerat pulvinar pellentesque. Fusce laoreet quam nibh, at porta justo rhoncus rutrum. Donec lobortis auctor tellus. Morbi id urna dapibus, gravida leo sit amet, luctus nisi. Curabitur ligula neque, dignissim nec ornare vel, gravida ut sem. Fusce mattis tincidunt ligula in ultricies. In convallis condimentum tellus ut vehicula. Nunc semper eu ante a congue. Duis ut quam vehicula, egestas tellus ac, dapibus orci. </p>
+              </div>
+
+          </div>
         </div>
 
-        <div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="headingTwo">
-                <h4 class="panel-title">
-                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        <i class="more-less glyphicon glyphicon-plus"></i>
-                        Collapsible Group Item #2
-                    </a>
-                </h4>
+        </div>
+        <div class="col-md-6 col-xs-12 marginBottom">
+          <div class="ampanel panel-group" ui-state="myAccordion2" ui-default="1">
+
+          <div class="panel panel-default borderColor" ng-repeat="i in [1,2,3]">
+            <div class="panel-heading bgColor" ui-set="{'myAccordion2': i}">
+              <h4 class="panel-title">
+                  Accordion Title#{{i}}
+              </h4>
+              <i class="fa" ui-class="{'fa-minus': myAccordion2 == {{i}}, 'fa-plus':myAccordion2 != {{i}}}" ></i>
             </div>
-            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                <div class="panel-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                </div>
-            </div>
+
+              <div class="panel-body" ui-if="myAccordion2 == {{i}}">
+                <h3>This is Heading {{i}}</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sem nunc, facilisis id feugiat sed, dictum sed tellus. Fusce eget augue id turpis finibus bibendum et id quam. In id lectus et lectus malesuada aliquam efficitur a orci. Vestibulum euismod lacus eget nulla vehicula vehicula. Nunc tortor nisi, blandit sed sapien id, ultrices molestie erat. Donec placerat pulvinar pellentesque. Fusce laoreet quam nibh, at porta justo rhoncus rutrum. Donec lobortis auctor tellus. Morbi id urna dapibus, gravida leo sit amet, luctus nisi. Curabitur ligula neque, dignissim nec ornare vel, gravida ut sem. Fusce mattis tincidunt ligula in ultricies. In convallis condimentum tellus ut vehicula. Nunc semper eu ante a congue. Duis ut quam vehicula, egestas tellus ac, dapibus orci. </p>
+              </div>
+
+          </div>
+        </div>
         </div>
 
-        <div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="headingThree">
-                <h4 class="panel-title">
-                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        <i class="more-less glyphicon glyphicon-plus"></i>
-                        Collapsible Group Item #3
-                    </a>
-                </h4>
+        <div class="col-md-6 col-xs-12 marginBottom">
+          <div class="ampanel panel-group" ui-state="myAccordion3" ui-default="1">
+
+          <div class="panel panel-default borderColor radiusLg" ng-repeat="i in [1,2,3]">
+            <div class="panel-heading bgColor radiusLg" ui-set="{'myAccordion3': i}">
+              <h4 class="panel-title">
+                  Accordion Title#{{i}}
+              </h4>
+              <i class="fa" ui-class="{'fa-minus': myAccordion3 == {{i}}, 'fa-plus':myAccordion3 != {{i}}}" ></i>
             </div>
-            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                <div class="panel-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                </div>
-            </div>
+
+              <div class="panel-body" ui-if="myAccordion3 == {{i}}">
+                <h3>This is Heading {{i}}</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sem nunc, facilisis id feugiat sed, dictum sed tellus. Fusce eget augue id turpis finibus bibendum et id quam. In id lectus et lectus malesuada aliquam efficitur a orci. Vestibulum euismod lacus eget nulla vehicula vehicula. Nunc tortor nisi, blandit sed sapien id, ultrices molestie erat. Donec placerat pulvinar pellentesque. Fusce laoreet quam nibh, at porta justo rhoncus rutrum. Donec lobortis auctor tellus. Morbi id urna dapibus, gravida leo sit amet, luctus nisi. Curabitur ligula neque, dignissim nec ornare vel, gravida ut sem. Fusce mattis tincidunt ligula in ultricies. In convallis condimentum tellus ut vehicula. Nunc semper eu ante a congue. Duis ut quam vehicula, egestas tellus ac, dapibus orci. </p>
+              </div>
+
+          </div>
+        </div>
         </div>
 
-    </div><!-- panel-group -->
+    </div>
   </div>
-</div>
-</div>
-
-</div>
+</section>

@@ -1,103 +1,94 @@
-.title-entry {
-    color: #555;
-    font-family: "Quattrocento", serif;
-    font-weight: bold;
-    margin-bottom: 70px;
-    margin-top: 50px;
-    overflow: hidden;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
+.amtitle {
+  margin-bottom: 30px;
+  position: relative;
 }
-.title-entry .title {
-    position: relative;
+.amtitle h1, .amtitle h2, .amtitle h3, .amtitle h4, .amtitle h5, .amtitle h6 {
+  background-color: #fff;
+  display: inline-block;
+  margin-bottom: 0;
+  padding-right: 15px;
+  position: relative;
+  z-index: 1;
+  text-transform: uppercase;
 }
-.title-entry h1,
-.title-entry h2,
-.title-entry h3,
-.title-entry h4,
-.title-entry h5,
-.title-entry h6 {
-    background: #ffffff none repeat scroll 0 0;
-    display: inline-block;
-    margin: 0;
-    padding-right: 15px;
-    text-transform: uppercase;
+.amtitle h4, .amtitle h5, .amtitle h6 {
+  padding-right: 10px;
 }
-.title-entry.title-right {
+.amtitle.title-double-border::before,
+.amtitle.title-border::before,
+.amtitle.title-double-border::after
+{
+  border-top: 3px solid #B52E31;
+  content: "";
+  height: 0;
+  left: auto;
+  position: absolute;
+  right: 0;
+  top: 40%;
+  width: 100%;
+}
+.amtitle.title-double-border::after,
+.amtitle.title-border::after,
+.amtitle.title-border-color::after {
+  border-top: 1px solid #B52E31;
+  top: 54%;
+}
+
+.amtitle.shape-dotted::before,
+.amtitle.shape-dotted::after {
+    border-top-style: dotted;
+}
+.amtitle.shape-dash::before,
+.amtitle.shape-dash::after {
+    border-top-style: dashed;
+}
+
+.amtitle.shape-sd::after {
+    border-top-style: dotted;
+}
+
+.amtitle.title-border::before {
+  border-top: 1px solid #B52E31;
+  top: 49%;
+}
+
+.amtitle.title-bottom-border h1, .amtitle.title-bottom-border h2, .amtitle.title-bottom-border h3, .amtitle.title-bottom-border h4, .amtitle.title-bottom-border h5, .amtitle.title-bottom-border h6 {
+  background: transparent none repeat scroll 0 0;
+  border-bottom: 2px solid #B52E31;
+  display: block;
+  padding: 0 0 10px;
+}
+.title-center {
+  text-align: center;
+}
+.title-center h1, .title-center h2, .title-center h3 {
+  padding: 0 15px;
+}
+
+.title-center h4, .title-center h5, .title-center h6 {
+  padding: 0 10px;
+}
+.amtitle.title-right {
     text-align: right;
 }
-.title-entry.title-right h1,
-.title-entry.title-right h2,
-.title-entry.title-right h3,
-.title-entry.title-right h4,
-.title-entry.title-right h5,
-.title-entry.title-right h6 {
+.amtitle.title-right h1,
+.amtitle.title-right h2,
+.amtitle.title-right h3,
+.amtitle.title-right h4,
+.amtitle.title-right h5,
+.amtitle.title-right h6 {
     padding-right: 0;
     padding-left: 15px;
 }
-.title-entry.title-center {
-    text-align: center;
-}
-.title-entry.title-center h1,
-.title-entry.title-center h2,
-.title-entry.title-center h3,
-.title-entry.title-center h4,
-.title-entry.title-center h5,
-.title-entry.title-center h6 {
-    padding-right: 15px;
-    padding-left: 15px;
-}
-.title-entry small {
+.amtitle h1 small, .amtitle h2 small, .amtitle h3 small, .amtitle h4 small, .amtitle h5 small, .amtitle h6 small {
     display: block;
-    font-size: 16px;
+    font-size: 40%;
     line-height: 2em;
 }
-.title-entry .title::before,
-.title-entry .title::after {
-    border-top-color: #ddd;
-    border-top-style: solid;
-    border-top-width: 2px;
-    content: "";
-    display: block;
-    position: absolute;
-    top: 35%;
-    width: 100%;
-    z-index: -5;
+.amtitle h4 small, .amtitle h5 small, .amtitle h6 small{
+  font-size: 80%;
 }
-.title-entry .title::after {
-    top: 55%;
-}
-.title-entry.shape-dotted .title::before,
-.title-entry.shape-dotted .title::after {
-    border-top-style: dotted;
-}
-.title-entry.shape-dash .title::before,
-.title-entry.shape-dash .title::after {
-    border-top-style: dashed;
-}
-.title-entry.shape-dotted-solid .title::before {
-    border-top-style: dotted;
-}
-.title-entry.shape-dash-solid .title::before {
-    border-top-style: dashed;
-}
-.title-entry.boder-bottom::after {
-    border-bottom: 3px dashed #ddd;
-    content: "";
-    display: block;
-    position: relative;
-    top: -1px;
-}
-.title-entry.boder-bottom.small-width::after {
-    border-bottom-style: solid;
-    border-color: rgba(153, 21, 0, 1);
-    margin: 0 auto;
-    padding-bottom: 20px;
-    text-align: center;
-    width: 200px;
-}
-.title-entry.title3D {
+.amtitle.title3D {
     text-align: center;
 }
 .title3D h1 {

@@ -112,12 +112,12 @@ h5 {
 h6 {
   font-size: 1em; /*  16px */
 }
-h1 > span:not(.nocolor),
-h2 > span:not(.nocolor),
-h3 > span:not(.nocolor),
-h4 > span:not(.nocolor),
-h5 > span:not(.nocolor),
-h6 > span:not(.nocolor) { color: #B52E31; }
+h1  span:not(.nocolor),
+h2  span:not(.nocolor),
+h3  span:not(.nocolor),
+h4  span:not(.nocolor),
+h5  span:not(.nocolor),
+h6  span:not(.nocolor) { color: #B52E31; }
 /*************
 Basic Class
 *********************/
@@ -215,7 +215,7 @@ Basic Class
 	margin-right: auto !important;
 }
 
-.bgColor{ background-color:#B52E31 !important; color: #F5F5F5;}
+.bgColor{ background-color:#B52E31 !important; color: #F5F5F5 !important; background-image: none !important;}
 .bgColorGray {background-color: #DDDDDD !important; color: #474747;}
 .bgColorWhite{ background-color: #FFFFFF !important; color: #474747;}
 .bgColorBlack{background-color: #212020 !important; color: #F5F5F5;}

@@ -350,7 +350,24 @@ a.socialIcon:hover,
   background: #B52E31;
 
 }
+/*about us page------------------------------------*/
+.skill {
+  background: #ddd none repeat scroll 0 0;
+  width: 100%;
+  margin: 5px 0px;
+}
+.skill-bg {
+  background:#B52E31 none repeat scroll 0 0;
+  color: #fff;
+  font-weight: 700;
+  padding: 5px;
+  width: 0;
+  transition: all .6s;
+  -webkit-transition: all .6s;
+  -moz-transition: all .6s;
+  -o-transition: all .6s;
 
+}
 
 @media (max-width: 1199px) {
 

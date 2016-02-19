@@ -1,0 +1,72 @@
+<am-pagetitle displayname-property="data.title"></am-pagetitle>
+
+<section class="container-fluid page-about marginTop marginBottom">
+  <div class="container">
+    <div class="row ">
+        <div class="col-md-6 col-xs-12 marginBottom">
+          <div class="amtab" ui-state="Default" default="1">
+              <ul class="nav nav-tabs">
+                <li ui-class="{'active': Default == 1}">
+                  <a ui-set="{'Default': 1}">Tab 1</a>
+                </li>
+                <li ui-class="{'active': Default == 2}">
+                  <a ui-set="{'Default': 2}"><i class="fa fa-tags"></i> Tab 2</a>
+                </li>
+                <li ui-class="{'active': Default == 3}">
+                  <a ui-set="{'Default': 3}">Tab 3</a>
+                </li>
+              </ul>
+
+              <div class="tab-content" ui-if="Default == 1">
+                <h5>Tab 1</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id rhoncus lorem. Sed sit amet lectus euismod massa ultrices gravida vitae nec neque. Donec enim massa, facilisis a metus sit amet, pretium auctor nisl. Nunc euismod congue lacinia. Ut euismod neque id feugiat cursus. Nam auctor tellus vel erat vestibulum fermentum. Mauris non massa ultrices, pellentesque lorem ut, dictum lectus. Sed ornare gravida sagittis. Phasellus a est in erat semper interdum. Nulla odio lorem, efficitur vitae feugiat id, accumsan et turpis. </p>
+              </div>
+
+              <div class="tab-content" ui-if="Default == 2">
+                <h5>Tab 2</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id rhoncus lorem. Sed sit amet lectus euismod massa ultrices gravida vitae nec neque. Donec enim massa, facilisis a metus sit amet, pretium auctor nisl. Nunc euismod congue lacinia. Ut euismod neque id feugiat cursus. Nam auctor tellus vel erat vestibulum fermentum. Mauris non massa ultrices, pellentesque lorem ut, dictum lectus. Sed ornare gravida sagittis. Phasellus a est in erat semper interdum. Nulla odio lorem, efficitur vitae feugiat id, accumsan et turpis. </p>
+              </div>
+
+              <div class="tab-content" ui-if="Default == 3">
+                <h5>Tab 3</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id rhoncus lorem. Sed sit amet lectus euismod massa ultrices gravida vitae nec neque. Donec enim massa, facilisis a metus sit amet, pretium auctor nisl. Nunc euismod congue lacinia. Ut euismod neque id feugiat cursus. Nam auctor tellus vel erat vestibulum fermentum. Mauris non massa ultrices, pellentesque lorem ut, dictum lectus. Sed ornare gravida sagittis. Phasellus a est in erat semper interdum. Nulla odio lorem, efficitur vitae feugiat id, accumsan et turpis. </p>
+              </div>
+          </div>
+
+        </div>
+        <div class="col-md-6 col-xs-12 marginBottom">
+
+          <div class="amtab vertical" ui-state="tabvertical" default="1">
+              <ul class="nav nav-tabs">
+                <li ui-class="{'active': tabvertical == 1}">
+                  <a ui-set="{'tabvertical': 1}"><i class="fa fa-tags"></i> Tab 1</a>
+                </li>
+                <li ui-class="{'active': tabvertical == 2}">
+                  <a ui-set="{'tabvertical': 2}">Tab 2</a>
+                </li>
+                <li ui-class="{'active': tabvertical == 3}">
+                  <a ui-set="{'tabvertical': 3}">Tab 3</a>
+                </li>
+              </ul>
+
+              <div class="tab-content" ui-if="tabvertical == 1">
+                <h5>Tab 1</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id rhoncus lorem. Sed sit amet lectus euismod massa ultrices gravida vitae nec neque. Donec enim massa, facilisis a metus sit amet, pretium auctor nisl. Nunc euismod congue lacinia. Ut euismod neque id feugiat cursus. Nam auctor tellus vel erat vestibulum fermentum. Mauris non massa ultrices, pellentesque lorem ut, dictum lectus. Sed ornare gravida sagittis. Phasellus a est in erat semper interdum. Nulla odio lorem, efficitur vitae feugiat id, accumsan et turpis. </p>
+              </div>
+
+              <div class="tab-content" ui-if="tabvertical == 2">
+                <h5>Tab 2</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id rhoncus lorem. Sed sit amet lectus euismod massa ultrices gravida vitae nec neque. Donec enim massa, facilisis a metus sit amet, pretium auctor nisl. Nunc euismod congue lacinia. Ut euismod neque id feugiat cursus. Nam auctor tellus vel erat vestibulum fermentum. Mauris non massa ultrices, pellentesque lorem ut, dictum lectus. Sed ornare gravida sagittis. Phasellus a est in erat semper interdum. Nulla odio lorem, efficitur vitae feugiat id, accumsan et turpis. </p>
+              </div>
+
+              <div class="tab-content" ui-if="tabvertical == 3">
+                <h5>Tab 3</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id rhoncus lorem. Sed sit amet lectus euismod massa ultrices gravida vitae nec neque. Donec enim massa, facilisis a metus sit amet, pretium auctor nisl. Nunc euismod congue lacinia. Ut euismod neque id feugiat cursus. Nam auctor tellus vel erat vestibulum fermentum. Mauris non massa ultrices, pellentesque lorem ut, dictum lectus. Sed ornare gravida sagittis. Phasellus a est in erat semper interdum. Nulla odio lorem, efficitur vitae feugiat id, accumsan et turpis. </p>
+              </div>
+          </div>
+
+        </div>
+
+    </div>
+  </div>
+</section>
