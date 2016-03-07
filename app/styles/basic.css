@@ -215,19 +215,21 @@ Basic Class
 	margin-right: auto !important;
 }
 
-.bgColor{ background-color:#B52E31 !important; color: #F5F5F5 !important; background-image: none !important;}
-.bgColorGray {background-color: #DDDDDD !important; color: #474747;}
-.bgColorWhite{ background-color: #FFFFFF !important; color: #474747;}
-.bgColorBlack{background-color: #212020 !important; color: #F5F5F5;}
+.bgColor{ background-color:#B52E31 !important;background-image: none !important;}
+.bgColorGray {background-color: #DDDDDD !important;}
+.bgColorWhite{ background-color: #FFFFFF !important;}
+.bgColorWhite, .bgColorWhite p, .bgColorWhite a, .bgColorGray p, .bgColorGray , .bgColorGray a{color: #474747;}
+.bgColorBlack{background-color: #212020 !important; }
+.bgColor, .bgColor p, .bgColor a, .bgColorBlack p, .bgColorBlack, .bgColorBlack a{color: #F5F5F5;}
 
 .nobg{background: none !important;}
 
-.color{ color: #B52E31 !important;}
-.textColor{color: #474747 !important;}
-.colorGray{color: #DDDDDD !important;}
-.colorWhite{color: #F5F5F5 !important;}
-.colorBlack{color: #212020 !important;}
-.colorAsh{color: #707070 !important;}
+.color, .color p, .color a{ color: #B52E31 !important;}
+.textColor, .textColor p, .textColor a{color: #474747 !important;}
+.colorGray, .colorGray p, .colorGray a{color: #DDDDDD !important;}
+.colorWhite, .colorWhite p, .colorWhite a{color: #F5F5F5 !important;}
+.colorBlack, .colorBlack p, .colorBlack a{color: #212020 !important;}
+.colorAsh, .colorAsh p, .colorAsh a{color: #707070 !important;}
 
 .ngbgColor{background-color:  transparent !important;}
 

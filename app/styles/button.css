@@ -24,6 +24,14 @@
 .round-10 {
   margin-top: 5px;
 }
+.button-am {
+  background-color: #B52E31;
+  border-color: rgba(#B52E31, 0.8);
+  color: #F5F5F5;
+}
+.button-red:hover {
+    background-color: rgba(181, 46, 49, 0.88);
+}
 .button-red {
     background-color: #791606;
     border-color: rgba(#791606, 0.8);

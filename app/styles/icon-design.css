@@ -1,16 +1,10 @@
 /********************************    Icon Effect and radious ***************************************************************************/
 
 
-.list-unstyled .icon-entry {
-  height: 110px;
-  margin-top: 17px;
-  min-width: 200px;
-  position: relative;
-  width: 19%;
-  display: inline-block;
-}
-.list-unstyled .icon-entry span{
+.IconEffects li span {
     display: block;
+    clear: both;
+    margin: 10px;
 }
 .icon-effect {
     display: inline-block;
@@ -26,7 +20,7 @@
     top: 0;
     text-decoration: none;
     z-index: 1;
-    color: rgba(153, 21, 0, 1);
+    color: #B52E31;
 }
 .icon-effect.xl {
     font-size: 45px;
@@ -106,18 +100,15 @@
 
 .content-box  .effect-1,
 .icon-effect.effect-1 {
-    background: rgb(153, 92, 0);
+    background: #B52E31;
     color: #FFF;
-    -webkit-transition: background 0.2s, color 0.2s;
-    -moz-transition: background 0.2s, color 0.2s;
-    transition: background 0.2s, color 0.2s;
 }
 .content-box  .effect-1::after,
 .icon-effect.effect-1:after {
     top: -7px;
     left: -7px;
     padding: 7px;
-    box-shadow: 0 0 0 4px rgba(153, 21, 0, 0.88);
+    box-shadow: 0 0 0 4px #B52E31;
     -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
     -webkit-transform: scale(.8);
     -moz-transition: -moz-transform 0.2s, opacity 0.2s;
@@ -130,15 +121,6 @@
 
 /* Effect 1a */
 
-.icon-effect.effect-1.effect-a:hover,.icon-effect.effect-1.effect-a:focus,
-.content-box :hover .icon-effect.effect-1.effect-a,.content-box :focus .icon-effect.effect-1.effect-a {
-    background: rgba(153, 21, 0, 0.88);
-    color: #FFFFFF;
-}
-.icon-effect.effect-1.effect-a:hover i,.icon-effect.effect-1.effect-a:focus i,
-.content-box:hover .icon-effect.effect-1.effect-a,.content-box:focus .icon-effect.effect-1.effect-a {
-    color: #FFF;
-}
 .icon-effect.effect-1.effect-a:hover:after,.icon-effect.effect-1.effect-a:focus:after,
 .content-box:hover .icon-effect.effect-1.effect-a:after,.content-box:focus .icon-effect.effect-1.effect-a:after {
     -webkit-transform: scale(1);
@@ -149,16 +131,6 @@
 }
 
 /* Effect 1b */
-
-.icon-effect.effect-1.effect-b:hover,.icon-effect.effect-1.effect-b:focus,
-.content-box:hover .icon-effect.effect-1.effect-b,.content-box:focus .icon-effect.effect-1.effect-b {
-    background: rgba(153, 21, 0, 0.88);
-    color: #FFF;
-}
-.icon-effect.effect-1.effect-b:hover i,.icon-effect.effect-1.effect-b:focus i,
-.content-box:hover .icon-effect.effect-1.effect-b i,.content-box:focus .icon-effect.effect-1.effect-b i {
-    color: #FFF;
-}
 .icon-effect.effect-1.effect-b:after,
 .content-box .icon-effect.effect-1.effect-b:after {
     -webkit-transform: scale(1.2);
@@ -179,10 +151,6 @@
 .icon-effect.effect-2 ,
 .content-box .icon-effect.effect-2 {
     color: #FFFFFF;
-    box-shadow: 0 0 0 3px rgba(153, 21, 0, 0.88);
-    -webkit-transition: color 0.3s;
-    -moz-transition: color 0.3s;
-    transition: color 0.3s;
 }
 .icon-effect.effect-2:after ,
 .content-box .icon-effect.effect-2:after {
@@ -190,18 +158,12 @@
     left: -2px;
     padding: 2px;
     z-index: -1;
-    background: rgb(153, 92, 0);
+    background: #B52E31;
     -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
     -moz-transition: -moz-transform 0.2s, opacity 0.2s;
     transition: transform 0.2s, opacity 0.2s;
 }
 /* Effect 2a */
-
-.icon-effect.effect-2.effect-a:hover,.icon-effect.effect-2.effect-a:focus,
-.content-box:hover .icon-effect.effect-2.effect-a,.content-box:focus .icon-effect.effect-2.effect-a,
-.icon-effect.effect-2.effect-a:hover i,.icon-effect.effect-2.effect-a:focus i {
-    color: #FFFFFF;
-}
 .icon-effect.effect-2.effect-a:hover:after ,.icon-effect.effect-2.effect-a:focus:after ,
 .content-box:hover .icon-effect.effect-2.effect-a::after,.content-box:focus .icon-effect.effect-2.effect-a::after {
     -webkit-transform: scale(0.85);
@@ -225,12 +187,12 @@
 .content-box:hover .icon-effect.effect-2.effect-b,.content-box:focus .icon-effect.effect-2.effect-b,
 .icon-effect.effect-2.effect-b:hover,.icon-effect.effect-2.effect-b:focus,
 .icon-effect.effect-2.effect-b:hover i,.icon-effect.effect-2.effect-b:focus i {
-    color: rgb(153, 21, 0);
+    color: #B52E31;
 }
 /* Effect 3 */
 
 .icon-effect.effect-3 {
-    box-shadow: 0 0 0 4px rgb(153, 21, 0);
+    box-shadow: 0 0 0 4px #B52E31;
     -webkit-transition: color 0.3s;
     -moz-transition: color 0.3s;
     transition: color 0.3s;
@@ -240,7 +202,7 @@
     left: -2px;
     padding: 2px;
     z-index: -1;
-    background: #995c00;
+    background: #B52E31;
     -webkit-transition: -webkit-transform 0.2s, opacity 0.3s;
     -moz-transition: -moz-transform 0.2s, opacity 0.3s;
     transition: transform 0.2s, opacity 0.3s;
@@ -254,7 +216,7 @@
 .icon-effect.effect-3.effect-a:hover,.icon-effect.effect-3.effect-a:focus,
 .content-box:hover .icon-effect.effect-3.effect-a,.content-box:focus .icon-effect.effect-3.effect-a,
 .icon-effect.effect-3.effect-a:hover i,.icon-effect.effect-3.effect-a:focus i {
-    color: rgb(153, 21, 0);
+    color: #B52E31;
 }
 .content-box:hover .icon-effect.effect-3.effect-a::after ,.content-box:focus .icon-effect.effect-3.effect-a::after ,
 .icon-effect.effect-3.effect-a:hover:after,.icon-effect.effect-3.effect-a:focus:after {
@@ -268,7 +230,7 @@
 
 .icon-effect.effect-3.effect-b,
 .icon-effect.effect-3.effect-b i {
-    color: rgb(153, 21, 0);
+    color: #B52E31;
 }
 .content-box:hover .icon-effect.effect-3.effect-b,.content-box:focus .icon-effect.effect-3.effect-b,
 .icon-effect.effect-3.effect-b:hover,.icon-effect.effect-3.effect-b:focus,
@@ -294,15 +256,14 @@
   top: -19px;
 }
 /* Effect 4 */
-
-.content-box:hover .effect-4,.content-box:focus .effect-4,
-.effect-4:hover i,.effect-4:focus i,
-.effect-4:hover,.effect-4:focus {
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -o-transition: all 0.2s;
-    -ms-transition: all 0.2s;
-    transition: all 0.2s;
+.effect-4 {
+    color: #B52E31;
+    box-shadow: 0 0 0 4px #B52E31;
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    transition: all 0.8s;
 }
 .content-box:hover .effect-4.effect-b,.content-box:focus .effect-4.effect-b,
 .effect-4.effect-b:hover,.effect-4.effect-b:focus {
@@ -318,19 +279,11 @@
     -ms--transform: rotate(720deg);
     transform: rotate(720deg);
 }
-.effect-4 {
-    color: rgba(153, 21, 0, 1);
-    box-shadow: 0 0 0 4px rgba(153, 21, 0, 1);
-    -webkit-transition: all 0.8s;
-    -moz-transition: all 0.8s;
-    -o-transition: all 0.8s;
-    -ms-transition: all 0.8s;
-    transition: all 0.8s;
-}
+
 /* Effect 5 */
 
 .icon-effect.effect-5 {
-    box-shadow: 0 0 0 4px rgba(153, 21, 0, 1);
+    box-shadow: 0 0 0 4px #B52E31;
     overflow: hidden;
     -webkit-transition: background 0.3s, color 0.3s, box-shadow 0.3s;
     -moz-transition: background 0.3s, color 0.3s, box-shadow 0.3s;
@@ -342,9 +295,9 @@
 }
 .content-box:hover .icon-effect.effect-5 ,.content-box:focus .icon-effect.effect-5 ,
 .icon-effect.effect-5:hover,.icon-effect.effect-5:focus {
-    background: rgba(153, 21, 0, 1);
+    background: #B52E31;
     color: #FFFFFF;
-    box-shadow: 0 0 0 8px rgb(153, 92, 0);
+    box-shadow: 0 0 0 8px #B52E31;
 }
 .content-box:hover .icon-effect.effect-5 i ,.content-box:focus .icon-effect.effect-5 i ,
 .icon-effect.effect-5:hover i ,.icon-effect.effect-5:focus i {
@@ -522,30 +475,26 @@
 
 .content-box .icon-effect,
 .icon-effect.effect-6 {
-    box-shadow: 0 0 0 4px rgb(153, 92, 0);
+    box-shadow: 0 0 0 4px #B52E31;
     -webkit-transition: background 0.2s, color 0.2s;
     -moz-transition: background 0.2s, color 0.2s;
     transition: background 0.2s, color 0.2s;
 }
 .content-box:hover .effect-6,.content-box:focus .effect-6,
 .icon-effect.effect-6:hover,.icon-effect.effect-6:focus {
-    background: rgba(153, 21, 0, 1);
-    color: #FFFFFF;
-}
-.content-box:hover .effect-6 i,.content-box:focus .effect-6 i,
-.icon-effect.effect-6:hover i,.icon-effect.effect-6:focus i {
+    background: #B52E31;
     color: #FFFFFF;
 }
 .content-box:hover .effect-6::before,.content-box:focus .effect-6::before,
 .icon-effect.effect-6:hover:before,.icon-effect.effect-6:focus:before {
-    -webkit-animation: spinAround 2s linear infinite;
-    -moz-animation: spinAround 2s linear infinite;
-    animation: spinAround 2s linear infinite;
+    -webkit-animation: bounceIn 2s linear infinite;
+    -moz-animation: bounceIn 2s linear infinite;
+    animation: bounceIn 2s linear infinite;
 }
 /* Effect 7 */
 
 .icon-effect.effect-7 {
-    box-shadow: 0 0 0 4px rgba(153, 21, 0, 1);
+    box-shadow: 0 0 0 4px #B52E31;
     -webkit-transition: background 0.2s, color 0.2s;
     -moz-transition: background 0.2s, color 0.2s;
     transition: background 0.2s, color 0.2s;
@@ -553,7 +502,7 @@
 .content-box:hover .icon-effect.effect-7,.content-box:focus .icon-effect.effect-7,
 .icon-effect.effect-7:hover,.icon-effect.effect-7:focus,
 .icon-effect.effect-7:hover i ,.icon-effect.effect-7:focus i {
-    color: rgba(153, 21, 0, 1);
+    color: #B52E31;
 }
 .icon-effect.effect-7:after {
     top: -8px;
@@ -565,7 +514,7 @@
 /* Effect 7a */
 
 .icon-effect.effect-7.effect-a:after {
-    box-shadow: 0 0 0 rgba(153, 21, 0, 1);
+    box-shadow: 0 0 0 #B52E31;
     -webkit-transition: opacity 0.2s, box-shadow 0.2s;
     -moz-transition: opacity 0.2s, box-shadow 0.2s;
     transition: opacity 0.2s, box-shadow 0.2s;
@@ -573,7 +522,7 @@
 .content-box:hover .icon-effect.effect-7.effect-a::after ,.content-box:focus .icon-effect.effect-7.effect-a::after ,
 .icon-effect.effect-7.effect-a:hover:after,.icon-effect.effect-7.effect-a:focus:after {
     opacity: 1;
-    box-shadow: 3px 3px 0 rgba(153, 21, 0, 1);
+    box-shadow: 3px 3px 0 #B52E31;
 }
 .icon-effect.effect-7.effect-a:before {
     -webkit-transform: scale(0.8);
@@ -596,7 +545,7 @@
 /* Effect 7b */
 
 .icon-effect.effect-7.effect-b:after {
-    box-shadow: 3px 3px rgba(153, 21, 0, 1);
+    box-shadow: 3px 3px #B52E31;
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
@@ -631,138 +580,57 @@
     transform: scale(1);
     opacity: 1;
 }
+
 /* Effect 8 */
 
 .icon-effect.effect-8 {
-    background: rgba(153, 21, 0, 1);
-    color: #FFF;
-    -webkit-transition: -webkit-transform ease-out 0.1s, background 0.2s;
-    -moz-transition: -moz-transform ease-out 0.1s, background 0.2s;
-    transition: transform ease-out 0.1s, background 0.2s;
+    -webkit-transition: box-shadow 0.2s;
+    -moz-transition: box-shadow 0.2s;
+    transition: box-shadow 0.2s;
 }
 .icon-effect.effect-8:after {
     top: 0;
     left: 0;
     padding: 0;
-    z-index: -1;
-    box-shadow: 0 0 0 2px rgba(153, 21, 0, 1);
-    opacity: 0;
-    -webkit-transform: scale(0.9);
-    -moz-transform: scale(0.9);
-    -ms-transform: scale(0.9);
-    transform: scale(0.9);
-}
-.content-box:hover .icon-effect.effect-8,.content-box:focus .icon-effect.effect-8,
-.icon-effect.effect-8:hover,.icon-effect.effect-8:focus {
-    background: rgb(153, 92, 0);
-    -webkit-transform: scale(0.93);
-    -moz-transform: scale(0.93);
-    -ms-transform: scale(0.93);
-    transform: scale(0.93);
-    color: #fff;
-}
-.content-box:hover .icon-effect.effect-8,.content-box:focus .icon-effect.effect-8,
-.icon-effect.effect-8:hover i ,.icon-effect.effect-8:focus i {
-    color: #fff;
-}
-.content-box:hover .icon-effect.effect-8::after ,.content-box:focus .icon-effect.effect-8::after ,
-.icon-effect.effect-8:hover:after,.icon-effect.effect-8:focus:after {
-    -webkit-animation: sonarEffect 1.3s ease-out 75ms;
-    -moz-animation: sonarEffect 1.3s ease-out 75ms;
-    animation: sonarEffect 1.3s ease-out 75ms;
-}
-@-webkit-keyframes sonarEffect {
-    0% {
-        opacity: 0.3;
-    }
-    40% {
-        opacity: 0.5;
-        box-shadow: 0 0 0 2px rgba(153, 21, 0, 0.1), 0 0 10px 10px rgba(153, 21, 0, .51), 0 0 0 10px rgba(153, 21, 0, .81);
-    }
-    100% {
-        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(255, 255, 255, 0.5);
-        -webkit-transform: scale(1.5);
-        opacity: 0;
-    }
-}
-@-moz-keyframes sonarEffect {
-    0% {
-        opacity: 0.3;
-    }
-    40% {
-        opacity: 0.5;
-        box-shadow: 0 0 0 2px rgba(153, 21, 0, 0.1), 0 0 10px 10px rgba(153, 21, 0, .51), 0 0 0 10px rgba(153, 21, 0, .81);
-    }
-    100% {
-        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(255, 255, 255, 0.5);
-        -moz-transform: scale(1.5);
-        opacity: 0;
-    }
-}
-@keyframes sonarEffect {
-    0% {
-        opacity: 0.3;
-    }
-    40% {
-        opacity: 0.5;
-        box-shadow: 0 0 0 2px rgba(153, 21, 0, 0.1), 0 0 10px 10px rgba(153, 21, 0, .51), 0 0 0 10px rgba(153, 21, 0, .81);
-    }
-    100% {
-        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(255, 255, 255, 0.5);
-        transform: scale(1.5);
-        opacity: 0;
-    }
-}
-/* Effect 9 */
-
-.icon-effect.effect-9 {
-    -webkit-transition: box-shadow 0.2s;
-    -moz-transition: box-shadow 0.2s;
-    transition: box-shadow 0.2s;
-}
-.icon-effect.effect-9:after {
-    top: 0;
-    left: 0;
-    padding: 0;
-    box-shadow: 0 0 0 3px rgb(153, 92, 0);
+    box-shadow: 0 0 0 3px #B52E31;
     -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
     -moz-transition: -moz-transform 0.2s, opacity 0.2s;
     transition: transform 0.2s, opacity 0.2s;
 }
-/* Effect 9a */
+/* Effect 8a */
 
-.content-box:hover .icon-effect.effect-9.effect-a::after ,.content-box:focus .icon-effect.effect-9.effect-a::after ,
-.icon-effect.effect-9.effect-a:hover:after ,.icon-effect.effect-9.effect-a:focus:after {
+.content-box:hover .icon-effect.effect-8.effect-a::after ,.content-box:focus .icon-effect.effect-8.effect-a::after ,
+.icon-effect.effect-8.effect-a:hover:after ,.icon-effect.effect-8.effect-a:focus:after {
     -webkit-transform: scale(0.85);
     -moz-transform: scale(0.85);
     -ms-transform: scale(0.85);
     transform: scale(0.85);
     opacity: 0.5;
 }
-.content-box:hover .icon-effect.effect-9.effect-a,.content-box:focus .icon-effect.effect-9.effect-a,
-.icon-effect.effect-9.effect-a:hover ,.icon-effect.effect-9.effect-a:focus {
-    box-shadow: 0 0 0 10px rgb(153, 92, 0);
-    color: rgba(153, 21, 0, 0.88);
+.content-box:hover .icon-effect.effect-8.effect-a,.content-box:focus .icon-effect.effect-8.effect-a,
+.icon-effect.effect-8.effect-a:hover ,.icon-effect.effect-8.effect-a:focus {
+    box-shadow: 0 0 0 10px #B52E31;
+    color: #B52E31;
 }
-.content-box:hover .icon-effect.effect-9.effect-a i,.content-box:focus .icon-effect.effect-9.effect-a i,
-.icon-effect.effect-9.effect-a:hover i,.icon-effect.effect-9.effect-a:focus i {
-    color: rgba(153, 21, 0, 0.88);
+.content-box:hover .icon-effect.effect-8.effect-a i,.content-box:focus .icon-effect.effect-8.effect-a i,
+.icon-effect.effect-8.effect-a:hover i,.icon-effect.effect-8.effect-a:focus i {
+    color: #B52E31;
 }
-/* Effect 9b */
+/* Effect 8b */
 
-.content-box:hover .icon-effect.effect-9.effect-b::after ,.content-box:focus .icon-effect.effect-9.effect-b::after ,
-.icon-effect.effect-9.effect-b:hover:after,.icon-effect.effect-9.effect-b:focus:after {
+.content-box:hover .icon-effect.effect-8.effect-b::after ,.content-box:focus .icon-effect.effect-8.effect-b::after ,
+.icon-effect.effect-8.effect-b:hover:after,.icon-effect.effect-8.effect-b:focus:after {
     -webkit-transform: scale(0.85);
     -moz-transform: scale(0.85);
     -ms-transform: scale(0.85);
     transform: scale(0.85);
 }
-.content-box:hover .icon-effect.effect-9.effect-b ,.content-box:focus .icon-effect.effect-9.effect-b ,
-.icon-effect.effect-9.effect-b:hover,.icon-effect.effect-9.effect-b:focus {
-    box-shadow: 0 0 0 10px rgb(153, 92, 0);
-    color: rgba(153, 21, 0, 0.88);
+.content-box:hover .icon-effect.effect-8.effect-b ,.content-box:focus .icon-effect.effect-8.effect-b ,
+.icon-effect.effect-8.effect-b:hover,.icon-effect.effect-8.effect-b:focus {
+    box-shadow: 0 0 0 10px #B52E31;
+    color: #B52E31;
 }
-.content-box :hover .icon-effect.effect-9.effect-b:hover i ,.content-box :focus .icon-effect.effect-9.effect-b:focus i ,
-.icon-effect.effect-9.effect-b:hover i ,.icon-effect.effect-9.effect-b:focus i{
-    color: rgba(153, 21, 0, 0.88);
+.content-box :hover .icon-effect.effect-8.effect-b:hover i ,.content-box :focus .icon-effect.effect-8.effect-b:focus i ,
+.icon-effect.effect-8.effect-b:hover i ,.icon-effect.effect-8.effect-b:focus i{
+    color: #B52E31;
 }
