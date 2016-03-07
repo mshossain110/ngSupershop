@@ -11,6 +11,9 @@
   position: relative;
   width: 100%;
 }
+.header-top .dropdown-menu {
+  color: #474747;
+}
 #header .header-top .btn-group.socialInfo {
   float: left;
 }

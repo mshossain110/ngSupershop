@@ -389,6 +389,31 @@ angular.module('ngSuperShopApp')
     }
   }
 }])
+.directive('timer', [function(){
+  return {
+    restrict : 'C',
+    link : function(scope, element, attrs){
+      var separator = angular.isDefined(attrs.separator) ? attrs.separator : false;
+        element.bind('appear', function(){
+          if(!separator){
+            element.countTo('restart');
+          }
+          else {
+            element.countTo({
+    					formatter: function (value, options) {
+    						value = value.toFixed(options.decimals);
+    						value = value.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    						return value;
+    					}
+    				});
+          }
+
+        })
+
+
+    }
+  }
+}])
 .directive('toucharea', ['$touch', function($touch){
   // Runs during compile
   return {
@@ -591,4 +616,6 @@ angular.module('ngSuperShopApp')
     }
   };
 }])
+
+
 ;

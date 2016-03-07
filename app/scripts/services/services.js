@@ -8,6 +8,98 @@
  * Service in the ngSuperShopApp.
  */
 angular.module('angularMart.Service', [])
+  .factory('auth', ['$window', function($window){
+      var auth ={};
+
+      auth.parseJWT = function(token){
+        var base64Url = token.split('.')[1];
+        var base64 = base64Url.replace('-', '+').replace('_', '/');
+        return JSON.parse($window.atob(base64));
+      };
+
+      auth.saveToken = function(token){
+        $window.localStorage['am-auth'] = token;
+      };
+
+      auth.getToken = function(){
+        return $window.localStorage['am-auth']
+      };
+
+      auth.removeToken = function(){
+        $window.localStorage.removeItem('am-auth');
+      };
+
+
+      return auth;
+  }])
+  .factory('authInterceptor', ['API', 'auth', function(API, auth){
+    return {
+      'request': function(config){
+        var token = auth.getToken();
+
+        if(config.url.indexOf(API) === 0 && token){
+          config.headers.Authorization = 'Bearer ' + token;
+        }
+
+        return config;
+      },
+      'response':function(response){
+          if(response.config.url.indexOf(API) ===0 && response.data.token){
+            auth.saveToken(response.data.token);
+          }
+
+          return response;
+      }
+    }
+  }])
+  .service('userservice', ['$http','API', 'auth', function($http, API, auth){
+      var user= {};
+
+      user.getQuote = function(){
+        return $http.get(API+ 'users/quote');
+      };
+
+      user.register = function(user){
+        return $http.post(API + 'users/register', user);
+      };
+
+      user.login = function(user){
+        return $http.post(API + 'users/login', user);
+      };
+
+      user.isLogin = function(){
+        var token = auth.getToken();
+
+        if(token){
+          var parse = auth.parseJWT(token);
+
+          return Math.round(Date.now()/1000) < parse.exp;
+        }else{
+          return false;
+        }
+
+      };
+
+      user.currentUser = function(){
+        var token = auth.getToken();
+
+        if(token){
+          var parse = auth.parseJWT(token);
+
+          return parse.userName;
+        }
+      };
+
+      user.logout = function(){
+        auth.removeToken();
+      };
+
+      user.checkUser =  function(user){
+          return $http.get(API + 'users/checkuser', user);
+      }
+
+      return user;
+  }])
   .service('PService', [ '$timeout', '$sce', function ($timeout, $sce) {
   		var $products, $minPrice, $maxPrice, $categories=[], $colors=[], $sizes=[], $brands=[];
 

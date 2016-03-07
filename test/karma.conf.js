@@ -40,6 +40,7 @@ module.exports = function(config) {
       'bower_components/lodash/lodash.js',
       'bower_components/angularjs-slider/dist/rzslider.js',
       'bower_components/angular-socialshare/dist/angular-socialshare.min.js',
+      'bower_components/angular-messages/angular-messages.js',
       // endbower
       "app/scripts/**/*.js",
       "test/mock/**/*.js",

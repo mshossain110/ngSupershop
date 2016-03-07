@@ -3,105 +3,111 @@
     <div class="row">
       <h1>unique flavour of vegetarian pizza</h1>
       <div class="pizzaItems">
-          <div class="item">
-              <img src="images/resturent/re1.jpg" alt="" />
-              <p>Double Cheese Pizza</p>
-          </div>
-          <div class="item">
-              <img src="images/resturent/re1.jpg" alt="" />
-              <p>Double Cheese Pizza</p>
-          </div>
-          <div class="item">
-              <img src="images/resturent/re1.jpg" alt="" />
-              <p>Double Cheese Pizza</p>
-          </div>
-          <div class="item">
-              <img src="images/resturent/re1.jpg" alt="" />
-              <p>Double Cheese Pizza</p>
-          </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="container-fluid marginTop marginBottom pizza-contant oHidden">
-  <div class="container">
-    <div class="row">
-
-      <div class="col-md-9 col-md-offset-1 col-xs-12">
-        <div class="content-box cb-border cb-image-left">
-          <div class="content-box-outer">
-            <div class="content-box-inner">
-
-              <div class="content-box-image">
-                <img src="images/resturent/re1.jpg"  class="img-responsive">
-              </div>
-
-              <div class="content-box-content cb-border">
-                <h3><a href="">Cantaloupe And Sweet Ricotta Pizza</a></h3>
-                <p>Paneer is a fresh cheese common in South Asian Cuisine. It is an Indian Origin food item which is a delicious piece of cheese cube made of pure milk. This is a very popular recipe in India as the vegetarian people loves Paneer a lot. The Paneer used in this pizza are barbequed and then few pieces of Paneer is sprinkled over the pizza along with crispy capsicum slices and spicy red pepper. Its yummy taste and is really very appetizing. the Peppy Paneer pizza forms the spicy menu among the vegetarian list of pizzas.</p>
-                  <div class="content-box-tag">
-                      <a href="">Pizza</a>
-                      <a href="">Pizza</a>
-                      <a href="">Pizza</a>
-                  </div>
-              </div>
+        <div class="image-flex-overlay">
+          <img src="images/resturent/re1.jpg" alt="sample22"/>
+          <figcaption>
+            <div><h4>What <span>state</span> do you live in?</h4></div>
+            <div>
+              <p>Denial. Miss Wormwood: I don't suppose I can argue with that.</p>
+              <div class="curl"></div>
             </div>
-          </div>
+            <a href="#"></a>
+          </figcaption>
         </div>
+        <div class="image-flex-overlay">
+          <img src="images/resturent/re2.jpg" alt="sample20"/>
+          <figcaption>
+            <div><h4>If we wanted more <span>leisure</span></h4></div>
+            <div>
+              <p>We'd invent machines that do things less efficiently.</p>
+              <div class="curl"></div>
+            </div>
+            <a href="#"></a>
+          </figcaption>
+        </div>
+        <div class="image-flex-overlay">
+          <img src="images/resturent/re3.jpg" alt="sample21"/>
+          <figcaption>
+            <div><h4>I <span>propose</span> we leave <span>math</span> </h4></div>
+            <div>
+              <p>To the machines and go play outside.</p>
+              <div class="curl"></div>
+            </div>
+            <a href="#"></a>
+          </figcaption>
+        </div>
+
       </div>
-
-
     </div>
   </div>
 </section>
+
+
 <section class="feature-product container-fluid marginBottom">
   <div class="container clearfix">
     <div class="row">
-        <am-products template-url="views/shop/pizzahut.html"></am-products>
+
+      <div class="am-products products-block-container pizza-hut">
+
+              <div class="products-entry">
+                <div class="col-md-6 col-sm-6 col-xs-12 product-outer marginSmBottom" ng-repeat="product in p.getProductByCategory('pizaa')">
+                  <div class="product-inner">
+                    <div class="product" >
+                      <a href=""><h3>{{product.title}}</h3></a>
+                      <div class="feature-image">
+                        <img src="{{product.src}}" class="img-responsive" alt="AdidasHoodie" />
+                      </div>
+                      <span>{{product.price | currency:"$":0}}</span>
+                      <div class="product-title">
+                        <ul class="list-unstyled">
+                          <li class="" ng-repeat="f in product.flavour">{{f}}</li>
+                        </ul>
+                        <a class="btn ambtn" ng-click="amCart.addItem(product.ID, product.title, product.src, product.price, 1)" title="Add to Cart"  href="#">Order Now!!</a>
+                      </div>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+      </div>
 
     </div>
   </div>
 </section>
-  <section class="container-fluid">
+  <section class="container-fluid marginBottom client-testimonial">
         <div class="container clearfix">
             <div class="row">
 
+              <div class="amtitle title-double-border shape-sd title-center">
+                <h3><span class="fa fa-smile-o"></span>  Our satisfied Clint</h3>
+              </div>
 
-              <div class="snip0021">
-              	<img src="images/resturent/re1.jpg" alt="sample22"/>
-              	<figcaption>
-              		<div><h2>What <span>state</span> do you live in?</h2></div>
-              		<div>
-              			<p>Denial. Miss Wormwood: I don't suppose I can argue with that.</p>
-              			<div class="curl"></div>
-              		</div>
-              		<a href="#"></a>
-              	</figcaption>
-              </div>
-              <div class="snip0021">
-              	<img src="images/resturent/re2.jpg" alt="sample20"/>
-              	<figcaption>
-              		<div><h2>If we wanted more <span>leisure</span></h2></div>
-              		<div>
-              			<p>We'd invent machines that do things less efficiently.</p>
-              			<div class="curl"></div>
-              		</div>
-              		<a href="#"></a>
-              	</figcaption>
-              </div>
-              <div class="snip0021">
-              	<img src="images/resturent/re3.jpg" alt="sample21"/>
-              	<figcaption>
-              		<div><h2>I <span>propose</span> we leave <span>math</span> </h2></div>
-              		<div>
-              			<p>To the machines and go play outside.</p>
-              			<div class="curl"></div>
-              		</div>
-              		<a href="#"></a>
-              	</figcaption>
-              </div>
+
+
+          <div class="amcarousel" autoplay="5000" slides-per-view="1">
+           <div class="swiper-wrapper">
+             <div class="swiper-slide testimonials center-block" ng-repeat="product in p.getProductByID([18, 5, 6, 8, 10, 13, 14, 12])">
+
+               <div class="quote col-md-8  classic">
+                 <blockquote>
+                     <p>Calvin: Sometimes when I'm talking with others, my words can't keep up with my thoughts. I wonder why we think faster than we speak. Hobbes: Probably so we can think twice. </p>
+
+                 </blockquote>
+                 <div class="author">
+                   <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample1.jpg" alt="sq-sample1"/>
+                   <div class="author-info">
+                     <span class="author-name">Anton Shauchenka</span>
+                     <span class="author-position">CDO, TrackDuck</span>
+                   </div>
+                 </div>
+               </div>
+
+             </div>
+           </div>
+
+       </div>
 
             </div>
         </div>

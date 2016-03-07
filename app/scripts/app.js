@@ -12,6 +12,7 @@ angular
   .module('ngSuperShopApp', [
     'ngAnimate',
     'ngResource',
+    'ngMessages',
     'ui.router',
     'mobile-angular-ui',
     'mobile-angular-ui.gestures',
@@ -21,9 +22,10 @@ angular
     'angularMart.Service',
     'angularMart.Filter'
   ])
-  .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
+  .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
 
-
+    // $httpProvider interceptors
+    $httpProvider.interceptors.push('authInterceptor')
 
    $urlRouterProvider.otherwise("/");
 
@@ -32,11 +34,7 @@ angular
 
    .state('home',{
      url:'/',
-
-     views: {
-       "footer": {templateUrl: 'views/templates/footer.html'},
-        "": {templateUrl: 'views/main.html'}
-      }
+     templateUrl: 'views/main.html'
    }).state('home2',{
      url: '/home2',
      templateUrl: '/views/pages/home2.html'
@@ -65,6 +63,20 @@ angular
      url:'/:id',
      controller: 'ShopSingleClt',
      templateUrl: '/views/shop/shopSingle.html'
+   })
+
+   .state('login',{
+     url:'/login',
+     controller: 'login',
+     templateUrl: '/views/user/login.html'
+   }).state('registation',{
+     url:'/registation',
+     controller: 'registation',
+     templateUrl: '/views/user/registation.html'
+   }).state('userprofile',{
+     url:'/userprofile',
+     controller: 'userprofile',
+     templateUrl: '/views/user/userprofile.html'
    })
 
    // elements router
@@ -141,10 +153,9 @@ angular
   })
   .run(['$rootScope','amCart', 'store', '$window', '$timeout', function($rootScope, amCart, store, $window, $timeout){
 
-    $rootScope.$on('$stateChangeStart',
-function(event, toState, toParams, fromState, fromParams){
-    $( ".scrollable-content" ).scrollTop( 0 );
-})
+    $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams){
+          $( ".scrollable-content" ).scrollTop( 0 );
+      })
 
 
      $rootScope.$on('amCart:change', function(evnt, data){
@@ -172,5 +183,5 @@ function(event, toState, toParams, fromState, fromParams){
     }, 10);
 
 
-  }])
+  }]).constant('API', 'http://127.0.0.1:3000/');
   ;
