@@ -1,0 +1,195 @@
+.post {
+  display: block;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  overflow: hidden;
+  padding-bottom: 20px;
+  position: relative;
+}
+.post .post-content{
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.post .post-content p{
+  color: #777;
+
+}
+.post .title h3 {
+  line-height: 1em;
+  color: #777;
+  font-size: 1.8em;
+}
+.post .post-image, .post .feature-image img{
+  width: 100%;
+  height: auto;
+}
+.post .post-date {
+  bottom: 30px;
+  left: 0;
+  position: absolute;
+}
+.post .post-date > p {
+  color: #fff;
+  font-size: 1.2em;
+  margin: 0;
+  padding: 10px;
+}
+.post .post-date span {
+  display: block;
+}
+.post .meta {
+  border-bottom: 1px solid #f00;
+  border-top: 1px solid #f00;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 2px 5px;
+}
+.post .category {
+  display: inline-block;
+}
+.post .post-status {
+  float: right;
+}
+/*list style*/
+.post.post-list-style .feature-image {
+  float: left;
+  margin-right: 20px;
+  width: 380px;
+}
+.post.post-list-style .title, .post.post-list-style .post-content{
+  margin-left: 400px;
+}
+.post.post-list-style .meta {
+  bottom: 20px;
+  position: absolute;
+  right: 0;
+  width: 453px;
+}
+
+/*list clasic*/
+.post.post-listClasic-style {
+  margin-right: 50px;
+}
+.post-listClasic-style .feature-image {
+  margin-bottom: 30px;
+  width: 100%;
+  max-height: 400px;
+}
+.post-listClasic-style .title {
+  margin-left: 100px;
+}
+.post.post-listClasic-style .post-date {
+  bottom: 170px;
+  display: inline-block;
+  left: 0;
+  position: absolute;
+}
+.post-listClasic-style .post-content {
+  margin-left: 100px;
+}
+
+/*grid style 1*/
+.post-grid-style .feature-image {
+  margin-bottom: 10px;
+}
+.post-grid-style .title h3 {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+.post-grid-style .post-meta {
+  display: block;
+  font-size: 12px;
+}
+.post-grid-style .post-meta .fa {
+  margin-right: 5px;
+}
+
+/*Grid style overlay*/
+.post-grid-overlay .title h4 {
+  padding-top: 70px;
+}
+.post-grid-overlay .post-meta {
+  left: 70px;
+  position: absolute;
+  top: 120px;
+  opacity: 0;
+  -webkit-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+.image-flex-overlay:hover figcaption .post-meta,
+.image-flex-overlay.hover figcaption .post-meta {
+  opacity: 1;
+  -webkit-animation: bounceIn 0.5s linear 0.5s;
+  -moz-animation: bounceIn 0.5s linear 0.5s;
+  -ms-animation: bounceIn 0.5s linear 0.5s;
+  animation: bounceIn 0.5s linear 0.5s;
+}
+/*******************sidbar widget*******************/
+
+/*widget-recent-post*/
+.widget {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+.widget h3 {
+  border-bottom: 6px double #eaeaea;
+  font-size: 1.5em;
+}
+.widget-recent-post li {
+  border-bottom: 1px solid #ddd;
+  display: block;
+  overflow: hidden;
+  padding: 5px 0;
+}
+.widget-recent-post li img {
+  float: left;
+  height: auto;
+  margin-right: 10px;
+  width: 80px;
+}
+.widget-recent-post li h4 {
+  font-size: 17px;
+  margin: 0;
+}
+.widget-recent-post .post-status{
+  float: none;
+  display: block;
+}
+.widget-recent-post .post-status li {
+  border: medium none;
+  display: inline;
+  font-size: 11px;
+  padding: 0 2px;
+  text-align: left;
+}
+
+/*widget category*/
+.widget-category li a .fa {
+  font-size: 13px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.widget-category li a {
+  display: block;
+  padding: 3px 10px;
+  margin-left: 10px;
+  color: #444;
+  border-bottom: 1px solid #EAEAEA;
+}
+.widget-category li a:hover{
+  background: #f0e5e5;
+}
+/*widget Tag*/
+
+.widget-tag a:hover {
+    background: #e0e0e0;
+}
+.widget-tag a {
+    display: inline-block;
+    padding: 5px;
+    border: 1px solid #EAEAEA;
+    margin: 3px;
+    color: #444;
+}

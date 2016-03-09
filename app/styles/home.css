@@ -300,10 +300,6 @@
   float: left;
   overflow: hidden;
   margin: 10px 1%;
-  min-width: 220px;
-  max-width: 350px;
-  max-height: 220px;
-  width: 100%;
   background: #000000;
   text-align: center;
 }
@@ -322,12 +318,16 @@
   height: 100%;
   text-align: left;
 }
-.image-flex-overlay figcaption > div {
+.image-flex-overlay figcaption  div.title,
+.image-flex-overlay figcaption  div.content {
   float: left;
   height: 100%;
   overflow: hidden;
   width: 50%;
   position: relative;
+}
+.image-flex-overlay figcaption  div.content {
+
 }
 .image-flex-overlay figcaption::before {
   position: absolute;
@@ -369,9 +369,6 @@
   -webkit-transform: translate3d(50%, 0%, 0);
   transform: translate3d(50%, 0%, 0);
 }
-.image-flex-overlay h4 span {
-  font-weight: 800;
-}
 .image-flex-overlay p {
   display: block;
   bottom: 0;
@@ -379,8 +376,8 @@
   font-weight: 300;
   top: 0%;
   color: #000;
-  background: #ffffff;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.3) 0%, transparent 40%, rgba(0, 0, 0, 0.1) 100%);
+  background: rgba(255, 255, 255, 0.5);
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2) 0%, transparent 60%, rgba(255, 255, 255, 0.6) 100%);
   -webkit-transform: translate3d(-50%, 0%, 0);
   transform: translate3d(-50%, 0%, 0);
 }
@@ -390,7 +387,7 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  background: linear-gradient(135deg, #ffffff, #f3f3f3 20%, #cccccc 38%, #bbbbbb 44%, #aaaaaa 50%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0.4));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.3) 0%, transparent 40%, rgba(255, 255, , 0.1) 100%);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   transition: all .3s ease;
 }
@@ -459,6 +456,40 @@
   height: 40px;
   -webkit-transition-delay: 0.7s;
   transition-delay: 0.7s;
+}
+
+.image-flex-overlay.horizontal figcaption  div.title,
+.image-flex-overlay.horizontal figcaption  div.content {
+  float: none;
+  height: 50%;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+.image-flex-overlay.horizontal figcaption::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right:50%;
+  width: 2px;
+  height: 2px;
+  content: '';
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+}
+.image-flex-overlay.horizontal:hover figcaption::before,
+.image-flex-overlay.horizontal.hover figcaption::before {
+  background: #ffffff;
+  left:0;
+  right: 0;
+  opacity: 1;
+  width: 100%;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
 }
 /*page 3--------------------------------*/
 .pizza-slider{

@@ -51,7 +51,6 @@
                       <ul>
                         <li class="mega-menu-title">Angular</li>
                         <li ui-sref-active="active"><a  ui-sref="elements.accordion" >accordion</a></li>
-
                         <li ui-sref-active="active"><a  ui-sref="elements.modal">modal</a> </li>
                         <li ui-sref-active="active"><a  ui-sref="elements.tabs" >Tab</a> </li>
 
@@ -69,7 +68,15 @@
     </li>
 
 
-    <li ><a href="#" ><i class="fa fa-file-text-o"></i>Blog</a></li>
+    <li ><a ui-sref="blog.listSidebar"><i class="fa fa-file-text-o"></i>Blog</a>
+      <ul>
+            <li><a  ui-sref="blog.listClasic">Blog Classic</a></li>
+            <li><a  ui-sref="blog.gridStyle">Blog Grid</a></li>
+            <li><a  ui-sref="blog.gridStyle2">Blog Grid2</a></li>
+            <li><a  ui-sref="blog.gridStylefull">Blog Grid full</a></li>
+            <li><a  ui-sref="blog.single">Blog Single</a></li>
+      </ul>
+    </li>
     <li><a href="#" ><i class="fa fa-comment"></i>Contact</a></li>
       </ul>
 </nav>

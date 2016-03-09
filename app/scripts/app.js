@@ -78,6 +78,29 @@ angular
      controller: 'userprofile',
      templateUrl: '/views/user/userprofile.html'
    })
+   //blog state
+   .state('blog',{
+     url:'/blog',
+      template: '<ui-view />'
+   }).state('blog.listSidebar',{
+     url:'/list-sidebar',
+     templateUrl: '/views/blogs/listSidebar.html'
+   }).state('blog.listClasic',{
+     url:'/list-clasic',
+     templateUrl: '/views/blogs/listClasic.html'
+   }).state('blog.gridStyle',{
+     url:'/list-gridstyle',
+     templateUrl: '/views/blogs/gridStyle.html'
+   }).state('blog.gridStyle2',{
+     url:'/list-gridstyle2',
+     templateUrl: '/views/blogs/gridStyle2.html'
+   }).state('blog.gridStylefull',{
+     url:'/list-gridStylefull',
+     templateUrl: '/views/blogs/gridStylefull.html'
+   }).state('blog.single',{
+     url:'/single',
+     templateUrl: '/views/blogs/single.html'
+   })
 
    // elements router
    .state('elements',{
