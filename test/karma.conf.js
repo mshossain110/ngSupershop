@@ -41,6 +41,7 @@ module.exports = function(config) {
       'bower_components/angularjs-slider/dist/rzslider.js',
       'bower_components/angular-socialshare/dist/angular-socialshare.min.js',
       'bower_components/angular-messages/angular-messages.js',
+      'bower_components/angular-video-bg/angular-video-bg.min.js',
       // endbower
       "app/scripts/**/*.js",
       "test/mock/**/*.js",

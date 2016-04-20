@@ -2,26 +2,22 @@
   "name": "ng-super-shop",
   "version": "0.0.0",
   "dependencies": {
-    "angular": "^1.4.0",
-    "angular-animate": "^1.4.0",
-    "angular-resource": "^1.4.0",
-    "angular-sanitize": "^1.4.0",
+    "angular": "^1.5.1",
+    "angular-animate": "^1.5.1",
+    "angular-resource": "^1.5.1",
+    "angular-sanitize": "^1.5.1",
     "font-awesome": "~4.5.0",
     "animate.css": "~3.5.0",
     "angular-ui-router": "~0.2.15",
-    "jquery-countTo": "~1.2.0",
-    "jquery.countdown": "~2.1.0",
-    "jqvmap": "~1.4.0",
     "mobile-angular-ui": "~1.2.0-rc.3",
     "jquery.scrollbar": "~0.2.10",
     "jquery-appear": "~0.2.4",
     "Swiper": "swiper#~3.3.0",
-    "jquery.stellar": "~0.6.2",
     "lodash": "~4.2.1",
     "angularjs-slider": "^2.8.0",
     "bootstrap": "^3.3.6",
     "angular-socialshare": "angularjs-socialshare#^0.1.20",
-    "angular-messages": "^1.5.0"
+    "angular-messages": "^1.5.0",
   },
   "devDependencies": {
     "font-awesome": "~4.5.0"
@@ -33,17 +29,6 @@
       "main": [
         "dist/css/bootstrap.min.css",
         "dist/css/bootstrap-theme.min.css"
-      ]
-    },
-    "mobile-angular-ui": {
-      "main": [
-        "dist/js/mobile-angular-ui.js",
-        "dist/js/mobile-angular-ui.gestures.js"
-      ]
-    },
-    "font-awesome": {
-      "main": [
-        "css/font-awesome.css"
       ]
     }
   }

@@ -52,7 +52,6 @@ angular.module('ngSuperShopApp')
       autoplay : '=?'
     },
     link: function(scope, element, attrs){
-      console.log(scope.slidesPerView);
         scope.pagination = angular.isDefined(scope.pagination) ? scope.pagination : '.swiper-pagination';
         scope.slidesPerView = angular.isDefined(scope.slidesPerView) ? parseInt(scope.slidesPerView, 10) : 4;
         scope.slidesPerColumn = angular.isDefined(scope.slidesPerColumn) ? scope.slidesPerColumn : 1;
@@ -221,6 +220,104 @@ angular.module('ngSuperShopApp')
     }
 
   };
+}])
+.directive('amSlider', ['$timeout', function($timeout){
+
+  return {
+    transclude:false,
+    restrict: 'AC',
+    scope:{
+      options: '=?'
+    },
+    controller: function($scope, $element, $timeout){
+
+        var that = this;
+        $timeout(function(){
+          that.swiper = $scope.swiper;
+        },1000)
+
+    },
+    link:function($scope, element, attrs){
+      $scope.swiper = new Swiper(element, $scope.options);
+    // $scope.swiper.on('slideChangeStart', function () {
+    //       console.log('slide change start 2');
+    //   });
+    }
+  }
+
+}])
+.directive('slideLayer', ['$timeout', function($timeout){
+  return {
+    restrict : 'AC',
+    scope:{
+      left: '@',
+      top: '@',
+      animation: '@',
+      animationDelay: '@',
+      animationDuration: '@',
+      animationtf: '@'
+    },
+    require : '^amSlider',
+    controller: function($scope, $element){
+
+    },
+    link: function($scope, element, attrs, amSliderCltr){
+       $scope.left = angular.isDefined($scope.left) ? parseInt($scope.left) + 'px' :  0 +'px';
+       $scope.top = angular.isDefined($scope.top) ? parseInt($scope.top)+ 'px' : 0 + 'px';
+       $scope.animation = angular.isDefined($scope.animation) ? $scope.animation :'faidIn';
+       $scope.animationDelay = (angular.isDefined($scope.animationDelay) ? parseInt($scope.animationDelay): 6)*100;
+       $scope.animationDuration = (angular.isDefined($scope.animationDuration) ? parseInt($scope.animationDuration): 6)*100 +'ms';
+       $scope.animationtf = angular.isDefined($scope.animationtf) ? $scope.animationtf : 'linear';
+
+
+      var css ={
+        'position':'absolute',
+        'left':$scope.left,
+        'top':$scope.top,
+        'opacity':1,
+        '-webkit-animation-fill-mode': 'both',
+        'animation-fill-mode': 'both',
+        '-webkit-animation': $scope.animation +' ' +$scope.animationDuration+' ' +$scope.animationtf +' 0s',
+        '-moz-animation': $scope.animation +' ' +$scope.animationDuration+' ' +$scope.animationtf +' 0s',
+        '-o-animation': $scope.animation +' ' +$scope.animationDuration+' ' +$scope.animationtf+' 0s' ,
+        'animation':  $scope.animation +' ' +$scope.animationDuration+' ' +$scope.animationtf +' 0s'
+      };
+
+      var reCSS= {
+        'opacity':0,
+        '-webkit-animation': '',
+        '-moz-animation': '',
+        '-o-animation': '',
+        'animation': ''
+      }
+
+      $timeout(function(){
+        var mySwiper = $('.swiper-container')[0].swiper;
+
+
+        mySwiper.on('onSlideChangeEnd', function(swiper){
+            if(isActive()){
+              $timeout(function(){
+                element.css(css);
+              },  $scope.animationDelay);
+
+            }else{
+                element.css(reCSS);
+            }
+        });
+
+
+      }, 1000);
+
+      function isActive(){
+        return element.parent().hasClass("swiper-slide-active");
+      }
+
+
+
+
+    }
+  }
 }])
 .directive('amPagetitle', ['$interpolate', '$state', function($interpolate, $state) {
             return {
@@ -615,7 +712,4 @@ angular.module('ngSuperShopApp')
       );
     }
   };
-}])
-
-
-;
+}]);

@@ -49,41 +49,61 @@ angular.module('ngSuperShopApp')
 
      $rootScope.$broadcast('bodyClass:add', $scope.bodyClass);
 
-//      function rawurlencode(str) {
-//     str = (str+'').toString();
-//     return encodeURIComponent(str).replace(/!/g, '%21').replace(/'/g, '%27').replace(/\(/g, '%28').
-//                                                                                    replace(/\)/g, '%29').replace(/\*/g, '%2A');
-// }
-//    var oauth = new OAuth({
-//             consumer: {
-//                 public: 'ck_da4c6fd7b9af4d5f5c34aec40a1c01b8fcff735b',
-//                 secret: 'cs_8045d1c622bc0e1c6da273962259711ca77a9e55'
-//             },
-//             signature_method: 'HMAC-SHA1'
-//          });
-//
-//          var request_data = {
-//              url: 'http://biswas-stall.com/wc-api/v1/products',
-//               method: 'GET',
-//
-//           };
-//           var token = {
-//             public: 'ck_da4c6fd7b9af4d5f5c34aec40a1c01b8fcff735b',
-//             secret: 'cs_8045d1c622bc0e1c6da273962259711ca77a9e55'
-//           };
-//
-//           var data = oauth.authorize(request_data);
-//
-//           var url =rawurlencode(request_data.url) + "&" +
-//                       "oauth_consumer_key"+"%3D"+rawurlencode(data.oauth_consumer_key)+
-//                       "%26"+"oauth_nonce"+"%3D"+rawurlencode(data.oauth_nonce)+
-//                       "%26"+"oauth_signature_method"+"%3D"+rawurlencode(data.oauth_signature_method)+
-//                       "%26"+"oauth_timestamp"+"%3D"+rawurlencode(data.oauth_timestamp)+
-//                       "%26"+"oauth_signature"+"%3D"+rawurlencode(data.oauth_signature);
-//         $http.get(url).success(function(data) {
-//
-//             console.log(data);
-//         })
+     /****swiper Slider option
+     *** get all option
+     **http://idangero.us/swiper/api/
+     */
+     $scope.slider1 ={
+             nextButton: '.swiper-button-next',
+             prevButton: '.swiper-button-prev',
+             paginationClickable: true,
+             spaceBetween: 30,
+             centeredSlides: true,
+             autoplay: 2500,
+             effect: 'fade',
+             autoplayDisableOnInteraction: false,
+         };
+
+         $scope.slider2 ={
+           pagination: '.swiper-pagination',
+           effect: 'coverflow',
+           grabCursor: true,
+           centeredSlides: true,
+           slidesPerView: 'auto',
+           autoplay: 2500,
+           loop: true,
+           coverflow: {
+               rotate: 50,
+               stretch: 0,
+               depth: 100,
+               modifier: 1,
+               slideShadows : true
+           }
+       };
+
+       $scope.slider3={
+     	        nextButton: '.arrow-nav-next',
+     	        prevButton: '.arrow-nav-prev',
+     	        paginationClickable: true,
+     	        spaceBetween: 30,
+     	        centeredSlides: true,
+     	        autoplay: 5000,
+     					effect: 'fade',
+     	        autoplayDisableOnInteraction: false,
+     					loop: true
+     	    }
+
+        $scope.slider5 ={
+      	        nextButton: '.swiper-button-next',
+      	        prevButton: '.swiper-button-prev',
+      	        paginationClickable: true,
+                autoplay: 5000,
+      	        spaceBetween: 30,
+      	        centeredSlides: true,
+      	        autoplayDisableOnInteraction: false,
+                	loop: true
+      	    }
+
 
    }])
    .controller('MainCtrl',['$scope',   function ($scope) {
@@ -204,7 +224,5 @@ angular.module('ngSuperShopApp')
         })
       }
 
-
-  }]).controller('userprofile', ['$scope', function($scope){
 
   }]);

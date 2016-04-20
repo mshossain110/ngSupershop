@@ -18,6 +18,7 @@ angular
     'mobile-angular-ui.gestures',
     'ngSanitize',
     'rzModule',
+    'angularVideoBg',
     '720kb.socialshare',
     'angularMart.Service',
     'angularMart.Filter'
