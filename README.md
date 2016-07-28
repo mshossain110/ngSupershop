@@ -1,9 +1,7 @@
-#Angular Mart
+#Angular Super shop
 
-## Angularjs Shoping Template
+## Angularjs basic Shoping Template, add to cart, product service, and more application added
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.15.1.
 
 ## Build & development
 
